@@ -11,12 +11,11 @@ export class HeaderVipComponent implements OnInit {
 
   ngOnInit(): void {}
 
-
-  @HostListener("document:scroll")
-  scroolFunction(){
-    if(document.body.scrollTop >0 || document.documentElement.scrollTop > 0){
+  @HostListener('document:scroll')
+  scroolFunction() {
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
       this.header_variable = true;
-    }else{
+    } else {
       this.header_variable = false;
     }
   }
