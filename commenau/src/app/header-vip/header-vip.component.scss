@@ -1,0 +1,72 @@
+.header {
+  width: 100%;
+  position: relative;
+  .menu-header {
+    display: flex;
+    color: azure;
+    position: absolute;
+    padding-left: 200px;
+    z-index: 99999999999999;
+    width: 100%;
+    height: 120px;
+    transition: 0.4s;
+    h2 {
+      top: 1em;
+      position: relative;
+      left: 35%;
+    }
+    .header-big {
+      position: relative;
+      top: 7em;
+      display: flex;
+      flex: 70%;
+      position: relative;
+      justify-content: space-around;
+      h5 {
+        cursor: pointer;
+        position: relative;
+      }
+    }
+    .icon-menu {
+      flex: 30%;
+      position: relative;
+      left: 16em;
+      top: 0.8em;
+      i {
+        padding: 0.8em;
+        cursor: pointer;
+      }
+    }
+  }
+  .menu-header:hover {
+    background-color: black;
+  }
+  .header-change {
+    transition: 0.4s;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    background-color: black;
+    height: 8%;
+    h2 {
+      visibility: hidden;
+    }
+    .header-big {
+      position: relative;
+      top: 2em;
+    }
+  }
+  .container {
+    padding: 0;
+    position: relative;
+    margin: 0;
+    #myCarousel {
+      width: 152em;
+      .carousel-indicators {
+        position: absolute;
+        left: 15em;
+        // background-color: red;
+      }
+    }
+  }
+}
