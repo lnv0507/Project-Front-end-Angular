@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
-import { HeaderMenuComponent } from './header-menu/header-menu.component';
 import { HeaderVipComponent } from './header-vip/header-vip.component';
 
 @NgModule({
@@ -13,7 +12,6 @@ import { HeaderVipComponent } from './header-vip/header-vip.component';
     AppComponent,
     FooterComponent,
     BodyComponent,
-    HeaderMenuComponent,
     HeaderVipComponent
   ],
   imports: [
