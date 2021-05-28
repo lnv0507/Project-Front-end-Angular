@@ -3,7 +3,7 @@
   position: relative;
   .menu-header {
     display: flex;
-    color: azure;
+    color: #f0ffff;
     position: absolute;
     padding-left: 200px;
     z-index: 99999999999999;
@@ -12,29 +12,47 @@
     transition: 0.4s;
     h2 {
       top: 1em;
-      position: relative;
-      left: 35%;
+      position: absolute;
+      left: 45%;
+      width: 100%;
     }
     .header-big {
+      transition: 0.4s;
       position: relative;
       top: 7em;
       display: flex;
       flex: 70%;
       position: relative;
-      justify-content: space-around;
+      justify-content: space-evenly;
+      left: 12em;
       h5 {
         cursor: pointer;
         position: relative;
       }
     }
+
     .icon-menu {
+      display: flex;
       flex: 30%;
       position: relative;
       left: 16em;
       top: 0.8em;
-      i {
-        padding: 0.8em;
-        cursor: pointer;
+      a {
+        color: #f0ffff;
+        i {
+          padding: 0.8em;
+          cursor: pointer;
+        }
+      }
+      .login-user {
+        position: absolute;
+        background-color: #f0ffff;
+        width: 200px;
+        height: 150px;
+        div{
+          background-color: blue;
+          height: 100px;
+        }
       }
     }
   }
@@ -42,7 +60,6 @@
     background-color: black;
   }
   .header-change {
-    transition: 0.4s;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -54,6 +71,13 @@
     .header-big {
       position: relative;
       top: 2em;
+    }
+    .icon-menu {
+      a {
+        label {
+          display: none;
+        }
+      }
     }
   }
   .container {
