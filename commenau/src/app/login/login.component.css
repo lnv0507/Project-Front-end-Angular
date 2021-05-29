@@ -94,7 +94,7 @@ button:hover {
 #container .container-login .wrap-login {
   width: 450px;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 64px;
   overflow: hidden;
   padding-left: 55px;
   padding-right: 55px;
@@ -135,7 +135,7 @@ button:hover {
   font-weight: bolder;
 }
 
-#container .container-login .wrap-login .login-form .wrap-input .input {
+#container .container-login .wrap-login .login-form .wrap-input #input1 {
   font-size: 16px;
   color: #333333;
   line-height: 1.2;
@@ -227,8 +227,10 @@ button:hover {
   z-index: -1;
   width: 300%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#3ac5c8), to(#92edff));
-  background: linear-gradient(#3ac5c8 0%, #92edff 100%);
+  background: linear-gradient(-45deg, #09e9de, #3ac5c8, #92edff);
+  -webkit-animation: gradient 6s ease infinite;
+          animation: gradient 6s ease infinite;
+  background-size: 400% 400%;
   top: 0;
   left: -100%;
   -webkit-transition: all 0.4s;
@@ -237,7 +239,8 @@ button:hover {
 
 #container .container-login .wrap-login .login-form .container-login-form-btn .wrap-login-form-btn .login-form-btn {
   font-family: Poppins-Medium;
-  font-size: 16px;
+  font-size: 19px;
+  font-weight: bolder;
   color: #fff;
   line-height: 1.2;
   text-transform: uppercase;
@@ -270,5 +273,29 @@ button:hover {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 150px;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 /*# sourceMappingURL=login.component.css.map */
