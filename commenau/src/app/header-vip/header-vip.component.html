@@ -9,20 +9,69 @@
       <h5>LIÊN HỆ</h5>
     </div>
     <div class="icon-menu">
-      <div>
-        <a href=""><i class="far fa-user"></i><label>Đăng nhập</label></a>
+      <div class="user-big">
+        <a class="userA" href=""><i class="far fa-user"></i><label>Đăng nhập</label></a>
         <div class="login-user">
           <div>
             <button>Tạo tài khoản</button>
           </div>
-          <button>Đăng nhập</button>
+          <button class="login-button">Đăng nhập</button>
         </div>
       </div>
-      <div>
-        <a href=""><i class="fas fa-briefcase"></i><label>Túi</label></a>
+      <div class="bag-big">
+        <a class="bagA" href=""><i class="fas fa-briefcase"></i><label>Túi</label></a>
+        <div class="bag-user">
+          <p class="food-bag">Túi Đồ Ăn</p>
+          <div class="item-cart">
+            <img
+              src="https://lh3.googleusercontent.com/proxy/1SM0KQZmvOvPPKTieWf5lQ2mRdT8YRDrIKVhoA0IexiQvgy0mzZpbdhBp7gYHBiNqYBVYOM1YniY9iJTX_OKHTZXnm_Ph1NdlUs-ofimctw"
+              alt=""
+            />
+            <div class="item-food">
+              <p>Cơm Gà</p>
+              <p>Số Lượng: <label for="">2</label></p>
+              <p>Giá: <label for="">23.000</label></p>
+            </div>
+          </div>
+          <div class="sub-total">
+            <p>Tổng Tiền</p>
+            <p>46.000</p>
+          </div>
+          <div>
+            <button>XEM CHI TIẾT TÚI</button>
+          </div>
+          <button class="bag-button">THANH TOÁN</button>
+        </div>
       </div>
-      <div>
-        <a href=""> <i class="fas fa-search"></i></a>
+      <div class="search-menu">
+        <a> <i (click)="searchClick()" class="search-cancel fas fa-search"></i></a>
+        <div class="search-menu-bar" [class.search-menu-charge]="search_click">
+          <div class="input-search">
+            <i class="fas fa-search"> </i>
+            <input placeholder="Bạn đang thèm gì nhờ?" type="text" />
+          </div>
+          <div class="title-search">
+            <ul>
+              <h5>Tìm Kiếm Nhiều Nhất</h5>
+              <li>
+                <i class="fas fa-search"> </i>
+                <p>Cơm Gà</p>
+              </li>
+              <li>
+                <i class="fas fa-search"> </i>
+                <p>Phở</p>
+              </li>
+              <li>
+                <i class="fas fa-search"> </i>
+                <p>Cơm Sườn</p>
+              </li>
+              <li>
+                <i class="fas fa-search"> </i>
+                <p>Cơm Gà</p>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>

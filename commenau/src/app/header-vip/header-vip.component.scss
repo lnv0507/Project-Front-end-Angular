@@ -1,12 +1,17 @@
+$blue: #3ac5c8;
+$black: #141619;
+$white: #ffffff;
+$gray: #e7e7e7;
+
 .header {
   width: 100%;
   position: relative;
   .menu-header {
     display: flex;
-    color: #f0ffff;
+    color: $white;
     position: absolute;
     padding-left: 200px;
-    z-index: 99999999999999;
+    z-index: 1;
     width: 100%;
     height: 120px;
     transition: 0.4s;
@@ -14,7 +19,6 @@
       top: 1em;
       position: absolute;
       left: 45%;
-      width: 100%;
     }
     .header-big {
       transition: 0.4s;
@@ -22,7 +26,6 @@
       top: 7em;
       display: flex;
       flex: 70%;
-      position: relative;
       justify-content: space-evenly;
       left: 12em;
       h5 {
@@ -35,35 +38,214 @@
       display: flex;
       flex: 30%;
       position: relative;
-      left: 16em;
+      margin-left: 20em;
       top: 0.8em;
       a {
-        color: #f0ffff;
+        color: $white;
         i {
           padding: 0.8em;
           cursor: pointer;
         }
       }
-      .login-user {
-        position: absolute;
-        background-color: #f0ffff;
-        width: 200px;
-        height: 150px;
-        div{
-          background-color: blue;
-          height: 100px;
+      .user-big {
+        height: 10px;
+        .login-user {
+          top: 5em;
+          transition: height 0.5s ease-in;
+          position: absolute;
+          background-color: $white;
+          width: 0px;
+          height: 0px;
+          left: -50px;
+          z-index: 2;
+          visibility: hidden;
+          opacity: 0;
+          overflow: hidden;
+          div {
+            background-color: $blue;
+            height: 100px;
+            button {
+              width: 150px;
+              height: 4em;
+              color: $black;
+              margin-top: 50px;
+              margin-left: 22%;
+            }
+          }
+          .login-button {
+            width: 150px;
+            height: 4em;
+            color: $white;
+            background-color: $black;
+            margin-top: 10px;
+            margin-left: 22%;
+          }
+        }
+      }
+      .user-big:hover {
+        .login-user {
+          height: 180px;
+          opacity: 1;
+          visibility: inherit;
+          width: 270px;
+        }
+      }
+      .bag-big {
+        height: 10px;
+        .bag-user {
+          top: 5em;
+          transition: height 0.5s ease-in;
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+          background-color: $white;
+          width: 0em;
+          height: 0em;
+          left: -50px;
+          z-index: 2;
+          overflow: hidden;
+          .food-bag {
+            color: $black;
+            margin-left: 34%;
+            margin-top: 0.7em;
+            font-size: 2em;
+          }
+          .item-cart {
+            color: $black;
+            display: flex;
+            margin-left: 20px;
+            font-size: 2em;
+            p {
+              margin-left: 10px;
+              color: darkgray;
+            }
+            p:nth-child(1) {
+              color: $black;
+            }
+            p:nth-child(2) {
+              color: darkgray;
+            }
+            img {
+              width: 70px;
+              height: 100px;
+            }
+          }
+          .sub-total {
+            margin-top: 2em;
+            border-top: solid 1px #141619;
+            border-bottom: solid 1px #141619;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            color: $black;
+            font-size: 2em;
+          }
+          div {
+            button {
+              font-size: 1.5em;
+              width: 90%;
+              height: 3em;
+              color: $black;
+              margin-top: 50px;
+              margin-left: 5%;
+              border: none;
+            }
+          }
+          .bag-button {
+            border: none;
+            font-size: 1.5em;
+            width: 90%;
+            height: 3em;
+            color: $white;
+            background-color: $black;
+            margin-top: 10px;
+            margin-left: 5%;
+          }
+        }
+      }
+      .bag-big:hover {
+        .bag-user {
+          opacity: 1;
+          visibility: inherit;
+          width: 35em;
+          height: 50em;
+        }
+      }
+      .search-menu {
+        .search-cancel {
+          font-size: 20px;
+          position: relative;
+          top: -0.7em;
+          right: 10px;
+        }
+        .search-menu-bar {
+          opacity: 0;
+          visibility: none;
+          background-color: $white;
+          color: #141619;
+          width: 0em;
+          position: absolute;
+          left: -30em;
+          top: 5em;
+          height: 0em;
+          padding: 2em 5em;
+          overflow: hidden;
+          transition: height 0.5s ease-in;
+          z-index: 2;
+        }
+        .input-search {
+          border-bottom: solid 1px black;
+          width: 90%;
+          font-size: 1.5em;
+          padding: 1em 0;
+          input {
+            margin-left: 10px;
+            border: none;
+            outline: none;
+            width: 90%;
+          }
+        }
+        .title-search {
+          margin-top: 2em;
+          ul {
+            h5 {
+              margin-bottom: 1em;
+            }
+            li {
+              display: flex;
+              i {
+                color: darkgray;
+                padding-right: 0.7em;
+                font-size: 1.5em;
+              }
+              p {
+                font-size: 1.5em;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+      .search-menu {
+        .search-menu-charge {
+          opacity: 1;
+          visibility: inherit;
+          height: 30em;
+          width: 50em;
+          transition: height 0.5s ease-out;
         }
       }
     }
   }
   .menu-header:hover {
-    background-color: black;
+    background-color: $black;
   }
   .header-change {
-    overflow: hidden;
+    
+    // overflow: hidden;
     position: fixed;
     top: 0;
-    background-color: black;
+    background-color: $black;
     height: 8%;
     h2 {
       visibility: hidden;
@@ -73,9 +255,18 @@
       top: 2em;
     }
     .icon-menu {
-      a {
+      .userA {
+        position: relative;
+        left: 6em;
         label {
-          display: none;
+          visibility: hidden;
+        }
+      }
+      .bagA {
+        position: relative;
+        left: 1.2em;
+        label {
+          visibility: hidden;
         }
       }
     }
