@@ -2,7 +2,7 @@
   <div [class.header-change]="header_variable" class="menu-header">
     <h2 id="idLogo">C O M M E N A U</h2>
     <div class="header-big">
-      <h5>TRANG CHỦ</h5>
+      <a routerLink="/trangchu"> <h5>TRANG CHỦ</h5></a>
       <h5>MENU</h5>
       <h5>PHẢN HỒI</h5>
       <h5>VỀ CHÚNG TÔI</h5>
@@ -10,7 +10,9 @@
     </div>
     <div class="icon-menu">
       <div class="user-big">
-        <a class="userA" href=""><i class="far fa-user"></i><label>Đăng nhập</label></a>
+        <a class="userA" routerLink="/login"
+          ><i class="far fa-user"></i><label>Đăng nhập</label></a
+        >
         <div class="login-user">
           <div>
             <button>Tạo tài khoản</button>
@@ -19,7 +21,9 @@
         </div>
       </div>
       <div class="bag-big">
-        <a class="bagA" href=""><i class="fas fa-briefcase"></i><label>Túi</label></a>
+        <a class="bagA" href=""
+          ><i class="fas fa-briefcase"></i><label>Túi</label></a
+        >
         <div class="bag-user">
           <p class="food-bag">Túi Đồ Ăn</p>
           <div class="item-cart">
@@ -44,7 +48,9 @@
         </div>
       </div>
       <div class="search-menu">
-        <a> <i (click)="searchClick()" class="search-cancel fas fa-search"></i></a>
+        <a>
+          <i (click)="searchClick()" class="search-cancel fas fa-search"></i
+        ></a>
         <div class="search-menu-bar" [class.search-menu-charge]="search_click">
           <div class="input-search">
             <i class="fas fa-search"> </i>
@@ -76,7 +82,7 @@
     </div>
   </div>
 
-  <div class="container">
+  <!-- <div class="container">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -111,5 +117,7 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-  </div>
+  </div> -->
 </div>
+
+<router-outlet></router-outlet>

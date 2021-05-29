@@ -1,0 +1,13 @@
+.container {
+    padding: 0;
+    position: relative;
+    margin: 0;
+    #myCarousel {
+      width: 152em;
+      .carousel-indicators {
+        position: absolute;
+        left: 15em;
+        // background-color: red;
+      }
+    }
+  }
