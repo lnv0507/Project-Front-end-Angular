@@ -20,6 +20,7 @@ import { RegisterComponent } from './register/register.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { VerifyComponent } from './verify/verify.component';
 import { HeaderMenuComponent } from './header-menu/header-menu.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { HeaderMenuComponent } from './header-menu/header-menu.component';
     ForgotPasswordComponent,
     VerifyComponent,
     HeaderMenuComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
