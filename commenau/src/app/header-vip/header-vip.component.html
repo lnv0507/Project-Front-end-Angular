@@ -2,28 +2,86 @@
   <div [class.header-change]="header_variable" class="menu-header">
     <h2 id="idLogo">C O M M E N A U</h2>
     <div class="header-big">
-      <a routerLink="/trangchu"> <h5>TRANG CHỦ</h5></a>
-      <h5>MENU</h5>
-      <h5>PHẢN HỒI</h5>
-      <h5>VỀ CHÚNG TÔI</h5>
-      <h5>LIÊN HỆ</h5>
+      <a routerLink="/trangchu">
+        <h5>
+          TRANG CHỦ
+          <div class="thanh-bar"></div></h5
+      ></a>
+      <a routerLink="/trangchu" class="menu-bar">
+        <h5>
+          MENU
+          <div class="thanh-bar"></div>
+        </h5>
+        <div class="menubar-header">
+          <ul>
+            <h5>Cơm</h5>
+            <li>Cơm gà</li>
+            <li>Cơm sườn</li>
+            <li>Cơm bò</li>
+            <li>Cơm chiên</li>
+            <li>Cơm hải sản</li>
+          </ul>
+          <ul>
+            <h5>Cơm</h5>
+            <li>Cơm gà</li>
+            <li>Cơm sườn</li>
+            <li>Cơm bò</li>
+            <li>Cơm chiên</li>
+            <li>Cơm hải sản</li>
+          </ul>
+          <ul>
+            <h5>Cơm</h5>
+            <li>Cơm gà</li>
+            <li>Cơm sườn</li>
+            <li>Cơm bò</li>
+            <li>Cơm chiên</li>
+            <li>Cơm hải sản</li>
+          </ul>
+          <ul>
+            <h5>Cơm</h5>
+            <li>Cơm gà</li>
+            <li>Cơm sườn</li>
+            <li>Cơm bò</li>
+            <li>Cơm chiên</li>
+            <li>Cơm hải sản</li>
+          </ul>
+        </div>
+      </a>
+      <a routerLink="/trangchu">
+        <h5>
+          PHẢN HỒI
+          <div class="thanh-bar"></div></h5
+      ></a>
+      <a routerLink="/trangchu">
+        <h5>
+          VỀ CHÚNG TÔI
+          <div class="thanh-bar"></div></h5
+      ></a>
+      <a routerLink="/trangchu">
+        <h5>
+          LIÊN HỆ
+          <div class="thanh-bar"></div></h5
+      ></a>
     </div>
     <div class="icon-menu">
-      <div class="user-big">
+      <div class="user-big thanhbar-muiten">
         <a class="userA" routerLink="/login"
           ><i class="far fa-user"></i><label>Đăng nhập</label></a
         >
+        <div class="thanh-bar"></div>
         <div class="login-user">
           <div>
-            <button>Tạo tài khoản</button>
+            <button routerLink="/register">Tạo tài khoản</button>
           </div>
-          <button class="login-button">Đăng nhập</button>
+          <button class="login-button" routerLink="/login">Đăng nhập</button>
         </div>
       </div>
-      <div class="bag-big">
+
+      <div class="bag-big thanhbar-muiten">
         <a class="bagA" href=""
           ><i class="fas fa-briefcase"></i><label>Túi</label></a
         >
+        <div class="thanh-bar"></div>
         <div class="bag-user">
           <p class="food-bag">Túi Đồ Ăn</p>
           <div class="item-cart">

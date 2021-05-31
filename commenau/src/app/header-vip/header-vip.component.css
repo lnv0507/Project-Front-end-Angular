@@ -40,7 +40,12 @@
   left: 12em;
 }
 
-.header .menu-header .header-big h5 {
+.header .menu-header .header-big a {
+  color: #e7e7e7;
+  text-decoration: none;
+}
+
+.header .menu-header .header-big a h5 {
   cursor: pointer;
   position: relative;
 }
