@@ -1,0 +1,36 @@
+$blue: #3ac5c8;
+$black: #141619;
+$white: #ffffff;
+$gray: #e7e7e7;
+div {
+  font-size: 10px;
+  background-color: $black;
+  .footer-header {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 15em;
+
+    color: $white;
+    .footer-vip {
+      h5 {
+        font-weight: bold;
+        color: darkgray;
+        padding-bottom: 1.5em;
+      }
+      a {
+        color: $white;
+        text-decoration: none;
+        p {
+          i {
+            color: darkgrey;
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  .footer-under {
+    color: darkgray;
+    padding: 10px 24em;
+  }
+}

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 const routersConfig: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: 'cart', component: CartComponent },
   { path: '', component: HeaderMenuComponent },
   { path: 'trangchu', component: HeaderMenuComponent },
   { path: 'register', component: RegisterComponent },
