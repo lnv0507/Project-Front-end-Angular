@@ -10,18 +10,14 @@ a {
   color: black;
   margin: 0px;
   transition: 0px;
-  text-decoration: none; 
-  }
+  text-decoration: none; }
+
+a:focus {
+  outline: none !important; }
 
 a:hover {
   text-decoration: none;
-  color: #3ac5c8; 
-  cursor: pointer;
-}
-span:hover{
-  color: #3ac5c8; 
-  cursor: pointer;
-}
+  color: #3ac5c8; }
 
 h1,
 h2,
@@ -72,7 +68,7 @@ button:hover {
     font-size: 30px;
     font-weight: 600; }
   .container .check-account {
-    width: 100%;
+    width: 90%;
     height: fit-content; }
     .container .check-account .detail-account {
       width: 100%;
@@ -104,7 +100,7 @@ button:hover {
         .container .check-account .detail-account .remember-pass label {
           margin-left: 2px; }
   .container .check-coupon {
-    width: 100%;
+    width: 90%;
     height: fit-content; }
     .container .check-coupon .detail-coupon {
       width: 100%;
