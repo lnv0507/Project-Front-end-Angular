@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 a {
     font-size: 14px;
@@ -133,6 +134,101 @@ button:hover{
                 margin-left: 20px;
             }
         }
+    }
+    .detail-checkout{
+        margin-top: 20px;
+        height: fit-content;
+        width: 50%;
+        float: left;
+        padding-right: 30px;
+        h1{
+            margin-top: 5px;
+            font-size: 20px;
+        }
+        input{
+            width: 100%;
+            height: 30px;
+            border: 2px solid #e1e1e1;
+            margin-bottom: 15px;
+            margin-top: 5px;
+        }
+        .phone-checkout , .email-checkout{
+            width: 50%;
+            float:left;
+        }
+        .email-checkout{
+            padding-left: 20px;
+        }
+        .phone-checkout{
+            padding-right: 20px;
+        }
+        .note-checkout{
+            width: 100%;
+            height:fit-content;
+        }
+        textarea{
+            width: 100%;
+            border: 2px solid #e1e1e1
+        }
+    }
+    .order-checkout{
+        width: 40%;
+        float: left;
+        padding: 30px;
+        border: black 2px solid ;
+        margin-top: 20px;
+        h1{
+            margin-top: 5px;
+            font-size: 20px;
+        }
+        h5{
+            font-size: 15px;
+        }
+        table{
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            .right{
+                text-align: right;
+            }
+            tr{
+                height: 20px;
+            }
+            th{
+                font-size: 14px;
+                font-weight: normal;
+            }
+            
+        }
+        .discount-checkout , .total-checkout{
+            width: 100%;
+            height: 20px;
+            margin-top: 10px;
+            h5{
+                float: left;
+            }
+            p{
+                float: right;
+            }
+        }
+        .btn-checkout{
+            width: 100%;
+            height: 30px;
+            margin-top: 20px;
+            
+            
+            button{
+                width: 300px;
+                border-radius: 10px;
+                margin-left: 20%;
+                height: 30px;
+                font-size: 15px;
+                background-color: #3ac5c8 ;
+            }
+        }
+        
+        
+        
     }
 
 }
