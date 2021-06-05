@@ -23,6 +23,7 @@ import { VerifyComponent } from './verify/verify.component';
 import { HeaderMenuComponent } from './header-menu/header-menu.component';
 import { CartComponent } from './cart/cart.component';
 import { ShopDetailComponent } from './shop-detail/shop-detail.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ShopDetailComponent } from './shop-detail/shop-detail.component';
     HeaderMenuComponent,
     CartComponent,
     ShopDetailComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,

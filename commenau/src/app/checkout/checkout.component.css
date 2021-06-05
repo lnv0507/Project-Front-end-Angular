@@ -1,0 +1,120 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+a {
+  font-size: 14px;
+  line-height: 1.7;
+  color: black;
+  margin: 0px;
+  transition: 0px;
+  text-decoration: none; }
+
+a:focus {
+  outline: none !important; }
+
+a:hover {
+  text-decoration: none;
+  color: #3ac5c8; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  font-size: 14px;
+  font-weight: 700;
+  color: black; }
+
+p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: black;
+  margin: 0px; }
+
+ul,
+li {
+  margin: 0px;
+  list-style-type: none; }
+
+textarea:focus,
+input:focus {
+  border-color: transparent !important; }
+
+button {
+  outline: none;
+  border: none;
+  background-color: black;
+  color: white;
+  width: 100px;
+  height: 20px;
+  border-radius: 2px; }
+
+button:hover {
+  cursor: pointer;
+  background-color: #3ac5c8; }
+
+.container {
+  margin: auto; }
+  .container .title-content {
+    color: #3ac5c8;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 600; }
+  .container .check-account {
+    width: 100%;
+    height: fit-content; }
+    .container .check-account .detail-account {
+      width: 100%;
+      height: 100px;
+      border: black 2px solid;
+      background-color: #f5f5f5;
+      padding: 5px;
+      padding-left: 20px; }
+      .container .check-account .detail-account .user-checkout, .container .check-account .detail-account .pass-checkout {
+        float: left;
+        width: 20%;
+        height: fit-content; }
+        .container .check-account .detail-account .user-checkout input, .container .check-account .detail-account .pass-checkout input {
+          width: 220px;
+          height: 25px;
+          border: 2px solid gray; }
+      .container .check-account .detail-account .pass-checkout {
+        width: 80%; }
+      .container .check-account .detail-account button {
+        float: left;
+        margin-top: 5px;
+        width: 10%; }
+      .container .check-account .detail-account .remember-pass {
+        height: fit-content;
+        margin-top: 5px;
+        width: 90%;
+        float: left;
+        padding-left: 30px; }
+        .container .check-account .detail-account .remember-pass label {
+          margin-left: 2px; }
+  .container .check-coupon {
+    width: 100%;
+    height: fit-content; }
+    .container .check-coupon .detail-coupon {
+      width: 100%;
+      height: fit-content;
+      border: black 2px solid;
+      background-color: #f5f5f5;
+      padding: 10px;
+      padding-left: 20px; }
+      .container .check-coupon .detail-coupon input {
+        width: 60%;
+        height: 30px;
+        border: 2px solid gray;
+        padding-left: 10px; }
+      .container .check-coupon .detail-coupon button {
+        height: 30px;
+        margin-left: 20px; }
+
+/*# sourceMappingURL=checkout.component.css.map */
