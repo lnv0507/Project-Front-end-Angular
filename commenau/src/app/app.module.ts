@@ -22,6 +22,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { VerifyComponent } from './verify/verify.component';
 import { HeaderMenuComponent } from './header-menu/header-menu.component';
 import { CartComponent } from './cart/cart.component';
+import { ShopDetailComponent } from './shop-detail/shop-detail.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { CartComponent } from './cart/cart.component';
     VerifyComponent,
     HeaderMenuComponent,
     CartComponent,
+    ShopDetailComponent,
   ],
   imports: [
     BrowserModule,
