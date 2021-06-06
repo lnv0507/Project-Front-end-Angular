@@ -42,8 +42,8 @@ export class HeaderVipComponent implements OnInit {
     // } else {
     //   document.body.style.backgroundColor = 'red';
     // }
-    
 
     // Note : Làm mờ khi click search mà chưa ra :))
   }
+ 
 }
