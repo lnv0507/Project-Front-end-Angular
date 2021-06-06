@@ -24,6 +24,7 @@ import { HeaderMenuComponent } from './header-menu/header-menu.component';
 import { CartComponent } from './cart/cart.component';
 import { ShopDetailComponent } from './shop-detail/shop-detail.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { Page404Component } from './page404/page404.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     CartComponent,
     ShopDetailComponent,
     CheckoutComponent,
+    Page404Component,
   ],
   imports: [
     BrowserModule,
