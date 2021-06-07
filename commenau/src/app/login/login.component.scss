@@ -1,3 +1,9 @@
+$blue: #3ac5c8;
+$blue1: #23536b;
+$blue2:#2B82AD;
+$black: #141619;
+$white: #ffffff;
+$gray: #e7e7e7;
 * {
   margin: 0px;
   padding: 0px;
@@ -15,7 +21,7 @@ a:focus {
 }
 a:hover {
   text-decoration: none;
-  color: #3ac5c8;
+  color: $blue2;
 }
 h1,
 h2,
@@ -28,7 +34,7 @@ h6 {
 p {
   font-size: 14px;
   line-height: 1.7;
-  color: black;
+  color: $black;
   margin: 0px;
 }
 ul,
@@ -75,7 +81,7 @@ button:hover {
     background-size: cover;
     .wrap-login {
       width: 450px;
-      background: #fff;
+      background: $white;
       border-radius: 64px;
       overflow: hidden;
       padding-left: 55px;
@@ -87,7 +93,7 @@ button:hover {
         .login-form-title {
           display: block;
           font-size: 39px;
-          color: #333333;
+          color: $black;
           line-height: 1.2;
           text-align: center;
           padding-bottom: 49px;
@@ -103,14 +109,14 @@ button:hover {
           margin-bottom: 23px;
           .label-input {
             font-size: 14px;
-            color: #333333;
+            color: $black;
             line-height: 1.5;
             padding-left: 7px;
             font-weight: bolder;
           }
           #input1 {
             font-size: 16px;
-            color: #333333;
+            color: $black;
             line-height: 1.2;
             display: block;
             width: 100%;
@@ -193,7 +199,7 @@ button:hover {
               z-index: -1;
               width: 300%;
               height: 100%;
-              background: linear-gradient(-45deg, #09e9de, #3ac5c8, #92edff);
+              background: linear-gradient(-45deg, $blue, $blue2, $blue1);
               animation: gradient 6s ease infinite;
               background-size: 400% 400%;
               top: 0;
@@ -205,10 +211,10 @@ button:hover {
               transition: all 0.4s;
             }
             .login-form-btn {
-              font-family: Poppins-Medium;
+     
               font-size: 19px;
               font-weight: bolder;
-              color: #fff;
+              color: $white;
               line-height: 1.2;
               text-transform: uppercase;
 
