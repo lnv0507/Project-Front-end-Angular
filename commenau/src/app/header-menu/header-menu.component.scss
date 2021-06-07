@@ -62,15 +62,15 @@
       }
 
       .slide1 {
-        background-image: url(https://source.unsplash.com/1000x750);
+        background-image: url(/assets/img/Body/slideshow1.jpg);
         animation: 20s slides-set-1 -0.1s infinite;
       }
       .slide2 {
-        background-image: url(https://source.unsplash.com/1001x751);
+        background-image: url(/assets/img/Body/slideshow2.jpg);
         animation: 20s slides-set-2 -0.1s infinite;
       }
       .slide3 {
-        background-image: url(https://source.unsplash.com/1002x752);
+        background-image: url(/assets/img/Body/slideshow3.jpg);
         animation: 20s slides-set-3 -0.1s infinite;
       }
 
@@ -130,7 +130,7 @@
             rgba(200, 200, 75, 0.25) 0,
             rgba(200, 75, 75, 0.5) 100%
           ),
-          url(https://source.unsplash.com/1000x750);
+          url(/assets/img/Body/slideshow1.jpg);
         // background-image: url(../img/slideshow/hero-1.jpg);
         animation: 20s slides-set-1 -0.2s infinite;
       }
@@ -140,7 +140,7 @@
             rgba(200, 200, 75, 0.25) 0,
             rgba(200, 75, 75, 0.5) 100%
           ),
-          url(https://source.unsplash.com/1001x751);
+          url(/assets/img/Body/slideshow2.jpg);
         // background-image: url(../img/slideshow/hero-2.jpg);
         animation: 20s slides-set-2 -0.2s infinite;
       }
@@ -150,7 +150,7 @@
             rgba(200, 200, 75, 0.25) 0,
             rgba(200, 75, 75, 0.5) 100%
           ),
-          url(https://source.unsplash.com/1002x752);
+          url(/assets/img/Body/slideshow3.jpg);
         // background-image: url(../img/slideshow/hero-3.jpg);
         animation: 20s slides-set-3 -0.2s infinite;
       }
