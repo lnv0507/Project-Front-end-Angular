@@ -6,16 +6,16 @@ $gray: #e7e7e7;
 .header {
   width: 100%;
   position: relative;
-  .menu-header2 {
-    display: flex;
-    color: $white;
-    position: absolute;
-    padding-left: 200px;
-    z-index: 1;
-    width: 100%;
-    height: 110px;
-    transition: 0.4s;
-  }
+  // .menu-header2 {
+  //   display: flex;
+  //   color: $white;
+  //   position: absolute;
+  //   padding-left: 200px;
+  //   z-index: 1;
+  //   width: 100%;
+  //   height: 110px;
+  //   transition: 0.4s;
+  // }
   .menu-header {
     display: flex;
     color: $white;
