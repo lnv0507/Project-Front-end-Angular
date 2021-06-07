@@ -2,13 +2,16 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 const routersConfig: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'cart', component: CartComponent },
+  { path: 'dangnhap', component: LoginComponent },
+  { path: 'giohang', component: CartComponent },
   { path: '', component: HeaderMenuComponent },
   { path: 'trangchu', component: HeaderMenuComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'forgot', component: ForgotPasswordComponent },
-  { path: 'verify', component: VerifyComponent },
+  { path: 'dangky', component: RegisterComponent },
+  { path: 'quenmatkhau', component: ForgotPasswordComponent },
+  { path: 'thanhtoan', component: CheckoutComponent },
+  { path: 'chitietsanpham', component: ShopDetailComponent },
+  { path: '**', component: Page404Component },
+  { path: 'kiemtra', component: VerifyComponent },
 ];
 
 import { AppRoutingModule } from './app-routing.module';

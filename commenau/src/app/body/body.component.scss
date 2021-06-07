@@ -1,4 +1,4 @@
-$blue: #3ac5c8;
+$blue: #2b82ad;
 $black: #141619;
 $white: #ffffff;
 $gray: #e7e7e7;
@@ -32,6 +32,104 @@ $gray: #e7e7e7;
     button:nth-last-child(1) {
       position: relative;
       left: 10px;
+    }
+  }
+  // San Pham Slide
+  div {
+    .related-product {
+      padding-bottom: 30px;
+      .related__product__title {
+        margin-bottom: 70px;
+      }
+      .product__item {
+        margin-bottom: 50px;
+        .product__item__pic {
+          height: 270px;
+          // width: 290px;
+          position: relative;
+          overflow: hidden;
+
+          .product__item__pic__hover {
+            position: absolute;
+            left: 0;
+            bottom: -50px;
+            width: 100%;
+            text-align: center;
+            -webkit-transition: all, 0.5s;
+            -moz-transition: all, 0.5s;
+            -ms-transition: all, 0.5s;
+            -o-transition: all, 0.5s;
+            transition: all, 0.5s;
+
+            li {
+              list-style: none;
+              display: inline-block;
+              margin-right: 6px;
+              a {
+                font-size: 16px;
+                color: #1c1c1c;
+                height: 40px;
+                width: 40px;
+                line-height: 40px;
+                text-align: center;
+                border: 1px solid #ebebeb;
+                background: #ffffff;
+                display: block;
+                border-radius: 50%;
+                -webkit-transition: all, 0.5s;
+                -moz-transition: all, 0.5s;
+                -ms-transition: all, 0.5s;
+                -o-transition: all, 0.5s;
+                transition: all, 0.5s;
+                i {
+                  position: relative;
+                  transform: rotate(0);
+                  -webkit-transition: all, 0.3s;
+                  -moz-transition: all, 0.3s;
+                  -ms-transition: all, 0.3s;
+                  -o-transition: all, 0.3s;
+                  transition: all, 0.3s;
+                }
+              }
+            }
+            li:last-child {
+              margin-right: 0;
+            }
+            li:hover a {
+              background: #3ac5c8;
+              border-color: #3ac5c8;
+              i {
+                color: #ffffff;
+                transform: rotate(360deg);
+              }
+            }
+          }
+        }
+        .product__item__text {
+          text-align: center;
+          padding-top: 15px;
+          h6 {
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            a {
+              color: #141619;
+              text-decoration: none;
+            }
+          }
+          h5 {
+            color: #141619;
+            font-weight: 700;
+          }
+        }
+      }
+      .product__item:hover .product__item__pic .product__item__pic__hover {
+        bottom: 20px;
+      }
+      .product__item:hover {
+        -webkit-box-shadow: 0px 0px 10px 2px #3ac5c8;
+        box-shadow: 0px 0px 10px 2px #3ac5c8;
+      }
     }
   }
 }
