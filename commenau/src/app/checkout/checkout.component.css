@@ -59,7 +59,8 @@ button:hover {
   background-color: #3ac5c8; }
 
 .container {
-  margin: auto; }
+  margin: auto;
+  margin-bottom: 100px; }
   .container .title-content {
     color: #3ac5c8;
     text-align: center;
@@ -68,8 +69,12 @@ button:hover {
     font-size: 30px;
     font-weight: 600; }
   .container .check-account {
-    width: 90%;
+    width: 53%;
     height: fit-content; }
+    .container .check-account a {
+      cursor: pointer; }
+    .container .check-account a:hover {
+      color: #3ac5c8; }
     .container .check-account .detail-account {
       width: 100%;
       height: 100px;
@@ -79,14 +84,14 @@ button:hover {
       padding-left: 20px; }
       .container .check-account .detail-account .user-checkout, .container .check-account .detail-account .pass-checkout {
         float: left;
-        width: 20%;
+        width: 40%;
         height: fit-content; }
         .container .check-account .detail-account .user-checkout input, .container .check-account .detail-account .pass-checkout input {
           width: 220px;
           height: 25px;
           border: 2px solid gray; }
       .container .check-account .detail-account .pass-checkout {
-        width: 80%; }
+        width: 60%; }
       .container .check-account .detail-account button {
         float: left;
         margin-top: 5px;
@@ -100,8 +105,12 @@ button:hover {
         .container .check-account .detail-account .remember-pass label {
           margin-left: 2px; }
   .container .check-coupon {
-    width: 90%;
+    width: 53%;
     height: fit-content; }
+    .container .check-coupon a {
+      cursor: pointer; }
+    .container .check-coupon a:hover {
+      color: #3ac5c8; }
     .container .check-coupon .detail-coupon {
       width: 100%;
       height: fit-content;
@@ -110,7 +119,7 @@ button:hover {
       padding: 10px;
       padding-left: 20px; }
       .container .check-coupon .detail-coupon input {
-        width: 60%;
+        width: 80%;
         height: 30px;
         border: 2px solid gray;
         padding-left: 10px; }
@@ -120,9 +129,9 @@ button:hover {
   .container .detail-checkout {
     margin-top: 20px;
     height: fit-content;
-    width: 50%;
+    width: 60%;
     float: left;
-    padding-right: 30px; }
+    padding-right: 100px; }
     .container .detail-checkout h1 {
       margin-top: 5px;
       font-size: 20px; }

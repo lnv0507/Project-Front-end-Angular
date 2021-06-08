@@ -1,0 +1,142 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+h5{
+    background-color: white;
+    font-size: 14px;
+}
+h2{
+    font-weight: 700;
+}
+p{
+    font-weight: 600;
+}
+.container{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    
+    .title-order{
+        color: #3ac5c8;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .order-detail{
+        width: 100%;
+        
+        .order-left{
+            width: 60%;
+            float: left;
+            padding-right: 50px;
+            padding-left: 50px;
+            .info-customer{
+                width: 100%;
+                height: 150px;
+                .info-detail-customer{
+                    margin: 5%;
+                    .name-order , .addres-order, .phone-order{
+                        width: 100%;
+                        h5{
+                            width: 30%;
+                            float: left;
+                            height: fit-content;
+                        }
+                        p{
+                            width: 70%;
+                            height: fit-content;
+                            float: left;
+                        }
+                    }
+                }
+            }
+            .order-detail{
+                width: 100%;
+                height: auto;
+                .order{
+                    margin-top: 30px;
+                    padding-right: 5%;
+                    padding-left: 5%;
+                    table{
+                        width: 100%;
+                        margin-top: 5px;
+                        margin-bottom: 5px;
+                        h5{
+                            font-weight: 600;
+                            font-size: 18px;
+                        }
+                        th{
+                            font-weight: normal;
+                        }
+                        .right{
+                            float: right;
+                        }
+                    }
+                    .discount-checkout , .total-checkout{
+                        width: 100%;
+                        height: 21px;
+                        h5{
+                            float: left;
+                        }
+                        p{
+                            float: right;
+                            font-weight: normal;
+                        }
+                        .bold{
+                            font-weight: 600;
+                        }
+                    }
+                }
+               
+            }
+
+        }
+        .order-right{
+            width: 40%;
+            float: left;
+            margin-top: 30px;
+            .order-right-detail{
+                border: 2px solid black;
+                background-color: lightgray;
+                height: 250px;
+                float: right;
+                width: 100%;
+                h2{
+                    margin-top: 30px;
+                    text-align: center;
+                }
+                .content-detail{
+                    width: 100%;
+                    padding-top: 30px;
+                    padding-left: 60px;
+
+                    .id-order , .date-order, .total-order{
+                        width: 100%;
+                        height: 30px;
+                        h5{
+                            width: 40%;
+                            float: left;
+                        }
+                        p{
+                            width: 60%;
+                            float: left;
+                        }
+                    }
+
+                }
+                h5{
+                    background-color: lightgray;
+                }
+                
+            }
+        }
+
+    }
+    
+}

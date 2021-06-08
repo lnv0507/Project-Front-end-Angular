@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     margin: auto;
+    margin-bottom: 100px;
     .title-table{
         font-size: 20px;
     }
@@ -18,17 +19,18 @@
         height: 20px;
     }
     .title-cart{
-        width: fit-content;
-        margin: auto;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        color: #3ac5c8 ;
-        font-weight: bolder;
+        color: #3ac5c8;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
         font-size: 30px;
+        font-weight: 600;
+        
     }
     .list-cart{
-        width: 50%;
+        width: 70%;
         float: left;
+        padding-right: 60px;
         td{
             font-size: 15px;
         }
@@ -62,8 +64,7 @@
     }
     .cart-right{
         float: left;
-        width: 40%;
-        margin-left: 40px;
+        width: 30%;
         padding-top: 5px;
         border-left: black solid 2px;
         padding-left: 40px;

@@ -1,7 +1,7 @@
 <div class="container">
     <h1 class="title-content">THANH TOÁN</h1>
     <div class="check-account">
-        <h5>Bạn đã có tài khoản? <span (click) = "displayAccount()">Nhấn vào để đăng nhập</span></h5>
+        <h5>Bạn đã có tài khoản? <a (click) = "displayAccount()">Nhấn vào để đăng nhập</a></h5>
         <div class="detail-account" *ngIf = "showAccount">
             <div class="user-checkout">
                 <h5>Số điện thoại hoặc email*</h5>
@@ -9,7 +9,7 @@
             </div>
             <div class="pass-checkout">
                 <h5>Mật khẩu*</h5>
-                <input type="text">
+                <input type="password">
             </div>
             
             <button>ĐĂNG NHẬP</button>
@@ -44,7 +44,7 @@
             <input type="text">
         </div>
         <div class="email-checkout">
-            <h5>Email</h5>
+            <h5>Email*</h5>
             <input type="text">
         </div>
         <h5>Bạn chưa có tài khoản? <a href="">Đăng kí ngay</a></h5>
