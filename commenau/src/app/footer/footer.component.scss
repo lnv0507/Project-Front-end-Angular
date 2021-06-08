@@ -2,27 +2,50 @@ $blue: #23536b;
 $black: #141619;
 $white: #ffffff;
 $gray: #e7e7e7;
-div {
-  font-size: 10px;
+.footer-1 {
   background-color: $blue;
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 220px;
+  // height: 200px;
+  div {
+    border: 1px dashed $white;
+    width: 45%;
+    background-color: $blue;
+    padding: 20px;
+    height: 100%;
+    h5 {
+      font-size: 20px;
+      margin-left: 15%;
+      padding: 20px;
+    }
+    p {
+      font-size: 15px;
+      margin-left: 10%;
+    }
+  }
+}
+div {
+  font-size: 15px;
+  background-color: $white;
   .footer-header {
     display: flex;
     justify-content: space-around;
     padding: 20px 15em;
-
-    color: $white;
+    color: $black;
     .footer-vip {
       h5 {
         font-weight: bold;
-        color: darkgray;
+        color: $blue;
         padding-bottom: 1.5em;
       }
       a {
-        color: $white;
+        color: $black;
         text-decoration: none;
         p {
           i {
-            color: darkgrey;
+            color: $black;
             padding-right: 10px;
           }
         }
@@ -30,7 +53,9 @@ div {
     }
   }
   .footer-under {
+    background-color: $black;
     color: darkgray;
     padding: 10px 24em;
+    font-size: 10px;
   }
 }

@@ -7,6 +7,7 @@ $gray: #e7e7e7;
 
   .title-body {
     margin-left: 45%;
+    margin-bottom: 10em;
     h5 {
       font-size: 30px;
     }
@@ -33,12 +34,31 @@ $gray: #e7e7e7;
       left: 10px;
     }
   }
+  .title-everyday{
+    h5{
+      margin-left: 42%;
+      font-size: 30px;
+    }
+    ul{
+      margin-left: 30%;
+      font-size: 15px;
+    }
+    .tab-panels{
+      p{
+        font-size: 20px;
+      }
+    }
+  }
   // San Pham Slide
   div {
     .related-product {
       padding-bottom: 30px;
       .related__product__title {
         margin-bottom: 70px;
+        margin-left: 40%;
+        h2{
+          font-size: 30px;
+        }
       }
       .product__item {
         margin-bottom: 50px;
