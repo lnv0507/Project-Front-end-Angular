@@ -34,17 +34,17 @@ $gray: #e7e7e7;
       left: 10px;
     }
   }
-  .title-everyday{
-    h5{
+  .title-everyday {
+    h5 {
       margin-left: 42%;
       font-size: 30px;
     }
-    ul{
+    ul {
       margin-left: 30%;
       font-size: 15px;
     }
-    .tab-panels{
-      p{
+    .tab-panels {
+      p {
         font-size: 20px;
       }
     }
@@ -52,13 +52,9 @@ $gray: #e7e7e7;
   // San Pham Slide
   div {
     .related-product {
-      padding-bottom: 30px;
+      padding-bottom: 20px;
       .related__product__title {
         margin-bottom: 70px;
-        margin-left: 40%;
-        h2{
-          font-size: 30px;
-        }
       }
       .product__item {
         margin-bottom: 50px;
@@ -67,7 +63,7 @@ $gray: #e7e7e7;
           // width: 290px;
           position: relative;
           overflow: hidden;
-
+    
           .product__item__pic__hover {
             position: absolute;
             left: 0;
@@ -79,20 +75,20 @@ $gray: #e7e7e7;
             -ms-transition: all, 0.5s;
             -o-transition: all, 0.5s;
             transition: all, 0.5s;
-
+    
             li {
               list-style: none;
               display: inline-block;
               margin-right: 6px;
               a {
                 font-size: 16px;
-                color: #1c1c1c;
+                color: $black;
                 height: 40px;
                 width: 40px;
                 line-height: 40px;
                 text-align: center;
                 border: 1px solid #ebebeb;
-                background: #ffffff;
+                background: $white;
                 display: block;
                 border-radius: 50%;
                 -webkit-transition: all, 0.5s;
@@ -115,10 +111,10 @@ $gray: #e7e7e7;
               margin-right: 0;
             }
             li:hover a {
-              background: #3ac5c8;
-              border-color: #3ac5c8;
+              background: $blue;
+              border-color: $blue;
               i {
-                color: #ffffff;
+                color: $white;
                 transform: rotate(360deg);
               }
             }
@@ -132,12 +128,12 @@ $gray: #e7e7e7;
             font-weight: bold;
             font-size: 20px;
             a {
-              color: #141619;
+              color: $black;
               text-decoration: none;
             }
           }
           h5 {
-            color: #141619;
+            color: $black;
             font-weight: 700;
           }
         }
@@ -146,9 +142,56 @@ $gray: #e7e7e7;
         bottom: 20px;
       }
       .product__item:hover {
-        -webkit-box-shadow: 0px 0px 10px 2px #3ac5c8;
-        box-shadow: 0px 0px 10px 2px #3ac5c8;
+        // -webkit-box-shadow: 0px 0px 10px 2px $blue2;
+        // box-shadow: 0px 0px 10px 2px $blue2;
+        transform: scale(1.07);
+        visibility: visible;
       }
     }
   }
+}
+@import url("https://fonts.googleapis.com/css?family=Creepster");
+
+$frame-duration: 0.3;
+$images-list: "/assets/img/product/1.png", "/assets/img/product/1.png",
+  "/assets/img/product/2.png", "/assets/img/product/3.png",
+  "/assets/img/product/4.png", "/assets/img/product/5.png",
+  "/assets/img/product/6.png";
+
+h1 {
+  margin: 0;
+  font-size: 20em;
+  line-height: 25vw;
+  font-family: Creepster, sans-serif;
+  color: #ff6d00;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  animation: slideshow #{length($images-list) * $frame-duration}s infinite
+    steps(1);
+}
+
+@keyframes slideshow {
+  @for $i from 1 through length($images-list) {
+    $percent: if($i == 1, (0%, 100%), (100% / length($images-list) * ($i - 1)));
+    #{$percent} {
+      background-image: url(nth($images-list, $i));
+    }
+  }
+}
+.title-load {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // background-color: #ffe0b2;
+  // background-image: url("/assets/img/Body/slideshow4.jpg");
+  // background-repeat: no-repeat;
 }
