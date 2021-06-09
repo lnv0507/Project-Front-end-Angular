@@ -29,6 +29,7 @@ import { ShopDetailComponent } from './shop-detail/shop-detail.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { Page404Component } from './page404/page404.component';
 import { OrderComponent } from './order/order.component';
+import { DetailCustomerComponent } from './detail-customer/detail-customer.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { OrderComponent } from './order/order.component';
     CheckoutComponent,
     Page404Component,
     OrderComponent,
+    DetailCustomerComponent,
   ],
   imports: [
     BrowserModule,
