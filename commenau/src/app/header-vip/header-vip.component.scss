@@ -2,326 +2,327 @@ $blue: #23536b;
 $black: #141619;
 $white: #ffffff;
 $gray: #e7e7e7;
-
+.menu-header2 {
+  display: flex;
+  color: $blue;
+  position: absolute;
+  padding-left: 200px;
+  z-index: 999999;
+  width: 100%;
+  height: 110px;
+  transition: 0.4s;
+  // background-color: red;
+}
+.menu-header {
+  display: flex;
+  color: $white;
+  position: relative;
+  padding-left: 200px;
+  z-index: 99999;
+  width: 100%;
+  height: 110px;
+  transition: all 0.1s;
+  background-color: $blue;
+}
 .header {
   width: 100%;
   position: relative;
-  // .menu-header2 {
-  //   display: flex;
-  //   color: $white;
-  //   position: absolute;
-  //   padding-left: 200px;
-  //   z-index: 1;
-  //   width: 100%;
-  //   height: 110px;
-  //   transition: 0.4s;
-  // }
-  .menu-header {
-    display: flex;
-    color: $white;
+
+  h2 {
+    top: 1em;
+    position: absolute;
+    left: 45%;
+  }
+  .header-big {
+    transition: 0.4s;
     position: relative;
-    padding-left: 200px;
-    z-index: 99999;
-    width: 100%;
-    height: 110px;
-    transition: all 0.1s;
-    background-color: $blue;
-    h2 {
-      top: 1em;
-      position: absolute;
-      left: 45%;
-    }
-    .header-big {
-      transition: 0.4s;
-      position: relative;
-      top: 7em;
-      display: flex;
-      flex: 70%;
-      justify-content: space-evenly;
-      left: 12em;
+    top: 7em;
+    display: flex;
+    flex: 70%;
+    justify-content: space-evenly;
+    left: 12em;
 
-      .menu-bar {
-        .menubar-header {
-          background-color: $white;
-          height: 0px;
-          width: 0px;
-          position: absolute;
-          display: flex;
-          justify-content: space-between;
-          transition: height 0.5s ease-in-out;
-          margin-top: 0.6em;
-          opacity: 0;
-          visibility: hidden;
-          overflow: hidden;
-          ul {
-            color: black;
-            list-style: none;
-            h5 {
-              font-size: 1.2em;
-            }
-            li {
-              font-size: 1.2em;
-            }
+    .menu-bar {
+      .menubar-header {
+        background-color: $white;
+        height: 0px;
+        width: 0px;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        transition: height 0.5s ease-in-out;
+        margin-top: 0.6em;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+        ul {
+          color: black;
+          list-style: none;
+          h5 {
+            font-size: 1.2em;
+          }
+          li {
+            font-size: 1.2em;
           }
         }
       }
-      .menu-bar:hover {
-        .menubar-header {
-          transition: 0.4s;
-          right: -30%;
-          visibility: inherit;
-          height: 17em;
-          opacity: 1;
-          width: 150%;
-          padding: 2em 20em;
-        }
-      }
-      a {
-        color: $gray;
-        text-decoration: none;
-        height: 4em;
-        h5 {
-          cursor: pointer;
-          position: relative;
-        }
-      }
-      a:hover {
-        .thanh-bar {
-          position: relative;
-          border-top: 5px solid transparent;
-          border-right: 5px solid transparent;
-          border-bottom: 5px solid $white;
-          border-left: 5px solid transparent;
-          width: 0;
-          height: 0;
-          margin: auto;
-          margin-top: 5px;
-        }
+    }
+    .menu-bar:hover {
+      .menubar-header {
+        transition: 0.4s;
+        right: -30%;
+        visibility: inherit;
+        height: 17em;
+        opacity: 1;
+        width: 150%;
+        padding: 2em 20em;
       }
     }
-    .icon-menu {
-      display: flex;
-      flex: 30%;
-      position: relative;
-      margin-left: 20em;
-      top: 0.8em;
-
-      a {
+    a {
+      color: $gray;
+      text-decoration: none;
+      height: 4em;
+      h5 {
+        cursor: pointer;
         position: relative;
-        left: 0;
-        transition: left 0.4s;
-        color: $white;
-        i {
-          padding: 0.8em;
-          cursor: pointer;
-        }
       }
-      .user-big {
-        height: 1.9em;
-        .login-user {
-          // top: 5em;
-          transition: height 0.5s ease-in;
-          position: absolute;
-          background-color: $white;
-          width: 0px;
-          height: 0px;
-          left: -50px;
-          z-index: 2;
-          visibility: hidden;
-          opacity: 0;
-          overflow: hidden;
-          div {
-            background-color: #2b82ad;
-            height: 100px;
-            button {
-              width: 150px;
-              height: 4em;
-              color: $black;
-              margin-top: 50px;
-              margin-left: 22%;
-            }
-          }
-          .login-button {
+    }
+    a:hover {
+      .thanh-bar {
+        position: relative;
+        border-top: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid $white;
+        border-left: 5px solid transparent;
+        width: 0;
+        height: 0;
+        margin: auto;
+        margin-top: 5px;
+      }
+    }
+  }
+  .icon-menu {
+    display: flex;
+    flex: 30%;
+    position: relative;
+    margin-left: 20em;
+    top: 0.8em;
+
+    a {
+      position: relative;
+      left: 0;
+      transition: left 0.4s;
+      color: $white;
+      i {
+        padding: 0.8em;
+        cursor: pointer;
+      }
+    }
+    .user-big {
+      height: 1.9em;
+      .login-user {
+        // top: 5em;
+        transition: height 0.5s ease-in;
+        position: absolute;
+        background-color: $white;
+        width: 0px;
+        height: 0px;
+        left: -50px;
+        z-index: 2;
+        visibility: hidden;
+        opacity: 0;
+        overflow: hidden;
+        div {
+          background-color: #2b82ad;
+          height: 100px;
+          button {
             width: 150px;
             height: 4em;
-            color: $white;
-            background-color: $black;
-            margin-top: 10px;
+            color: $black;
+            margin-top: 50px;
             margin-left: 22%;
           }
         }
-      }
-      .user-big:hover {
-        .login-user {
-          height: 180px;
-          opacity: 1;
-          visibility: inherit;
-          width: 270px;
+        .login-button {
+          width: 150px;
+          height: 4em;
+          color: $white;
+          background-color: $black;
+          margin-top: 10px;
+          margin-left: 22%;
         }
       }
-      .bag-big {
-        height: 1.9em;
-        .bag-user {
-          // margin-top: 1em;
-          transition: height 0.5s ease-in;
-          visibility: hidden;
-          opacity: 0;
-          position: absolute;
-          background-color: $white;
-          width: 0em;
-          height: 0em;
-          left: -50px;
-          z-index: 2;
-          overflow: hidden;
-          .food-bag {
+    }
+    .user-big:hover {
+      .login-user {
+        height: 180px;
+        opacity: 1;
+        visibility: inherit;
+        width: 270px;
+      }
+    }
+    .bag-big {
+      height: 1.9em;
+      .bag-user {
+        // margin-top: 1em;
+        transition: height 0.5s ease-in;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        background-color: $white;
+        width: 0em;
+        height: 0em;
+        left: -50px;
+        z-index: 2;
+        overflow: hidden;
+        .food-bag {
+          color: $black;
+          margin-left: 34%;
+          margin-top: 0.7em;
+          font-size: 2em;
+        }
+        .item-cart {
+          color: $black;
+          display: flex;
+          margin-left: 20px;
+          font-size: 2em;
+          p {
+            margin-left: 10px;
+            color: darkgray;
+          }
+          p:nth-child(1) {
             color: $black;
-            margin-left: 34%;
-            margin-top: 0.7em;
-            font-size: 2em;
           }
-          .item-cart {
-            color: $black;
-            display: flex;
-            margin-left: 20px;
-            font-size: 2em;
-            p {
-              margin-left: 10px;
-              color: darkgray;
-            }
-            p:nth-child(1) {
-              color: $black;
-            }
-            p:nth-child(2) {
-              color: darkgray;
-            }
-            img {
-              width: 70px;
-              height: 100px;
-            }
+          p:nth-child(2) {
+            color: darkgray;
           }
-          .sub-total {
-            margin-top: 2em;
-            border-top: solid 1px #141619;
-            border-bottom: solid 1px #141619;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            color: $black;
-            font-size: 2em;
+          img {
+            width: 70px;
+            height: 100px;
           }
-          div {
-            button {
-              font-size: 1.5em;
-              width: 90%;
-              height: 3em;
-              color: $black;
-              margin-top: 50px;
-              margin-left: 5%;
-              border: none;
-            }
-          }
-          .bag-button {
-            border: none;
+        }
+        .sub-total {
+          margin-top: 2em;
+          border-top: solid 1px #141619;
+          border-bottom: solid 1px #141619;
+          padding: 20px;
+          display: flex;
+          justify-content: space-between;
+          color: $black;
+          font-size: 2em;
+        }
+        div {
+          button {
             font-size: 1.5em;
             width: 90%;
             height: 3em;
-            color: $white;
-            background-color: $black;
-            margin-top: 10px;
+            color: $black;
+            margin-top: 50px;
             margin-left: 5%;
-          }
-        }
-      }
-      .bag-big:hover {
-        .bag-user {
-          opacity: 1;
-          visibility: inherit;
-          width: 35em;
-          height: 50em;
-        }
-      }
-      .thanhbar-muiten:hover {
-        .thanh-bar {
-          position: relative;
-          border-top: 7px solid transparent;
-          border-right: 7px solid transparent;
-          border-bottom: 7px solid $white;
-          border-left: 7px solid transparent;
-          width: 0;
-          height: 0;
-          margin: auto;
-        }
-      }
-      .search-menu {
-        .search-cancel {
-          font-size: 20px;
-          position: relative;
-          top: -0.7em;
-          right: 10px;
-        }
-        .search-menu-bar {
-          opacity: 0;
-          visibility: none;
-          background-color: $white;
-          color: #141619;
-          width: 0em;
-          position: absolute;
-          left: -30em;
-          top: 5em;
-          height: 0em;
-          padding: 2em 5em;
-          overflow: hidden;
-          transition: height 0.5s ease-in;
-          z-index: 2;
-        }
-        .input-search {
-          border-bottom: solid 1px black;
-          width: 90%;
-          font-size: 1.5em;
-          padding: 1em 0;
-          input {
-            margin-left: 10px;
             border: none;
-            outline: none;
-            width: 90%;
           }
         }
-        .title-search {
-          margin-top: 2em;
-          ul {
-            h5 {
-              margin-bottom: 1em;
+        .bag-button {
+          border: none;
+          font-size: 1.5em;
+          width: 90%;
+          height: 3em;
+          color: $white;
+          background-color: $black;
+          margin-top: 10px;
+          margin-left: 5%;
+        }
+      }
+    }
+    .bag-big:hover {
+      .bag-user {
+        opacity: 1;
+        visibility: inherit;
+        width: 35em;
+        height: 50em;
+      }
+    }
+    .thanhbar-muiten:hover {
+      .thanh-bar {
+        position: relative;
+        border-top: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid $white;
+        border-left: 7px solid transparent;
+        width: 0;
+        height: 0;
+        margin: auto;
+      }
+    }
+    .search-menu {
+      .search-cancel {
+        font-size: 20px;
+        position: relative;
+        top: -0.7em;
+        right: 10px;
+      }
+      .search-menu-bar {
+        opacity: 0;
+        visibility: none;
+        background-color: $white;
+        color: #141619;
+        width: 0em;
+        position: absolute;
+        left: -30em;
+        top: 5em;
+        height: 0em;
+        padding: 2em 5em;
+        overflow: hidden;
+        transition: height 0.5s ease-in;
+        z-index: 2;
+      }
+      .input-search {
+        border-bottom: solid 1px black;
+        width: 90%;
+        font-size: 1.5em;
+        padding: 1em 0;
+        input {
+          margin-left: 10px;
+          border: none;
+          outline: none;
+          width: 90%;
+        }
+      }
+      .title-search {
+        margin-top: 2em;
+        ul {
+          h5 {
+            margin-bottom: 1em;
+          }
+          li {
+            display: flex;
+            i {
+              color: darkgray;
+              padding-right: 0.7em;
+              font-size: 1.5em;
             }
-            li {
-              display: flex;
-              i {
-                color: darkgray;
-                padding-right: 0.7em;
-                font-size: 1.5em;
-              }
-              p {
-                font-size: 1.5em;
-                font-weight: bold;
-              }
+            p {
+              font-size: 1.5em;
+              font-weight: bold;
             }
           }
         }
       }
-      .search-menu {
-        .search-menu-charge {
-          opacity: 1;
-          visibility: inherit;
-          height: 30em;
-          width: 50em;
-          transition: height 0.5s ease-out;
-        }
+    }
+    .search-menu {
+      .search-menu-charge {
+        opacity: 1;
+        visibility: inherit;
+        height: 30em;
+        width: 50em;
+        transition: height 0.5s ease-out;
       }
     }
   }
 
   .header-change {
     position: fixed;
-      top: 0;
+    top: 0;
     background-color: $blue;
     height: 55px;
     // margin-bottom: 200px;

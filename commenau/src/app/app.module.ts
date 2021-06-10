@@ -4,8 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 const routersConfig: Routes = [
   { path: 'dangnhap', component: LoginComponent },
   { path: 'giohang', component: CartComponent },
-  { path: '', component: HeaderMenuComponent },
-  { path: 'trangchu', component: HeaderMenuComponent },
+  { path: '', component: BodyComponent },
+  { path: 'trangchu', component: BodyComponent },
   { path: 'dangky', component: RegisterComponent },
   { path: 'quenmatkhau', component: ForgotPasswordComponent },
   { path: 'thanhtoan', component: CheckoutComponent },
@@ -23,7 +23,6 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { VerifyComponent } from './verify/verify.component';
-import { HeaderMenuComponent } from './header-menu/header-menu.component';
 import { CartComponent } from './cart/cart.component';
 import { ShopDetailComponent } from './shop-detail/shop-detail.component';
 import { CheckoutComponent } from './checkout/checkout.component';
@@ -41,7 +40,6 @@ import { DetailCustomerComponent } from './detail-customer/detail-customer.compo
     RegisterComponent,
     ForgotPasswordComponent,
     VerifyComponent,
-    HeaderMenuComponent,
     CartComponent,
     ShopDetailComponent,
     CheckoutComponent,

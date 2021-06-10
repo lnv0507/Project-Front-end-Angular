@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header-vip',
@@ -8,6 +8,8 @@ import { Component, OnInit, HostListener } from '@angular/core';
 export class HeaderVipComponent implements OnInit {
   header_variable = false;
   search_click = false;
+  @Input() menu_header :string="menu-header2";
+  
   constructor() {}
 
   ngOnInit(): void {}

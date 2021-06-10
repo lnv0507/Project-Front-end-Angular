@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,UAAU,CAAC;EACP,OAAO,EAAE,CAAC;EACV,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,CAAC;CASV;;AAZH,AAII,UAJM,CAIN,WAAW,CAAC;EACV,KAAK,EAAE,KAAK;CAMb;;AAXL,AAMM,UANI,CAIN,WAAW,CAET,oBAAoB,CAAC;EACnB,QAAQ,EAAE,QAAQ;EAClB,IAAI,EAAE,IAAI;CAEX",
-    "sources": [
-        "header-menu.component.scss"
-    ],
-    "names": [],
-    "file": "header-menu.component.css"
-}
