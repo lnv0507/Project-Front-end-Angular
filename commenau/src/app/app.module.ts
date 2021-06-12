@@ -31,6 +31,8 @@ import { Page404Component } from './page404/page404.component';
 import { OrderComponent } from './order/order.component';
 import { DetailCustomerComponent } from './detail-customer/detail-customer.component';
 import { MenuComponent } from './menu/menu.component';
+import { ContactComponent } from './contact/contact.component';
+
 
 @NgModule({
   declarations: [
@@ -49,6 +51,8 @@ import { MenuComponent } from './menu/menu.component';
     OrderComponent,
     DetailCustomerComponent,
     MenuComponent,
+    ContactComponent,
+
   ],
   imports: [
     BrowserModule,
