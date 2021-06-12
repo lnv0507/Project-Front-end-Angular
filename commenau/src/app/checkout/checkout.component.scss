@@ -17,7 +17,7 @@ a:focus {
 }
 a:hover {
     text-decoration: none;
-    color: #3ac5c8;
+    color: #2b82ad;
 }
 h1,
 h2,
@@ -57,18 +57,18 @@ button{
 }
 button:hover{
     cursor: pointer;
-    background-color: #3ac5c8;
+    background-color: #2b82ad;
 }
 
 .container{
     margin: auto;
     margin-bottom: 100px;
     .title-content{
-        color: #3ac5c8;
+        color: #2b82ad;
         text-align: center;
         margin-top: 30px;
         margin-bottom: 30px;
-        font-size: 30px;
+        font-size: 40px;
         font-weight: 600;
     }
     .check-account{
@@ -78,7 +78,7 @@ button:hover{
             cursor: pointer;
         }
         a:hover{
-            color:#3ac5c8;
+            color:#2b82ad;
         }
         .detail-account{
             width: 100%;
@@ -95,6 +95,8 @@ button:hover{
                     width: 220px;
                     height: 25px;
                     border: 2px solid gray;
+                    padding-left: 20px;
+                    
                 }
             }
             .pass-checkout{
@@ -127,7 +129,7 @@ button:hover{
             cursor: pointer;
         }
         a:hover{
-            color:#3ac5c8;
+            color:#2b82ad;
         }
         .detail-coupon{
             width: 100%;
@@ -236,7 +238,11 @@ button:hover{
                 margin-left: 20%;
                 height: 30px;
                 font-size: 15px;
-                background-color: #3ac5c8 ;
+                font-weight: 600;
+                background-color: #2b82ad ;
+            }
+            button:hover{
+                color: black;
             }
         }
         

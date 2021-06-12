@@ -18,12 +18,15 @@
         width: 35px;
         height: 20px;
     }
+    hr{
+        background-color: black;
+    }
     .title-cart{
-        color: #3ac5c8;
+        color: #2b82ad;
         text-align: center;
         margin-top: 30px;
         margin-bottom: 30px;
-        font-size: 30px;
+        font-size: 40px;
         font-weight: 600;
         
     }
@@ -33,6 +36,40 @@
         padding-right: 60px;
         td{
             font-size: 15px;
+            line-height: 50px; 
+        }
+        .quantity{
+            height: 20px;
+            line-height: 0px;
+            padding-top: 22px;
+            input{
+                border: none;
+                background-color: #f5f5f5;
+                width: 50px;
+                height: 20px;
+                text-align: center;
+            }
+            button{
+                height: 20px;
+            }
+
+        }
+        .delete{
+            padding-top: 22px;
+        }
+        .total{
+            font-weight: 600;
+        }
+
+        .product-name{
+            img{
+                float: left;
+            }
+            h5{
+                float: left;
+                padding-left: 10px;
+                line-height: 50px;
+            }
         }
         .shoping__cart__btns{
             
@@ -61,6 +98,7 @@
             }
             
         }
+
     }
     .cart-right{
         float: left;
@@ -92,20 +130,29 @@
                 }
             }
             .total-money{
-                font-weight: bolder;
+                h5{
+                    font-weight: 600;
+                    font-size: 16px;
+                }
             }
-            
-            
+   
         }
         .btn-order{
             width: 300px;
             height: 30px;
-            margin-bottom: 5px;
-            background-color: #3ac5c8;
+            margin-bottom: 20px;
+            background-color:#2b82ad ;
             color: white;
             border: 0px;
             font-weight: bolder;
             border-radius: 20px;
+            margin-top: 20px;
+            a{
+                color: white;
+            }
+            a:hover{
+                color: black;
+            }
         }
         .coupon-cart{
             .items-coupon{
@@ -120,10 +167,15 @@
                     font-weight: bolder;
                 }
                 input{
-                    border: #e7e7e7 solid 2px;
+                    border: black solid 2px;
                 }
                 button{
                     border: black solid 2px;
+                    background-color: #dbdbdb;
+                }
+                button:hover{
+                    background-color: black;
+                    color: white;
                 }
                 
             }
