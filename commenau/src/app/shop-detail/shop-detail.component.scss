@@ -39,7 +39,7 @@ h6 {
   font-size: 19px;
 }
 p {
-  font-size: 17px;
+  font-size: 15px;
   color: $black;
   font-weight: 400;
   line-height: 26px;
@@ -144,7 +144,7 @@ a:focus {
 //   }
 // }
 .container{
-  width: 1150px;
+  width: 1080px;
 }
 //product
 .product-details {
@@ -154,7 +154,7 @@ a:focus {
       margin-bottom: 20px;
       img {
         // min-width: 100%;
-        width: 520px;
+        width: 500px;
         height: 400px;
       }
     }
@@ -163,7 +163,7 @@ a:focus {
         cursor: pointer;
         width: 150px;
         height: 150px;
-        margin-right: 35px;
+        margin-right: 25px;
       }
     }
     .product__details__pic__slider.owl-carousel .owl-item {
@@ -186,7 +186,7 @@ a:focus {
       margin-bottom: 16px;
     }
     .product__details__rating {
-      font-size: 17px;
+      font-size: 16px;
       margin-bottom: 12px;
       i {
         margin-right: -2px;
@@ -198,14 +198,14 @@ a:focus {
       }
     }
     .product__details__price {
-      font-size: 30px;
+      font-size: 20px;
       color: #dd2222;
       font-weight: 600;
       margin-bottom: 15px;
     }
     p {
       margin-bottom: 10px;
-      font-size: 17px;
+      
       color: #141619;
       samp {
         color: #dd2222;
@@ -335,6 +335,7 @@ a:focus {
       // width: 290px;
       position: relative;
       overflow: hidden;
+      border-radius: 4px;
 
       .product__item__pic__hover {
         position: absolute;
@@ -398,7 +399,7 @@ a:focus {
       h6 {
         margin-bottom: 10px;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 16px;
         a {
           color: $black;
           text-decoration: none;
@@ -416,7 +417,7 @@ a:focus {
   .product__item:hover {
     // -webkit-box-shadow: 0px 0px 10px 2px $blue2;
     // box-shadow: 0px 0px 10px 2px $blue2;
-    transform: scale(1.07);
+    transform: scale(1.03);
     visibility: visible;
   }
 }
@@ -428,7 +429,7 @@ a:focus {
       font-size: 15px;
       a{
         text-decoration: none;
-        color: $black;
+        color: rgb(161, 147, 147);
       }
   }
   

@@ -5,9 +5,8 @@ h4,
 h5,
 h6 {
   margin: 0;
-  color: #111111;
+  color: #141619;
   font-weight: 400;
-  font-family: "Cairo", sans-serif;
 }
 
 h1 {
@@ -15,11 +14,11 @@ h1 {
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 25px;
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 h4 {
@@ -35,9 +34,8 @@ h6 {
 }
 
 p {
-  font-size: 19px;
-  font-family: "Cairo", sans-serif;
-  color: #6f6f6f;
+  font-size: 15px;
+  color: #141619;
   font-weight: 400;
   line-height: 26px;
   margin: 0 0 15px 0;
@@ -47,7 +45,6 @@ a:hover,
 a:focus {
   text-decoration: none;
   outline: none;
-  color: #ffffff;
 }
 
 .section-title {
@@ -56,7 +53,7 @@ a:focus {
 }
 
 .section-title h2 {
-  color: #1c1c1c;
+  color: #141619;
   font-weight: 700;
   position: relative;
 }
@@ -68,7 +65,7 @@ a:focus {
   right: 0;
   height: 2px;
   width: 560px;
-  background: #3ac5c8;
+  background: #2B82AD;
   content: "";
   margin: 0 auto;
 }
@@ -91,7 +88,7 @@ a:focus {
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 700;
-  background: #3ac5c8;
+  background: #2B82AD;
   letter-spacing: 2px;
 }
 
@@ -102,55 +99,16 @@ a:focus {
   text-transform: uppercase;
   display: inline-block;
   padding: 13px 30px 12px;
-  background: #3ac5c8;
+  background: #2B82AD;
   border: none;
 }
 
-.breadcrumb-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 25px 0 40px;
-  background-image: url("/assets/img/breadcrumb.jpg");
-}
-
-.breadcrumb-section .breadcrumb__text h2 {
-  font-size: 46px;
-  color: #ffffff;
-  font-weight: 700;
-}
-
-.breadcrumb-section .breadcrumb__text .breadcrumb__option a {
-  display: inline-block;
-  font-size: 16px;
-  color: #ffffff;
-  font-weight: 700;
-  margin-right: 20px;
-  position: relative;
-  text-decoration: none;
-}
-
-.breadcrumb-section .breadcrumb__text .breadcrumb__option a:after {
-  position: absolute;
-  right: -12px;
-  top: 13px;
-  height: 1px;
-  width: 10px;
-  background: #ffffff;
-  content: "";
-}
-
-.breadcrumb-section .breadcrumb__text .breadcrumb__option span {
-  display: inline-block;
-  font-size: 16px;
-  color: #ffffff;
+.container {
+  width: 1080px;
 }
 
 .product-details {
-  padding-top: 80px;
+  padding-top: 20px;
 }
 
 .product-details .product__details__pic .product__details__pic__item {
@@ -158,15 +116,15 @@ a:focus {
 }
 
 .product-details .product__details__pic .product__details__pic__item img {
-  width: 555px;
-  height: 550px;
+  width: 500px;
+  height: 400px;
 }
 
 .product-details .product__details__pic .product__details__pic__slider img {
   cursor: pointer;
   width: 150px;
   height: 150px;
-  margin-right: 64px;
+  margin-right: 25px;
 }
 
 .product-details .product__details__pic .product__details__pic__slider.owl-carousel .owl-item {
@@ -192,7 +150,7 @@ a:focus {
 }
 
 .product-details .product__details__text .product__details__rating {
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 12px;
 }
 
@@ -207,7 +165,7 @@ a:focus {
 }
 
 .product-details .product__details__text .product__details__price {
-  font-size: 30px;
+  font-size: 20px;
   color: #dd2222;
   font-weight: 600;
   margin-bottom: 15px;
@@ -215,7 +173,6 @@ a:focus {
 
 .product-details .product__details__text p {
   margin-bottom: 10px;
-  font-size: 20px;
   color: #141619;
 }
 
@@ -233,8 +190,9 @@ a:focus {
 .product-details .product__details__text .heart-icon {
   display: inline-block;
   font-size: 16px;
-  color: #3ac5c8;
+  color: red;
   padding: 13px 16px 13px;
+  cursor: pointer;
 }
 
 .product-details .product__details__text .product__details__quantity {
@@ -262,16 +220,17 @@ a:focus {
 }
 
 .product-details .product__details__text .product__details__quantity .pro-qty .qtybtn {
-  width: 35px;
+  width: 30px;
+  height: 30px;
   font-size: 16px;
-  color: #6f6f6f;
+  color: #141619;
   cursor: pointer;
   display: inline-block;
-  border: #111111;
+  border: #111111 solid 1px;
 }
 
 .product-details .product__details__tab {
-  padding-top: 85px;
+  padding-top: 40px;
 }
 
 .product-details .product__details__tab .nav-tabs {
@@ -292,18 +251,22 @@ a:focus {
 }
 
 .product-details .product__details__tab .nav-tabs li a {
-  font-size: 25px;
+  font-size: 20px;
   color: #141619;
   font-weight: 700;
   border: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   padding: 0;
+  background-color: white;
 }
 
 .product-details .product__details__tab .nav-tabs li a:hover {
-  color: #3ac5c8;
-  background-color: #ffffff;
+  background-color: white;
+}
+
+.product-details .product__details__tab .nav-tabs li .activeClick {
+  color: #2B82AD;
 }
 
 .product-details .product__details__tab .nav-tabs:before {
@@ -312,7 +275,7 @@ a:focus {
   top: 12px;
   height: 1px;
   width: 370px;
-  background: #3ac5c8;
+  background: #2B82AD;
   content: "";
 }
 
@@ -322,7 +285,7 @@ a:focus {
   top: 12px;
   height: 1px;
   width: 370px;
-  background: #3ac5c8;
+  background: #2B82AD;
   content: "";
 }
 
@@ -341,7 +304,7 @@ a:focus {
 }
 
 .related-product {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .related-product .related__product__title {
@@ -356,6 +319,7 @@ a:focus {
   height: 270px;
   position: relative;
   overflow: hidden;
+  border-radius: 4px;
 }
 
 .related-product .product__item .product__item__pic .product__item__pic__hover {
@@ -376,7 +340,7 @@ a:focus {
 
 .related-product .product__item .product__item__pic .product__item__pic__hover li a {
   font-size: 16px;
-  color: #1c1c1c;
+  color: #141619;
   height: 40px;
   width: 40px;
   line-height: 40px;
@@ -420,7 +384,7 @@ a:focus {
 .related-product .product__item .product__item__text h6 {
   margin-bottom: 10px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .related-product .product__item .product__item__text h6 a {
@@ -438,7 +402,19 @@ a:focus {
 }
 
 .related-product .product__item:hover {
-  -webkit-box-shadow: 0px 0px 10px 2px #3ac5c8;
-  box-shadow: 0px 0px 10px 2px #3ac5c8;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  visibility: visible;
+}
+
+.breadcurb-area .breadcrumb {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  padding-top: 20px;
+  font-size: 15px;
+}
+
+.breadcurb-area .breadcrumb a {
+  text-decoration: none;
+  color: #a19393;
 }
 /*# sourceMappingURL=shop-detail.component.css.map */

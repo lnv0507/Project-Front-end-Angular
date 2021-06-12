@@ -10,6 +10,7 @@ const routersConfig: Routes = [
   { path: 'quenmatkhau', component: ForgotPasswordComponent },
   { path: 'thanhtoan', component: CheckoutComponent },
   { path: 'chitietsanpham', component: ShopDetailComponent },
+  { path: 'menu', component: MenuComponent },
   { path: '**', component: Page404Component },
   { path: 'kiemtra', component: VerifyComponent },
 ];
@@ -29,6 +30,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { Page404Component } from './page404/page404.component';
 import { OrderComponent } from './order/order.component';
 import { DetailCustomerComponent } from './detail-customer/detail-customer.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,7 @@ import { DetailCustomerComponent } from './detail-customer/detail-customer.compo
     Page404Component,
     OrderComponent,
     DetailCustomerComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
