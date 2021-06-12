@@ -1,0 +1,76 @@
+$blue: #23536b;
+$black: #141619;
+$white: #ffffff;
+$gray: #e7e7e7;
+.about-us {
+  height: 100%;
+  a {
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    color: #777;
+  }
+  .breadcurb-area {
+    .breadcrumb {
+      background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+      margin: 15px 0 20px;
+      padding: 0;
+      font-size: 15px;
+    }
+  }
+  .background-about {
+    background-image: url(/assets/img/about/about.jpg);
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    .line {
+      position: relative;
+      //   left: 40%;
+      padding-left: 40%;
+      top: 10em;
+      h5 {
+        margin: auto;
+        font-size: 60px;
+        color: $white;
+        font-weight: 500;
+      }
+      p {
+        padding: 20px;
+        margin: auto;
+        font-size: 20px;
+        color: $white;
+        position: relative;
+        right: 10em;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+    }
+  }
+  .customer {
+    .customer-brand {
+      font-size: 5rem;
+      margin-left: 40%;
+    }
+    padding: 20px 130px;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      li {
+        margin: 20px 80px;
+
+        img {
+          width: 250px;
+        }
+        h5 {
+          margin-top: 20px;
+          font-size: 20px;
+        }
+        p {
+          margin-top: 20px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

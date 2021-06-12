@@ -12,7 +12,9 @@ const routersConfig: Routes = [
   { path: 'chitietsanpham', component: ShopDetailComponent },
   { path: 'menu', component: MenuComponent },
   { path: '**', component: Page404Component },
+  { path: 'vechungtoi', component: AboutComponent },
   { path: 'kiemtra', component: VerifyComponent },
+  { path: '**', component: Page404Component },
 ];
 
 import { AppRoutingModule } from './app-routing.module';
@@ -32,6 +34,7 @@ import { OrderComponent } from './order/order.component';
 import { DetailCustomerComponent } from './detail-customer/detail-customer.component';
 import { MenuComponent } from './menu/menu.component';
 import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
