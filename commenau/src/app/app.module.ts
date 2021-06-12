@@ -11,7 +11,7 @@ const routersConfig: Routes = [
   { path: 'thanhtoan', component: CheckoutComponent },
   { path: 'chitietsanpham', component: ShopDetailComponent },
   { path: 'menu', component: MenuComponent },
-  { path: '**', component: Page404Component },
+  { path: 'lienhe', component: ContactComponent },
   { path: 'vechungtoi', component: AboutComponent },
   { path: 'kiemtra', component: VerifyComponent },
   { path: '**', component: Page404Component },
