@@ -37,6 +37,7 @@ import { MenuComponent } from './menu/menu.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
+import { ProductDirective } from './Directives/product.directive';
 
 
 @NgModule({
@@ -57,6 +58,7 @@ import { WishlistComponent } from './wishlist/wishlist.component';
     DetailCustomerComponent,
     MenuComponent,
     ContactComponent,
+    ProductDirective,
 
   ],
   imports: [
