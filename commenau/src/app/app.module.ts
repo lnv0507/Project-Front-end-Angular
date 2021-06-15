@@ -38,6 +38,8 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { ProductDirective } from './Directives/product.directive';
+import { ProductsService } from './Services/products.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -65,6 +67,7 @@ import { ProductDirective } from './Directives/product.directive';
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routersConfig),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

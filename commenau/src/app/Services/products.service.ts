@@ -11,6 +11,7 @@ import { catchError, map, tap } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class ProductsService {
+  id = 2;
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-type': 'application/json',
