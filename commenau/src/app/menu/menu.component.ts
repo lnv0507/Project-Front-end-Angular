@@ -7,17 +7,13 @@ import { ProductsService } from '../Services/products.service';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent implements OnInit {
-  productName!: number;
-  
-  constructor(
-    private serviceDoan: ProductsService
-    ) {
-    this.productName = serviceDoan.id;
-  }
+  allProduct = [];
+
+  constructor(private serviceProduct: ProductsService) {}
 
   ngOnInit(): void {
-    this.serviceDoan.getProduct().subscribe((data) => {
-      console.log(data);
+    this.serviceProduct.getProduct().subscribe((response) => {
+     console.log(response);
     });
   }
 }

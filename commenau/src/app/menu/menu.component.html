@@ -1,11 +1,11 @@
 <div class="breadcurb-area">
-    <div class="container">
-        <ul class="breadcrumb">
-            <li><a href="#">Trang chủ</a></li>
-            <li><a href="#">Menu</a></li>
-            <li>Món Ăn</li>
-        </ul>
-    </div>
+  <div class="container">
+    <ul class="breadcrumb">
+      <li><a href="#">Trang chủ</a></li>
+      <li><a href="#">Menu</a></li>
+      <li>Món Ăn</li>
+    </ul>
+  </div>
 </div>
 <section class="product spad">
   <div class="container">
@@ -52,7 +52,7 @@
         </div>
         <div class="row">
           <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="product__item">
+            <div class="product__item" *ngFor="let product of allProduct">
               <div
                 class="product__item__pic set-bg"
                 style="background-image: url(assets/img/product/1.png)"
@@ -72,8 +72,10 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a href="#">Cơm Tấm Sườn Bì</a></h6>
-                <h5>30.000đ</h5>
+                <h6>
+                  <!-- <a href="#">{{ product.name }}</a> -->
+                </h6>
+                <!-- <h5>{{ product.price }}</h5> -->
               </div>
             </div>
           </div>

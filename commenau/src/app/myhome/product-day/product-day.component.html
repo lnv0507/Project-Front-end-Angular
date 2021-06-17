@@ -34,7 +34,7 @@
         </li>
       </ul>
       <div class="tab-panels">
-        <div class="col-lg-3 col-md-12 col-sm-12">
+        <div class="col-lg-3 col-md-12 col-sm-12" *ngFor="let doan of dataPro">
           <div class="product__item">
             <div
               class="product__item__pic set-bg"
@@ -55,8 +55,10 @@
               </ul>
             </div>
             <div class="product__item__text">
-              <h6><a href="#">Cơm Tấm Sườn Bì</a></h6>
-              <h5>30.000đ</h5>
+              <h6>
+                <a href="#">{{ doan.name }}</a>
+              </h6>
+              <h5>{{ doan.price }}</h5>
             </div>
           </div>
         </div>

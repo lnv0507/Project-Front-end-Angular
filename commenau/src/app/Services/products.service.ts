@@ -4,27 +4,28 @@ import {
   HttpErrorResponse,
   HttpHeaders,
 } from '@angular/common/http';
-import { from, Observable, throwError } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProductsService {
-  id = 2;
+  private REST_API_SERVER = 'http://localhost:3000';
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-type': 'application/json',
-      // Authorization: 'my-auth-token',
+      Authorization: 'my-auth-token',
     }),
   };
   // lay dia chi ser ver phai chay localhost moi lay dc data
-  private REST_API_SERVER = 'http://localhost:3000';
+
   constructor(private httpClient: HttpClient) {}
+
   // lay product out
   public getProduct(): Observable<any> {
     // lay dia chi ra vo database la do an
-    const url = `${this.REST_API_SERVER}/doan`;
+    const url = `${this.REST_API_SERVER}/product`;
     return this.httpClient
       .get<any>(url, this.httpOptions)
       .pipe(catchError(this.handleError));

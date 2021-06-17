@@ -1,5 +1,8 @@
 {
-    "doan":[
-        {"id": 1, "title": "hihi", "author": "hello"}
-    ]
+  "doan": [{ "id": 1, "title": "hihi", "author": "hello" }],
+  "product": [
+    { "name": "Cơm Gà", "price": "25.000" },
+    { "name": "Cơm Sườn", "price": "22.000" },
+    { "name": "Cơm Ba Rọi", "price": "25.000" }
+  ]
 }
