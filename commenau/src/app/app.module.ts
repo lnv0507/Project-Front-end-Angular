@@ -4,13 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 const routersConfig: Routes = [
   { path: 'dangnhap', component: LoginComponent },
   { path: 'giohang', component: CartComponent },
-  { path: '', component: BodyComponent },
-  { path: 'trangchu', component: BodyComponent },
+  { path: '', component: MyhomeComponent },
+  { path: 'trangchu', component: MyhomeComponent },
   { path: 'dangky', component: RegisterComponent },
   { path: 'quenmatkhau', component: ForgotPasswordComponent },
   { path: 'thanhtoan', component: CheckoutComponent },
   { path: 'chitietsanpham', component: ShopDetailComponent },
-  { path: 'menu', component: MenuComponent },
+  { path: 'menu', component: ProductsComponent },
   { path: 'lienhe', component: ContactComponent },
   { path: 'vechungtoi', component: AboutComponent },
   { path: 'kiemtra', component: VerifyComponent },
@@ -33,13 +33,19 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { Page404Component } from './page404/page404.component';
 import { OrderComponent } from './order/order.component';
 import { DetailCustomerComponent } from './detail-customer/detail-customer.component';
-import { MenuComponent } from './menu/menu.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
-import { ProductDirective } from './Directives/product.directive';
+import { ProductDirective } from './directives/product.directive';
 import { ProductsService } from './Services/products.service';
 import { HttpClientModule } from '@angular/common/http';
+import { MenuComponent } from './menu/menu.component';
+import { ProductsComponent } from './products/products.component';
+import { BreakcumbComponent } from './products/breakcumb/breakcumb.component';
+import { FilterComponent } from './products/filter/filter.component';
+import { ProductListComponent } from './products/product-list/product-list.component';
+import { MyhomeComponent } from './myhome/myhome.component';
+import { ProductDayComponent } from './myhome/product-day/product-day.component';
 
 
 @NgModule({
@@ -58,9 +64,14 @@ import { HttpClientModule } from '@angular/common/http';
     Page404Component,
     OrderComponent,
     DetailCustomerComponent,
-    MenuComponent,
     ContactComponent,
     ProductDirective,
+    ProductsComponent,
+    BreakcumbComponent,
+    FilterComponent,
+    ProductListComponent,
+    MyhomeComponent,
+    ProductDayComponent,
 
   ],
   imports: [

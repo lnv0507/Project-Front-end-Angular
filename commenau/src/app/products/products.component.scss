@@ -1,0 +1,112 @@
+$blue: #3ac5c8;
+$blue1: #23536b;
+$blue2: #2b82ad;
+$black: #141619;
+$white: #ffffff;
+$gray: #e7e7e7;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: $black;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 19px;
+}
+p {
+  font-size: 17px;
+  color: $black;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 0 0 15px 0;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+.section-title {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.section-title h2 {
+  color: $black;
+  font-weight: 700;
+  position: relative;
+}
+
+.section-title h2:after {
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  right: 0;
+  height: 2px;
+  width: 560px;
+  background: $blue2;
+  content: "";
+  margin: 0 auto;
+}
+.spad {
+  padding-bottom: 30px;
+}
+.set-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+//btn
+.primary-btn {
+  display: inline-block;
+  font-size: 14px;
+  padding: 10px 28px 10px;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: $blue2;
+  letter-spacing: 2px;
+}
+
+.site-btn {
+  font-size: 14px;
+  color: $white;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 13px 30px 12px;
+  background: $blue2;
+  border: none;
+}
+.product {
+  .container {
+    width: 1080px;
+    border-top: solid 1px $blue2;
+    padding-top: 30px;
+  }
+}
+// transition

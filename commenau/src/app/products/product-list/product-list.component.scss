@@ -1,0 +1,195 @@
+$blue: #3ac5c8;
+$blue1: #23536b;
+$blue2: #2b82ad;
+$black: #141619;
+$white: #ffffff;
+$gray: #e7e7e7;
+
+.filter__item {
+  border-top: 1px solid $white;
+  padding-bottom: 20px;
+  .filter__sort {
+    margin-bottom: 15px;
+
+    span {
+      font-size: 16px;
+      color: $black;
+      display: inline-block;
+      padding-right: 15px;
+      font-weight: 700;
+    }
+
+    select {
+      background-color: #fff;
+      border-radius: 0;
+      border: none;
+      display: inline-block;
+      float: none;
+
+      line-height: 0;
+      padding-left: 18px;
+      padding-right: 30px;
+      font-size: 16px;
+      color: $black;
+
+      cursor: pointer;
+
+      span {
+        color: $black;
+      }
+
+      &:after {
+        border-bottom: 1.5px solid #1c1c1c;
+        border-right: 1.5px solid #1c1c1c;
+        height: 8px;
+        margin-top: 0;
+        right: 16px;
+        width: 8px;
+        top: -5px;
+      }
+    }
+
+    select.open .list {
+      opacity: 1;
+      pointer-events: auto;
+      -webkit-transform: scale(1) translateY(0);
+      -ms-transform: scale(1) translateY(0);
+      transform: scale(1) translateY(0);
+    }
+
+    select .list {
+      border-radius: 0;
+      margin-top: 0;
+      top: 15px;
+    }
+
+    select .option {
+      line-height: 30px;
+      min-height: 30px;
+    }
+  }
+}
+.product__item {
+  margin-bottom: 50px;
+  .product__item__pic {
+    height: 270px;
+    // width: 290px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+
+    .product__item__pic__hover {
+      position: absolute;
+      left: 0;
+      bottom: -50px;
+      width: 100%;
+      text-align: center;
+      -webkit-transition: all, 0.5s;
+      -moz-transition: all, 0.5s;
+      -ms-transition: all, 0.5s;
+      -o-transition: all, 0.5s;
+      transition: all, 0.5s;
+
+      li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 6px;
+        a {
+          font-size: 16px;
+          color: $black;
+          height: 40px;
+          width: 40px;
+          line-height: 40px;
+          text-align: center;
+          border: 1px solid #ebebeb;
+          background: $white;
+          display: block;
+          border-radius: 50%;
+          -webkit-transition: all, 0.5s;
+          -moz-transition: all, 0.5s;
+          -ms-transition: all, 0.5s;
+          -o-transition: all, 0.5s;
+          transition: all, 0.5s;
+          i {
+            position: relative;
+            transform: rotate(0);
+            -webkit-transition: all, 0.3s;
+            -moz-transition: all, 0.3s;
+            -ms-transition: all, 0.3s;
+            -o-transition: all, 0.3s;
+            transition: all, 0.3s;
+          }
+        }
+      }
+      li:last-child {
+        margin-right: 0;
+      }
+      li:hover a {
+        background: $blue;
+        border-color: $blue;
+        i {
+          color: $white;
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+  .product__item__text {
+    text-align: center;
+    padding-top: 15px;
+    h6 {
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      a {
+        color: $black;
+        text-decoration: none;
+      }
+    }
+    h5 {
+      color: $black;
+      font-weight: 700;
+    }
+  }
+}
+.product__item:hover .product__item__pic .product__item__pic__hover {
+  bottom: 20px;
+}
+.product__item:hover {
+  // -webkit-box-shadow: 0px 0px 10px 2px $blue2;
+  // box-shadow: 0px 0px 10px 2px $blue2;
+  transform: scale(1.03);
+  visibility: visible;
+}
+.product__pagination {
+  padding-top: 10px;
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #b2b2b2;
+    font-size: 14px;
+    color: #b2b2b2;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+    margin-right: 16px;
+    -webkit-transition: all, 0.3s;
+    -moz-transition: all, 0.3s;
+    -ms-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    transition: all, 0.3s;
+
+    &:hover {
+      background: $blue2;
+      border-color: $blue2;
+      color: $white;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

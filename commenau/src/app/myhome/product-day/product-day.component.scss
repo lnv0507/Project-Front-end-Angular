@@ -1,0 +1,148 @@
+$blue: #2b82ad;
+$black: #141619;
+$white: #ffffff;
+$gray: #e7e7e7;
+
+.body-home {
+  margin-top: 3em;
+
+  .title-body {
+    margin-left: 45%;
+    margin-bottom: 10em;
+    h5 {
+      font-size: 30px;
+    }
+    p {
+      position: relative;
+      top: 10px;
+      font-size: 1.5em;
+      margin-left: 1em;
+    }
+    button {
+      top: 20px;
+      height: 40px;
+      width: 100px;
+      border-radius: 10px;
+      position: relative;
+      left: -20px;
+      background-color: $blue;
+      border: none;
+      color: $white;
+      font-size: 15px;
+    }
+    button:nth-last-child(1) {
+      position: relative;
+      left: 10px;
+    }
+  }
+  .title-everyday {
+    h5 {
+      margin-left: 42%;
+      font-size: 30px;
+    }
+    ul {
+      margin-left: 30%;
+      font-size: 15px;
+    }
+    .tab-panels {
+      p {
+        font-size: 20px;
+      }
+    }
+
+    // San Pham Slide
+    div {
+      .product__item {
+        margin-bottom: 50px;
+        .product__item__pic {
+          height: 270px;
+          // width: 290px;
+          position: relative;
+          overflow: hidden;
+
+          .product__item__pic__hover {
+            position: absolute;
+            left: 0;
+            bottom: -50px;
+            width: 100%;
+            text-align: center;
+            -webkit-transition: all, 0.5s;
+            -moz-transition: all, 0.5s;
+            -ms-transition: all, 0.5s;
+            -o-transition: all, 0.5s;
+            transition: all, 0.5s;
+
+            li {
+              list-style: none;
+              display: inline-block;
+              margin-right: 6px;
+              a {
+                font-size: 16px;
+                color: $black;
+                height: 40px;
+                width: 40px;
+                line-height: 40px;
+                text-align: center;
+                border: 1px solid #ebebeb;
+                background: $white;
+                display: block;
+                border-radius: 50%;
+                -webkit-transition: all, 0.5s;
+                -moz-transition: all, 0.5s;
+                -ms-transition: all, 0.5s;
+                -o-transition: all, 0.5s;
+                transition: all, 0.5s;
+                i {
+                  position: relative;
+                  transform: rotate(0);
+                  -webkit-transition: all, 0.3s;
+                  -moz-transition: all, 0.3s;
+                  -ms-transition: all, 0.3s;
+                  -o-transition: all, 0.3s;
+                  transition: all, 0.3s;
+                }
+              }
+            }
+            li:last-child {
+              margin-right: 0;
+            }
+            li:hover a {
+              background: $blue;
+              border-color: $blue;
+              i {
+                color: $white;
+                transform: rotate(360deg);
+              }
+            }
+          }
+        }
+        .product__item__text {
+          text-align: center;
+          padding-top: 15px;
+          h6 {
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            a {
+              color: $black;
+              text-decoration: none;
+            }
+          }
+          h5 {
+            color: $black;
+            font-weight: 700;
+          }
+        }
+      }
+      .product__item:hover .product__item__pic .product__item__pic__hover {
+        bottom: 20px;
+      }
+      .product__item:hover {
+        // -webkit-box-shadow: 0px 0px 10px 2px $blue2;
+        // box-shadow: 0px 0px 10px 2px $blue2;
+        transform: scale(1.07);
+        visibility: visible;
+      }
+    }
+  }
+}
