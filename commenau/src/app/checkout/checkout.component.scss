@@ -74,81 +74,13 @@ button:hover{
     .check-account{
         width: 53%;
         height: fit-content;
-        a{
-            cursor: pointer;
-        }
-        a:hover{
-            color:#2b82ad;
-        }
-        .detail-account{
-            width: 100%;
-            height: 100px;
-            border: black 2px solid;
-            background-color:  #f5f5f5;
-            padding: 5px;
-            padding-left: 20px;
-            .user-checkout , .pass-checkout{
-                float: left;
-                width: 40%;
-                height: fit-content;
-                input{
-                    width: 220px;
-                    height: 25px;
-                    border: 2px solid gray;
-                    padding-left: 20px;
-                    
-                }
-            }
-            .pass-checkout{
-                width: 60%;
-            }
-            button{
-                float: left;
-                margin-top: 5px;
-                width: 10%;
-            }
-            .remember-pass{
-                height: fit-content;
-                margin-top: 5px;
-                width: 90%;
-                float: left;
-                padding-left: 30px;
-                label{
-                    margin-left: 2px;
-                }
-            }
-            
-            
-        }
+        
 
     }
     .check-coupon{
         width: 53%;
         height: fit-content;
-        a{
-            cursor: pointer;
-        }
-        a:hover{
-            color:#2b82ad;
-        }
-        .detail-coupon{
-            width: 100%;
-            height: fit-content;
-            border: black 2px solid;
-            background-color:  #f5f5f5;
-            padding: 10px;
-            padding-left: 20px;
-            input{
-                width: 80%;
-                height: 30px;
-                border: 2px solid gray;
-                padding-left: 10px;
-            }
-            button{
-                height: 30px;
-                margin-left: 20px;
-            }
-        }
+        
     }
     .detail-checkout{
         margin-top: 20px;
@@ -156,97 +88,14 @@ button:hover{
         width: 60%;
         float: left;
         padding-right: 100px;
-        h1{
-            margin-top: 5px;
-            font-size: 20px;
-        }
-        input{
-            width: 100%;
-            height: 30px;
-            border: 2px solid #e1e1e1;
-            margin-bottom: 15px;
-            margin-top: 5px;
-        }
-        .phone-checkout , .email-checkout{
-            width: 50%;
-            float:left;
-        }
-        .email-checkout{
-            padding-left: 20px;
-        }
-        .phone-checkout{
-            padding-right: 20px;
-        }
-        .note-checkout{
-            width: 100%;
-            height:fit-content;
-        }
-        textarea{
-            width: 100%;
-            border: 2px solid #e1e1e1
-        }
+        
     }
     .order-checkout{
         width: 40%;
         float: left;
         padding: 30px;
         border: black 2px solid ;
-        margin-top: 20px;
-        h1{
-            margin-top: 5px;
-            font-size: 20px;
-        }
-        h5{
-            font-size: 15px;
-        }
-        table{
-            width: 100%;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            .right{
-                text-align: right;
-            }
-            tr{
-                height: 20px;
-            }
-            th{
-                font-size: 14px;
-                font-weight: normal;
-            }
-            
-        }
-        .discount-checkout , .total-checkout{
-            width: 100%;
-            height: 20px;
-            margin-top: 10px;
-            h5{
-                float: left;
-            }
-            p{
-                float: right;
-            }
-        }
-        .btn-checkout{
-            width: 100%;
-            height: 30px;
-            margin-top: 20px;
-            
-            
-            button{
-                width: 300px;
-                border-radius: 10px;
-                margin-left: 20%;
-                height: 30px;
-                font-size: 15px;
-                font-weight: 600;
-                background-color: #2b82ad ;
-            }
-            button:hover{
-                color: black;
-            }
-        }
-        
-        
+        margin-top: 20px;  
         
     }
 
