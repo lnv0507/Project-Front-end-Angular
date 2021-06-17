@@ -5,6 +5,11 @@ $black: #141619;
 $white: #ffffff;
 $gray: #e7e7e7;
 
+.set-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
 .filter__item {
   border-top: 1px solid $white;
   padding-bottom: 20px;
