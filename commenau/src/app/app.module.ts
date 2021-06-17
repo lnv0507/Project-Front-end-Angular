@@ -46,6 +46,12 @@ import { FilterComponent } from './products/filter/filter.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
 import { MyhomeComponent } from './myhome/myhome.component';
 import { ProductDayComponent } from './myhome/product-day/product-day.component';
+import { CartDetailComponent } from './cart/cart-detail/cart-detail.component';
+import { CartTotalComponent } from './cart/cart-total/cart-total.component';
+import { CheckoutAccountComponent } from './checkout/checkout-account/checkout-account.component';
+import { CheckoutCouponComponent } from './checkout/checkout-coupon/checkout-coupon.component';
+import { CheckoutDetailComponent } from './checkout/checkout-detail/checkout-detail.component';
+import { CheckoutOrderComponent } from './checkout/checkout-order/checkout-order.component';
 
 
 @NgModule({
@@ -72,7 +78,12 @@ import { ProductDayComponent } from './myhome/product-day/product-day.component'
     ProductListComponent,
     MyhomeComponent,
     ProductDayComponent,
-
+    CartDetailComponent,
+    CartTotalComponent,
+    CheckoutAccountComponent,
+    CheckoutCouponComponent,
+    CheckoutDetailComponent,
+    CheckoutOrderComponent,
   ],
   imports: [
     BrowserModule,

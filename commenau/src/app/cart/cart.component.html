@@ -1,92 +1,10 @@
 <div class="container">
     <h1 class="title-cart">GIỎ HÀNG</h1>
     <div class="list-cart">
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col"></th>
-                <th scope="col" class="title-table">SẢN PHẨM</th>
-                <th scope="col" class="title-table">GIÁ</th>
-                <th scope="col" class="title-table">SỐ LƯỢNG</th>
-                <th scope="col" class="title-table">TỔNG TIỀN</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th class="delete">
-                    <button>x</button>
-                </th>
-                <td class="product-name">
-                    <img src="https://media.cooky.vn/recipe/g3/25753/s320x320/recipe25753-prepare-step3-636494756650995360.jpg" alt="" style="height: 50px;width: 50px">
-                    <h5>Cánh gà chiên nước mắm</h5>
-                </td>
-                <td>57,000 đ</td>
-                <td class="quantity">
-                    <button>+</button>
-                    <input type="text" value="0">
-                    <button>-</button>  
-                </td>
-                <td class="total">32,000 đ</td>
-              </tr>
-              <tr>
-                <th class="delete">
-                    <button>x</button>
-                </th>
-                <td class="product-name">
-                    <img src="https://scm-assets.constant.co/scm/unilever/e9dc924f238fa6cc29465942875fe8f0/c1de3c63-0cae-4a0d-bac7-5d3fe27ec490.jpg" alt="" style="height: 50px;width: 50px">
-                    <h5>Chả giò</h5>
-                </td>
-                <td>89,000 đ</td>
-                <td class="quantity">
-                    <button><span class="inc qtybtn">+</span></button>
-                    <input type="text" value="0">
-                    <button><span class="dec qtybtn">-</span></button>
-                </td>
-                <td class="total">89,000 đ</td>
-              </tr>
-            
-            </tbody>
-          </table>
-          <div class="row">
-            <div class="col-lg-12">
-                <div class="shoping__cart__btns">
-                    <button type="button" class="btn btn-light"> <a routerLink="/thanhtoan">TIẾP TỤC ĐẶT HÀNG</a></button>
-                    <button type="button" class="btn btn-dark"><a href="">CẬP NHẬT GIỎ HÀNG</a></button>
-                </div>
-            </div>
-          </div>
+        <app-cart-detail></app-cart-detail>
     </div>
     <div class="cart-right">
-        <div class="total-cart">
-            <h1>TỔNG GIỎ HÀNG</h1>
-            <hr>
-            <div class="items-total-cart">
-                <div class="temporary-money">
-                    <h5 class="text-left">Tạm thu</h5>
-                    <h5 class="text-right">146000</h5>
-                </div>
-                <div class="discount">
-                    <h5 class="text-left">Giảm giá</h5>
-                    <h5 class="text-right">10000</h5>
-                </div>
-                <hr>
-                <div class="total-money">
-                    <h5 class="text-left">TỔNG CỘNG</h5>
-                    <h5 class="text-right">126000</h5>
-                </div>
-            </div>
-            <button class="btn-order"><a routerLink="/thanhtoan"> TIẾN HÀNH ĐẶT HÀNG</a></button>
-            
-        </div>
-        <div class="coupon-cart">
-            <h1>PHIẾU ƯU ĐÃI</h1>
-            <hr>
-            <div class="items-coupon">
-                <input type="text" placeholder="Mã ưu đãi">
-                <button type="submit" class="btn btn-light">ÁP DỤNG MÃ</button>
-            </div>
-        </div>
-
+        <app-cart-total></app-cart-total>
     </div>
 </div>
 <router-outlet></router-outlet>

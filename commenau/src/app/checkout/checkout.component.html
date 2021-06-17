@@ -1,94 +1,15 @@
 <div class="container">
     <h1 class="title-content">THANH TOÁN</h1>
     <div class="check-account">
-        <h5>Bạn đã có tài khoản? <a (click) = "displayAccount()">Nhấn vào để đăng nhập</a></h5>
-        <div class="detail-account" *ngIf = "showAccount">
-            <div class="user-checkout">
-                <h5>Số điện thoại hoặc email*</h5>
-                <input type="text">
-            </div>
-            <div class="pass-checkout">
-                <h5>Mật khẩu*</h5>
-                <input type="password">
-            </div>
-            
-            <button>ĐĂNG NHẬP</button>
-            <div class="remember-pass">
-                <input type="checkbox" value="remember_pass" id="remember_pass">
-                <label for="remember_pass">Ghi nhớ mật khẩu</label>
-            </div>
-            
-            <h5><a href="">Quên mật khẩu? </a></h5>
-        </div>
+        <app-checkout-account></app-checkout-account>
     </div>
     <div class="check-coupon">
-        <h5>Bạn đã có mã ưu đãi? <a (click)="showCoupon = !showCoupon">Nhấn vào để nhập mã</a></h5>
-        <div class="detail-coupon" *ngIf="showCoupon">
-            <input type="text" placeholder="Mã ưu đãi">
-            <button>ÁP DỤNG</button>
-        </div>
+        <app-checkout-coupon></app-checkout-coupon>
     </div>
     <div class="detail-checkout">
-        <hr>
-        <h1>CHI TIẾT THANH TOÁN</h1>
-        <div class="name-checkout">
-            <h5>Họ tên*</h5>
-            <input type="text">
-        </div>
-        <div class="address-checkout">
-            <h5>Địa chỉ*</h5>
-            <input type="text">
-        </div>
-        <div class="phone-checkout">
-            <h5>Số điện thoại*</h5>
-            <input type="text">
-        </div>
-        <div class="email-checkout">
-            <h5>Email*</h5>
-            <input type="text">
-        </div>
-        <h5>Bạn chưa có tài khoản? <a href="">Đăng kí ngay</a></h5>
-        <div class="note-checkout">
-            <h5>Ghi chú đặt hàng</h5>
-            <textarea name="note-checkout" id="note-checkout" cols="130" rows="8"></textarea>
-        </div>
+        <app-checkout-detail></app-checkout-detail>
     </div>
     <div class="order-checkout">
-        <h1>ĐƠN HÀNG CỦA BẠN</h1>
-        <hr>
-        <table>
-            <thead>
-                <tr>
-                    <th><h5>Sản phẩm</h5></th>
-                    <th></th>
-                    <th class="right"><h5>Tổng</h5></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>Ếch chiên nước mắm</th>
-                    <th>x<span>1</span></th>
-                    <th class="right">57,000 đ</th>
-                </tr>
-                <tr>
-                    <th>Chả giò</th>
-                    <th>x<span>1</span></th>
-                    <th class="right">89,000 đ</th>
-                </tr>
-            </tbody>
-        </table>
-        <hr>
-        <div class="discount-checkout">
-            <h5>Giảm giá</h5>
-            <p>10,000 đ</p>
-        </div>
-        <div class="total-checkout">
-            <h5>Tổng cộng</h5>
-            <p>126,000 đ</p>
-        </div>
-        <div class="btn-checkout">
-            <button>ĐẶT HÀNG</button>
-        </div>
-        
+        <app-checkout-order></app-checkout-order>
     </div>
 </div>

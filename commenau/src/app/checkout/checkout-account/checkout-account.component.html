@@ -1,0 +1,19 @@
+<h5>Bạn đã có tài khoản? <a (click) = "displayAccount()">Nhấn vào để đăng nhập</a></h5>
+    <div class="detail-account" *ngIf = "showAccount">
+        <div class="user-checkout">
+            <h5>Số điện thoại hoặc email*</h5>
+                <input type="text">
+        </div>
+        <div class="pass-checkout">
+            <h5>Mật khẩu*</h5>
+            <input type="password">
+        </div>
+            
+        <button>ĐĂNG NHẬP</button>
+        <div class="remember-pass">
+            <input type="checkbox" value="remember_pass" id="remember_pass">
+            <label for="remember_pass">Ghi nhớ mật khẩu</label>
+        </div>
+            
+        <h5><a href="">Quên mật khẩu? </a></h5>
+    </div>

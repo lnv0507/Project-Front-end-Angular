@@ -1,0 +1,89 @@
+hr{
+    width: 300px;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #000000;
+    margin: 1em 0;
+    padding: 0; 
+}
+a{
+    text-decoration: none;
+    font-size: 15px;
+}
+h5{
+    width: fit-content;
+}
+
+input{
+    width: 35px;
+    height: 20px;
+}
+hr{
+    background-color: black;
+}
+.items-total-cart{
+    width: 200px;
+    height: 100px;
+    .temporary-money, .discount, .total-money{
+        width: 300px;
+        height: 25px;
+        .text-left{
+            float: left;
+        }
+        .text-right{
+            float: right;
+            
+        }
+    }
+    .total-money{
+        h5{
+            font-weight: 600;
+            font-size: 16px;
+        }
+    }
+
+}
+.btn-order{
+    width: 300px;
+    height: 30px;
+    margin-bottom: 20px;
+    background-color:#2b82ad ;
+    color: white;
+    border: 0px;
+    font-weight: bolder;
+    border-radius: 20px;
+    margin-top: 20px;
+    a{
+        color: white;
+    }
+    a:hover{
+        color: black;
+    }
+}
+.coupon-cart{
+    .items-coupon{
+        width: 400px;
+        input, button{
+            width: 300px;
+            height: 30px;
+            margin-top: 10px;
+            text-align: center;
+            color: black;
+            font-size: 10px;
+            font-weight: bolder;
+        }
+        input{
+            border: black solid 2px;
+        }
+        button{
+            border: black solid 2px;
+            background-color: #dbdbdb;
+        }
+        button:hover{
+            background-color: black;
+            color: white;
+        }
+        
+    }
+}

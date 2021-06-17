@@ -11,10 +11,6 @@ export class CheckoutComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  showAccount = false;
-  showCoupon = false;
-  displayAccount(){
-    this.showAccount = !this.showAccount;
-  }
+  
 
 }
