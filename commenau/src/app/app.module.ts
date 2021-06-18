@@ -9,7 +9,7 @@ const routersConfig: Routes = [
   { path: 'dangky', component: RegisterComponent },
   { path: 'quenmatkhau', component: ForgotPasswordComponent },
   { path: 'thanhtoan', component: CheckoutComponent },
-  { path: 'chitietsanpham', component: ShopDetailComponent },
+  { path: 'chitietsanpham/:productId', component: ShopDetailComponent },
   { path: 'menu', component: ProductsComponent },
   { path: 'lienhe', component: ContactComponent },
   { path: 'vechungtoi', component: AboutComponent },

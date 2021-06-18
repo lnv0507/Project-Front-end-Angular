@@ -33,24 +33,24 @@
           <div class="product__details__pic__item">
             <img
               class="product__details__pic__item--large"
-              src="assets/img/product/heo-quay-kho-cai-chua.png"
+              src="{{product.img}}"
               alt=""
             />
           </div>
           <div class="product__details__pic__slider owl-carousel">
             <img
               data-imgbigurl="assets/img/product/heo-quay-kho-cai-chua.png"
-              src="assets/img/product/heo-quay-kho-cai-chua.png"
+              src="{{product.img}}"
               alt=""
             />
             <img
               data-imgbigurl="img/product/product/details/product-details-3.jpg"
-              src="assets/img/product/heo-quay-kho-cai-chua.png"
+              src="{{product.img}}"
               alt=""
             />
             <img
               data-imgbigurl="img/product/details/product-details-5.jpg"
-              src="assets/img/product/heo-quay-kho-cai-chua.png"
+              src="{{product.img}}"
               alt=""
             />
           </div>
@@ -58,8 +58,8 @@
       </div>
       <div class="col-lg-6 col-md-6">
         <div class="product__details__text">
-          <h3>Heo Quay Xào Cải Chua</h3>
-          <div class="product__details__price">35.000đ</div>
+          <h3>{{product.name}}</h3>
+          <div class="product__details__price">{{product.price}}</div>
           <div class="product__details__rating">
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
@@ -69,9 +69,7 @@
             <!-- <span>(18 reviews)</span> -->
           </div>
           <p>
-            <b>Mô tả:</b> Là món ăn kết hợp giữa thịt heo quay và cải chua mang
-            hương vị đồng quê dành cho người văn phòng. Món thêm 20k. Quy cách
-            hộp PP 4 ngăn và hộp giấy bảo vệ môi trường
+            <b>Mô tả: </b>{{product.des}}
           </p>
           <p><b>Tình trạng:</b> Còn hàng</p>
           <p><b>Giao hàng:</b> 1 giờ. <samp> Miễn phí trong ngày</samp></p>
@@ -139,12 +137,10 @@
             <div class="tab-pane active" id="tabs-1" role="tabpanel">
               <div class="product__details__tab__desc">
                 <h6>Mô tả món ăn</h6>
-                <p><b>Tên: </b>Thịt Xào Cải Chua</p>
+                <p><b>Tên: </b>{{product.name}}</p>
                 <p></p>
                 <p>
-                  <b>Mô tả:</b> Là món ăn kết hợp giữa thịt heo quay và cải chua
-                  mang hương vị đồng quê dành cho người văn phòng. Món thêm 20k.
-                  Quy cách hộp PP 4 ngăn và hộp giấy bảo vệ môi trường
+                  <b>Mô tả: </b>{{product.des}}
                 </p>
                 <p><b>Tình trạng:</b> Còn hàng</p>
                 <p>

@@ -33,6 +33,9 @@ export class ProductsService {
       .get<Product[]>(url, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
+  public getProductById(id :any){
+    return this.httpClient.get("http://localhost:3000/product/" + id)
+  }
  
 
   // Test error of json
@@ -46,4 +49,6 @@ export class ProductsService {
     }
     return throwError('Something bad happened; Please try again later.');
   }
+
+  
 }
