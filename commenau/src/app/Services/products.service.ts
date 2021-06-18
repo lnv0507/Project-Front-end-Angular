@@ -6,11 +6,14 @@ import {
 } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { ProductsComponent } from '../products/products.component';
+import { Product } from '../model/product';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProductsService {
+  product = new Product();
   private REST_API_SERVER = 'http://localhost:3000';
   private httpOptions = {
     headers: new HttpHeaders({
@@ -23,13 +26,14 @@ export class ProductsService {
   constructor(private httpClient: HttpClient) {}
 
   // lay product out
-  public getProduct(): Observable<any> {
+  public getProduct(): Observable<Product[]> {
     // lay dia chi ra vo database la do an
     const url = `${this.REST_API_SERVER}/product`;
     return this.httpClient
-      .get<any>(url, this.httpOptions)
+      .get<Product[]>(url, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
+ 
 
   // Test error of json
   private handleError(error: HttpErrorResponse) {

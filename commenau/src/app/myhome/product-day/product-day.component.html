@@ -7,38 +7,25 @@
   </div>
   <div class="title-everyday">
     <div class="container section-title-container" style="margin-bottom: 0px">
-      <h5>Cơm Trưa Văn Phòng</h5>
+      <h5>{{ titleRice }}</h5>
     </div>
     <div class="container">
       <ul class="nav nav-pills nav-uppercase nav-size-large nav-center">
-        <li>
-          <a href=""> <label for="">Thứ 2 </label></a>
-        </li>
-        <li>
-          <a href=""><label for=""> Thứ 3 </label></a>
-        </li>
-        <li>
-          <a href=""><label for=""> Thứ 4</label> </a>
-        </li>
-        <li>
-          <a href=""><label for=""> Thứ 5 </label></a>
-        </li>
-        <li>
-          <a href=""><label for=""> Thứ 6 </label></a>
-        </li>
-        <li>
-          <a href=""> <label for="">Thứ 7 </label></a>
-        </li>
-        <li>
-          <a href=""><label for=""> Chủ Nhật </label></a>
+        <li *ngFor="let th of weekDays">
+          <a href="#" click="productDay($th.day)">
+            <label for="">{{ th.day }} </label></a
+          >
         </li>
       </ul>
       <div class="tab-panels">
-        <div class="col-lg-3 col-md-12 col-sm-12" *ngFor="let doan of dataPro">
+        <div
+          class="col-lg-3 col-md-12 col-sm-12"
+          *ngFor="let product of dataProduct"
+        >
           <div class="product__item">
             <div
               class="product__item__pic set-bg"
-              style="background-image: url(assets/img/product/1.png)"
+              style="background-image: url('{{ product.img }}')"
             >
               <ul class="product__item__pic__hover">
                 <li>
@@ -56,9 +43,9 @@
             </div>
             <div class="product__item__text">
               <h6>
-                <a href="#">{{ doan.name }}</a>
+                <a href="#">{{ product.name }}</a>
               </h6>
-              <h5>{{ doan.price }}</h5>
+              <h5>{{ product.price }}</h5>
             </div>
           </div>
         </div>
