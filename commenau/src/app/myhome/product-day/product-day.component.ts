@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { element } from 'protractor';
 import { Product } from 'src/app/model/product';
 import { ProductsService } from 'src/app/Services/products.service';
@@ -10,7 +10,7 @@ import { ProductsService } from 'src/app/Services/products.service';
 })
 export class ProductDayComponent implements OnInit {
   dataProduct!: Product[];
-  dataProduct2: Array<Product> = [];
+  @Input() dataProduct2: Array<Product> = [];
   weekDays = [
     { day: 'Thứ 2' },
     { day: 'Thứ 3' },
@@ -42,7 +42,7 @@ export class ProductDayComponent implements OnInit {
     }
   }
   // create random weekday
-   // public getWeekDay() {
+  // public getWeekDay() {
   //   for (let i in this.weekDays) {
   //   }
   // }

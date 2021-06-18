@@ -42,7 +42,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { MenuComponent } from './menu/menu.component';
 import { ProductsComponent } from './products/products.component';
 import { BreakcumbComponent } from './products/breakcumb/breakcumb.component';
-import { FilterComponent } from './products/filter/filter.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
 import { MyhomeComponent } from './myhome/myhome.component';
 import { ProductDayComponent } from './myhome/product-day/product-day.component';
@@ -52,7 +51,6 @@ import { CheckoutAccountComponent } from './checkout/checkout-account/checkout-a
 import { CheckoutCouponComponent } from './checkout/checkout-coupon/checkout-coupon.component';
 import { CheckoutDetailComponent } from './checkout/checkout-detail/checkout-detail.component';
 import { CheckoutOrderComponent } from './checkout/checkout-order/checkout-order.component';
-
 
 @NgModule({
   declarations: [
@@ -74,7 +72,6 @@ import { CheckoutOrderComponent } from './checkout/checkout-order/checkout-order
     ProductDirective,
     ProductsComponent,
     BreakcumbComponent,
-    FilterComponent,
     ProductListComponent,
     MyhomeComponent,
     ProductDayComponent,
