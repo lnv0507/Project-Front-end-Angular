@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { element } from 'protractor';
 import { Product } from 'src/app/model/product';
 import { ProductsService } from 'src/app/Services/products.service';
 
@@ -9,7 +10,7 @@ import { ProductsService } from 'src/app/Services/products.service';
 })
 export class ProductDayComponent implements OnInit {
   dataProduct!: Product[];
-  product = new Product();
+  dataProduct2: Array<Product> = [];
   weekDays = [
     { day: 'Thứ 2' },
     { day: 'Thứ 3' },
@@ -26,17 +27,23 @@ export class ProductDayComponent implements OnInit {
   }
   public connectProduct(): void {
     this.serviceProduct.getProduct().subscribe((data) => {
-      console.log('data', data);
+      // console.log('data', data);
       this.dataProduct = data;
+      this.productDay('Thứ 2');
     });
   }
-  public getWeekDay() {
-    for (let i in this.weekDays) {
+  // List product follow day of weeks
+  public productDay(day: String) {
+    this.dataProduct2 = [];
+    for (let i of this.dataProduct) {
+      if (day === i.weekdays) {
+        this.dataProduct2.push(i);
+      }
     }
   }
-  // public productDay(day: String) {
-  //   if (day == this.product.weekdays) {
-  //     return this.dataProduct;
+  // create random weekday
+   // public getWeekDay() {
+  //   for (let i in this.weekDays) {
   //   }
   // }
 }
