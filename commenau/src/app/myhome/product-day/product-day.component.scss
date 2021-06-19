@@ -41,7 +41,7 @@ $gray: #e7e7e7;
       font-size: 30px;
     }
     ul {
-      margin-left: 30%;
+      // margin-left: 30%;
       font-size: 15px;
     }
     .tab-panels {
@@ -127,7 +127,7 @@ $gray: #e7e7e7;
           h6 {
             margin-bottom: 10px;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 16px;
             a {
               color: $black;
               text-decoration: none;
@@ -136,6 +136,8 @@ $gray: #e7e7e7;
           h5 {
             color: $black;
             font-weight: 700;
+            font-size: 1.25rem;
+            margin-left: 0%;
           }
         }
       }
@@ -145,7 +147,7 @@ $gray: #e7e7e7;
       .product__item:hover {
         // -webkit-box-shadow: 0px 0px 10px 2px $blue2;
         // box-shadow: 0px 0px 10px 2px $blue2;
-        transform: scale(1.07);
+        transform: scale(1.03);
         visibility: visible;
       }
     }
