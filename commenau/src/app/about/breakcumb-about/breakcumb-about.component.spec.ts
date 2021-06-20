@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MenuComponent } from './menu.component';
+import { BreakcumbAboutComponent } from './breakcumb-about.component';
 
-describe('MenuComponent', () => {
-  let component: MenuComponent;
-  let fixture: ComponentFixture<MenuComponent>;
+describe('BreakcumbAboutComponent', () => {
+  let component: BreakcumbAboutComponent;
+  let fixture: ComponentFixture<BreakcumbAboutComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MenuComponent ]
+      declarations: [ BreakcumbAboutComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MenuComponent);
+    fixture = TestBed.createComponent(BreakcumbAboutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

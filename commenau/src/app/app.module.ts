@@ -22,7 +22,6 @@ const routersConfig: Routes = [
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
-import { BodyComponent } from './body/body.component';
 import { HeaderVipComponent } from './header-vip/header-vip.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -40,7 +39,6 @@ import { WishlistComponent } from './wishlist/wishlist.component';
 import { ProductDirective } from './directives/product.directive';
 import { ProductsService } from './Services/products.service';
 import { HttpClientModule } from '@angular/common/http';
-import { MenuComponent } from './menu/menu.component';
 import { ProductsComponent } from './products/products.component';
 import { BreakcumbComponent } from './products/breakcumb/breakcumb.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
@@ -55,12 +53,13 @@ import { CheckoutOrderComponent } from './checkout/checkout-order/checkout-order
 import {NgxPaginationModule} from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
+import { BreakcumbAboutComponent } from './about/breakcumb-about/breakcumb-about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AboutComponent,
     FooterComponent,
-    BodyComponent,
     HeaderVipComponent,
     LoginComponent,
     RegisterComponent,
@@ -85,6 +84,7 @@ import { FormsModule } from '@angular/forms';
     CheckoutCouponComponent,
     CheckoutDetailComponent,
     CheckoutOrderComponent,
+    BreakcumbAboutComponent,
   ],
   imports: [
     BrowserModule,
