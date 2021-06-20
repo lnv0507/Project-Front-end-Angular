@@ -54,6 +54,7 @@ import { CheckoutDetailComponent } from './checkout/checkout-detail/checkout-det
 import { CheckoutOrderComponent } from './checkout/checkout-order/checkout-order.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -91,6 +92,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     RouterModule.forRoot(routersConfig),
     HttpClientModule,
     NgxPaginationModule,Ng2SearchPipeModule,
+    FormsModule
     
   ],
   providers: [],

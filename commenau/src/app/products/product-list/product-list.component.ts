@@ -12,6 +12,7 @@ import { ProductsService } from 'src/app/Services/products.service';
 export class ProductListComponent implements OnInit {
   totalRecords!: String;
   p: number = 1;
+  search='';
   dataProduct: Array<Product> = [];
   weekDays = [{ day: 'string' }];
 
