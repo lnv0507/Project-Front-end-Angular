@@ -1,827 +1,837 @@
 {
-  "doan": [{ "id": 1, "title": "hihi", "author": "hello" }],
+  "doan": [
+    {
+      "id": 1,
+      "title": "hihi",
+      "author": "hello"
+    }
+  ],
+  "cart": [
+  ],
   "product": [
-    { "id":1,
+    {
+      "id": 1,
       "name": "Cơm Tấm Sườn Bì",
-       "price": "25000",
-      "img":"assets/img/product/1.png",
-      "des":"Cơm tấm là một món ăn Việt Nam có nguyên liệu chủ yếu từ gạo tấm. Dù có nhiều tên gọi ở các vùng miền khác nhau, tuy nhiên nguyên liệu và cách thức chế biến của món ăn trên gần như là giống nhau.",
+      "price": "25000",
+      "img": "assets/img/product/1.png",
+      "des": "Cơm tấm là một món ăn Việt Nam có nguyên liệu chủ yếu từ gạo tấm. Dù có nhiều tên gọi ở các vùng miền khác nhau, tuy nhiên nguyên liệu và cách thức chế biến của món ăn trên gần như là giống nhau.",
       "weekdays": "Thứ 2"
-     },
-     { "id":2,
+    },
+    {
+      "id": 2,
       "name": "Thịt Kho Đậu Hủ",
-       "price": "35000",
-      "img":"assets/img/product/2.png",
-      "des":"Thịt kho đậu hũ thơm ngon với thịt béo mềm, đậu hũ mềm ngon đậm đà mà công thức lại thật dễ làm đúng không nào! Hãy cùng thưởng thức ngay món ngon này với một ít cơm trắng để cảm nhận độ ngon của nó nhé!",
+      "price": "35000",
+      "img": "assets/img/product/2.png",
+      "des": "Thịt kho đậu hũ thơm ngon với thịt béo mềm, đậu hũ mềm ngon đậm đà mà công thức lại thật dễ làm đúng không nào! Hãy cùng thưởng thức ngay món ngon này với một ít cơm trắng để cảm nhận độ ngon của nó nhé!",
       "weekdays": "Thứ 2"
-     },
-     { "id":3,
+    },
+    {
+      "id": 3,
       "name": "Bí Non Xào",
-       "price": "50000",
-      "img":"assets/img/product/3.png",
-      "des":"",
+      "price": "50000",
+      "img": "assets/img/product/3.png",
+      "des": "",
       "weekdays": "Thứ 2"
-     },
-     {
+    },
+    {
       "id": "4",
       "name": "Trứng Chiên",
       "price": "16000",
       "img": "assets/img/product/1.jpg",
       "des": "Trứng Chiên ",
       "weekdays": "Thứ 2"
-  },
-  {
+    },
+    {
       "id": "5",
       "name": "Salad",
       "price": "197000",
       "img": "assets/img/product/2.jpg",
       "des": "",
       "weekdays": "Thứ 3"
-  },
-  {
+    },
+    {
       "id": "6",
       "name": "Trứng Chiên Thịt Bằm",
       "price": "18000",
       "img": "assets/img/product/3.jpg",
       "des": "",
       "weekdays": "Thứ 4"
-  },
-  {
+    },
+    {
       "id": "7",
       "name": "Cá Trạch Chiên",
       "price": "34000",
       "img": "assets/img/product/4.jpg",
       "des": "",
       "weekdays": "Thứ 5"
-  },
-  {
+    },
+    {
       "id": "8",
       "name": "Cá Ngừ Kho Thơm ",
       "price": "40000",
       "img": "assets/img/product/5.jpg",
       "des": "",
       "weekdays": "Thứ 6"
-  },
-  {
+    },
+    {
       "id": "9",
       "name": "Thịt Kho Cơm Dừa",
       "price": "25000",
       "img": "assets/img/product/6.jpg",
       "des": "",
       "weekdays": "Thứ 7"
-  },
-  {
+    },
+    {
       "id": "10",
       "name": "Sườn Nướng ",
       "price": "60000",
       "img": "assets/img/product/7.jpg",
       "des": "",
       "weekdays": "Thứ 2"
-  },
-  {
+    },
+    {
       "id": "11",
       "name": "Thịt Kho Trứng Cút",
       "price": "46000",
       "img": "assets/img/product/8.jpg",
       "des": "",
       "weekdays": "Thứ 3"
-  },
-  {
+    },
+    {
       "id": "12",
       "name": "Súp Tôm",
       "price": "324000",
       "img": "assets/img/product/9.jpg",
       "des": "",
       "weekdays": "Thứ 4"
-  },
-  {
+    },
+    {
       "id": "13",
       "name": "Súp Hạt Sen",
       "price": "213000",
       "img": "assets/img/product/10.jpg",
       "des": "",
       "weekdays": "Thứ 5"
-  },
-  {
+    },
+    {
       "id": "14",
       "name": "Cơm Đậu Japan",
       "price": "19000",
       "img": "assets/img/product/11.jpg",
       "des": "",
       "weekdays": "Thứ 6"
-  },
-  {
+    },
+    {
       "id": "15",
       "name": "Thịt Kho Trứng Gà",
       "price": "43000",
       "img": "assets/img/product/12.jpg",
       "des": "",
       "weekdays": "Thứ 7"
-  },
-  {
+    },
+    {
       "id": "16",
       "name": "Há Cảo",
       "price": "23000",
       "img": "assets/img/product/13.jpg",
       "des": "",
       "weekdays": "Thứ 2"
-  },
-  {
+    },
+    {
       "id": "17",
       "name": "Gà Kho Lá Chanh",
       "price": "55000",
       "img": "assets/img/product/14.jpg",
       "des": "",
       "weekdays": "Thứ 3"
-  },
-  {
+    },
+    {
       "id": "18",
       "name": "Canh Rau Củ",
       "price": "30000",
       "img": "assets/img/product/15.jpg",
       "des": "",
       "weekdays": "Thứ 4"
-  },
-  {
+    },
+    {
       "id": "19",
       "name": "Gà Luộc Lá Chanh",
       "price": "78000",
       "img": "assets/img/product/16.jpg",
       "des": "",
       "weekdays": "Thứ 5"
-  },
-  {
+    },
+    {
       "id": "20",
       "name": "Đùi Gà Chiên Nước Mắm",
       "price": "30000",
       "img": "assets/img/product/17.jpg",
       "des": "",
       "weekdays": "Thứ 6"
-  },
-  {
+    },
+    {
       "id": "21",
       "name": "Cá Kho",
       "price": "80000",
       "img": "assets/img/product/18.jpg",
       "des": "",
       "weekdays": "Thứ 7"
-  },
-  {
+    },
+    {
       "id": "22",
       "name": "Đùi Bò Nướng",
       "price": "650000",
       "img": "assets/img/product/19.jpg",
       "des": "",
       "weekdays": "Thứ 2"
-  },
-  {
+    },
+    {
       "id": "23",
       "name": "Sườn heo Nướng Ớt",
       "price": "378000",
       "img": "assets/img/product/20.jpg",
       "des": "",
       "weekdays": "Thứ 3"
-  },
-  {
+    },
+    {
       "id": "24",
       "name": "Tôm Rang",
       "price": "478000",
       "img": "assets/img/product/21.jpg",
       "des": "",
       "weekdays": "Thứ 4"
-  },
-  {
+    },
+    {
       "id": "25",
       "name": "Cơm Chiên ",
       "price": "45000",
       "img": "assets/img/product/22.jpg",
       "des": "",
       "weekdays": "Thứ 5"
-  },
-  {
+    },
+    {
       "id": "26",
       "name": "Cơm Chiên Lá Dứa",
       "price": "25000",
       "img": "assets/img/product/23.jpg",
       "des": "",
       "weekdays": "Thứ 6"
-  },
-  {
+    },
+    {
       "id": "27",
       "name": "Cơm Chiên Sơ Cua",
       "price": "25000",
       "img": "assets/img/product/24.jpg",
       "des": "",
       "weekdays": "Thứ 7"
-  },
-  {
+    },
+    {
       "id": "28",
       "name": "Cơm Chiên Hàn Quốc",
       "price": "25000",
       "img": "assets/img/product/25.jpg",
       "des": "",
       "weekdays": "Thứ 2"
-  },
-  {
+    },
+    {
       "id": "29",
       "name": "Cánh Gà Chiên Nước Mắm",
       "price": "59000",
       "img": "assets/img/product/26.jpg",
       "des": "",
       "weekdays": "Thứ 3"
-  },
-  {
+    },
+    {
       "id": "30",
       "name": "Cơm Tôm Hùm",
       "price": "40000",
       "img": "assets/img/product/27.jpg",
       "des": "",
       "weekdays": "Thứ 4"
-  },
-  {
+    },
+    {
       "id": "31",
       "name": "Cơm Tôm Hùm sSs",
       "price": "40000",
       "img": "assets/img/product/28.jpg",
       "des": "",
       "weekdays": "Thứ 5"
-  },
-  {
+    },
+    {
       "id": "32",
       "name": "Bò Xào Nấm Đùi Gà",
       "price": "35000",
       "img": "assets/img/product/29.jpg",
       "des": "",
       "weekdays": "Thứ 6"
-  },
-  {
+    },
+    {
       "id": "33",
       "name": "Tôm Xào",
       "price": "349000",
       "img": "assets/img/product/30.jpg",
       "des": "",
       "weekdays": "Thứ 7"
-  },
-  {
+    },
+    {
       "id": "34",
       "name": "Cơm Chiên Tôm",
       "price": "40000",
       "img": "assets/img/product/31.jpg",
       "des": "",
       "weekdays": "Thứ 2"
-  },
-  {
+    },
+    {
       "id": "35",
       "name": "Cơm Chiên Cá Hồi",
       "price": "40000",
       "img": "assets/img/product/32.jpg",
       "des": "",
       "weekdays": "Thứ 3"
-  },
-  {
+    },
+    {
       "id": "36",
       "name": "Cơm Chiên Hàu",
       "price": "40000",
       "img": "assets/img/product/33.jpg",
       "des": "",
       "weekdays": "Thứ 4"
-  },
-  {
+    },
+    {
       "id": "37",
       "name": "Bò Xào Lúc Lắc",
       "price": "40000",
       "img": "assets/img/product/34.jpg",
       "des": "",
       "weekdays": "Thứ 5"
-  },
-  {
+    },
+    {
       "id": "38",
       "name": "Cá Hồi Áp Chảo Sốt Mật Ông",
       "price": "50000",
       "img": "assets/img/product/35.jpg",
       "des": "",
       "weekdays": "Thứ 6"
-  },
-  {
+    },
+    {
       "id": "39",
       "name": "Cá Hồi Nướng Sốt Nấm",
       "price": "69000",
       "img": "assets/img/product/36.jpg",
       "des": "",
       "weekdays": "Thứ 7"
-  },
-  {
+    },
+    {
       "id": "40",
       "name": "Mực Xào",
       "price": "69000",
       "img": "assets/img/product/37.jpg",
       "des": "",
       "weekdays": "Thứ 2"
-  },
-  {
+    },
+    {
       "id": "41",
       "name": "Sườn Bò Mỹ Nướng Sốt BBQ",
       "price": "69000",
       "img": "assets/img/product/38.jpg",
       "des": "",
       "weekdays": "Thứ 3"
-  },
-  {
+    },
+    {
       "id": "42",
       "name": "Sườn Bò Mỹ Nướng Tiêu",
       "price": "289000",
       "img": "assets/img/product/39.jpg",
       "des": "",
       "weekdays": "Thứ 4"
-  },
-  {
+    },
+    {
       "id": "43",
       "name": "Thịt Kho Chả Lụa",
       "price": "29000",
       "img": "assets/img/product/40.jpg",
       "des": "",
       "weekdays": "Thứ 5"
-  },
-  {
+    },
+    {
       "id": "44",
       "name": "Sườn Cừu Mỹ Nướng Ớt",
       "price": "287000",
       "img": "assets/img/product/41.jpg",
       "des": "",
       "weekdays": "Thứ 6"
-  },
-  {
+    },
+    {
       "id": "45",
       "name": "Hàu Sốt PhoMai",
       "price": "60000",
       "img": "assets/img/product/42.jpg",
       "des": "",
       "weekdays": "Thứ 7"
-  },
-  {
+    },
+    {
       "id": "46",
       "name": "Cá Nục Kho Thịt ",
       "price": "28000",
       "img": "assets/img/product/43.jpg",
       "des": "",
       "weekdays": "Thứ 2"
-  },
-  {
+    },
+    {
       "id": "47",
       "name": "Cá Bống Kho Tiêu",
       "price": "129000",
       "img": "assets/img/product/44.jpg",
       "des": "",
       "weekdays": "Thứ 3"
-  },
-  {
+    },
+    {
       "id": "48",
       "name": "Thịt Heo Chiên",
       "price": "30000",
       "img": "assets/img/product/45.jpg",
       "des": "",
       "weekdays": "Thứ 4"
-  },
-  {
+    },
+    {
       "id": "49",
       "name": "Cá Kho Tộ",
       "price": "30000",
       "img": "assets/img/product/46.jpg",
       "des": "",
       "weekdays": "Thứ 5"
-  },
-  {
+    },
+    {
       "id": "50",
       "name": "Cá Thu Sốt Cà",
       "price": "30000",
       "img": "assets/img/product/47.jpg",
       "des": "",
       "weekdays": "Thứ 6"
-  },
-  {
+    },
+    {
       "id": "51",
       "name": "Thịt Heo Quay Kho Cải Chua",
       "price": "30000",
       "img": "assets/img/product/48.jpg",
       "des": "",
       "weekdays": "Thứ 7"
-  },
-  {
+    },
+    {
       "id": "52",
       "name": "Gà Kho xả",
       "price": "45000",
       "img": "assets/img/product/49.jpg",
       "des": "",
       "weekdays": "Thứ 2"
-  },
-  {
+    },
+    {
       "id": "53",
       "name": "Cá Lóc Nướng",
       "price": "45000",
       "img": "assets/img/product/50.jpg",
       "des": "",
       "weekdays": "Thứ 3"
-  },
-  {
+    },
+    {
       "id": "54",
       "name": "Heo Xào Xả Ớt",
       "price": "45000",
       "img": "assets/img/product/51.jpg",
       "des": "",
       "weekdays": "Thứ 4"
-  },
-  {
+    },
+    {
       "id": "55",
       "name": "Bò Xào Hành Cần",
       "price": "45000",
       "img": "assets/img/product/52.jpg",
       "des": "",
       "weekdays": "Thứ 5"
-  },
-  {
+    },
+    {
       "id": "56",
       "name": "Sườn Sào Nướng Muối Ớt",
       "price": "500000",
       "img": "assets/img/product/53.jpg",
       "des": "",
       "weekdays": "Thứ 6"
-  },
-  {
+    },
+    {
       "id": "57",
       "name": "Sườn Ram",
       "price": "500000",
       "img": "assets/img/product/54.jpg",
       "des": "",
       "weekdays": "Thứ 7"
-  },
-  {
+    },
+    {
       "id": "58",
       "name": "Rau Muống Sào Tỏi",
       "price": "29000",
       "img": "assets/img/product/55.jpg",
       "des": "",
       "weekdays": "Thứ 2"
-  },
-  {
+    },
+    {
       "id": "59",
       "name": "Bò Lúc Lắc",
       "price": "449000",
       "img": "assets/img/product/56.jpg",
       "des": "",
       "weekdays": "Thứ 3"
-  },
-  {
+    },
+    {
       "id": "60",
       "name": "Mức Trứng Chiên Giòn",
       "price": "219000",
       "img": "assets/img/product/57.jpg",
       "des": "",
       "weekdays": "Thứ 4"
-  },
-  {
+    },
+    {
       "id": "61",
       "name": "Nấm Và Đậu Bắp ",
       "price": "30000",
       "img": "assets/img/product/58.jpg",
       "des": "",
       "weekdays": "Thứ 5"
-  },
-  {
+    },
+    {
       "id": "62",
       "name": "Rau Củ Luộc",
       "price": "45000",
       "img": "assets/img/product/59.jpg",
       "des": "",
       "weekdays": "Thứ 6"
-  },
-  {
+    },
+    {
       "id": "63",
       "name": "Mực Ống Nướng Muối Ớt",
       "price": "389000",
       "img": "assets/img/product/60.jpg",
       "des": "",
       "weekdays": "Thứ 7"
-  },
-  {
+    },
+    {
       "id": "64",
       "name": "Canh Khổ Qua Nhồi Thịt",
       "price": "30000",
       "img": "assets/img/product/61.jpg",
       "des": "",
       "weekdays": "Thứ 2"
-  },
-  {
+    },
+    {
       "id": "65",
       "name": "Nấm Bào Ngư Xả Ớt",
       "price": "30000",
       "img": "assets/img/product/62.jpg",
       "des": "",
       "weekdays": "Thứ 3"
-  },
-  {
+    },
+    {
       "id": "66",
       "name": "Rau Muống Sào Tỏi",
       "price": "45000",
       "img": "assets/img/product/63.jpg",
       "des": "",
       "weekdays": "Thứ 4"
-  },
-  {
+    },
+    {
       "id": "67",
       "name": "Cá Basa Kho Tộ",
       "price": "55000",
       "img": "assets/img/product/64.jpg",
       "des": "",
       "weekdays": "Thứ 5"
-  },
-  {
+    },
+    {
       "id": "68",
       "name": "Bò Salad",
       "price": "659000",
       "img": "assets/img/product/65.jpg",
       "des": "",
       "weekdays": "Thứ 6"
-  },
-  {
+    },
+    {
       "id": "69",
       "name": "Gỏi Chả",
       "price": "20000",
       "img": "assets/img/product/66.jpg",
       "des": "",
       "weekdays": "Thứ 7"
-  },
-  {
+    },
+    {
       "id": "70",
       "name": "Tôm Đất Rang Muối",
       "price": "20000",
       "img": "assets/img/product/67.jpg",
       "des": "",
       "weekdays": "Thứ 2"
-  },
-  {
+    },
+    {
       "id": "71",
       "name": "Mực Chiên Giòn",
       "price": "20000",
       "img": "assets/img/product/68.jpg",
       "des": "",
       "weekdays": "Thứ 3"
-  },
-  {
+    },
+    {
       "id": "72",
       "name": "Miến Trộn Sò Điệp",
       "price": "20000",
       "img": "assets/img/product/69.jpg",
       "des": "",
       "weekdays": "Thứ 4"
-  },
-  {
+    },
+    {
       "id": "73",
       "name": "Thịt Luộc Cà Pháo",
       "price": "50000",
       "img": "assets/img/product/70.jpg",
       "des": "",
       "weekdays": "Thứ 5"
-  },
-  {
+    },
+    {
       "id": "74",
       "name": "Kho Quẹt",
       "price": "79000",
       "img": "assets/img/product/71.jpg",
       "des": "",
       "weekdays": "Thứ 6"
-  },
-  {
+    },
+    {
       "id": "75",
       "name": "Canh Mồng Tơi Thịt Bằm",
       "price": "250000",
       "img": "assets/img/product/72.jpg",
       "des": "",
       "weekdays": "Thứ 7"
-  },
-  {
+    },
+    {
       "id": "76",
       "name": "Đậu Phụ Sốt Cà",
       "price": "250000",
       "img": "assets/img/product/73.jpg",
       "des": "",
       "weekdays": "Thứ 2"
-  },
-  {
+    },
+    {
       "id": "77",
       "name": "Nấm Sào Rau Càng Cua",
       "price": "250000",
       "img": "assets/img/product/74.jpg",
       "des": "",
       "weekdays": "Thứ 3"
-  },
-  {
+    },
+    {
       "id": "78",
       "name": "Gỏi Xoài Trộn Thịt Heo",
       "price": "250000",
       "img": "assets/img/product/75.jpg",
       "des": "",
       "weekdays": "Thứ 4"
-  },
-  {
+    },
+    {
       "id": "79",
       "name": "Salad",
       "price": "250000",
       "img": "assets/img/product/76.jpg",
       "des": "",
       "weekdays": "Thứ 5"
-  },
-  {
+    },
+    {
       "id": "80",
       "name": "Bông Hẹ Xào Bò",
       "price": "250000",
       "img": "assets/img/product/77.jpg",
       "des": "",
       "weekdays": "Thứ 6"
-  },
-  {
+    },
+    {
       "id": "81",
       "name": "Cơm Sườn Chả",
       "price": "250000",
       "img": "assets/img/product/78.jpg",
       "des": "",
       "weekdays": "Thứ 7"
-  },
-  {
+    },
+    {
       "id": "82",
       "name": "Cua Chiên Giòn",
       "price": "400000",
       "img": "assets/img/product/79.jpg",
       "des": "",
       "weekdays": "Thứ 2"
-  },
-  {
+    },
+    {
       "id": "83",
       "name": "Cải Thìa Sào",
       "price": "89000",
       "img": "assets/img/product/80.jpg",
       "des": "",
       "weekdays": "Thứ 3"
-  },
-  {
+    },
+    {
       "id": "84",
       "name": "Súp Đậu Hủ",
       "price": "89000",
       "img": "assets/img/product/81.jpg",
       "des": "",
       "weekdays": "Thứ 4"
-  },
-  {
+    },
+    {
       "id": "85",
       "name": "Đậu Hủ Nhồi Thịt",
       "price": "89000",
       "img": "assets/img/product/82.jpg",
       "des": "",
       "weekdays": "Thứ 5"
-  },
-  {
+    },
+    {
       "id": "86",
       "name": "Lòng Gà Xào Nấm",
       "price": "89000",
       "img": "assets/img/product/83.jpg",
       "des": "",
       "weekdays": "Thứ 6"
-  },
-  {
+    },
+    {
       "id": "87",
       "name": "Cà Pháo Muối",
       "price": "59000",
       "img": "assets/img/product/84.jpg",
       "des": "",
       "weekdays": "Thứ 7"
-  },
-  {
+    },
+    {
       "id": "88",
       "name": "Cơm Chiên Dương Châu",
       "price": "30000",
       "img": "assets/img/product/85.jpg",
       "des": "",
       "weekdays": "Thứ 2"
-  },
-  {
+    },
+    {
       "id": "89",
       "name": "Súp",
       "price": "25000",
       "img": "assets/img/product/86.jpg",
       "des": "",
       "weekdays": "Thứ 3"
-  },
-  {
+    },
+    {
       "id": "90",
       "name": "Canh Tôm Củ",
       "price": "29000",
       "img": "assets/img/product/87.jpg",
       "des": "",
       "weekdays": "Thứ 4"
-  },
-  {
+    },
+    {
       "id": "91",
       "name": "Canh Chua Cá Basa",
       "price": "29000",
       "img": "assets/img/product/88.jpg",
       "des": "",
       "weekdays": "Thứ 5"
-  },
-  {
+    },
+    {
       "id": "92",
       "name": "Cá Ngừ Chiên Nước Mắm",
       "price": "89000",
       "img": "assets/img/product/89.jpg",
       "des": "",
       "weekdays": "Thứ 6"
-  },
-  {
+    },
+    {
       "id": "93",
       "name": "Đùi Gà Chiên Nước Mắm",
       "price": "30000",
       "img": "assets/img/product/90.jpg",
       "des": "",
       "weekdays": "Thứ 7"
-  },
-  {
+    },
+    {
       "id": "94",
       "name": "Bí Non Xào Tỏi",
       "price": "30000",
       "img": "assets/img/product/91.jpg",
       "des": "",
       "weekdays": "Thứ 2"
-  },
-  {
+    },
+    {
       "id": "95",
       "name": "Tôm Đất Chiên Giòn",
       "price": "30000",
       "img": "assets/img/product/92.jpg",
       "des": "",
       "weekdays": "Thứ 3"
-  },
-  {
+    },
+    {
       "id": "96",
       "name": "Bánh Đúc Nhồi Thịt",
       "price": "30000",
       "img": "assets/img/product/93.jpg",
       "des": "",
       "weekdays": "Thứ 4"
-  },
-  {
+    },
+    {
       "id": "97",
       "name": "Cá Nục Chiên",
       "price": "30000",
       "img": "assets/img/product/94.jpg",
       "des": "",
       "weekdays": "Thứ 5"
-  },
-  {
+    },
+    {
       "id": "98",
       "name": "Cá Lóc Kho Tộ",
       "price": "99000",
       "img": "assets/img/product/95.jpg",
       "des": "",
       "weekdays": "Thứ 6"
-  },
-  {
+    },
+    {
       "id": "99",
       "name": "Cá Thu Béo Kho Tộ",
       "price": "78000",
       "img": "assets/img/product/96.jpg",
       "des": "",
       "weekdays": "Thứ 7"
-  },
-  {
+    },
+    {
       "id": "100",
       "name": "Canh Mít",
       "price": "67000",
       "img": "assets/img/product/97.jpg",
       "des": "",
       "weekdays": "Thứ 2"
-  },
-  {
+    },
+    {
       "id": "101",
       "name": "Gỏi Tôm Thịt Heo",
       "price": "46000",
       "img": "assets/img/product/98.jpg",
       "des": "",
       "weekdays": "Thứ 3"
-  },
-  {
+    },
+    {
       "id": "102",
       "name": "Canh Rau Muống",
       "price": "46000",
       "img": "assets/img/product/99.jpg",
       "des": "",
       "weekdays": "Thứ 4"
-  },
-  {
+    },
+    {
       "id": "103",
       "name": "Thịt Luộc Cà Pháo",
       "price": "123000",
       "img": "assets/img/product/100.jpg",
       "des": "",
       "weekdays": "Thứ 5"
-  }
-     
+    }
   ]
 }

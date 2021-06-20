@@ -26,7 +26,6 @@ export class ShopDetailComponent implements OnInit {
     })
   }
   
-
   fullHeart() {
     if (this.heartIcon) {
       this.heartIcon = false;

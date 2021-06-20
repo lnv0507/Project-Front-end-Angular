@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Product } from 'src/app/model/product';
 import { ProductDayComponent } from 'src/app/myhome/product-day/product-day.component';
 import { ProductsService } from 'src/app/Services/products.service';
+import { CartService } from 'src/app/Services/cart.service'
 
 @Component({
   selector: 'app-product-list',
@@ -17,7 +18,7 @@ export class ProductListComponent implements OnInit {
   weekDays = [{ day: 'string' }];
  
 
-  constructor(private product: ProductsService, public router: Router) {
+  constructor(private product: ProductsService, public router: Router, private cartService: CartService) {
     this.weekDays = this.product.weekDays;
   }
 
@@ -42,4 +43,8 @@ export class ProductListComponent implements OnInit {
     this.order = value;
   }
   
+  public addToCart(product: Product){
+    this.cartService.addItem(product);
+  }
+
 }
