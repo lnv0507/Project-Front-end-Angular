@@ -8,7 +8,6 @@ import { ProductCart } from '../model/product-cart';
   providedIn: 'root'
 })
 export class CartService {
-  exist :boolean | undefined;
   cartItems:ProductCart [] = [];
 
   constructor() {}
@@ -21,7 +20,13 @@ export class CartService {
     if(exist)
       exist.quatity++;
     else{
-      this.cartItems.push(new ProductCart(product.id,product.name,product.price, product.img));
+      const item: ProductCart = new ProductCart();
+      item.id = product.id;
+      item.name = product.name;
+      item.price = product.price;
+      item.quatity = 1;
+      item.img = product.img;
+      this.cartItems.push(item);
     }
      console.log(this.cartItems);
 
