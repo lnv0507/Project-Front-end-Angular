@@ -1,25 +1,23 @@
-
 import { getTranslationDeclStmts } from '@angular/compiler/src/render3/view/template';
 import { Injectable } from '@angular/core';
 import { Product } from '../model/product';
 import { ProductCart } from '../model/product-cart';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CartService {
-  cartItems:ProductCart [] = [];
+  cartItems: ProductCart[] = [];
 
   constructor() {}
-  
-  addItem(product: Product){
-    const exist = this.cartItems.find((item: ProductCart) =>{
+
+  addItem(product: Product) {
+    const exist = this.cartItems.find((item: ProductCart) => {
       return item.id === product.id;
     });
 
-    if(exist)
-      exist.quatity++;
-    else{
+    if (exist) exist.quatity++;
+    else {
       const item: ProductCart = new ProductCart();
       item.id = product.id;
       item.name = product.name;
@@ -28,20 +26,10 @@ export class CartService {
       item.img = product.img;
       this.cartItems.push(item);
     }
-     console.log(this.cartItems);
-
+    console.log(this.cartItems);
   }
-  
-  getCartItems(){
+
+  getCartItems() {
     return this.cartItems;
   }
-
 }
-
-  
-
-
-
-
-
-

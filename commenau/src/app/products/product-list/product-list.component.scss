@@ -12,6 +12,7 @@ $gray: #e7e7e7;
     font-size: 16px;
     margin-bottom: 15px;
   }
+
   ul {
     li {
       list-style: none;
@@ -20,6 +21,10 @@ $gray: #e7e7e7;
         color: $black;
         line-height: 39px;
         display: block;
+      }
+
+      .clickDay {
+        color: $blue1;
       }
     }
   }
@@ -43,14 +48,13 @@ $gray: #e7e7e7;
       padding-right: 15px;
       font-weight: 700;
     }
-    a{
+    a {
       font-size: 16px;
       color: $black;
       display: inline-block;
       padding-right: 15px;
       font-weight: 500;
       cursor: default;
-
     }
 
     select {
@@ -230,12 +234,12 @@ $gray: #e7e7e7;
   }
 }
 .hero__search__form {
-	width: 795px;
-	height: 50px;
-	border: 1px solid #ebebeb;
-	position: relative;
-	float: left;
-   button {
+  width: 795px;
+  height: 50px;
+  border: 1px solid #ebebeb;
+  position: relative;
+  float: left;
+  button {
     position: absolute;
     right: 0;
     top: -1px;
@@ -248,11 +252,10 @@ $gray: #e7e7e7;
     font-size: 16px;
     color: #b2b2b2;
     padding-left: 20px;
-     input::placeholder {
+    input::placeholder {
       color: #b2b2b2;
     }
-    
-}
+  }
 }
 .site-btn {
   font-size: 14px;

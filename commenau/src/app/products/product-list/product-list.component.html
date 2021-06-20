@@ -2,9 +2,16 @@
   <div class="sidebar">
     <div class="sidebar__item">
       <h5>Thực đơn theo ngày</h5>
-      <ul class="nav-uppercase nav-size-large nav-center">
+      <ul
+        class="nav nav-pills nav-uppercase nav-size-large nav-center dayProduct"
+      >
         <li *ngFor="let th of weekDays">
-          <a (click)="listProductDay(th.day)">
+          <a
+            (click)="listProductDay(th.day)"
+            routerLink="/menu"
+            routerLinkActive="clickDay"
+            [routerLinkActiveOptions]="{ exact: false }"
+          >
             <label> {{ th.day }}</label>
           </a>
         </li>
@@ -13,22 +20,27 @@
   </div>
 </div>
 <div class="row">
-  <div class="hero__search__form" >
-        <!-- <div class="hero__search__categories">
+  <div class="hero__search__form">
+    <!-- <div class="hero__search__categories">
             All Categories
             <span class="arrow_carrot-down"></span>
         </div> -->
-        <input type="text" placeholder="Bạn muốn ăn gì?" [(ngModel)]="search">
-         <button type="submit" class="site-btn"><i class="fas fa-search"></i></button>
-
-</div>
+    <input type="text" placeholder="Bạn muốn ăn gì?" [(ngModel)]="search" />
+    <button type="submit" class="site-btn">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
   <div class="filter__item">
     <div class="row">
       <div class="col-lg-12 col-md-5">
         <div class="filter__sort">
-          <span >Sắp xếp theo: &nbsp; </span>
-          <a (click)="setOrder('name')">Tên &nbsp;<i class="fas fa-sort"></i> </a>
-          <a (click)="setOrder('price')">Giá &nbsp;<i class="fas fa-sort"></i></a>
+          <span>Sắp xếp theo: &nbsp; </span>
+          <a (click)="setOrder('name')"
+            >Tên &nbsp;<i class="fas fa-sort"></i>
+          </a>
+          <a (click)="setOrder('price')"
+            >Giá &nbsp;<i class="fas fa-sort"></i
+          ></a>
           <!-- <select>
             <option >Mặc định</option>
             <option  (click)="setOrder('price')">Ten</option>
@@ -53,7 +65,10 @@
   <div
     class="col-lg-4 col-md-6 col-sm-6"
     *ngFor="
-      let d of dataProduct |filter:search | paginate: { itemsPerPage: 12, currentPage: p } | orderBy: order: reverse
+      let d of dataProduct
+        | filter: search
+        | paginate: { itemsPerPage: 12, currentPage: p }
+        | orderBy: order:reverse
     "
   >
     <div class="product__item">
@@ -79,7 +94,7 @@
         <h6>
           <a href="#">{{ d.name }}</a>
         </h6>
-        <h5>{{ d.price }} đ</h5>
+        <h5>{{ d.price | currency: "VND":"symbol" }}</h5>
       </div>
     </div>
   </div>

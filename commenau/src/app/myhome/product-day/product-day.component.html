@@ -10,9 +10,19 @@
       <h5>{{ titleRice }}</h5>
     </div>
     <div class="container">
-      <ul class="nav nav-pills nav-uppercase nav-size-large nav-center">
-        <li *ngFor="let th of weekDays">
-          <a (click)="listProductDay(th.day)">
+      <ul
+        class="
+          nav nav-pills nav-uppercase nav-size-large nav-center
+          day-product
+        "
+      >
+        <li *ngFor="let th of weekDays" >
+          <a
+            (click)="listProductDay(th.day)"
+            routerLink="/trangchu"
+            routerLinkActive="clickDay"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
             <label for="">{{ th.day }} </label></a
           >
         </li>
@@ -45,7 +55,7 @@
               <h6>
                 <a href="#">{{ product.name }}</a>
               </h6>
-              <h5>{{ product.price }} đ</h5>
+              <h5>{{ product.price | currency: "VND":"symbol" }}</h5>
             </div>
           </div>
         </div>
