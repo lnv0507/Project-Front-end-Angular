@@ -11,6 +11,8 @@ import { ProductsService } from 'src/app/Services/products.service';
 export class ProductListComponent implements OnInit {
   dataProduct2: Array<Product> = [];
   dataPro: any;
+  totalRecords!:String;
+  p: number = 1;
   constructor(private serviceProduct: ProductsService, public router: Router) {}
 
   ngOnInit(): void {

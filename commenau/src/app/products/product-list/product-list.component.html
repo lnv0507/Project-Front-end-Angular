@@ -40,7 +40,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let d of dataPro">
+  <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let d of dataPro | paginate: { itemsPerPage: 12, currentPage: p }">
     <div class="product__item">
       <div
         class="product__item__pic set-bg"
@@ -68,10 +68,10 @@
       </div>
     </div>
   </div>
+  <div class="product__pagination">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
 </div>
-<div class="product__pagination">
-  <a href="#">1</a>
-  <a href="#">2</a>
-  <a href="#">3</a>
-  <a href="#"><i class="fa fa-long-arrow-right"></i></a>
-</div>
+
+
+

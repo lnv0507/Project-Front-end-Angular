@@ -51,6 +51,8 @@ import { CheckoutAccountComponent } from './checkout/checkout-account/checkout-a
 import { CheckoutCouponComponent } from './checkout/checkout-coupon/checkout-coupon.component';
 import { CheckoutDetailComponent } from './checkout/checkout-detail/checkout-detail.component';
 import { CheckoutOrderComponent } from './checkout/checkout-order/checkout-order.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -87,6 +89,8 @@ import { CheckoutOrderComponent } from './checkout/checkout-order/checkout-order
     AppRoutingModule,
     RouterModule.forRoot(routersConfig),
     HttpClientModule,
+    NgxPaginationModule,Ng2SearchPipeModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],
