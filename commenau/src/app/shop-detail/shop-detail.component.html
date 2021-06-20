@@ -15,11 +15,11 @@
 </section> -->
 <div class="breadcurb-area">
   <div class="container">
-      <ul class="breadcrumb">
-          <li><a href="#">Trang chủ</a></li>
-          <li><a href="#">Cơm trưa</a></li>
-          <li>{{product.weekdays}}</li>
-      </ul>
+    <ul class="breadcrumb">
+      <li><a routerLink="/trangchu">Trang chủ</a></li>
+      <li><a routerLink="/menu">Menu</a></li>
+      <li>{{ product.weekdays }}</li>
+    </ul>
   </div>
 </div>
 <!-- Breadcrumb Section End -->
@@ -33,24 +33,24 @@
           <div class="product__details__pic__item">
             <img
               class="product__details__pic__item--large"
-              src="{{product.img}}"
+              src="{{ product.img }}"
               alt=""
             />
           </div>
           <div class="product__details__pic__slider owl-carousel">
             <img
               data-imgbigurl="assets/img/product/heo-quay-kho-cai-chua.png"
-              src="{{product.img}}"
+              src="{{ product.img }}"
               alt=""
             />
             <img
               data-imgbigurl="img/product/product/details/product-details-3.jpg"
-              src="{{product.img}}"
+              src="{{ product.img }}"
               alt=""
             />
             <img
               data-imgbigurl="img/product/details/product-details-5.jpg"
-              src="{{product.img}}"
+              src="{{ product.img }}"
               alt=""
             />
           </div>
@@ -58,8 +58,10 @@
       </div>
       <div class="col-lg-6 col-md-6">
         <div class="product__details__text">
-          <h3>{{product.name}}</h3>
-          <div class="product__details__price">{{product.price}}</div>
+          <h3>{{ product.name }}</h3>
+          <div class="product__details__price">
+            {{ product.price | currency: "VND" }}
+          </div>
           <div class="product__details__rating">
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
@@ -68,9 +70,7 @@
             <i class="fa fa-star-half-alt"></i>
             <!-- <span>(18 reviews)</span> -->
           </div>
-          <p>
-            <b>Mô tả: </b>{{product.des}}
-          </p>
+          <p><b>Mô tả: </b>{{ product.des }}</p>
           <p><b>Tình trạng:</b> Còn hàng</p>
           <p><b>Giao hàng:</b> 1 giờ. <samp> Miễn phí trong ngày</samp></p>
           <div class="product__details__quantity">
@@ -109,12 +109,9 @@
               <a
                 class="nav-link active"
                 data-toggle="tab"
-                routerLink="#tabs-1"
                 href="#tabs-1"
                 role="tab"
                 aria-selected="true"
-                routerLinkActive="activeClick"
-                [routerLinkActiveOptions]="{ exact: true }"
                 >Mô tả</a
               >
             </li>
@@ -123,12 +120,9 @@
               <a
                 class="nav-link"
                 data-toggle="tab"
-                routerLink="#tabs-3"
                 href="#tabs-3"
                 role="tab"
                 aria-selected="false"
-                routerLinkActive="activeClick"
-                [routerLinkActiveOptions]="{ exact: true }"
                 >Đánh giá <span>(1)</span></a
               >
             </li>
@@ -137,11 +131,9 @@
             <div class="tab-pane active" id="tabs-1" role="tabpanel">
               <div class="product__details__tab__desc">
                 <h6>Mô tả món ăn</h6>
-                <p><b>Tên: </b>{{product.name}}</p>
+                <p><b>Tên: </b>{{ product.name }}</p>
                 <p></p>
-                <p>
-                  <b>Mô tả: </b>{{product.des}}
-                </p>
+                <p><b>Mô tả: </b>{{ product.des }}</p>
                 <p><b>Tình trạng:</b> Còn hàng</p>
                 <p>
                   <b>Giao hàng:</b> 1 giờ. <samp> Miễn phí trong ngày</samp>
@@ -152,10 +144,6 @@
             <div class="tab-pane" id="tabs-3" role="tabpanel">
               <div class="product__details__tab__desc">
                 <h6>Đánh giá</h6>
-                <p>Sản phẩm ngon</p>
-                <p>Sản phẩm ngon</p>
-                <p>Sản phẩm ngon</p>
-                <p>Sản phẩm ngon</p>
                 <p>Sản phẩm ngon</p>
               </div>
             </div>
@@ -189,7 +177,9 @@
                 <a href="#"><i class="fa fa-heart"></i></a>
               </li>
               <li>
-                <a routerLink="/chitietsanpham"><i class="fa fa-external-link"></i></a>
+                <a routerLink="/chitietsanpham"
+                  ><i class="fa fa-external-link"></i
+                ></a>
               </li>
               <li>
                 <a href="#"><i class="fa fa-shopping-cart"></i></a>

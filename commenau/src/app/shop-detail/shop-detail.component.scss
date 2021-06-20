@@ -1,6 +1,6 @@
 $blue: #3ac5c8;
 $blue1: #23536b;
-$blue2:#2B82AD;
+$blue2: #2b82ad;
 $black: #141619;
 $white: #ffffff;
 $gray: #e7e7e7;
@@ -49,7 +49,6 @@ a:hover,
 a:focus {
   text-decoration: none;
   outline: none;
-  
 }
 .section-title {
   margin-bottom: 50px;
@@ -143,7 +142,7 @@ a:focus {
 //     }
 //   }
 // }
-.container{
+.container {
   width: 1080px;
 }
 //product
@@ -205,7 +204,7 @@ a:focus {
     }
     p {
       margin-bottom: 10px;
-      
+
       color: #141619;
       samp {
         color: #dd2222;
@@ -283,8 +282,8 @@ a:focus {
         padding: 0;
         background-color: white;
       }
-      li a:hover{
-          background-color: white;
+      li a:hover {
+        background-color: white;
       }
       li .activeClick {
         color: $blue2;
@@ -421,16 +420,21 @@ a:focus {
     visibility: visible;
   }
 }
-.breadcurb-area{
-  .breadcrumb{
-      background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-      // margin: 15px 0 20px;
-      padding-top: 20px;
-      font-size: 15px;
-      a{
-        text-decoration: none;
-        color: rgb(161, 147, 147);
-      }
+.breadcurb-area {
+  .breadcrumb {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    // margin: 15px 0 20px;
+    padding-top: 20px;
+    font-size: 15px;
+    a {
+      text-decoration: none;
+      color: rgb(161, 147, 147);
+    }
   }
-  
+}
+.changee {
+  color: red;
+}
+.changee2 {
+  color: blue;
 }
