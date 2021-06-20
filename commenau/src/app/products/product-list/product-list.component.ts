@@ -15,6 +15,7 @@ export class ProductListComponent implements OnInit {
   search='';
   dataProduct: Array<Product> = [];
   weekDays = [{ day: 'string' }];
+ 
 
   constructor(private product: ProductsService, public router: Router) {
     this.weekDays = this.product.weekDays;
@@ -31,4 +32,14 @@ export class ProductListComponent implements OnInit {
     this.dataProduct = this.product.productDay(day);
     return this.dataProduct;
   }
+  order: string = 'id';
+  reverse: boolean = false;
+  public setOrder(value: string) {
+    if (this.order === value) {
+      this.reverse = !this.reverse;
+    }
+
+    this.order = value;
+  }
+  
 }

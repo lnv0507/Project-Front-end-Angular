@@ -43,6 +43,15 @@ $gray: #e7e7e7;
       padding-right: 15px;
       font-weight: 700;
     }
+    a{
+      font-size: 16px;
+      color: $black;
+      display: inline-block;
+      padding-right: 15px;
+      font-weight: 500;
+      cursor: default;
+
+    }
 
     select {
       background-color: #fff;

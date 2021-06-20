@@ -52,6 +52,7 @@ import { CheckoutDetailComponent } from './checkout/checkout-detail/checkout-det
 import { CheckoutOrderComponent } from './checkout/checkout-order/checkout-order.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { Ng2OrderModule } from 'ng2-order-pipe';
 import { FormsModule } from '@angular/forms';
 import { BreakcumbAboutComponent } from './about/breakcumb-about/breakcumb-about.component';
 
@@ -91,7 +92,7 @@ import { BreakcumbAboutComponent } from './about/breakcumb-about/breakcumb-about
     AppRoutingModule,
     RouterModule.forRoot(routersConfig),
     HttpClientModule,
-    NgxPaginationModule,Ng2SearchPipeModule,
+    NgxPaginationModule,Ng2SearchPipeModule,Ng2OrderModule,
     FormsModule
     
   ],
