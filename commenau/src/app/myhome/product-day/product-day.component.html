@@ -12,7 +12,7 @@
     <div class="container">
       <ul class="nav nav-pills nav-uppercase nav-size-large nav-center">
         <li *ngFor="let th of weekDays">
-          <a (click)="productDay(th.day)">
+          <a (click)="listProductDay(th.day)">
             <label for="">{{ th.day }} </label></a
           >
         </li>
@@ -20,7 +20,7 @@
       <div class="tab-panels">
         <div
           class="col-lg-3 col-md-12 col-sm-12"
-          *ngFor="let product of dataProduct2"
+          *ngFor="let product of dataProduct"
         >
           <div class="product__item">
             <div

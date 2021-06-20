@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
+
 const routersConfig: Routes = [
   { path: 'dangnhap', component: LoginComponent },
   { path: 'giohang', component: CartComponent },

@@ -2,13 +2,12 @@
   <div class="sidebar">
     <div class="sidebar__item">
       <h5>Thực đơn theo ngày</h5>
-      <ul>
-        <li><a>Thứ Hai</a></li>
-        <li><a>Thứ Ba</a></li>
-        <li><a>Thứ Tư</a></li>
-        <li><a>Thứ Năm</a></li>
-        <li><a>Thứ Sáu</a></li>
-        <li><a>Thứ Bảy</a></li>
+      <ul class="nav-uppercase nav-size-large nav-center">
+        <li *ngFor="let th of weekDays">
+          <a (click)="listProductDay(th.day)">
+            <label> {{ th.day }}</label>
+          </a>
+        </li>
       </ul>
     </div>
   </div>
@@ -40,7 +39,12 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let d of dataPro | paginate: { itemsPerPage: 12, currentPage: p }">
+  <div
+    class="col-lg-4 col-md-6 col-sm-6"
+    *ngFor="
+      let d of dataProduct | paginate: { itemsPerPage: 12, currentPage: p }
+    "
+  >
     <div class="product__item">
       <div
         class="product__item__pic set-bg"
@@ -51,6 +55,7 @@
             <a href="#"><i class="fa fa-heart"></i></a>
           </li>
           <li>
+            a
             <a [routerLink]="['/chitietsanpham', d.id]"
               ><i class="fa fa-external-link"></i
             ></a>
@@ -72,6 +77,3 @@
     <pagination-controls (pageChange)="p = $event"></pagination-controls>
   </div>
 </div>
-
-
-

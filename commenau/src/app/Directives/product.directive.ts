@@ -1,12 +1,11 @@
-import { Directive } from '@angular/core';
+import { Directive, Input } from '@angular/core';
+import { Product } from '../model/product';
+import { ProductsService } from '../Services/products.service';
 
 @Directive({
-  selector: '[appProduct]'
+  selector: '[appProduct]',
 })
 export class ProductDirective {
-
-  constructor( ) { 
-    
-  }
-
+  constructor() {}
+  public ngOnInit(): void {}
 }

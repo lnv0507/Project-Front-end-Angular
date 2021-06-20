@@ -9,37 +9,23 @@ import { ProductsService } from 'src/app/Services/products.service';
   styleUrls: ['./product-day.component.scss'],
 })
 export class ProductDayComponent implements OnInit {
-  dataProduct!: Product[];
-  @Input() dataProduct2: Array<Product> = [];
-  weekDays = [
-    { day: 'Thứ 2' },
-    { day: 'Thứ 3' },
-    { day: 'Thứ 4' },
-    { day: 'Thứ 5' },
-    { day: 'Thứ 6' },
-    { day: 'Thứ 7' },
-  ];
+  dataProduct: Array<Product> = [];
+  weekDays = [{ day: 'string' }];
   titleRice = 'Cơm Trưa Văn Phòng';
-  constructor(private serviceProduct: ProductsService) {}
+  constructor(private product: ProductsService) {
+    this.weekDays = this.product.weekDays;
+  }
 
-  public ngOnInit(): void {
-    this.connectProduct();
+  ngOnInit(): void {
+    this.connect();
   }
-  public connectProduct(): void {
-    this.serviceProduct.getProduct().subscribe((data) => {
-      // console.log('data', data);
-      this.dataProduct = data;
-      this.productDay('Thứ 2');
-    });
+  public connect() {
+    this.product.connectProduct();
+    this.dataProduct = this.product.productDay('Thứ 2');
   }
-  // List product follow day of weeks
-  public productDay(day: String) {
-    this.dataProduct2 = [];
-    for (let i of this.dataProduct) {
-      if (day === i.weekdays) {
-        this.dataProduct2.push(i);
-      }
-    }
+  public listProductDay(day: String): Product[] {
+    this.dataProduct = this.product.productDay(day);
+    return this.dataProduct;
   }
   // create random weekday
   // public getWeekDay() {

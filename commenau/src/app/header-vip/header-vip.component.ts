@@ -8,8 +8,8 @@ import { Component, OnInit, HostListener, Input } from '@angular/core';
 export class HeaderVipComponent implements OnInit {
   header_variable = false;
   search_click = false;
-  @Input() menu_header :string="menu-header2";
-  
+  @Input() menu_header: string = 'menu-header2';
+
   constructor() {}
 
   ngOnInit(): void {}
@@ -47,5 +47,4 @@ export class HeaderVipComponent implements OnInit {
 
     // Note : Làm mờ khi click search mà chưa ra :))
   }
- 
 }
