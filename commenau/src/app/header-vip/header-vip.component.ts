@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener, Input } from '@angular/core';
+import { totalmem } from 'os';
 import { CartService } from '../Services/cart.service';
 
 @Component({
@@ -11,6 +12,7 @@ export class HeaderVipComponent implements OnInit {
   search_click = false;
   @Input() menu_header: string = 'menu-header2';
   items = this.cart.getCartItems();
+  total = this.getTotal();
 
   constructor(private cart: CartService) {}
 
@@ -50,6 +52,14 @@ export class HeaderVipComponent implements OnInit {
     // }
 
     // Note : Làm mờ khi click search mà chưa ra :))
+  }
+
+  getTotal(){
+    var total: number = 0;
+    for( let i of this.items){
+      total += (i.price * i.quatity);
+    }
+    return total;
   }
   
   

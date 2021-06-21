@@ -8,6 +8,7 @@ import { ProductCart } from '../model/product-cart';
 })
 export class CartService {
   cartItems: ProductCart[] = [];
+  total: number =0;
 
   constructor() {}
 
@@ -35,6 +36,12 @@ export class CartService {
   }
   setCartItems(cartItems: ProductCart[]){
     this.cartItems = cartItems;
+  }
+  getTotal(){
+    for(let i of this.cartItems){
+      this.total += (i.price * i.quatity);
+    }
+    return this.total;
   }
   
   
