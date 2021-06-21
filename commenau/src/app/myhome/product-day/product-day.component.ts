@@ -12,6 +12,7 @@ export class ProductDayComponent implements OnInit {
   dataProduct: Array<Product> = [];
   weekDays = [{ day: 'string' }];
   titleRice = 'Cơm Trưa Văn Phòng';
+  date!: Date;
   constructor(private product: ProductsService) {
     this.weekDays = this.product.weekDays;
   }

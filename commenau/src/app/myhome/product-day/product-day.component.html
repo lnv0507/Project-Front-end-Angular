@@ -16,7 +16,7 @@
           day-product
         "
       >
-        <li *ngFor="let th of weekDays" >
+        <li *ngFor="let th of weekDays">
           <a
             (click)="listProductDay(th.day)"
             routerLink="/trangchu"
@@ -55,7 +55,7 @@
               <h6>
                 <a href="#">{{ product.name }}</a>
               </h6>
-              <h5>{{ product.price | currency: "VND":"symbol" }}</h5>
+              <h5>{{ product.price | currency: "VND":true }}</h5>
             </div>
           </div>
         </div>

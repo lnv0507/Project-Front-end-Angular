@@ -188,20 +188,26 @@ $gray: #e7e7e7;
           color: $black;
           display: flex;
           margin-left: 20px;
-          font-size: 2em;
+          font-size: 1.5em;
+          margin-top: 10px;
+          .item-food{
+            display: flex;
+          }
           p {
             margin-left: 10px;
             color: darkgray;
           }
           p:nth-child(1) {
             color: $black;
+            margin-right: 80px;
           }
           p:nth-child(2) {
+            margin-right:40px;  
             color: darkgray;
           }
           img {
-            width: 70px;
-            height: 100px;
+            width: 40px;
+            height: 50px;
           }
         }
         .sub-total {
