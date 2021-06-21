@@ -8,10 +8,15 @@
         <th scope="col" class="title-table">TỔNG TIỀN</th>
       </tr>
     </thead>
-    <tbody>
-        <tr *ngFor="let item of items">
+    <tbody *ngIf="items.length == 0">
+      <tr>
+        <td class="emty_items" colspan="5">Chưa có sản phẩm trong giỏ hàng</td>
+      </tr>
+    </tbody>
+    <tbody *ngIf="items.length > 0">
+        <tr *ngFor="let item of items" >
           <th class="delete">
-              <button>x</button>
+              <button (click)="removeItem(item.id)">x</button>
           </th>
           <td class="product-name">
               <img src="{{item.img}}" alt="" style="height: 50px;width: 50px">
@@ -19,13 +24,12 @@
           </td>
           <td class="price">{{item.price}}</td>
           <td class="quantity">
-              <button>+</button>
+              <button (click)="increaseQuatity(item.id)" >+</button>
               <input type="text" value="{{item.quatity}}">
-              <button>-</button>  
+              <button (click)="reduceQuatity(item.id)">-</button>  
           </td>
           <td class="total">{{item.price * item.quatity}}</td>
         </tr>
-      
       
     </tbody>
   </table>

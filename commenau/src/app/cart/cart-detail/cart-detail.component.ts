@@ -12,8 +12,28 @@ export class CartDetailComponent implements OnInit {
   constructor(private cart: CartService) { }
 
   ngOnInit(): void {
+  }
+  increaseQuatity(id:any){
+    for(let p of this.items){
+      if(p.id === id){
+        p.quatity++;
+      }
+    }
+  }
 
-
+  reduceQuatity(id: any){
+    for(let p of this.items){
+      if(p.id === id){
+        if(p.quatity ===1)
+          p.quatity =1;
+        else p.quatity--;
+      }
+    }
+  }
+  
+  removeItem(id : any){
+     const index = this.items.findIndex(item => item.id === id);
+     this.items.splice(index,1);
   }
 
 }
