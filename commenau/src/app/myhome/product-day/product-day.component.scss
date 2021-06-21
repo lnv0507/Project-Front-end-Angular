@@ -6,35 +6,6 @@ $gray: #e7e7e7;
 .body-home {
   margin-top: 3em;
 
-  .title-body {
-    margin-left: 45%;
-    margin-bottom: 10em;
-    h5 {
-      font-size: 30px;
-    }
-    p {
-      position: relative;
-      top: 10px;
-      font-size: 1.5em;
-      margin-left: 1em;
-    }
-    button {
-      top: 20px;
-      height: 40px;
-      width: 100px;
-      border-radius: 10px;
-      position: relative;
-      left: -20px;
-      background-color: $blue;
-      border: none;
-      color: $white;
-      font-size: 15px;
-    }
-    button:nth-last-child(1) {
-      position: relative;
-      left: 10px;
-    }
-  }
   .title-everyday {
     h5 {
       margin-left: 42%;
