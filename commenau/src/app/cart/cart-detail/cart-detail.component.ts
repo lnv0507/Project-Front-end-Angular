@@ -19,6 +19,7 @@ export class CartDetailComponent implements OnInit {
         p.quatity++;
       }
     }
+    this.cart.setCartItems(this.items);
   }
 
   reduceQuatity(id: any){
@@ -29,11 +30,13 @@ export class CartDetailComponent implements OnInit {
         else p.quatity--;
       }
     }
+    this.cart.setCartItems(this.items);
   }
   
   removeItem(id : any){
      const index = this.items.findIndex(item => item.id === id);
      this.items.splice(index,1);
+     this.cart.setCartItems(this.items);
   }
 
 }

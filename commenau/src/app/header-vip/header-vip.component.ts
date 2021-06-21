@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener, Input } from '@angular/core';
+import { CartService } from '../Services/cart.service';
 
 @Component({
   selector: 'app-header-vip',
@@ -9,10 +10,13 @@ export class HeaderVipComponent implements OnInit {
   header_variable = false;
   search_click = false;
   @Input() menu_header: string = 'menu-header2';
+  items = this.cart.getCartItems();
 
-  constructor() {}
+  constructor(private cart: CartService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+  }
 
   @HostListener('document:scroll')
   scroolFunction() {
@@ -47,4 +51,8 @@ export class HeaderVipComponent implements OnInit {
 
     // Note : Làm mờ khi click search mà chưa ra :))
   }
+  
+  
+
+  
 }

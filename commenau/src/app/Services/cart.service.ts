@@ -16,7 +16,9 @@ export class CartService {
       return item.id === product.id;
     });
 
-    if (exist) exist.quatity++;
+    if (exist){
+      exist.quatity++;
+    }
     else {
       const item: ProductCart = new ProductCart();
       item.id = product.id;
@@ -26,10 +28,14 @@ export class CartService {
       item.img = product.img;
       this.cartItems.push(item);
     }
-    console.log(this.cartItems);
   }
 
   getCartItems() {
     return this.cartItems;
   }
+  setCartItems(cartItems: ProductCart[]){
+    this.cartItems = cartItems;
+  }
+  
+  
 }
