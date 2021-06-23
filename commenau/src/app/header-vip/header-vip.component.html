@@ -46,20 +46,23 @@
         <div class="thanh-bar"></div>
         <div class="bag-user">
           <p class="food-bag">Túi Đồ Ăn</p>
-          <div class="item-cart" *ngFor="let i of items">
-            <img
-              src="{{i.img}}"
-              alt=""
-            />
-            <div class="item-food">
-              <p>{{i.name}}</p>
-              <p><label for="">{{i.quatity}}</label></p>
-              <p><label for="">{{i.price * i.quatity}}</label></p>
+          <div class="scroll">
+            <div class="item-cart" *ngFor="let i of items">
+              <img src="{{ i.img }}" alt="" />
+              <div class="item-food">
+                <p>{{ i.name }}</p>
+                <p>
+                  <label for="">{{ i.quatity }}</label>
+                </p>
+                <p>
+                  <label for="">{{ i.price * i.quatity }}</label>
+                </p>
+              </div>
             </div>
           </div>
           <div class="sub-total">
             <p>Tổng Tiền</p>
-            <p>{{total}}</p>
+            <p>{{ total }}</p>
           </div>
           <div>
             <a routerLink="/giohang"> <button>XEM CHI TIẾT TÚI</button></a>

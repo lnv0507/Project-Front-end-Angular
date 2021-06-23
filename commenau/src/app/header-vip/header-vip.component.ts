@@ -12,12 +12,12 @@ export class HeaderVipComponent implements OnInit {
   search_click = false;
   @Input() menu_header: string = 'menu-header2';
   items = this.cart.getCartItems();
-  total = this.getTotal();
+  _total!: number;
 
   constructor(private cart: CartService) {}
 
   ngOnInit(): void {
-    
+    this.getTotal();
   }
 
   @HostListener('document:scroll')
@@ -53,16 +53,13 @@ export class HeaderVipComponent implements OnInit {
 
     // Note : Làm mờ khi click search mà chưa ra :))
   }
-
-  getTotal(){
-    var total: number = 0;
-    for( let i of this.items){
-      total += (i.price * i.quatity);
-    }
-    return total;
+  set total(total: number) {
+    this._total = total;
   }
-  
-  
-
-  
+  get total() {
+    return this._total;
+  }
+  getTotal() {
+    this._total = this.cart.getTotal();
+  }
 }

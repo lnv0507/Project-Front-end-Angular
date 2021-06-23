@@ -178,36 +178,47 @@ $gray: #e7e7e7;
         left: -50px;
         z-index: 2;
         overflow: hidden;
+
         .food-bag {
           color: $black;
           margin-left: 34%;
           margin-top: 0.7em;
           font-size: 2em;
         }
-        .item-cart {
-          color: $black;
-          display: flex;
-          margin-left: 20px;
-          font-size: 1.5em;
-          margin-top: 10px;
-          .item-food{
-            display: flex;
-          }
-          p {
-            margin-left: 10px;
-            color: darkgray;
-          }
-          p:nth-child(1) {
+        .scroll {
+          height: 150px;
+          overflow-y: scroll;
+
+          .item-cart {
             color: $black;
-            margin-right: 80px;
-          }
-          p:nth-child(2) {
-            margin-right:40px;  
-            color: darkgray;
-          }
-          img {
-            width: 40px;
-            height: 50px;
+            display: flex;
+            margin-left: 20px;
+            font-size: 1.5em;
+            margin-top: 10px;
+
+            .item-food {
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+            }
+            p {
+              color: darkgray;
+            }
+            p:nth-child(1) {
+              color: $black;
+              width: 40%;
+            }
+            p:nth-child(2) {
+              width: 10%;
+            }
+            p:nth-child(3) {
+              width: 30%;
+            }
+            img {
+              width: 40px;
+              height: 50px;
+              margin-right: 20px;
+            }
           }
         }
         .sub-total {

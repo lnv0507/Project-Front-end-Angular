@@ -7,20 +7,16 @@ import { ProductCart } from '../model/product-cart';
   providedIn: 'root',
 })
 export class CartService {
-  cartItems: ProductCart[] = [];
-  total: number =0;
-
+  cartItems: Array<ProductCart> = [];
   constructor() {}
-
   addItem(product: Product) {
     const exist = this.cartItems.find((item: ProductCart) => {
       return item.id === product.id;
     });
 
-    if (exist){
+    if (exist) {
       exist.quatity++;
-    }
-    else {
+    } else {
       const item: ProductCart = new ProductCart();
       item.id = product.id;
       item.name = product.name;
@@ -34,15 +30,15 @@ export class CartService {
   getCartItems() {
     return this.cartItems;
   }
-  setCartItems(cartItems: ProductCart[]){
+  setCartItems(cartItems: Array<ProductCart>) {
     this.cartItems = cartItems;
   }
-  getTotal(){
-    for(let i of this.cartItems){
-      this.total += (i.price * i.quatity);
+  getTotal() {
+    let total = 0;
+    for (let i of this.cartItems) {
+      total += i.price * i.quatity;
     }
-    return this.total;
+    return total;
   }
-  
-  
+
 }
