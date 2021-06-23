@@ -1,43 +1,46 @@
 <table class="table">
-    <thead>
-      <tr>
-        <th scope="col"></th>
-        <th scope="col" class="title-table">SẢN PHẨM</th>
-        <th scope="col" class="title-table">GIÁ</th>
-        <th scope="col" class="title-table">SỐ LƯỢNG</th>
-        <th scope="col" class="title-table">TỔNG TIỀN</th>
-      </tr>
-    </thead>
-    <tbody *ngIf="items.length == 0">
-      <tr>
-        <td class="emty_items" colspan="5">Chưa có sản phẩm trong giỏ hàng</td>
-      </tr>
-    </tbody>
-    <tbody *ngIf="items.length > 0">
-        <tr *ngFor="let item of items" >
-          <th class="delete">
-              <button (click)="removeItem(item.id)">x</button>
-          </th>
-          <td class="product-name">
-              <img src="{{item.img}}" alt="" style="height: 50px;width: 50px">
-              <h5>{{item.name}}</h5>
-          </td>
-          <td class="price">{{item.price}}</td>
-          <td class="quantity">
-              <button (click)="increaseQuatity(item.id)" >+</button>
-              <input type="text" value="{{item.quatity}}">
-              <button (click)="reduceQuatity(item.id)">-</button>  
-          </td>
-          <td class="total">{{item.price * item.quatity}}</td>
-        </tr>
-      
-    </tbody>
-  </table>
-  <div class="row">
-    <div class="col-lg-12">
-        <div class="shoping__cart__btns">
-            <button type="button" class="btn btn-light"> <a routerLink="/thanhtoan">TIẾP TỤC ĐẶT HÀNG</a></button>
-            <button type="button" class="btn btn-dark"><a href="">CẬP NHẬT GIỎ HÀNG</a></button>
-        </div>
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col" class="title-table">SẢN PHẨM</th>
+      <th scope="col" class="title-table">GIÁ</th>
+      <th scope="col" class="title-table">SỐ LƯỢNG</th>
+      <th scope="col" class="title-table">TỔNG TIỀN</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="items.length == 0">
+    <tr>
+      <td class="emty_items" colspan="5">Chưa có sản phẩm trong giỏ hàng</td>
+    </tr>
+  </tbody>
+  <tbody *ngIf="items.length > 0">
+    <tr *ngFor="let item of items">
+      <th class="delete">
+        <button (click)="removeItem(item.id)">x</button>
+      </th>
+      <td class="product-name">
+        <img src="{{ item.img }}" alt="" style="height: 50px; width: 50px" />
+        <h5>{{ item.name }}</h5>
+      </td>
+      <td class="price">{{ item.price }}</td>
+      <td class="quantity">
+        <button (click)="increaseQuatity(item.id)">+</button>
+        <input type="text" value="{{ item.quatity }}" />
+        <button (click)="reduceQuatity(item.id)">-</button>
+      </td>
+      <td class="total">{{ item.price * item.quatity }}</td>
+    </tr>
+  </tbody>
+</table>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="shoping__cart__btns">
+      <button type="button" class="btn btn-light">
+        <a routerLink="/thanhtoan">TIẾP TỤC ĐẶT HÀNG</a>
+      </button>
+      <button type="button" class="btn btn-dark">
+        <a href="">CẬP NHẬT GIỎ HÀNG</a>
+      </button>
     </div>
   </div>
+</div>
