@@ -38,6 +38,27 @@
           <button class="login-button" routerLink="/dangnhap">Đăng nhập</button>
         </div>
       </div>
+      <div class="bag-big thanhbar-muiten">
+        <a class="bagA" routerLink="/yeuthich"
+          ><i class="fas fa-heart"></i><label>Yêu Thích</label></a
+        >
+        <div class="thanh-bar"></div>
+        <div class="bag-user">
+          <p class="food-bag">Danh sách yêu thích</p>
+          <div class="scroll">
+            <div class="item-cart" *ngFor="let i of itemsWishlist">
+              <img src="{{ i.img }}" alt="" />
+              <div class="item-food">
+                <p>{{ i.name }}</p>
+              
+              </div>
+            </div>
+          </div>
+          <div>
+            <a routerLink="/yeuthich"> <button>XEM CHI TIẾT</button></a>
+          </div>
+        </div>
+      </div>
 
       <div class="bag-big thanhbar-muiten">
         <a class="bagA" routerLink="/giohang"

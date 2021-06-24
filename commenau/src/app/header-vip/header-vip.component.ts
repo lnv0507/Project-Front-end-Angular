@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener, Input } from '@angular/core';
 import { totalmem } from 'os';
 import { CartService } from '../Services/cart.service';
+import { WishlistService } from '../Services/wishlist.service';
 
 @Component({
   selector: 'app-header-vip',
@@ -12,8 +13,9 @@ export class HeaderVipComponent implements OnInit {
   search_click = false;
   @Input() menu_header: string = 'menu-header2';
   items = this.cart.getCartItems();
+  itemsWishlist=this.wish.getWishlistItems();
 
-  constructor(private cart: CartService) {}
+  constructor(private cart: CartService,private wish: WishlistService) {}
 
   ngOnInit(): void {
     this.getTotal();
