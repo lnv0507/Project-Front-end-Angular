@@ -3,8 +3,9 @@ export class Wishlist {
     name!: String;
     price!: number;
     img!: String;
-    quatity!: number;
+    quatity!: boolean;
     des!: String;
   weekdays!: String;
+  yeuthich!:boolean;
     constructor(){}
 }

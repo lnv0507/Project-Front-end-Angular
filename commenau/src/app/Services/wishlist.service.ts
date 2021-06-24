@@ -16,16 +16,23 @@ export class WishlistService {
 
     });
     if(exist){
-      exist.quatity++
+      exist.quatity==false;
     }else{
       const item:Wishlist =new Wishlist();
       item.id=product.id;
       item.name=product.name;
       item.price=product.price;
-      item.quatity =1;
+      item.quatity =true;
       item.img=product.img;
+      
       this.wishlistItems.push(item);
     }
+  }
+  removeItem(p: Product){
+    const index = this.wishlistItems.findIndex((item) => item.id === p.id);
+    this.wishlistItems.splice(index, 1);
+    this.setWishlistItems(this.wishlistItems);
+    
   }
 
   getWishlistItems(){

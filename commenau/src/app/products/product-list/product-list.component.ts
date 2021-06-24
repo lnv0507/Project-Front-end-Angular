@@ -18,6 +18,8 @@ export class ProductListComponent implements OnInit {
   dataProduct: Array<Product> = [];
   weekDays = [{ day: 'string' }];
   productCheck = true;
+  addedWishlist: boolean=false;
+  
 
   constructor(
     private product: ProductsService,
@@ -58,7 +60,14 @@ export class ProductListComponent implements OnInit {
     this.cartService.addItem(product);
   }
   public addToWishlist(p:Product){
+    p.yeuthich=true;
     this.wishlistService.addItem(p);
-    
+    return p.yeuthich;    
+  }
+
+  public removeWish(p:Product){
+    p.yeuthich=false;
+    this.wishlistService.removeItem(p);
+    return p.yeuthich;
   }
 }

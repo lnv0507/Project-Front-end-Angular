@@ -10,7 +10,7 @@
                                 <th>Giá</th>
                                 <th>Chi Tiết</th>
                                 <th>Thêm Vào Giỏ Hàng</th>
-                                <th></th>
+                                <th>Xóa</th>
                             </tr>
                         </thead>
                         <tbody *ngIf="items.length>0">
@@ -42,13 +42,10 @@
                           
                             
                         </tbody>
-                        <tbody *ngIf="items.length==0">
+                        <tbody *ngIf="items.length==0">                          
                             <tr>
-                                Không có sản phẩm 
-                              
-                            </tr>
-                          
-                            
+                                <td class="emty_items" colspan="5">Chưa có sản phẩm trong danh sách yêu thích</td>
+                              </tr>   
                         </tbody>
                     </table>
                 </div>
