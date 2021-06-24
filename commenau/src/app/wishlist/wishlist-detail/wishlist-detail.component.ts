@@ -18,5 +18,10 @@ export class WishlistDetailComponent implements OnInit {
   public addToCart(product: Product) {
     this.cartService.addItem(product);
   }
+  removeItem(id: any){
+    const index=this.items.findIndex((item)=>item.id===id);
+    this.items.splice(index,1);
+    this.wishlist.setWishlistItems(this.items);
+  }
 
 }
