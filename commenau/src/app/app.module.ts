@@ -16,6 +16,7 @@ const routersConfig: Routes = [
   { path: 'vechungtoi', component: AboutComponent },
   { path: 'kiemtra', component: VerifyComponent },
   { path: 'yeuthich', component: WishlistComponent },
+  {path: 'thongtin', component: DetailCustomerComponent},
   { path: '**', component: Page404Component },
 ];
 
