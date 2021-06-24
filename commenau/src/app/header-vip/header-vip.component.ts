@@ -12,7 +12,6 @@ export class HeaderVipComponent implements OnInit {
   search_click = false;
   @Input() menu_header: string = 'menu-header2';
   items = this.cart.getCartItems();
-  _total!: number;
 
   constructor(private cart: CartService) {}
 
@@ -53,13 +52,8 @@ export class HeaderVipComponent implements OnInit {
 
     // Note : Làm mờ khi click search mà chưa ra :))
   }
-  set total(total: number) {
-    this._total = total;
-  }
-  get total() {
-    return this._total;
-  }
+ 
   getTotal() {
-    this._total = this.cart.getTotal();
+   return this.cart.getTotal();
   }
 }

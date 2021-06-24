@@ -14,7 +14,11 @@ export class ProductDayComponent implements OnInit {
   weekDays = [{ day: 'string' }];
   titleRice = 'Cơm Trưa Văn Phòng';
   date!: Date;
-  constructor(private product: ProductsService, private cartService: CartService) {
+  productCheck = true;
+  constructor(
+    private product: ProductsService,
+    private cartService: CartService
+  ) {
     this.weekDays = this.product.weekDays;
   }
 
@@ -23,19 +27,18 @@ export class ProductDayComponent implements OnInit {
   }
   public connect() {
     this.product.connectProduct();
-    this.dataProduct = this.product.productDay('Thứ 2');
   }
   public listProductDay(day: String): Product[] {
     this.dataProduct = this.product.productDay(day);
+    this.productCheck = false;
     return this.dataProduct;
   }
+  public getProduct() {
+    this.productCheck = true;
+    return this.product.getDayProduct();
+  }
 
-  public addToCart(product: Product){
+  public addToCart(product: Product) {
     this.cartService.addItem(product);
   }
-  // create random weekday
-  // public getWeekDay() {
-  //   for (let i in this.weekDays) {
-  //   }
-  // }
 }

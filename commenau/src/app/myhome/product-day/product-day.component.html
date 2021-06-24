@@ -22,37 +22,77 @@
         </li>
       </ul>
       <div class="tab-panels">
-        <div
-          class="col-lg-3 col-md-12 col-sm-12"
-          *ngFor="let product of dataProduct"
-        >
-          <div class="product__item">
-            <div
-              class="product__item__pic set-bg"
-              style="background-image: url('{{ product.img }}')"
-            >
-              <ul class="product__item__pic__hover">
-                <li>
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </li>
-                <li>
-                  <a [routerLink]="['/chitietsanpham', product.id]"
-                    ><i class="fa fa-external-link"></i
-                  ></a>
-                </li>
-                <li>
-                  <a (click)="addToCart(product)"><i class="fa fa-shopping-cart"></i></a>
-                </li>
-              </ul>
-            </div>
-            <div class="product__item__text">
-              <h6>
-                <a href="#">{{ product.name }}</a>
-              </h6>
-              <h5>{{ product.price | currency: "VND":true }}</h5>
+        <div *ngIf="productCheck; then thenMonday; else thenDay"></div>
+        <ng-template #thenMonday>
+          <div
+            class="col-lg-3 col-md-12 col-sm-12"
+            *ngFor="let product of getProduct()"
+          >
+            <div class="product__item">
+              <div
+                class="product__item__pic set-bg"
+                style="background-image: url('{{ product.img }}')"
+              >
+                <ul class="product__item__pic__hover">
+                  <li>
+                    <a href="#"><i class="fa fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/chitietsanpham', product.id]"
+                      ><i class="fa fa-external-link"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a (click)="addToCart(product)"
+                      ><i class="fa fa-shopping-cart"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="product__item__text">
+                <h6>
+                  <a href="#">{{ product.name }}</a>
+                </h6>
+                <h5>{{ product.price | currency: "VND":true }}</h5>
+              </div>
             </div>
           </div>
-        </div>
+        </ng-template>
+        <ng-template #thenDay>
+          <div
+            class="col-lg-3 col-md-12 col-sm-12"
+            *ngFor="let product of dataProduct"
+          >
+            <div class="product__item">
+              <div
+                class="product__item__pic set-bg"
+                style="background-image: url('{{ product.img }}')"
+              >
+                <ul class="product__item__pic__hover">
+                  <li>
+                    <a href="#"><i class="fa fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/chitietsanpham', product.id]"
+                      ><i class="fa fa-external-link"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a (click)="addToCart(product)"
+                      ><i class="fa fa-shopping-cart"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="product__item__text">
+                <h6>
+                  <a href="#">{{ product.name }}</a>
+                </h6>
+                <h5>{{ product.price | currency: "VND":true }}</h5>
+              </div>
+            </div>
+          </div>
+        </ng-template>
       </div>
     </div>
   </div>

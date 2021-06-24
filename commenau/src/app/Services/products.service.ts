@@ -72,6 +72,41 @@ export class ProductsService {
         this.dataProduct2.push(i);
       }
     }
+
     return this.dataProduct2;
+  }
+  // Lay danh sach product theo ngay`
+  public getDayProduct() {
+    let date = new Date();
+    let th = date.getDay();
+    let day_name = '';
+    switch (th) {
+      case 0:
+        day_name = 'Chủ Nhật';
+        break;
+      case 1:
+        day_name = 'Thứ 2';
+        break;
+
+      case 2:
+        day_name = 'Thứ 3';
+        break;
+
+      case 3:
+        day_name = 'Thứ 4';
+        break;
+
+      case 4:
+        day_name = 'Thứ 5';
+        break;
+
+      case 5:
+        day_name = 'Thứ 6';
+        break;
+
+      case 6:
+        day_name = 'Thứ 7';
+    }
+    return this.productDay(day_name);
   }
 }

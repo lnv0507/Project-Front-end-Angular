@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Product } from 'src/app/model/product';
 import { ProductDayComponent } from 'src/app/myhome/product-day/product-day.component';
 import { ProductsService } from 'src/app/Services/products.service';
-import { CartService } from 'src/app/Services/cart.service'
+import { CartService } from 'src/app/Services/cart.service';
 
 @Component({
   selector: 'app-product-list',
@@ -13,12 +13,16 @@ import { CartService } from 'src/app/Services/cart.service'
 export class ProductListComponent implements OnInit {
   totalRecords!: String;
   p: number = 1;
-  search='';
+  search = '';
   dataProduct: Array<Product> = [];
   weekDays = [{ day: 'string' }];
- 
+  productCheck = true;
 
-  constructor(private product: ProductsService, public router: Router, private cartService: CartService) {
+  constructor(
+    private product: ProductsService,
+    public router: Router,
+    private cartService: CartService
+  ) {
     this.weekDays = this.product.weekDays;
   }
 
@@ -27,12 +31,17 @@ export class ProductListComponent implements OnInit {
   }
   public connect() {
     this.product.connectProduct();
-    this.dataProduct = this.product.productDay('Thứ 2');
   }
   public listProductDay(day: String): Product[] {
     this.dataProduct = this.product.productDay(day);
+    this.productCheck = false;
     return this.dataProduct;
   }
+  public getProduct() {
+    this.productCheck = true;
+    return this.product.getDayProduct();
+  }
+
   order: string = 'id';
   reverse: boolean = false;
   public setOrder(value: string) {
@@ -42,9 +51,8 @@ export class ProductListComponent implements OnInit {
 
     this.order = value;
   }
-  
-  public addToCart(product: Product){
+
+  public addToCart(product: Product) {
     this.cartService.addItem(product);
   }
-
 }
