@@ -12,6 +12,7 @@ import { Product } from '../model/product';
   providedIn: 'root',
 })
 export class ProductsService {
+  addCart = false;
   dataProduct!: Product[];
   dataProduct2: Array<Product> = [];
   weekDays = [

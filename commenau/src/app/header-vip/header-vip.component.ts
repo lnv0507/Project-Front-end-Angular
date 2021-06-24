@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener, Input } from '@angular/core';
 import { totalmem } from 'os';
 import { CartService } from '../Services/cart.service';
+import { ProductsService } from '../Services/products.service';
 import { WishlistService } from '../Services/wishlist.service';
 
 @Component({
@@ -13,9 +14,41 @@ export class HeaderVipComponent implements OnInit {
   search_click = false;
   @Input() menu_header: string = 'menu-header2';
   items = this.cart.getCartItems();
-  itemsWishlist=this.wish.getWishlistItems();
-
-  constructor(private cart: CartService,private wish: WishlistService) {}
+  itemsWishlist = this.wish.getWishlistItems();
+  styleAddCart = {
+    opacity: '1',
+    visibility: 'inherit',
+    width: '35em',
+    height: '50em',
+  };
+  styleCloseCart = {
+    transition: 'height 0.5s ease-in',
+    visibility: 'hidden',
+    opacity: '0',
+    position: 'absolute',
+    backgroundColor: '#fffff',
+    width: '0em',
+    height: '0em',
+    left: '-50px',
+    zIndex: '2',
+    overflow: 'hidden',
+  };
+  thanhBar = {
+    position: 'relative',
+    borderTop: '5px solid transparent',
+    borderTight: '5px solid transparent',
+    borderBbottom: '5px solid #fffff',
+    borderLeft: '5px solid transparent',
+    width: '0',
+    height: '0',
+    margin: 'auto',
+    marginTop: '5px',
+  };
+  constructor(
+    private cart: CartService,
+    private product: ProductsService,
+    private wish: WishlistService
+  ) {}
 
   ngOnInit(): void {
     this.getTotal();
@@ -54,8 +87,11 @@ export class HeaderVipComponent implements OnInit {
 
     // Note : Làm mờ khi click search mà chưa ra :))
   }
- 
+
   getTotal() {
-   return this.cart.getTotal();
+    return this.cart.getTotal();
+  }
+  showCart() {
+    return this.product.addCart;
   }
 }

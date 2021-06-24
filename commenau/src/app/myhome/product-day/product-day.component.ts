@@ -3,6 +3,7 @@ import { element } from 'protractor';
 import { Product } from 'src/app/model/product';
 import { ProductsService } from 'src/app/Services/products.service';
 import { CartService } from 'src/app/Services/cart.service';
+import { HeaderVipComponent } from 'src/app/header-vip/header-vip.component';
 
 @Component({
   selector: 'app-product-day',
@@ -38,7 +39,9 @@ export class ProductDayComponent implements OnInit {
     return this.product.getDayProduct();
   }
 
-  public addToCart(product: Product) {
-    this.cartService.addItem(product);
+  public addToCart(productt: Product) {
+    this.product.addCart = true;
+    this.cartService.addItem(productt);
+    return this.cartService;
   }
 }

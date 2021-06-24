@@ -1,4 +1,4 @@
-<div class="header">
+<div class="header" >
   <div [class.header-change]="header_variable" class="{{ menu_header }}">
     <h2 id="idLogo">C O M M E N A U</h2>
     <div class="header-big">
@@ -68,7 +68,10 @@
           ><i class="fas fa-briefcase"></i><label>Túi</label></a
         >
         <div class="thanh-bar"></div>
-        <div class="bag-user">
+        <div
+          class="bag-user"
+          [ngStyle]="showCart() ? styleAddCart : styleCloseCart"
+        >
           <p class="food-bag">Túi Đồ Ăn</p>
           <div class="scroll">
             <div class="item-cart" *ngFor="let i of items">

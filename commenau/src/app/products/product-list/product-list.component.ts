@@ -57,7 +57,9 @@ export class ProductListComponent implements OnInit {
   }
 
   public addToCart(product: Product) {
+    this.product.addCart = true;
     this.cartService.addItem(product);
+    return this.cartService;
   }
   public addToWishlist(p:Product){
     p.yeuthich=true;
