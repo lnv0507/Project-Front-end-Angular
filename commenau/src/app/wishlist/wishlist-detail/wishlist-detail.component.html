@@ -1,0 +1,58 @@
+<section class="wishlist spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="wishlist__table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="wishlist__product">Sản Phẩm</th>
+                                <th>Giá</th>
+                                <th>Chi Tiết</th>
+                                <th>Thêm Vào Giỏ Hàng</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody *ngIf="items.length>0">
+                            <tr *ngFor="let i of items">
+                                <td class="wishlist__item">
+                                    <img src="{{i.img}}" alt="">
+                                    <h5>{{i.name}}</h5>
+                                </td>
+                                <td class="wishlist__price">
+                                    {{i.price | currency: "VND":"symbol"}}
+                                </td>
+                                <td class="footer__widget">
+                                    <div class="footer__widget__social">
+                                        <a [routerLink]="['/chitietsanpham', i.id]"><i class="fa fa-external-link"></i></a>
+                                    </div>
+                                </td>
+    
+                                <td class="footer__widget">
+                                    <div class="footer__widget__social">
+                                        <a (click)="addToCart(i)"><i class="fa fa-shopping-cart"></i></a>
+                                    </div>
+                                </td>
+                                <td class="footer__widget">
+                                    <div class="footer__widget__social">
+                                        <a ><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                          
+                            
+                        </tbody>
+                        <tbody *ngIf="items.length==0">
+                            <tr>
+                                Không có sản phẩm 
+                              
+                            </tr>
+                          
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

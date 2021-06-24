@@ -56,6 +56,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import { FormsModule } from '@angular/forms';
 import { BreakcumbAboutComponent } from './about/breakcumb-about/breakcumb-about.component';
+import { WishlistDetailComponent } from './wishlist/wishlist-detail/wishlist-detail.component';
 
 @NgModule({
   declarations: [
@@ -87,6 +88,8 @@ import { BreakcumbAboutComponent } from './about/breakcumb-about/breakcumb-about
     CheckoutDetailComponent,
     CheckoutOrderComponent,
     BreakcumbAboutComponent,
+    WishlistDetailComponent,
+    WishlistComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@ import { Product } from 'src/app/model/product';
 import { ProductDayComponent } from 'src/app/myhome/product-day/product-day.component';
 import { ProductsService } from 'src/app/Services/products.service';
 import { CartService } from 'src/app/Services/cart.service';
+import { WishlistService } from 'src/app/Services/wishlist.service';
 
 @Component({
   selector: 'app-product-list',
@@ -21,7 +22,8 @@ export class ProductListComponent implements OnInit {
   constructor(
     private product: ProductsService,
     public router: Router,
-    private cartService: CartService
+    private cartService: CartService,
+    private wishlistService: WishlistService,
   ) {
     this.weekDays = this.product.weekDays;
   }
@@ -54,5 +56,9 @@ export class ProductListComponent implements OnInit {
 
   public addToCart(product: Product) {
     this.cartService.addItem(product);
+  }
+  public addToWishlist(p:Product){
+    this.wishlistService.addItem(p);
+    
   }
 }
