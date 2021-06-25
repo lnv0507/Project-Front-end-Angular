@@ -7,16 +7,16 @@
     }
   ],
   "voucher": [
-    {"id":"CMNT2", "discount" : 20000, "percent" : 0 , "condition" : 100000},
-    {"id":"CMNT3", "discount" : 30000, "percent" : 0 , "condition" : 100000},
-    {"id":"CMNT4", "discount" : 40000, "percent" : 0 , "condition" : 150000},
-    {"id":"CMNT5", "discount" : 50000, "percent" : 0 , "condition" : 200000},
-    {"id":"CMNT6", "discount" : 60000, "percent" : 0 , "condition" : 200000},
-    {"id":"CMNT7", "discount" : 70000, "percent" : 0 , "condition" : 200000},
-    {"id":"CMNCN", "discount" : 80000, "percent" : 0 ,"condition" : 250000},
+    {"id":"CMN20K", "discount" : 20000, "percent" : 0 , "condition" : 100000},
+    {"id":"CMN30K", "discount" : 30000, "percent" : 0 , "condition" : 100000},
+    {"id":"CMN40K", "discount" : 40000, "percent" : 0 , "condition" : 150000},
+    {"id":"CMN50K", "discount" : 50000, "percent" : 0 , "condition" : 200000},
+    {"id":"CMN60K", "discount" : 60000, "percent" : 0 , "condition" : 200000},
+    {"id":"CMN80K", "discount" : 70000, "percent" : 0 , "condition" : 200000},
+    {"id":"CMN5%", "discount" : 0, "percent" : 0.5 ,"condition" : 250000},
     {"id":"CMN10%", "discount" : 0, "percent" : 0.1 , "condition" : 100000},
-    {"id":"CMN25%", "discount" : 0, "percent" : 0.25 , "condition" : 200000},
-    {"id":"CMN50%", "discount" : 0, "percent" : 0.5 , "condition" : 300000}
+    {"id":"CMN20%", "discount" : 0, "percent" : 0.25 , "condition" : 200000},
+    {"id":"CMN30%", "discount" : 0, "percent" : 0.5 , "condition" : 300000}
   ],
   "product": [
     {

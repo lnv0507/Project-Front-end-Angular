@@ -29,11 +29,18 @@ export class CartTotalComponent implements OnInit {
   getDiscount(){
     var total = this.cartService.getTotal();
     if(this.checkVoucher && (total >= this.voucher.condition)){
+      this.checkMessage = false;
       return total*this.voucher.percent + this.voucher.discount
+    }
+    if(this.checkVoucher && (total < this.voucher.condition)){
+      this.checkMessage = true;
+      this.message = "Không đủ điều kiện áp dụng mã! Tổng đơn hàng phải lớn hơn " + this.voucher.condition + "đ";
+      return 0;
     }
     return 0;
   }
   applyVoucher(){
+    if(this.checkVoucher) this.checkVoucher = false;
   const listVoucher: Array<Voucher> = this.voucherService.getVoucherData();
     for(let v of listVoucher){
       if(v.id === this.nameVoucher){
@@ -41,8 +48,14 @@ export class CartTotalComponent implements OnInit {
         this.checkVoucher = true;
       }
     }
-  if(this.checkVoucher && (this.getDiscount() ===0))
-  this.checkMessage = true;
+  if(!this.checkVoucher){
+    this.checkMessage = true;
+    this.message = "Mã ưu đãi không hợp lệ, vui lòng nhập mã khác!"
+  }
+  console.log(this.checkMessage);
+  console.log(this.checkVoucher)
+  
+  
    
   }
   
