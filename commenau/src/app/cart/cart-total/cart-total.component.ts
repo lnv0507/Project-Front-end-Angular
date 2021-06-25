@@ -11,6 +11,7 @@ import { Voucher } from 'src/app/model/voucher';
 export class CartTotalComponent implements OnInit {
   nameVoucher = "";
   checkVoucher = false;
+  checkMessage = false;
   message : String = "hello";
   voucher: Voucher = new Voucher();
 
@@ -40,6 +41,8 @@ export class CartTotalComponent implements OnInit {
         this.checkVoucher = true;
       }
     }
+  if(this.checkVoucher && (this.getDiscount() ===0))
+  this.checkMessage = true;
    
   }
   
