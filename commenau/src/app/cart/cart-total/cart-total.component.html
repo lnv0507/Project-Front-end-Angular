@@ -4,16 +4,16 @@
   <div class="items-total-cart">
     <div class="temporary-money">
       <h5 class="text-left">Tạm thu</h5>
-      <h5 class="text-right">146000</h5>
+      <h5 class="text-right">{{getTotal()}}</h5>
     </div>
     <div class="discount">
       <h5 class="text-left">Giảm giá</h5>
-      <h5 class="text-right">10000</h5>
+      <h5 class="text-right">{{getDiscount()}}</h5>
     </div>
     <hr />
     <div class="total-money">
       <h5 class="text-left">TỔNG CỘNG</h5>
-      <h5 class="text-right">{{ getTotal() }}</h5>
+      <h5 class="text-right">{{ getTotalAll() }}</h5>
     </div>
   </div>
   <button class="btn-order">
@@ -24,7 +24,7 @@
   <h1>PHIẾU ƯU ĐÃI</h1>
   <hr />
   <div class="items-coupon">
-    <input type="text" placeholder="Mã ưu đãi" />
-    <button type="submit" class="btn btn-light">ÁP DỤNG MÃ</button>
+    <input type="text" placeholder="Mã ưu đãi" [(ngModel)]="nameVoucher"/>
+    <button (click)="applyVoucher()" class="btn btn-light">ÁP DỤNG MÃ</button>
   </div>
 </div>
