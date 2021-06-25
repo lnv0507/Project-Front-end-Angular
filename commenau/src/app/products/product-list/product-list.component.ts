@@ -18,14 +18,13 @@ export class ProductListComponent implements OnInit {
   dataProduct: Array<Product> = [];
   weekDays = [{ day: 'string' }];
   productCheck = true;
-  addedWishlist: boolean=false;
-  
+  addedWishlist: boolean = false;
 
   constructor(
     private product: ProductsService,
     public router: Router,
     private cartService: CartService,
-    private wishlistService: WishlistService,
+    private wishlistService: WishlistService
   ) {
     this.weekDays = this.product.weekDays;
   }
@@ -57,18 +56,18 @@ export class ProductListComponent implements OnInit {
   }
 
   public addToCart(product: Product) {
-    this.product.addCart = true;
+    this.product.getAddCart();
     this.cartService.addItem(product);
     return this.cartService;
   }
-  public addToWishlist(p:Product){
-    p.yeuthich=true;
+  public addToWishlist(p: Product) {
+    p.yeuthich = true;
     this.wishlistService.addItem(p);
-    return p.yeuthich;    
+    return p.yeuthich;
   }
 
-  public removeWish(p:Product){
-    p.yeuthich=false;
+  public removeWish(p: Product) {
+    p.yeuthich = false;
     this.wishlistService.removeItem(p);
     return p.yeuthich;
   }

@@ -40,7 +40,8 @@ export class ProductDayComponent implements OnInit {
   }
 
   public addToCart(productt: Product) {
-    this.product.addCart = true;
+    this.product.setAddCart(true);
+    this.product.getAddCart();
     this.cartService.addItem(productt);
     return this.cartService;
   }

@@ -12,7 +12,7 @@ import { Product } from '../model/product';
   providedIn: 'root',
 })
 export class ProductsService {
-  addCart = false;
+  _addCart = false;
   dataProduct!: Product[];
   dataProduct2: Array<Product> = [];
   weekDays = [
@@ -34,7 +34,12 @@ export class ProductsService {
   // lay dia chi ser ver phai chay localhost moi lay dc data
 
   constructor(private httpClient: HttpClient) {}
-
+  getAddCart() {
+    return this._addCart;
+  }
+  setAddCart(addCart: boolean) {
+    this._addCart = addCart;
+  }
   // lay product out
   public getProduct(): Observable<Product[]> {
     // lay dia chi ra vo database la do an
@@ -110,4 +115,5 @@ export class ProductsService {
     }
     return this.productDay(day_name);
   }
+
 }

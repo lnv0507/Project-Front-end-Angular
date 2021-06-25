@@ -92,6 +92,6 @@ export class HeaderVipComponent implements OnInit {
     return this.cart.getTotal();
   }
   showCart() {
-    return this.product.addCart;
+    return this.product.getAddCart();
   }
 }
