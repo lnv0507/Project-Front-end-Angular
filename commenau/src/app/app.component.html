@@ -1,11 +1,11 @@
 <div>
-  <div *ngIf="router.isActive('/trangchu' || '', true); else other">
-    <app-header-vip [menu_header]="menu_header2"></app-header-vip>
-  </div>
-  <ng-template #other>
-    <app-header-vip [menu_header]="menu_header"></app-header-vip>
-  </ng-template>
-  <app-footer (click)="hiddenCart()"></app-footer>
+    <div *ngIf="router.isActive('/trangchu' || '', true); else other">
+        <app-header-vip [menu_header]="menu_header2"></app-header-vip>
+    </div>
+    <ng-template #other>
+        <app-header-vip [menu_header]="menu_header"></app-header-vip>
+    </ng-template>
+    <app-footer></app-footer>
 </div>
 <!-- <app-products></app-products> -->
 <!-- <app-menu></app-menu> -->

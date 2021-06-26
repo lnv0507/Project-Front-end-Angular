@@ -39,10 +39,8 @@ export class ProductDayComponent implements OnInit {
     return this.product.getDayProduct();
   }
 
-  public addToCart(productt: Product) {
-    this.product._addCart = true;
-    this.product.getAddCart();
-    this.cartService.addItem(productt);
+  public addToCart(product: Product) {
+    this.cartService.addItem(product);
     return this.cartService;
   }
 }

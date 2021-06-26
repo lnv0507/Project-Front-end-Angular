@@ -22,16 +22,16 @@ export class HeaderVipComponent implements OnInit {
     height: '50em',
   };
   styleCloseCart = {
-    transition: 'height 0.5s ease-in',
-    visibility: 'hidden',
+    transition: 'height 0.5s ease-in !important',
+    visibility: 'hidden !important',
     opacity: '0',
-    position: 'absolute',
-    backgroundColor: '#fffff',
-    width: '0em',
-    height: '0em',
-    left: '-50px',
-    zIndex: '2',
-    overflow: 'hidden',
+    position: 'absolute !important',
+    backgroundColor: '#fffff !important',
+    width: '0em !important',
+    height: '0em !important',
+    left: '-50px !important',
+    zIndex: '2 !important',
+    overflow: 'hidden !important',
   };
   thanhBar = {
     position: 'relative',
@@ -44,6 +44,7 @@ export class HeaderVipComponent implements OnInit {
     margin: 'auto',
     marginTop: '5px',
   };
+
   constructor(
     private cart: CartService,
     private product: ProductsService,
@@ -91,7 +92,5 @@ export class HeaderVipComponent implements OnInit {
   getTotal() {
     return this.cart.getTotal();
   }
-  showCart() {
-    return this.product.getAddCart();
-  }
+
 }

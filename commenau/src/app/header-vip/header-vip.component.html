@@ -1,34 +1,36 @@
-<div class="header" >
-  <div [class.header-change]="header_variable" class="{{ menu_header }}">
-    <h2 id="idLogo">C O M M E N A U</h2>
-    <div class="header-big">
-      <a routerLink="/trangchu" routerLinkActive="active">
-        <h5>
-          TRANG CHỦ
-          <div class="thanh-bar"></div></h5
-      ></a>
-      <a routerLink="/menu" class="menu-bar">
-        <h5>
-          MENU
-          <div class="thanh-bar"></div>
-        </h5>
-      </a>
+<div class="header">
+    <div [class.header-change]="header_variable" class="{{ menu_header }}">
+        <h2 id="idLogo">C O M M E N A U</h2>
+        <div class="header-big">
+            <a routerLink="/trangchu" routerLinkActive="active">
+                <h5>
+                    TRANG CHỦ
+                    <div class="thanh-bar"></div>
+                </h5>
+            </a>
+            <a routerLink="/menu" class="menu-bar">
+                <h5>
+                    MENU
+                    <div class="thanh-bar"></div>
+                </h5>
+            </a>
 
-      <a routerLink="/vechungtoi">
-        <h5>
-          VỀ CHÚNG TÔI
-          <div class="thanh-bar"></div></h5
-      ></a>
-      <a routerLink="/lienhe">
-        <h5>
-          LIÊN HỆ
-          <div class="thanh-bar"></div></h5
-      ></a>
-    </div>
-    <div class="icon-menu">
-      <div class="user-big thanhbar-muiten">
-        <a class="userA" routerLink="/dangnhap"
-          ><i class="far fa-user"></i><label>Đăng nhập</label></a
+            <a routerLink="/vechungtoi">
+                <h5>
+                    VỀ CHÚNG TÔI
+                    <div class="thanh-bar"></div>
+                </h5>
+            </a>
+            <a routerLink="/lienhe">
+                <h5>
+                    LIÊN HỆ
+                    <div class="thanh-bar"></div>
+                </h5>
+            </a>
+        </div>
+        <div class="icon-menu">
+            <div class="user-big thanhbar-muiten">
+                <a class="userA" routerLink="/dangnhap"><i class="far fa-user"></i><label>Đăng nhập</label></a
         >
         <div class="thanh-bar"></div>
         <div class="login-user">
@@ -51,28 +53,31 @@
               <div class="item-food">
                 <p>{{ i.name }}</p>
                 <p>
-                  <label for="">{{ i.price}}</label>
+                  <label for="">{{ i.price }}</label>
                 </p>
-              
               </div>
             </div>
           </div>
           <div>
             <a routerLink="/yeuthich"> <button>XEM CHI TIẾT</button></a>
-          </div>
+            </div>
         </div>
-      </div>
+    </div>
 
-      <div class="bag-big thanhbar-muiten">
-        <a class="bagA" routerLink="/giohang"
-          ><i class="fas fa-briefcase"></i><label>Túi</label></a
+    <div class="bag-big thanhbar-muiten">
+        <a class="bagA" routerLink="/giohang"><i class="fas fa-briefcase"></i><label>Túi</label></a
         >
         <div class="thanh-bar"></div>
-        <div
-          class="bag-user"
-          [ngStyle]="showCart() ? styleAddCart : styleCloseCart"
-        >
-          <p class="food-bag">Túi Đồ Ăn</p>
+        <div class="bag-user">
+          <div class="header-cart">
+            <p class="food-bag">Túi Đồ Ăn</p>
+
+            <i
+              class="far fa-times-circle icon-x"
+              style="color: black; font-size: 20px"
+            ></i>
+          </div>
+
           <div class="scroll">
             <div class="item-cart" *ngFor="let i of items">
               <img src="{{ i.img }}" alt="" />
@@ -93,44 +98,44 @@
           </div>
           <div>
             <a routerLink="/giohang"> <button>XEM CHI TIẾT TÚI</button></a>
-          </div>
-          <button class="bag-button">THANH TOÁN</button>
-        </div>
-      </div>
-      <div class="search-menu">
-        <a>
-          <i (click)="searchClick()" class="search-cancel fas fa-search"></i
+    </div>
+    <button class="bag-button">THANH TOÁN</button>
+</div>
+</div>
+<div class="search-menu">
+    <a>
+        <i (click)="searchClick()" class="search-cancel fas fa-search"></i
         ></a>
         <div class="search-menu-bar" [class.search-menu-charge]="search_click">
           <div class="input-search">
             <i class="fas fa-search"> </i>
-            <input placeholder="Bạn đang thèm gì nhờ?" type="text" />
-          </div>
-          <div class="title-search">
-            <ul>
-              <h5>Tìm Kiếm Nhiều Nhất</h5>
-              <li>
-                <i class="fas fa-search"> </i>
-                <p>Cơm Gà</p>
-              </li>
-              <li>
-                <i class="fas fa-search"> </i>
-                <p>Phở</p>
-              </li>
-              <li>
-                <i class="fas fa-search"> </i>
-                <p>Cơm Sườn</p>
-              </li>
-              <li>
-                <i class="fas fa-search"> </i>
-                <p>Cơm Gà</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+        <input placeholder="Bạn đang thèm gì nhờ?" type="text" />
+</div>
+<div class="title-search">
+    <ul>
+        <h5>Tìm Kiếm Nhiều Nhất</h5>
+        <li>
+            <i class="fas fa-search"> </i>
+            <p>Cơm Gà</p>
+        </li>
+        <li>
+            <i class="fas fa-search"> </i>
+            <p>Phở</p>
+        </li>
+        <li>
+            <i class="fas fa-search"> </i>
+            <p>Cơm Sườn</p>
+        </li>
+        <li>
+            <i class="fas fa-search"> </i>
+            <p>Cơm Gà</p>
+        </li>
+    </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
 <router-outlet></router-outlet>

@@ -14,8 +14,4 @@ export class AppComponent {
   menu_header: string = 'menu-header';
   menu_header2: string = 'menu-header2';
   constructor(public router: Router, private product: ProductsService) {}
-  hiddenCart() {
-    this.product.setAddCart(false);
-    this.product.getAddCart();
-  }
 }
