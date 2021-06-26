@@ -349,68 +349,13 @@ $gray: #e7e7e7;
             position: relative;
             top: 2em;
         }
-        .icon-menu {
-            .userA {
-                position: relative;
-                left: 6em;
-                label {
-                    visibility: hidden;
-                }
-            }
-            .bagA {
-                position: relative;
-                left: 1.2em;
-                label {
-                    visibility: hidden;
-                }
-            }
-            .thanhbar-muiten:hover:nth-child(1) {
-                .thanh-bar {
-                    position: relative;
-                    border-top: 7px solid transparent;
-                    border-right: 7px solid transparent;
-                    border-bottom: 7px solid $white;
-                    border-left: 7px solid transparent;
-                    width: 0;
-                    height: 0;
-                    margin: auto;
-                    left: 35px;
-                }
-            }
-            .thanhbar-muiten:hover:nth-child(2) {
-                .thanh-bar {
-                    position: relative;
-                    border-top: 7px solid transparent;
-                    border-right: 7px solid transparent;
-                    border-bottom: 7px solid $white;
-                    border-left: 7px solid transparent;
-                    width: 0;
-                    height: 0;
-                    margin: auto;
-                    left: 6px;
-                }
-            }
-        }
     }
-    // .container {
-    //   padding: 0;
-    //   position: relative;
-    //   margin: 0;
-    //   #myCarousel {
-    //     width: 152em;
-    //     .carousel-indicators {
-    //       position: absolute;
-    //       left: 15em;
-    //       // background-color: red;
-    //     }
-    //   }
-    // }
 }
 
 .header-cart {
     display: flex;
     .icon-x {
-      margin-top:20px;
-      margin-left:100px;
+        margin-top: 20px;
+        margin-left: 100px;
     }
 }
