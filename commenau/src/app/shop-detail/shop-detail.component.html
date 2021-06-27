@@ -59,12 +59,12 @@
                     <div class="product__details__quantity">
                         <div class="quantity">
                             <div class="pro-qty">
-                                <span class="dec qtybtn">-</span><input type="text" value="1" />
-                                <span class="inc qtybtn">+</span>
+                                <span (click)="increaseValue()" class="dec qtybtn">+</span><input type="text" value="{{value}}" />
+                                <span (click)="reduceValue()" class="inc qtybtn">-</span>
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="primary-btn">Thêm Vào Giỏ Hàng</a>
+                    <a class="addCart" (click)="addToCartDetail()" class="primary-btn">Thêm Vào Giỏ Hàng</a>
                     <a (click)="fullHeart()" class="heart-icon"><span class="icon_heart_alt">
               <i *ngIf="heartIcon" class="fas fa-heart"></i>
               <i *ngIf="!heartIcon" class="far fa-heart"></i> </span

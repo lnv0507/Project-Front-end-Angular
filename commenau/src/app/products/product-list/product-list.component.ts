@@ -5,6 +5,7 @@ import { ProductDayComponent } from 'src/app/myhome/product-day/product-day.comp
 import { ProductsService } from 'src/app/Services/products.service';
 import { CartService } from 'src/app/Services/cart.service';
 import { WishlistService } from 'src/app/Services/wishlist.service';
+import { ProductCart } from 'src/app/model/product-cart';
 
 @Component({
   selector: 'app-product-list',
@@ -56,8 +57,13 @@ export class ProductListComponent implements OnInit {
   }
 
   public addToCart(product: Product) {
-    this.cartService.addItem(product);
-    return this.cartService;
+    const item : ProductCart = new ProductCart();
+    item.id = product.id;
+    item.img = product.img;
+    item.name = product.name;
+    item.price = product.price;
+    item.quatity = 1;
+    this.cartService.addItem(item);
   }
   public addToWishlist(p: Product) {
     p.yeuthich = true;

@@ -4,6 +4,7 @@ import { Product } from 'src/app/model/product';
 import { ProductsService } from 'src/app/Services/products.service';
 import { CartService } from 'src/app/Services/cart.service';
 import { HeaderVipComponent } from 'src/app/header-vip/header-vip.component';
+import { ProductCart } from 'src/app/model/product-cart';
 
 @Component({
   selector: 'app-product-day',
@@ -40,7 +41,12 @@ export class ProductDayComponent implements OnInit {
   }
 
   public addToCart(product: Product) {
-    this.cartService.addItem(product);
-    return this.cartService;
+    const item : ProductCart = new ProductCart();
+    item.id = product.id;
+    item.img = product.img;
+    item.name = product.name;
+    item.price = product.price;
+    item.quatity = 1;
+    this.cartService.addItem(item);
   }
 }

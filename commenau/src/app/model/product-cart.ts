@@ -4,8 +4,7 @@ export class ProductCart {
     price!: number;
     img!: String;
     quatity!: number;
-    constructor(){
-        
-    }
+    constructor(){}
+    
   
 }

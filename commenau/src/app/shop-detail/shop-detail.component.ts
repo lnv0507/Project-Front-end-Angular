@@ -3,6 +3,7 @@ import { ProductsService } from 'src/app/Services/products.service';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../model/product';
 import { CartService } from '../Services/cart.service';
+import { ProductCart } from '../model/product-cart';
 
 @Component({
   selector: 'app-shop-detail',
@@ -13,6 +14,7 @@ export class ShopDetailComponent implements OnInit {
   heartIcon = false;
   product: any;
   change = false;
+  value = 1;
   constructor(
     private serviceProduct: ProductsService,
     private cartService: CartService,
@@ -45,7 +47,33 @@ export class ShopDetailComponent implements OnInit {
     return this.serviceProduct.getDayProduct();
   }
   public addToCart(product: Product) {
-    this.cartService.addItem(product);
-    return this.cartService;
+    const item : ProductCart = new ProductCart();
+    item.id = product.id;
+    item.img = product.img;
+    item.name = product.name;
+    item.price = product.price;
+    item.quatity = 1;
+    this.cartService.addItem(item);
   }
+  public addToCartDetail(){
+    const item : ProductCart = new ProductCart();
+    item.id = this.product.id;
+    item.img = this.product.img;
+    item.name = this.product.name;
+    item.price = this.product.price;
+    item.quatity = this.value;
+    this.cartService.addItem(item);
+  }
+  reduceValue(){
+    if(this.value===1){
+      this.value = 1;
+    }else{
+      this.value--;
+    }
+
+  }
+  increaseValue(){
+    this.value++;
+  }
+
 }

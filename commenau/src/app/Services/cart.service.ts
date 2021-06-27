@@ -9,21 +9,15 @@ import { ProductCart } from '../model/product-cart';
 export class CartService {
   cartItems: Array<ProductCart> = [];
   constructor() {}
-  addItem(product: Product) {
+  addItem(product: ProductCart) {
     const exist = this.cartItems.find((item: ProductCart) => {
       return item.id === product.id;
     });
 
     if (exist) {
-      exist.quatity++;
+      exist.quatity += product.quatity;
     } else {
-      const item: ProductCart = new ProductCart();
-      item.id = product.id;
-      item.name = product.name;
-      item.price = product.price;
-      item.quatity = 1;
-      item.img = product.img;
-      this.cartItems.push(item);
+      this.cartItems.push(product);
     }
   }
 

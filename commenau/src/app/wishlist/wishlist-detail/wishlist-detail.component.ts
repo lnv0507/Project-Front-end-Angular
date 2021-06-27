@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/model/product';
+import { ProductCart } from 'src/app/model/product-cart';
 import { CartService } from 'src/app/Services/cart.service';
 import { WishlistService } from 'src/app/Services/wishlist.service';
 
@@ -16,7 +17,13 @@ export class WishlistDetailComponent implements OnInit {
   ngOnInit(): void {
   }
   public addToCart(product: Product) {
-    this.cartService.addItem(product);
+    const item : ProductCart = new ProductCart();
+    item.id = product.id;
+    item.img = product.img;
+    item.name = product.name;
+    item.price = product.price;
+    item.quatity = 1;
+    this.cartService.addItem(item);
   }
   removeItem(id: any){
     const index=this.items.findIndex((item)=>item.id===id);
