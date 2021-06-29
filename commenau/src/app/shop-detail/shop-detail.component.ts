@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { ProductsService } from 'src/app/Services/products.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../model/product';
 import { CartService } from '../Services/cart.service';
 import { ProductCart } from '../model/product-cart';
+import * as EventEmitter from 'events';
 
 @Component({
   selector: 'app-shop-detail',
   templateUrl: './shop-detail.component.html',
   styleUrls: ['./shop-detail.component.scss'],
 })
-export class ShopDetailComponent implements OnInit {
+export class ShopDetailComponent implements OnInit, OnChanges {
   heartIcon = false;
   product: any;
   change = false;
@@ -26,6 +27,9 @@ export class ShopDetailComponent implements OnInit {
     const productIdFromRoute = Number(routeParams.get('productId'));
     this.getProdutById(productIdFromRoute);
     this.connect();
+  }
+  ngOnChanges(): void {
+    this.getProduct();
   }
   public connect() {
     this.serviceProduct.connectProduct();
@@ -47,7 +51,7 @@ export class ShopDetailComponent implements OnInit {
     return this.serviceProduct.getDayProduct();
   }
   public addToCart(product: Product) {
-    const item : ProductCart = new ProductCart();
+    const item: ProductCart = new ProductCart();
     item.id = product.id;
     item.img = product.img;
     item.name = product.name;
@@ -55,8 +59,8 @@ export class ShopDetailComponent implements OnInit {
     item.quatity = 1;
     this.cartService.addItem(item);
   }
-  public addToCartDetail(){
-    const item : ProductCart = new ProductCart();
+  public addToCartDetail() {
+    const item: ProductCart = new ProductCart();
     item.id = this.product.id;
     item.img = this.product.img;
     item.name = this.product.name;
@@ -64,16 +68,17 @@ export class ShopDetailComponent implements OnInit {
     item.quatity = this.value;
     this.cartService.addItem(item);
   }
-  reduceValue(){
-    if(this.value===1){
+  reduceValue() {
+    if (this.value === 1) {
       this.value = 1;
-    }else{
+    } else {
       this.value--;
     }
-
   }
-  increaseValue(){
+  increaseValue() {
     this.value++;
   }
-
+  refresh() {
+    window.location.reload();
+  }
 }

@@ -59,13 +59,16 @@
                     <div class="product__details__quantity">
                         <div class="quantity">
                             <div class="pro-qty">
-                                <span (click)="increaseValue()" class="dec qtybtn">+</span><input type="text" value="{{value}}" />
-                                <span (click)="reduceValue()" class="inc qtybtn">-</span>
+                                <span (click)="increaseValue()" class="dec qtybtn">+</span
+                ><input type="text" value="{{ value }}" />
+                <span (click)="reduceValue()" class="inc qtybtn">-</span>
                             </div>
                         </div>
                     </div>
-                    <a class="addCart" (click)="addToCartDetail()" class="primary-btn">Thêm Vào Giỏ Hàng</a>
-                    <a (click)="fullHeart()" class="heart-icon"><span class="icon_heart_alt">
+                    <a class="addCart" (click)="addToCartDetail()" class="primary-btn">Thêm Vào Giỏ Hàng</a
+          >
+          <a (click)="fullHeart()" class="heart-icon"
+            ><span class="icon_heart_alt">
               <i *ngIf="heartIcon" class="fas fa-heart"></i>
               <i *ngIf="!heartIcon" class="far fa-heart"></i> </span
           ></a>
@@ -156,7 +159,7 @@
                 <a href="#"><i class="fa fa-heart"></i></a>
                         </li>
                         <li>
-                            <a [routerLink]="['/chitietsanpham', product.id]"><i class="fa fa-external-link"></i
+                            <a [routerLink]="['/chitietsanpham', product.id]" (click)="refresh()"><i class="fa fa-external-link"></i
                 ></a>
                         </li>
                         <li>
@@ -167,15 +170,14 @@
                 </div>
                 <div class="product__item__text">
                     <h6>
-                        <a [routerLink]="['/chitietsanpham', product.id]">{{
-                product.name
-              }}</a>
-                    </h6>
-                    <h5>{{ product.price | currency: "VND" }}</h5>
-                </div>
-            </div>
+                        <a [routerLink]="['/chitietsanpham', product.id]" (click)="refresh()">{{ product.name }}</a
+              >
+            </h6>
+            <h5>{{ product.price | currency: "VND" }}</h5>
+          </div>
         </div>
+      </div>
     </div>
-    </div>
+  </div>
 </section>
 <router-outlet></router-outlet>
