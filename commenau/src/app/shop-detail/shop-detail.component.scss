@@ -93,6 +93,16 @@ a:focus {
   font-weight: 700;
   background: $blue2;
   letter-spacing: 2px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.primary-btn:hover {
+  background-color: $gray;
+  color: $blue2;
+  border-color: $blue2;
+  padding: 0px 30px 0px 50px;
+  opacity: 1;
+  visibility: visible;
 }
 
 .site-btn {
@@ -386,8 +396,8 @@ a:focus {
           margin-right: 0;
         }
         li:hover a {
-          background: $blue;
-          border-color: $blue;
+          background: $blue2;
+          border-color: $blue2;
           i {
             color: $white;
             transform: rotate(360deg);
