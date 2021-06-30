@@ -1,9 +1,9 @@
-import { Route } from '@angular/compiler/src/core';
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Product } from './model/product';
 import { ProductsService } from './Services/products.service';
-
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { HeaderVipComponent } from './header-vip/header-vip.component';
+import { CartHeaderComponent } from './header-vip/cart-header/cart-header.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,5 +13,7 @@ export class AppComponent {
   title = 'commenau';
   menu_header: string = 'menu-header';
   menu_header2: string = 'menu-header2';
-  constructor(public router: Router, private product: ProductsService) {}
+
+  constructor(public router: Router, private modalService: NgbModal) {}
+
 }

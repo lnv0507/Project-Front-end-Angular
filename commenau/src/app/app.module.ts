@@ -57,6 +57,8 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
 import { FormsModule } from '@angular/forms';
 import { BreakcumbAboutComponent } from './about/breakcumb-about/breakcumb-about.component';
 import { WishlistDetailComponent } from './wishlist/wishlist-detail/wishlist-detail.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CartHeaderComponent } from './header-vip/cart-header/cart-header.component';
 
 @NgModule({
   declarations: [
@@ -90,6 +92,7 @@ import { WishlistDetailComponent } from './wishlist/wishlist-detail/wishlist-det
     BreakcumbAboutComponent,
     WishlistDetailComponent,
     WishlistComponent,
+    CartHeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -97,8 +100,9 @@ import { WishlistDetailComponent } from './wishlist/wishlist-detail/wishlist-det
     RouterModule.forRoot(routersConfig),
     HttpClientModule,
     NgxPaginationModule,Ng2SearchPipeModule,Ng2OrderModule,
-    FormsModule
-    
+    FormsModule,
+    NgbModule
+
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -5,6 +5,8 @@ import { ProductsService } from 'src/app/Services/products.service';
 import { CartService } from 'src/app/Services/cart.service';
 import { HeaderVipComponent } from 'src/app/header-vip/header-vip.component';
 import { ProductCart } from 'src/app/model/product-cart';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { CartHeaderComponent } from 'src/app/header-vip/cart-header/cart-header.component';
 
 @Component({
   selector: 'app-product-day',
@@ -19,7 +21,8 @@ export class ProductDayComponent implements OnInit {
   productCheck = true;
   constructor(
     private product: ProductsService,
-    private cartService: CartService
+    private cartService: CartService,
+    private clickCart: NgbModal
   ) {
     this.weekDays = this.product.weekDays;
   }
@@ -41,6 +44,7 @@ export class ProductDayComponent implements OnInit {
   }
 
   public addToCart(product: Product) {
+    this.clickCart.open(CartHeaderComponent);
     const item : ProductCart = new ProductCart();
     item.id = product.id;
     item.img = product.img;

@@ -1,10 +1,9 @@
-import { Component, Input, OnChanges, OnInit, Output } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/Services/products.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Product } from '../model/product';
 import { CartService } from '../Services/cart.service';
 import { ProductCart } from '../model/product-cart';
-import * as EventEmitter from 'events';
 
 @Component({
   selector: 'app-shop-detail',
