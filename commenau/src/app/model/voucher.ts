@@ -3,5 +3,5 @@ export class Voucher {
     discount!: number;
     percent!: number;
     condition!: number;
-    constructor(){}  
+    constructor(){}
 }

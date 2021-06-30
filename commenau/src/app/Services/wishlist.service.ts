@@ -24,7 +24,7 @@ export class WishlistService {
       item.price=product.price;
       item.quatity =true;
       item.img=product.img;
-      
+
       this.wishlistItems.push(item);
     }
   }
@@ -32,7 +32,7 @@ export class WishlistService {
     const index = this.wishlistItems.findIndex((item) => item.id === p.id);
     this.wishlistItems.splice(index, 1);
     this.setWishlistItems(this.wishlistItems);
-    
+
   }
 
   getWishlistItems(){

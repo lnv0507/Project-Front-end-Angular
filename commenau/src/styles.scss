@@ -1,16 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
 $blue: #3ac5c8;
 $black: #141619;
 $white: #ffffff;
 $gray: #e7e7e7;
-
-
-
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+
 /* Importing Bootstrap SCSS file. */
+
 @import '~bootstrap/scss/bootstrap';

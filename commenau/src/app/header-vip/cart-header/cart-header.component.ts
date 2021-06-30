@@ -5,12 +5,10 @@ import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './cart-header.component.html',
   styleUrls: ['./cart-header.component.scss'],
 })
-export class CartHeaderComponent implements OnInit {
+export class CartHeaderComponent {
   closeResult = '';
 
   constructor(private modalService: NgbModal) {}
-  name = 'lam';
-  ngOnInit(): void {}
   open(content: any) {
     console.log('Hello Lam Dep Trai');
     this.modalService

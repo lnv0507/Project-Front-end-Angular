@@ -9,6 +9,7 @@ $gray: #e7e7e7;
     padding: 0px;
     box-sizing: border-box;
 }
+
 a {
     font-size: 14px;
     line-height: 1.7;
@@ -16,13 +17,16 @@ a {
     margin: 0px;
     transition: 0px;
 }
+
 a:focus {
     outline: none !important;
 }
+
 a:hover {
     text-decoration: none;
     color: $blue2;
 }
+
 h1,
 h2,
 h3,
@@ -31,40 +35,47 @@ h5,
 h6 {
     margin: 0px;
 }
+
 p {
     font-size: 14px;
     line-height: 1.7;
     color: $black;
     margin: 0px;
 }
+
 ul,
 li {
     margin: 0px;
     list-style-type: none;
 }
+
 input {
     outline: none;
     border: none;
 }
+
 textarea {
     outline: none;
     border: none;
 }
+
 textarea:focus,
 input:focus {
     border-color: transparent !important;
 }
-button{
+
+button {
     outline: none;
     border: none;
     background: transparent;
-
 }
-button:hover{
+
+button:hover {
     cursor: pointer;
 }
-#container{
-    .container-verify{
+
+#container {
+    .container-verify {
         background-image: url('/assets/img/bg.png');
         width: 100%;
         min-height: 100vh;
@@ -80,7 +91,7 @@ button:hover{
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        .wrap-verify{
+        .wrap-verify {
             width: 450px;
             background: $white;
             border-radius: 64px;
@@ -89,9 +100,9 @@ button:hover{
             padding-right: 55px;
             padding-top: 65px;
             padding-bottom: 54px;
-            .verify-form{
+            .verify-form {
                 width: 100%;
-                .verify-form-title{
+                .verify-form-title {
                     display: block;
                     font-size: 39px;
                     color: $black;
@@ -100,30 +111,28 @@ button:hover{
                     // padding-bottom: 49px;
                     font-weight: bolder;
                 }
-                p{
+                p {
                     text-align: center;
-                    
-
                 }
-                hr{
+                hr {
                     margin-bottom: 49px;
                 }
                 .validate-input {
                     position: relative;
-                  }
-                .wrap-input{
+                }
+                .wrap-input {
                     width: 100%;
                     position: relative;
                     border-bottom: 2px solid $white;
                     margin-bottom: 23px;
-                    .label-input{
+                    .label-input {
                         font-size: 14px;
                         color: $black;
                         line-height: 1.5;
                         padding-left: 7px;
                         font-weight: bolder;
                     }
-                    input{
+                    input {
                         font-size: 16px;
                         color: $black;
                         line-height: 1.2;
@@ -133,7 +142,7 @@ button:hover{
                         background: transparent;
                         padding: 0 7px 0 43px;
                     }
-                    .focus-input{
+                    .focus-input {
                         position: absolute;
                         display: block;
                         width: 100%;
@@ -147,7 +156,6 @@ button:hover{
                         content: attr(data-symbol);
                         color: #adadad;
                         font-size: 22px;
-                      
                         display: -webkit-box;
                         display: -webkit-flex;
                         display: -moz-box;
@@ -161,8 +169,8 @@ button:hover{
                         left: 0;
                         padding-left: 13px;
                         padding-top: 3px;
-                      }
-                      .focus-input::before {
+                    }
+                    .focus-input::before {
                         content: "";
                         display: block;
                         position: absolute;
@@ -175,9 +183,9 @@ button:hover{
                         -o-transition: all 0.4s;
                         -moz-transition: all 0.4s;
                         transition: all 0.4s;
-                      }
+                    }
                 }
-                .container-verify-form-btn{
+                .container-verify-form-btn {
                     display: -webkit-box;
                     display: -webkit-flex;
                     display: -moz-box;
@@ -185,7 +193,7 @@ button:hover{
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
-                    .wrap-verify-form-btn{
+                    .wrap-verify-form-btn {
                         width: 100%;
                         display: block;
                         position: relative;
@@ -193,7 +201,6 @@ button:hover{
                         border-radius: 25px;
                         overflow: hidden;
                         margin: 0 auto;
-
                         box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
                         -moz-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
                         -webkit-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
@@ -204,26 +211,22 @@ button:hover{
                             z-index: -1;
                             width: 300%;
                             height: 100%;
-                            background: linear-gradient(-45deg, $blue,$blue2 , $blue1); 
+                            background: linear-gradient(-45deg, $blue, $blue2, $blue1);
                             animation: gradient 6s ease infinite;
                             background-size: 400% 400%;
                             top: 0;
                             left: -100%;
-                            
-                          
                             -webkit-transition: all 0.4s;
                             -o-transition: all 0.4s;
                             -moz-transition: all 0.4s;
                             transition: all 0.4s;
-                          }
-                          .verify-form-btn {
-                       
+                        }
+                        .verify-form-btn {
                             font-size: 19px;
                             font-weight: bolder;
                             color: $white;
                             line-height: 1.2;
                             text-transform: uppercase;
-                          
                             display: -webkit-box;
                             display: -webkit-flex;
                             display: -moz-box;
@@ -234,10 +237,8 @@ button:hover{
                             padding: 0 20px;
                             width: 100%;
                             height: 50px;
-                          }
+                        }
                     }
-                    
-
                 }
                 .flex-col-c {
                     display: -webkit-box;
@@ -254,22 +255,19 @@ button:hover{
                     align-items: center;
                     padding-top: 150px;
                 }
-                
-
             }
         }
-
     }
 }
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
 
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

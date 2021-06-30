@@ -5,6 +5,6 @@ export class ProductCart {
     img!: String;
     quatity!: number;
     constructor(){}
-    
-  
+
+
 }

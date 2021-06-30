@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 a {
     font-size: 14px;
     line-height: 1.7;
@@ -12,13 +13,16 @@ a {
     transition: 0px;
     text-decoration: none;
 }
+
 a:focus {
     outline: none !important;
 }
+
 a:hover {
     text-decoration: none;
     color: #2b82ad;
 }
+
 h1,
 h2,
 h3,
@@ -30,22 +34,26 @@ h6 {
     font-weight: 700;
     color: black;
 }
+
 p {
     font-size: 14px;
     line-height: 1.7;
     color: black;
     margin: 0px;
 }
+
 ul,
 li {
     margin: 0px;
     list-style-type: none;
 }
+
 textarea:focus,
 input:focus {
     border-color: transparent !important;
 }
-button{
+
+button {
     outline: none;
     border: none;
     background-color: black;
@@ -53,17 +61,17 @@ button{
     width: 100px;
     height: 20px;
     border-radius: 2px;
-
 }
-button:hover{
+
+button:hover {
     cursor: pointer;
     background-color: #2b82ad;
 }
 
-.container{
+.container {
     margin: auto;
     margin-bottom: 100px;
-    .title-content{
+    .title-content {
         color: #2b82ad;
         text-align: center;
         margin-top: 30px;
@@ -71,32 +79,26 @@ button:hover{
         font-size: 40px;
         font-weight: 600;
     }
-    .check-account{
+    .check-account {
         width: 53%;
         height: fit-content;
-        
-
     }
-    .check-coupon{
+    .check-coupon {
         width: 53%;
         height: fit-content;
-        
     }
-    .detail-checkout{
+    .detail-checkout {
         margin-top: 20px;
         height: fit-content;
         width: 60%;
         float: left;
         padding-right: 100px;
-        
     }
-    .order-checkout{
+    .order-checkout {
         width: 40%;
         float: left;
         padding: 30px;
-        border: black 2px solid ;
-        margin-top: 20px;  
-        
+        border: black 2px solid;
+        margin-top: 20px;
     }
-
 }

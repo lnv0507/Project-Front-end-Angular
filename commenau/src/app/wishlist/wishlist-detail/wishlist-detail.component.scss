@@ -10,175 +10,174 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
-  color: $black;
-  font-weight: 400;
+    margin: 0;
+    color: $black;
+    font-weight: 400;
 }
 
 h1 {
-  font-size: 70px;
+    font-size: 70px;
 }
 
 h2 {
-  font-size: 25px;
+    font-size: 25px;
 }
 
 h3 {
-  font-size: 25px;
+    font-size: 25px;
 }
 
 h4 {
-  font-size: 24px;
+    font-size: 24px;
 }
 
 h5 {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 h6 {
-  font-size: 19px;
+    font-size: 19px;
 }
+
 p {
-  font-size: 15px;
-  color: $black;
-  font-weight: 400;
-  line-height: 26px;
-  margin: 0 0 15px 0;
+    font-size: 15px;
+    color: $black;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0 0 15px 0;
 }
+
 a:hover,
 a:focus {
-  text-decoration: none;
-  outline: none;
+    text-decoration: none;
+    outline: none;
 }
+
 .section-title {
-  margin-bottom: 50px;
-  text-align: center;
+    margin-bottom: 50px;
+    text-align: center;
 }
 
 .section-title h2 {
-  color: $black;
-  font-weight: 700;
-  position: relative;
+    color: $black;
+    font-weight: 700;
+    position: relative;
 }
 
 .section-title h2:after {
-  position: absolute;
-  left: 0;
-  bottom: -15px;
-  right: 0;
-  height: 2px;
-  width: 560px;
-  background: $blue2;
-  content: "";
-  margin: 0 auto;
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    right: 0;
+    height: 2px;
+    width: 560px;
+    background: $blue2;
+    content: "";
+    margin: 0 auto;
 }
+
 .spad {
-  padding-bottom: 100px;
+    padding-bottom: 100px;
 }
+
 .set-bg {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
 }
+
 .container {
-  width: 1080px;
+    width: 1080px;
 }
+
 .wishlist {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  .wishlist__table {
-    margin-bottom: 30px;
-    table {
-      width: 100%;
-      text-align: center;
-
-      thead {
-        tr {
-          border-bottom: 1px solid $blue2;
-        }
-
-        th {
-          font-size: 16px;
-          font-weight: 700;
-          color: black;
-          padding-bottom: 20px;
-
-          &.wishlist__product {
-            text-align: left;
-          }
-        }
-      }
-
-      tbody {
-        tr {
-          td {
-            padding-top: 30px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid $blue2;
-
-            &.wishlist__item {
-              width: 325px;
-              text-align: left;
-
-              img {
-                display: inline-block;
-                margin-right: 25px;
-                width: 100px;
-                height: 100px;
-              }
-
-              h5 {
-                color: black;
-                display: inline-block;
-                font-size: 16px;
-              }
-            }
-
-            &.wishlist__price {
-              font-size: 16px;
-              color: black;
-              font-weight: 700;
-              width: 100px;
-            }
-            &.footer__widget {
-              margin-bottom: 30px;
-              overflow: hidden;
-              .footer__widget__social {
-                a {
-                  display: inline-block;
-                  height: 41px;
-                  width: 41px;
-                  font-size: 16px;
-                  color: #404040;
-                  border: 1px solid #ededed;
-                  border-radius: 50%;
-                  line-height: 38px;
-                  text-align: center;
-                  background: #ffffff;
-                  -webkit-transition: all, 0.3s;
-                  -moz-transition: all, 0.3s;
-                  -ms-transition: all, 0.3s;
-                  -o-transition: all, 0.3s;
-                  transition: all, 0.3s;
-                  margin-right: 10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .wishlist__table {
+        margin-bottom: 30px;
+        table {
+            width: 100%;
+            text-align: center;
+            thead {
+                tr {
+                    border-bottom: 1px solid $blue2;
                 }
-                a:last-child {
-                  margin-right: 0;
+                th {
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: black;
+                    padding-bottom: 20px;
+                    &.wishlist__product {
+                        text-align: left;
+                    }
                 }
-                a:hover {
-                  background: $blue2;
-                  color: #ffffff;
-                  border-color: #ffffff;
-                }
-              }
             }
-          }
+            tbody {
+                tr {
+                    td {
+                        padding-top: 30px;
+                        padding-bottom: 30px;
+                        border-bottom: 1px solid $blue2;
+                        &.wishlist__item {
+                            width: 325px;
+                            text-align: left;
+                            img {
+                                display: inline-block;
+                                margin-right: 25px;
+                                width: 100px;
+                                height: 100px;
+                            }
+                            h5 {
+                                color: black;
+                                display: inline-block;
+                                font-size: 16px;
+                            }
+                        }
+                        &.wishlist__price {
+                            font-size: 16px;
+                            color: black;
+                            font-weight: 700;
+                            width: 100px;
+                        }
+                        &.footer__widget {
+                            margin-bottom: 30px;
+                            overflow: hidden;
+                            .footer__widget__social {
+                                a {
+                                    display: inline-block;
+                                    height: 41px;
+                                    width: 41px;
+                                    font-size: 16px;
+                                    color: #404040;
+                                    border: 1px solid #ededed;
+                                    border-radius: 50%;
+                                    line-height: 38px;
+                                    text-align: center;
+                                    background: #ffffff;
+                                    -webkit-transition: all, 0.3s;
+                                    -moz-transition: all, 0.3s;
+                                    -ms-transition: all, 0.3s;
+                                    -o-transition: all, 0.3s;
+                                    transition: all, 0.3s;
+                                    margin-right: 10px;
+                                }
+                                a:last-child {
+                                    margin-right: 0;
+                                }
+                                a:hover {
+                                    background: $blue2;
+                                    color: #ffffff;
+                                    border-color: #ffffff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-      }
     }
-  }
 }
-.emty_items{
-  font-size: 16px;
 
+.emty_items {
+    font-size: 16px;
 }

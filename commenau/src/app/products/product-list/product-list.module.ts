@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     NgxPaginationModule,Ng2SearchPipeModule,
     FormsModule,
-    
+
   ],
   providers: [],
   bootstrap: [ProductListComponent],

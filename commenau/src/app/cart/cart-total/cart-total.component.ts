@@ -54,12 +54,12 @@ export class CartTotalComponent implements OnInit {
   }
   console.log(this.checkMessage);
   console.log(this.checkVoucher)
-  
-  
-   
-  }
-  
-   
 
-  
+
+
+  }
+
+
+
+
 }

@@ -27,7 +27,7 @@
                                         <a [routerLink]="['/chitietsanpham', i.id]"><i class="fa fa-external-link"></i></a>
                                     </div>
                                 </td>
-    
+
                                 <td class="footer__widget">
                                     <div class="footer__widget__social">
                                         <a (click)="addToCart(i)"><i class="fa fa-shopping-cart"></i></a>
@@ -39,13 +39,13 @@
                                     </div>
                                 </td>
                             </tr>
-                          
-                            
+
+
                         </tbody>
-                        <tbody *ngIf="items.length==0">                          
+                        <tbody *ngIf="items.length==0">
                             <tr>
                                 <td class="emty_items" colspan="5">Chưa có sản phẩm trong danh sách yêu thích</td>
-                              </tr>   
+                            </tr>
                         </tbody>
                     </table>
                 </div>

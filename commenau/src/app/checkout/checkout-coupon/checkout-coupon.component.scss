@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 a {
     font-size: 14px;
     line-height: 1.7;
@@ -12,13 +13,16 @@ a {
     transition: 0px;
     text-decoration: none;
 }
+
 a:focus {
     outline: none !important;
 }
+
 a:hover {
     text-decoration: none;
     color: #2b82ad;
 }
+
 h1,
 h2,
 h3,
@@ -30,22 +34,26 @@ h6 {
     font-weight: 700;
     color: black;
 }
+
 p {
     font-size: 14px;
     line-height: 1.7;
     color: black;
     margin: 0px;
 }
+
 ul,
 li {
     margin: 0px;
     list-style-type: none;
 }
+
 textarea:focus,
 input:focus {
     border-color: transparent !important;
 }
-button{
+
+button {
     outline: none;
     border: none;
     background-color: black;
@@ -53,32 +61,35 @@ button{
     width: 100px;
     height: 20px;
     border-radius: 2px;
-
 }
-button:hover{
+
+button:hover {
     cursor: pointer;
     background-color: #2b82ad;
 }
-a{
+
+a {
     cursor: pointer;
 }
-a:hover{
-    color:#2b82ad;
+
+a:hover {
+    color: #2b82ad;
 }
-.detail-coupon{
+
+.detail-coupon {
     width: 100%;
     height: fit-content;
     border: black 2px solid;
-    background-color:  #f5f5f5;
+    background-color: #f5f5f5;
     padding: 10px;
     padding-left: 20px;
-    input{
+    input {
         width: 80%;
         height: 30px;
         border: 2px solid gray;
         padding-left: 10px;
     }
-    button{
+    button {
         height: 30px;
         margin-left: 20px;
     }
