@@ -73,9 +73,16 @@ button {
 button:hover {
     cursor: pointer;
 }
-
-#container {
-    .container-register {
+.is-invalid{
+    border: 2px #dc3545 solid;
+    border-radius: 2px;
+}
+.invalid-feedback{
+    font-size: 15px;
+    padding-left: 20px;
+}
+#container{
+    .container-register{
         background-image: url('/assets/img/bg.png');
         width: 100%;
         min-height: 100vh;

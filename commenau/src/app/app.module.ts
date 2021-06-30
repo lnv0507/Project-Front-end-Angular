@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
+import { ReactiveFormsModule} from '@angular/forms'
 
 const routersConfig: Routes = [
   { path: 'dangnhap', component: LoginComponent },
@@ -101,7 +102,8 @@ import { CartHeaderComponent } from './header-vip/cart-header/cart-header.compon
     HttpClientModule,
     NgxPaginationModule,Ng2SearchPipeModule,Ng2OrderModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

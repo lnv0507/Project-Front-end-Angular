@@ -1,64 +1,83 @@
 <div id="container">
     <div class="container-register">
         <div class="wrap-register">
-            <form class="register-form validate-form">
-                <span class="register-form-title">
-                    Đăng Kí
-                </span>
+            <form class="register-form validate-form" (ngSubmit)="onSubmit()" [formGroup]="formRegister">
+                <span class="register-form-title">Đăng Kí</span>
                 <div class="wrap-input validate-input" data-validate="Name is reauired">
                     <span class="label-input">Họ và Tên</span>
-                    <input class="input" type="text" name="name" placeholder="Nhập tên của bạn">
+                    <input class="input" type="text" name="name" placeholder="Nhập tên của bạn" formControlName ="name"
+                    [ngClass]="{'is-invalid' : formRegister.controls.name.invalid && formRegister.controls.name.touched}" >
                     <div class="focus-input">
                         <div class="ic">
                             <i class="fas fa-user"></i>
                         </div>
                     </div>
+                    <div class="invalid-feedback">
+                        Vui lòng nhập họ và tên
+                    </div>
                 </div>
 
                 <div class="wrap-input validate-input" data-validate="Username is reauired">
                     <span class="label-input">Email </span>
-                    <input class="input" type="text" name="username" placeholder="Nhập email của bạn">
+
+                    <input class="input" type="text" name="username"
+                        placeholder="Nhập email của bạn" formControlName ="email" 
+                        [ngClass]="{'is-invalid' : formRegister.controls.email.invalid && formRegister.controls.email.touched}">
                     <div class="focus-input">
                         <div class="ic">
                             <i class="fas fa-envelope"></i>
                         </div>
                     </div>
+                    <div class="invalid-feedback">
+                        Vui lòng nhập email
+                    </div>
                 </div>
                 <div class="wrap-input validate-input" data-validate="Phone is reauired">
-                    <span class="label-input">Số điện thoại</span>
-                    <input class="input" type="text" name="phone" placeholder="Nhập số điện thoại của bạn">
+                <span class="label-input">Số điện thoại</span>
+                    <input class="input" type="text" name="phone" placeholder="Nhập số điện thoại của bạn" formControlName ="phone"
+                    [ngClass]="{'is-invalid' : formRegister.controls.phone.invalid && formRegister.controls.phone.touched}">
                     <div class="focus-input">
                         <div class="ic">
                             <i class="fas fa-phone"></i>
                         </div>
                     </div>
+                    <div class="invalid-feedback">
+                        Vui lòng nhập số điện thoại
+                    </div>
+                    
                 </div>
 
                 <div class="wrap-input validate-input" data-validate="Password is required">
                     <span class="label-input">Mật khẩu</span>
-                    <input class="input" type="password" name="pass" placeholder="Nhập mật khẩu">
+                    <input class="input" type="password" name="pass" placeholder="Nhập mật khẩu" formControlName ="password"
+                    [ngClass]="{'is-invalid' : formRegister.controls.password.invalid && formRegister.controls.password.touched}">
                     <span class="focus-input">
                         <div class="ic">
                             <i class="fas fa-lock"></i>
                         </div>
                     </span>
+                    <div class="invalid-feedback">
+                        Vui lòng nhập mật khẩu
+                    </div>
                 </div>
                 <div class="wrap-input validate-input" data-validate="RePassword is required">
                     <span class="label-input">Mật khẩu</span>
-                    <input class="input" type="password" name="repass" placeholder="Nhập lại mật khẩu">
+                    <input class="input" type="password" name="repass" placeholder="Nhập lại mật khẩu" formControlName ="re_password"
+                    [ngClass]="{'is-invalid' : formRegister.controls.re_password.invalid && formRegister.controls.re_password.touched}">
                     <span class="focus-input">
                         <div class="ic">
                             <i class="fas fa-lock"></i>
                         </div>
                     </span>
+                    <div class="invalid-feedback">
+                        Vui lòng nhập lại mật khẩu
+                    </div>
                 </div>
 
                 <div class="container-register-form-btn">
                     <div class="wrap-register-form-btn">
                         <div class="register-form-bgbtn"></div>
-                        <button class="register-form-btn">
-                            Đăng Kí
-                        </button>
+                        <button class="register-form-btn" [disabled]="!formRegister.valid">Đăng Kí</button>
                     </div>
                 </div>
 
