@@ -15,6 +15,7 @@ a {
 
 h5 {
     width: fit-content;
+    font-size: 15px;
 }
 
 input {
@@ -24,6 +25,10 @@ input {
 
 hr {
     background-color: black;
+}
+h1{
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .checkvoucher {
@@ -39,7 +44,7 @@ hr {
     .discount,
     .total-money {
         width: 300px;
-        height: 25px;
+        height: 26px;
         .text-left {
             float: left;
         }
