@@ -9,7 +9,7 @@ $gray: #e7e7e7;
     padding-left: 200px;
     z-index: 999999;
     width: 100%;
-    height: 110px;
+    height: 200px;
     transition: 0.4s;
     // background-color: red;
 }
@@ -21,9 +21,10 @@ $gray: #e7e7e7;
     padding-left: 200px;
     z-index: 99999;
     width: 100%;
-    height: 110px;
+    height: 100%;
     transition: all 0.1s;
     background-color: $blue;
+    padding-bottom: 20px;
 }
 
 .menu-header2:hover {
@@ -31,67 +32,34 @@ $gray: #e7e7e7;
 }
 
 .header {
-    width: 100%;
-    position: relative;
+    .navbar-toggler {
+        margin-right: 100px;
+        span {
+            display: block;
+        }
+    }
     h2 {
         top: 1em;
         position: absolute;
         left: 45%;
     }
     .header-big {
-        transition: 0.4s;
         position: relative;
-        top: 7em;
+        transition: 0.4s;
+        margin-top: 4.5em;
+        left: 15%;
         display: flex;
         flex: 70%;
-        justify-content: space-evenly;
-        left: 12em;
-        .menu-bar {
-            .menubar-header {
-                background-color: $white;
-                height: 0px;
-                width: 0px;
-                position: absolute;
-                display: flex;
-                justify-content: space-between;
-                transition: height 0.5s ease-in-out;
-                margin-top: 0.6em;
-                opacity: 0;
-                visibility: hidden;
-                overflow: hidden;
-                ul {
-                    color: black;
-                    list-style: none;
-                    h5 {
-                        font-size: 1.2em;
-                    }
-                    li {
-                        font-size: 1.2em;
-                    }
-                }
-            }
-        }
-        .menu-bar:hover {
-            .menubar-header {
-                transition: 0.4s;
-                right: -30%;
-                visibility: inherit;
-                height: 17em;
-                opacity: 1;
-                width: 150%;
-                padding: 2em 20em;
-            }
-        }
-        a {
+        height: 100px;
+        .menu-bar-title {
             color: $gray;
             text-decoration: none;
-            height: 4em;
-            h5 {
+            .menu-word {
                 cursor: pointer;
-                position: relative;
             }
         }
-        a:hover {
+        .menu-bar-title:hover {
+            width: 100%;
             .thanh-bar {
                 position: relative;
                 border-top: 5px solid transparent;
@@ -101,7 +69,6 @@ $gray: #e7e7e7;
                 width: 0;
                 height: 0;
                 margin: auto;
-                margin-top: 5px;
             }
         }
     }
@@ -286,7 +253,7 @@ $gray: #e7e7e7;
                 width: 0em;
                 position: absolute;
                 left: -30em;
-                top: 5em;
+                top: 8em;
                 height: 0em;
                 padding: 2em 5em;
                 overflow: hidden;
@@ -347,7 +314,7 @@ $gray: #e7e7e7;
         }
         .header-big {
             position: relative;
-            top: 2em;
+            top: -20px;
         }
     }
 }
