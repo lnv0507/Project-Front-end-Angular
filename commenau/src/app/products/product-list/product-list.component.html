@@ -1,131 +1,165 @@
+<div class="container">
+    <div class="row">
 <div class="col-lg-3 col-md-5">
-    <div class="sidebar">
-        <div class="sidebar__item">
-            <h5>Thực đơn theo ngày</h5>
-            <ul class="nav nav-pills nav-uppercase nav-size-large nav-center dayProduct">
-                <li *ngFor="let th of weekDays">
-                    <a (click)="listProductDay(th.day)" routerLink="/menu" routerLinkActive="clickDay" [routerLinkActiveOptions]="{ exact: false }">
-                        <label> {{ th.day }}</label>
-                    </a>
-                </li>
-            </ul>
-        </div>
+  <div class="sidebar">
+    <div class="sidebar__item">
+      <h5>Thực đơn theo ngày</h5>
+      <ul
+        class="nav nav-pills nav-uppercase nav-size-large nav-center dayProduct"
+      >
+        <li *ngFor="let th of weekDays">
+          <a
+            (click)="listProductDay(th.day)"
+            routerLink="/menu"
+            routerLinkActive="clickDay"
+            [routerLinkActiveOptions]="{ exact: false }"
+          >
+            <label> {{ th.day }}</label>
+          </a>
+        </li>
+      </ul>
     </div>
+  </div>
 </div>
-<div class="row">
+<div class="col-lg-9 col-md-7">
+  <div class="row">
     <div class="hero__search__form">
-        <!-- <div class="hero__search__categories">
+      <!-- <div class="hero__search__categories">
             All Categories
             <span class="arrow_carrot-down"></span>
         </div> -->
-        <button type="submit" class="site-btn">
-            <i class="fas fa-search"></i>
-          </button>
-        <input type="text" placeholder="Bạn muốn ăn gì?" [(ngModel)]="search" />
-
+      <button type="submit" class="site-btn">
+        <i class="fas fa-search"></i>
+      </button>
+      <input type="text" placeholder="Bạn muốn ăn gì?" [(ngModel)]="search" />
     </div>
     <div class="filter__item">
-        <div class="row">
-            <div class="col-lg-12 col-md-5">
-                <div class="filter__sort">
-                    <span>Sắp xếp theo: &nbsp; </span>
-                    <a (click)="setOrder('name')">Tên &nbsp;<i class="fas fa-sort-alpha-up"></i>
-          </a>
-                    <a (click)="setOrder('price')">Giá &nbsp;<i class="fas fa-sort-numeric-down"></i
-          ></a>
-                    <!-- <select>
+      <div class="row">
+        <div class="col-lg-12 col-md-5">
+          <div class="filter__sort">
+            <span>Sắp xếp theo: &nbsp; </span>
+            <a (click)="setOrder('name')"
+              >Tên &nbsp;<i class="fas fa-sort-alpha-up"></i>
+            </a>
+            <a (click)="setOrder('price')"
+              >Giá &nbsp;<i class="fas fa-sort-numeric-down"></i
+            ></a>
+            <!-- <select>
             <option >Mặc định</option>
             <option  (click)="setOrder('price')">Ten</option>
           </select> -->
-                </div>
-            </div>
-            <!-- <div class="col-lg-4 col-md-4">
+          </div>
+        </div>
+        <!-- <div class="col-lg-4 col-md-4">
                             <div class="filter__found">
                                 <h6><span>16</span> Products found</h6>
                             </div>
                         </div> -->
-            <!-- <div class="col-lg-4 col-md-3">
+        <!-- <div class="col-lg-4 col-md-3">
                             <div class="filter__option">
                                 <span class="icon_grid-2x2"></span>
                                 <span class="icon_ul"></span>
                             </div>
                         </div> -->
-        </div>
+      </div>
     </div>
-</div>
-<div class="row">
+  </div>
+  <div class="row">
     <div *ngIf="productCheck; then thenMonday; else thenDay"></div>
     <ng-template #thenMonday>
-        <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="
-        let d of getProduct()
-          | filter: search
-          | paginate: { itemsPerPage: 12, currentPage: p }
-          | orderBy: order:reverse
-      ">
-            <div class="product__item">
-                <div class="product__item__pic set-bg" style="background-image: url('{{ d.img }}')">
-                    <ul class="product__item__pic__hover">
-                        <li *ngIf="!d.yeuthich">
-                            <a (click)="addToWishlist(d)"><i class="fa fa-heart"></i></a>
-                        </li>
-                        <li *ngIf="d.yeuthich">
-                            <a (click)="removeWish(d)"><i class="fa fa-heart" style="color: red"></i
-              ></a>
-                        </li>
-                        <li>
-                            <a [routerLink]="['/chitietsanpham', d.id]"><i class="fa fa-external-link"></i
-              ></a>
-                        </li>
-                        <li>
-                            <a (click)="addToCart(d)"><i class="fa fa-shopping-cart"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="product__item__text">
-                    <h6>
-                        <a href="#">{{ d.name }}</a>
-                    </h6>
-                    <h5>{{ d.price | currency: "VND":"symbol" }}</h5>
-                </div>
-            </div>
+      <div
+        class="col-lg-4 col-md-6 col-sm-6"
+        *ngFor="
+          let d of getProduct()
+            | filter: search
+            | paginate: { itemsPerPage: 12, currentPage: p }
+            | orderBy: order:reverse
+        "
+      >
+        <div class="product__item">
+          <div
+            class="product__item__pic set-bg"
+            style="background-image: url('{{ d.img }}')"
+          >
+            <ul class="product__item__pic__hover">
+              <li *ngIf="!d.yeuthich">
+                <a (click)="addToWishlist(d)"><i class="fa fa-heart"></i></a>
+              </li>
+              <li *ngIf="d.yeuthich">
+                <a (click)="removeWish(d)"
+                  ><i class="fa fa-heart" style="color: red"></i
+                ></a>
+              </li>
+              <li>
+                <a [routerLink]="['/chitietsanpham', d.id]"
+                  ><i class="fa fa-external-link"></i
+                ></a>
+              </li>
+              <li>
+                <a (click)="addToCart(d)"
+                  ><i class="fa fa-shopping-cart"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="product__item__text">
+            <h6>
+              <a href="#">{{ d.name }}</a>
+            </h6>
+            <h5>{{ d.price | currency: "VND":"symbol" }}</h5>
+          </div>
         </div>
+      </div>
     </ng-template>
     <ng-template #thenDay>
-        <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="
-        let d of dataProduct
-          | filter: search
-          | paginate: { itemsPerPage: 12, currentPage: p }
-          | orderBy: order:reverse
-      ">
-            <div class="product__item">
-                <div class="product__item__pic set-bg" style="background-image: url('{{ d.img }}')">
-                    <ul class="product__item__pic__hover">
-                        <li *ngIf="!d.yeuthich">
-                            <a (click)="addToWishlist(d)"><i class="fa fa-heart"></i></a>
-                        </li>
-                        <li *ngIf="d.yeuthich">
-                            <a (click)="removeWish(d)"><i class="fa fa-heart" style="color: red"></i
-              ></a>
-                        </li>
-                        <li>
-                            <a [routerLink]="['/chitietsanpham', d.id]"><i class="fa fa-external-link"></i
-              ></a>
-                        </li>
-                        <li>
-                            <a (click)="addToCart(d)"><i class="fa fa-shopping-cart"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="product__item__text">
-                    <h6>
-                        <a href="#">{{ d.name }}</a>
-                    </h6>
-                    <h5>{{ d.price | currency: "VND":"symbol" }}</h5>
-                </div>
-            </div>
+      <div
+        class="col-lg-4 col-md-6 col-sm-6"
+        *ngFor="
+          let d of dataProduct
+            | filter: search
+            | paginate: { itemsPerPage: 12, currentPage: p }
+            | orderBy: order:reverse
+        "
+      >
+        <div class="product__item">
+          <div
+            class="product__item__pic set-bg"
+            style="background-image: url('{{ d.img }}')"
+          >
+            <ul class="product__item__pic__hover">
+              <li *ngIf="!d.yeuthich">
+                <a (click)="addToWishlist(d)"><i class="fa fa-heart"></i></a>
+              </li>
+              <li *ngIf="d.yeuthich">
+                <a (click)="removeWish(d)"
+                  ><i class="fa fa-heart" style="color: red"></i
+                ></a>
+              </li>
+              <li>
+                <a [routerLink]="['/chitietsanpham', d.id]"
+                  ><i class="fa fa-external-link"></i
+                ></a>
+              </li>
+              <li>
+                <a (click)="addToCart(d)"
+                  ><i class="fa fa-shopping-cart"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="product__item__text">
+            <h6>
+              <a href="#">{{ d.name }}</a>
+            </h6>
+            <h5>{{ d.price | currency: "VND":"symbol" }}</h5>
+          </div>
         </div>
+      </div>
     </ng-template>
     <div class="product__pagination">
-        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </div>
+  </div>
+</div>
+</div>
 </div>
