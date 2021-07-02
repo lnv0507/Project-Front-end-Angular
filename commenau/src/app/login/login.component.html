@@ -1,27 +1,39 @@
 <div id="container">
   <div class="container-login">
     <div class="wrap-login">
-      <form class="login-form validate-form">
+      <form class="login-form validate-form" [formGroup]="form" (ngSubmit)="onSubmit()">
         <span class="login-form-title"> Đăng Nhập </span>
 
         <div
           class="wrap-input validate-input"
-          data-validate="Username is reauired"
+          data-validate="Username is required"
         >
-          <span class="label-input">Email hoặc số điện thoại</span>
+          <span class="label-input">Email hoặc số điện thoại</span> 
+          
+          
           <input
-            id="input1"
+            class="input1"
             type="text"
             name="username"
+            formControlName="username"
+            [ngClass]="{ 'is-invalid': f.username.invalid&&f.username.touched }"
+           
             placeholder="Nhập email hoặc số điện thoại của bạn"
             
+            
           />
+          
           <div class="focus-input">
             <div id="ic1">
               <i class="fas fa-user"></i>
             </div>
           </div>
+          
+          <div class="invalid-feedback">
+            Vui lòng nhập số điện thoại
+          </div>
         </div>
+        
 
         <div
           class="wrap-input validate-input"
@@ -29,17 +41,22 @@
         >
           <span class="label-input">Mật khẩu</span>
           <input
-            id="input1"
+            class="input1"
             type="password"
             name="pass"
+            formControlName="password"
+            [ngClass]="{ 'is-invalid': f.password.invalid&&f.password.touched }"
             placeholder="Nhập mật khẩu của bạn"
            
           />
-          <span class="focus-input">
+          <div class="focus-input">
             <div id="ic2">
               <i class="fas fa-lock"></i>
             </div>
-          </span>
+          </div>
+          <div class="invalid-feedback">
+            Vui lòng nhập mật khẩu
+          </div>
         </div>
 
         <div class="text-right">
@@ -49,7 +66,7 @@
         <div class="container-login-form-btn">
           <div class="wrap-login-form-btn">
             <div class="login-form-bgbtn"></div>
-            <button class="login-form-btn">Đăng nhập</button>
+            <button class="login-form-btn" [disabled]="f.valid">Đăng nhập</button>
           </div>
         </div>
 
