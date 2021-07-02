@@ -102,3 +102,34 @@ button:hover {
         margin-top: 20px;
     }
 }
+//tablet and moblie
+@media only screen and (max-width: 63.9375em){
+    .container{
+        padding-right: 10px;
+        padding-left: 10px;
+        .detail-checkout{
+            width: 100%;
+            padding-right: 0;
+        }
+        .order-checkout{
+            width: 100%;
+        }
+        .check-coupon {
+            width: 100%;
+        }
+        .check-account {
+            width: 100%;
+
+        }
+    }
+    
+}
+// moblie
+@media only screen and (max-width: 46.1875em){
+
+}
+//tablet
+@media only screen and (min-width: 46.25em ) and (max-width: 63.9375em){
+    
+    
+}

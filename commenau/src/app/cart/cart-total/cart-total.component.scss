@@ -104,3 +104,22 @@ h1{
         }
     }
 }
+@media only screen and (max-width: 63.9375em){
+    .total-cart{
+        float: right;
+        width: 93%;
+    }
+    .coupon-cart{
+        float:right;
+        width: 93%;
+    }
+}
+// moblie
+@media only screen and (max-width: 46.1875em){
+    
+}
+//tablet
+@media only screen and (min-width: 46.25em ) and (max-width: 63.9375em){
+    
+    
+}

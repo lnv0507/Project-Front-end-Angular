@@ -59,23 +59,25 @@ ul {
                 margin-left: 10px;
             }
         }
-        ul li {
-            width: 100%;
+        ul{
             margin-top: 20px;
-            i {
-                width: 20%;
-                float: left;
-                text-align: center;
-            }
-            p {
-                width: 80%;
-                float: left;
+            li {
+                width: 100%;
+                height: 20px;
+                i {
+                    width: 20%;
+                    float: left;
+                    text-align: center;
+                }
+                p {
+                    width: 80%;
+                    float: left;
+                }
             }
         }
+        
         .inline {
             width: 100%;
-            height: 60px;
-            padding: 30px;
             padding-left: 60px;
             a {
                 width: 100%;
@@ -164,6 +166,77 @@ ul {
                     margin-left: 40%;
                 }
             }
+        }
+    }
+}
+@media only screen and (max-width: 63.9375em){
+   
+    
+}
+// moblie
+@media only screen and (max-width: 46.1875em){
+    .container{
+        .customer-left{
+            width: 100%;
+            .avatar-name{
+                
+                img{
+                    margin-left: 25px;
+                }
+            }
+            .inline{
+                padding-left: 100px;
+            }
+        }
+        .customer-right{
+            width: 100%;
+            padding: 10px;
+            height: 360px;
+            .content{
+                .content-right{
+                    display: none;
+                }
+                .content-left{
+                    width: 100%;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
+//tablet
+@media only screen and (min-width: 46.25em ) and (max-width: 63.9375em){
+    .container {
+        .customer-left{
+            width: 30%;
+            .avatar-name{
+                text-align: center;
+                flex-direction: column;
+                line-height: 2;
+                p{
+                    width: 100%;
+                    margin-left: 0;
+                }
+                img{
+                    margin-left: 60px;
+                }
+            }
+            .inline{
+                padding-left: 60px;
+            }
+        }
+        .customer-right{
+            width: 70%;
+            .content{
+                .content-right{
+                    display: none;
+                }
+                .content-left{
+                    width: 100%;
+                    padding-right: 0;
+                }
+            }
+ 
         }
     }
 }

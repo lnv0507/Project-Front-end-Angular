@@ -56,6 +56,9 @@ td {
     padding-left: 10px;
     line-height: 50px;
   }
+  .reponsive{
+    display: none;
+  }
 }
 .shoping__cart__btns {
   button {
@@ -80,4 +83,54 @@ td {
       font-weight: bolder;
     }
   }
+}
+//tablet and moblie
+@media only screen and (max-width: 63.9375em){
+  .row{
+    display: none;
+  }
+}
+// moblie
+@media only screen and (max-width: 46.1875em){
+  .product-name{
+    width: 100%;
+    display: flexbox;
+    h5{
+      font-size: 15px;
+      width: 100%;
+      line-height: 22px;
+      padding-left: 0px;
+      margin-bottom: 0;
+      font-weight: 0;
+    }
+    img{
+      height: 60px;
+      width: 60px;
+    }
+    .reponsive{
+      width: 100%;
+      display: block;
+      padding-left: 5px;
+      .title{
+        color: #23536b;
+      }
+      
+    }
+    .mobile_reponsive{
+      display: none;
+    }
+  }
+  .price_table{
+    display: none;
+  }
+  .quantity{
+    .hihi{
+      display: flex;
+    }
+  }
+}
+//tablet
+@media only screen and (min-width: 46.25em ) and (max-width: 63.9375em){
+    
+    
 }
