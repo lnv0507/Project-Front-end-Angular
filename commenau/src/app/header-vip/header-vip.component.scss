@@ -8,6 +8,7 @@ $gray: #e7e7e7;
     position: absolute;
     z-index: 999999;
     transition: 0.4s;
+    height: 120px;
 }
 
 .menu-header {
@@ -15,9 +16,9 @@ $gray: #e7e7e7;
     color: $white;
     position: relative;
     z-index: 99999;
-    transition: all 0.1s;
+    transition: 0.4s;
     background-color: $blue;
-    padding-bottom: 20px;
+    height: 120px;
 }
 
 .navbar {
@@ -30,15 +31,16 @@ $gray: #e7e7e7;
 
 .header {
     #idLogo {
-        top: 1em;
+        top: 0.5em;
         position: absolute;
-        left: 110%;
+        left: 150%;
+        font-size: 25px;
     }
     .header-big {
         position: relative;
         transition: 0.4s;
-        margin-top: 4.5em;
-        left: 70%;
+        margin-top: 3.5em;
+        left: 110%;
         display: flex;
         .menu-bar-title {
             color: $gray;
@@ -47,6 +49,7 @@ $gray: #e7e7e7;
             .menu-word {
                 cursor: pointer;
                 height: 15px;
+                font-size: 0.7em;
             }
             .menu-word:hover {
                 height: 15px;
@@ -68,8 +71,8 @@ $gray: #e7e7e7;
     .icon-menu {
         display: flex;
         position: relative;
-        margin-left: 40em;
-        margin-top: 1em;
+        margin-left: 50em;
+        margin-top: 0.4em;
         a {
             position: relative;
             left: 0;
@@ -89,7 +92,7 @@ $gray: #e7e7e7;
                 background-color: $white;
                 width: 0px;
                 height: 0px;
-                left: -50px;
+                right: 0;
                 z-index: 2;
                 visibility: hidden;
                 opacity: 0;
@@ -102,7 +105,7 @@ $gray: #e7e7e7;
                         height: 4em;
                         color: $black;
                         margin-top: 50px;
-                        margin-left: 22%;
+                        margin-left: 25%;
                     }
                 }
                 .login-button {
@@ -111,16 +114,16 @@ $gray: #e7e7e7;
                     color: $white;
                     background-color: $black;
                     margin-top: 10px;
-                    margin-left: 22%;
+                    margin-left: 25%;
                 }
             }
         }
         .user-big:hover {
             .login-user {
-                height: 180px;
+                height: 230px;
                 opacity: 1;
                 visibility: inherit;
-                width: 270px;
+                width: 300px;
             }
         }
         .bag-big {
@@ -134,14 +137,14 @@ $gray: #e7e7e7;
                 background-color: $white;
                 width: 0em;
                 height: 0em;
-                left: -50px;
+                right: -70px;
                 z-index: 2;
                 overflow: hidden;
                 .food-bag {
                     color: $black;
                     margin-left: 34%;
                     margin-top: 0.7em;
-                    font-size: 2em;
+                    font-size: 1.5em;
                 }
                 .scroll {
                     height: 150px;
@@ -185,13 +188,13 @@ $gray: #e7e7e7;
                     display: flex;
                     justify-content: space-between;
                     color: $black;
-                    font-size: 2em;
+                    font-size: 1em;
                 }
                 div {
                     button {
-                        font-size: 1.5em;
+                        font-size: 1em;
                         width: 90%;
-                        height: 3em;
+                        height: 2em;
                         color: $black;
                         margin-top: 50px;
                         margin-left: 5%;
@@ -200,7 +203,7 @@ $gray: #e7e7e7;
                 }
                 .bag-button {
                     border: none;
-                    font-size: 1.5em;
+                    font-size: 1em;
                     width: 90%;
                     height: 3em;
                     color: $white;
@@ -214,8 +217,8 @@ $gray: #e7e7e7;
             .bag-user {
                 opacity: 1;
                 visibility: inherit;
-                width: 35em;
-                height: 50em;
+                width: 25em;
+                height: 500px;
             }
         }
         .thanhbar-muiten:hover {
@@ -232,9 +235,9 @@ $gray: #e7e7e7;
         }
         .search-menu {
             .search-cancel {
-                font-size: 20px;
+                font-size: 25px;
                 position: relative;
-                top: -0.5em;
+                top: -0.6em;
                 right: 10px;
             }
             .search-menu-bar {
@@ -244,8 +247,7 @@ $gray: #e7e7e7;
                 color: #141619;
                 width: 0em;
                 position: absolute;
-                left: -30em;
-                top: 8em;
+                right: -100px;
                 height: 0em;
                 padding: 2em 5em;
                 overflow: hidden;
@@ -255,7 +257,7 @@ $gray: #e7e7e7;
             .input-search {
                 border-bottom: solid 1px black;
                 width: 90%;
-                font-size: 1.5em;
+                font-size: 1em;
                 padding: 1em 0;
                 input {
                     margin-left: 10px;
@@ -275,10 +277,10 @@ $gray: #e7e7e7;
                         i {
                             color: darkgray;
                             padding-right: 0.7em;
-                            font-size: 1.5em;
+                            font-size: 1em;
                         }
                         p {
-                            font-size: 1.5em;
+                            font-size: 1em;
                             font-weight: bold;
                         }
                     }
@@ -289,8 +291,8 @@ $gray: #e7e7e7;
             .search-menu-charge {
                 opacity: 1;
                 visibility: inherit;
-                height: 30em;
-                width: 50em;
+                height: 25em;
+                width: 45em;
                 transition: height 0.5s ease-out;
             }
         }
@@ -299,10 +301,12 @@ $gray: #e7e7e7;
         position: fixed;
         top: 0;
         background-color: $blue;
-        height: 100px;
-        // margin-bottom: 200px;
+        height: 60px;
         h2 {
             visibility: hidden;
+        }
+        .menu-word {
+            margin-top: -35px;
         }
     }
 }

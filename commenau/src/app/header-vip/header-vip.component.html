@@ -1,6 +1,6 @@
 <div class="header">
-    <div [class.header-change]="header_variable" class="{{ menu_header }}" class="container-fluid">
-        <nav class="navbar navbar-expand-lg ">
+    <div [class.header-change]="header_variable" class="{{ menu_header }}" class="container-fluid ">
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <h2 id="idLogo" class="navbar-brand">C O M M E N A U</h2>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -58,35 +58,11 @@
                 </div>
             </div>
             <div class="bag-big thanhbar-muiten">
-                <a class="bagA" routerLink="/yeuthich"><i class="fas fa-heart"></i></a>
-                <div class="thanh-bar"></div>
-                <div class="bag-user">
-                    <p class="food-bag">Danh sách yêu thích</p>
-                    <div class="scroll">
-                        <div class="item-cart" *ngFor="let i of itemsWishlist">
-                            <img src="{{ i.img }}" alt="" />
-                            <div class="item-food">
-                                <p>{{ i.name }}</p>
-                                <p>
-                                    <label for="">{{ i.price }}</label>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <a routerLink="/yeuthich"> <button>XEM CHI TIẾT</button></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bag-big thanhbar-muiten">
                 <a class="bagA" routerLink="/giohang"><i class="fas fa-briefcase"></i></a>
                 <div class="thanh-bar"></div>
                 <div class="bag-user">
                     <div class="header-cart">
                         <p class="food-bag">Túi Đồ Ăn</p>
-
-                        <i class="far fa-times-circle icon-x" style="color: black; font-size: 20px"></i>
                     </div>
 
                     <div class="scroll">
