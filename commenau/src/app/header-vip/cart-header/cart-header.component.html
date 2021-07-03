@@ -1,41 +1,32 @@
-
 <div class="bag-big thanhbar-muiten">
-    <a class="bagA" routerLink="/giohang"><i class="fas fa-briefcase"></i><label>Túi</label></a
-  >
-  <div class="thanh-bar"></div>
-  <div class="bag-user">
-    <div class="header-cart">
-      <p class="food-bag">Túi Đồ Ăn</p>
-
-      <i
-        class="far fa-times-circle icon-x"
-        style="color: black; font-size: 20px"
-      ></i>
-    </div>
-
-    <div class="scroll">
-      <!-- <div class="item-cart" *ngFor="let i of items">
-        <img src="{{ i.img }}" alt="" />
-        <div class="item-food">
-          <p>{{ i.name }}</p>
-          <p>
-            <label for="">{{ i.quatity }}</label>
-          </p>
-          <p>
-            <label for="">{{ i.price * i.quatity }} </label>
-          </p>
-
-
+    <a class="bagA" routerLink="/giohang"><i class="fas fa-briefcase"></i></a>
+    <div class="thanh-bar"></div>
+    <div class="bag-user">
+        <div class="header-cart">
+            <p class="food-bag">Túi Đồ Ăn</p>
         </div>
-      </div>
-    </div> -->
-    <div class="sub-total">
-      <p>Tổng Tiền</p>
-      <!-- <p>{{ getTotal() }}</p> -->
+
+        <div class="scroll">
+            <div class="item-cart" *ngFor="let i of items">
+                <img src="{{ i.img }}" alt="" />
+                <div class="item-food">
+                    <p>{{ i.name }}</p>
+                    <p>
+                        <label for="">{{ i.quatity }}</label>
+                    </p>
+                    <p>
+                        <label for="">{{ i.price * i.quatity }} </label>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="sub-total">
+            <p>Tổng Tiền</p>
+            <p>{{ getTotal() }}</p>
+        </div>
+        <div>
+            <a routerLink="/giohang"> <button>XEM CHI TIẾT TÚI</button></a>
+        </div>
+        <button class="bag-button">THANH TOÁN</button>
     </div>
-    <div>
-      <a routerLink="/giohang"> <button>XEM CHI TIẾT TÚI</button></a>
-</div>
-<button class="bag-button">THANH TOÁN</button>
-</div>
 </div>
