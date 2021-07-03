@@ -25,7 +25,7 @@
     <hr />
     <div class="items-coupon">
         <input type="text" placeholder="Mã ưu đãi" [(ngModel)]="nameVoucher" />
-        <p class="checkvoucher" *ngIf="checkMessage">{{message}}</p>
-        <button (click)="applyVoucher()" class="btn btn-light">ÁP DỤNG MÃ</button>
+        <p class="checkvoucher" *ngIf="getCheckMessage()">{{getMessage()}}</p>
+        <button (click)="applyVoucher(nameVoucher)" class="btn btn-light">ÁP DỤNG MÃ</button>
     </div>
 </div>

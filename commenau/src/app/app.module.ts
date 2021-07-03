@@ -17,7 +17,7 @@ const routersConfig: Routes = [
   { path: 'vechungtoi', component: AboutComponent },
   { path: 'kiemtra', component: VerifyComponent },
   { path: 'yeuthich', component: WishlistComponent },
-  {path: 'thongtin', component: DetailCustomerComponent},
+  { path: 'thongtin', component: DetailCustomerComponent},
   { path: '**', component: Page404Component },
 ];
 
@@ -52,7 +52,7 @@ import { CheckoutAccountComponent } from './checkout/checkout-account/checkout-a
 import { CheckoutCouponComponent } from './checkout/checkout-coupon/checkout-coupon.component';
 import { CheckoutDetailComponent } from './checkout/checkout-detail/checkout-detail.component';
 import { CheckoutOrderComponent } from './checkout/checkout-order/checkout-order.component';
-import {NgxPaginationModule} from 'ngx-pagination';
+import { NgxPaginationModule} from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import { FormsModule } from '@angular/forms';

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from 'src/app/Services/cart.service';
+import { VoucherService } from 'src/app/Services/voucher.service';
 
 @Component({
   selector: 'app-checkout-order',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./checkout-order.component.scss']
 })
 export class CheckoutOrderComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor(private cartService: CartService, private voucherService: VoucherService) { }
 
   ngOnInit(): void {
   }
+
+  items = this.cartService.getCartItems();
+  getDisCount(){
+    return this.voucherService.getDiscount();
+  }
+  getAllTotal(){
+    return this.cartService.getTotal() - this.getDisCount();
+  }
+
 
 }
