@@ -7,12 +7,12 @@ $gray: #e7e7e7;
     .bag-user {
         // margin-top: 1em;
         transition: height 0.5s ease-in;
-        visibility: hidden;
-        opacity: 0;
+        opacity: 1;
+        visibility: inherit;
         position: absolute;
         background-color: $white;
-        width: 0em;
-        height: 0em;
+        width: 35em;
+        height: 50em;
         left: -50px;
         z-index: 2;
         overflow: hidden;
@@ -90,11 +90,11 @@ $gray: #e7e7e7;
     }
 }
 
-.bag-big:hover {
-    .bag-user {
-        opacity: 1;
-        visibility: inherit;
-        width: 35em;
-        height: 50em;
-    }
-}
+// .bag-big:hover {
+//     .bag-user {
+//         opacity: 1;
+//         visibility: inherit;
+//         width: 35em;
+//         height: 50em;
+//     }
+// }
