@@ -6,25 +6,22 @@ $gray: #e7e7e7;
     display: flex;
     color: $white;
     position: absolute;
-    padding-left: 200px;
     z-index: 999999;
-    width: 100%;
-    height: 200px;
     transition: 0.4s;
-    // background-color: red;
 }
 
 .menu-header {
     display: flex;
     color: $white;
     position: relative;
-    padding-left: 200px;
     z-index: 99999;
-    width: 100%;
-    height: 100%;
     transition: all 0.1s;
     background-color: $blue;
     padding-bottom: 20px;
+}
+
+.navbar {
+    .navbar-toggler {}
 }
 
 .menu-header2:hover {
@@ -32,34 +29,30 @@ $gray: #e7e7e7;
 }
 
 .header {
-    .navbar-toggler {
-        margin-right: 100px;
-        span {
-            display: block;
-        }
-    }
-    h2 {
+    #idLogo {
         top: 1em;
         position: absolute;
-        left: 45%;
+        left: 110%;
     }
     .header-big {
         position: relative;
         transition: 0.4s;
         margin-top: 4.5em;
-        left: 15%;
+        left: 70%;
         display: flex;
-        flex: 70%;
-        height: 100px;
         .menu-bar-title {
             color: $gray;
             text-decoration: none;
+            margin: 0 20px;
             .menu-word {
                 cursor: pointer;
+                height: 15px;
+            }
+            .menu-word:hover {
+                height: 15px;
             }
         }
         .menu-bar-title:hover {
-            width: 100%;
             .thanh-bar {
                 position: relative;
                 border-top: 5px solid transparent;
@@ -74,10 +67,9 @@ $gray: #e7e7e7;
     }
     .icon-menu {
         display: flex;
-        flex: 30%;
         position: relative;
-        margin-left: 20em;
-        top: 0.8em;
+        margin-left: 40em;
+        margin-top: 1em;
         a {
             position: relative;
             left: 0;
@@ -242,7 +234,7 @@ $gray: #e7e7e7;
             .search-cancel {
                 font-size: 20px;
                 position: relative;
-                top: -0.7em;
+                top: -0.5em;
                 right: 10px;
             }
             .search-menu-bar {
@@ -307,14 +299,10 @@ $gray: #e7e7e7;
         position: fixed;
         top: 0;
         background-color: $blue;
-        height: 55px;
+        height: 100px;
         // margin-bottom: 200px;
         h2 {
             visibility: hidden;
-        }
-        .header-big {
-            position: relative;
-            top: -20px;
         }
     }
 }
