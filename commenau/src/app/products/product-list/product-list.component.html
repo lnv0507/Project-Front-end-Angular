@@ -23,6 +23,9 @@
 </div>
 <div class="col-lg-9 col-md-7">
   <div class="row">
+    <div class="sidebar__item">
+      <h5>Thực đơn ngày: {{day | date: ' dd/MM/y'}}</h5>
+    </div>
     <div class="hero__search__form">
       <!-- <div class="hero__search__categories">
             All Categories
@@ -33,38 +36,40 @@
       </button>
       <input type="text" placeholder="Bạn muốn ăn gì?" [(ngModel)]="search" />
     </div>
-    <div class="filter__item">
-      <div class="row">
-        <div class="col-lg-12 col-md-5">
-          <div class="filter__sort">
-            <span>Sắp xếp theo: &nbsp; </span>
-            <a (click)="setOrder('name')"
-              >Tên &nbsp;<i class="fas fa-sort-alpha-up"></i>
-            </a>
-            <a (click)="setOrder('price')"
-              >Giá &nbsp;<i class="fas fa-sort-numeric-down"></i
-            ></a>
-            <!-- <select>
-            <option >Mặc định</option>
-            <option  (click)="setOrder('price')">Ten</option>
-          </select> -->
-          </div>
+    
+  </div>
+  <div class="filter__item">
+    <div class="row">
+      <div class="col-lg-12 col-md-5">
+        <div class="filter__sort">
+          <span>Sắp xếp theo: &nbsp; </span>
+          <a (click)="setOrder('name')"
+            >Tên &nbsp;<i class="fas fa-sort-alpha-up"></i>
+          </a>
+          <a (click)="setOrder('price')"
+            >Giá &nbsp;<i class="fas fa-sort-numeric-down"></i
+          ></a>
+          <!-- <select>
+          <option >Mặc định</option>
+          <option  (click)="setOrder('price')">Ten</option>
+        </select> -->
         </div>
-        <!-- <div class="col-lg-4 col-md-4">
-                            <div class="filter__found">
-                                <h6><span>16</span> Products found</h6>
-                            </div>
-                        </div> -->
-        <!-- <div class="col-lg-4 col-md-3">
-                            <div class="filter__option">
-                                <span class="icon_grid-2x2"></span>
-                                <span class="icon_ul"></span>
-                            </div>
-                        </div> -->
       </div>
+      <!-- <div class="col-lg-4 col-md-4">
+                          <div class="filter__found">
+                              <h6><span>16</span> Products found</h6>
+                          </div>
+                      </div> -->
+      <!-- <div class="col-lg-4 col-md-3">
+                          <div class="filter__option">
+                              <span class="icon_grid-2x2"></span>
+                              <span class="icon_ul"></span>
+                          </div>
+                      </div> -->
     </div>
   </div>
   <div class="row">
+    
     <div *ngIf="productCheck; then thenMonday; else thenDay"></div>
     <ng-template #thenMonday>
       <div

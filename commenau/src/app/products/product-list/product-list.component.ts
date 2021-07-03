@@ -80,4 +80,5 @@ export class ProductListComponent implements OnInit {
     this.wishlistService.removeItem(p);
     return p.yeuthich;
   }
+  public day: Date=new Date();
 }

@@ -6,7 +6,7 @@ $white: #ffffff;
 $gray: #e7e7e7;
 .breadcurb-area {
     .container {
-        width: 1080px;
+    
         .breadcrumb {
             background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
             margin: 15px 0 20px;
@@ -16,6 +16,7 @@ $gray: #e7e7e7;
                 transition: all 0.3s ease 0s;
                 text-decoration: none;
                 color: rgb(161, 147, 147);
+                cursor: pointer;
             }
         }
     }
