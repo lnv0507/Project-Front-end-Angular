@@ -3,7 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import {MatTabsModule} from '@angular/material/tabs';
+
 
 const routersConfig: Routes = [
   { path: 'dangnhap', component: LoginComponent },
@@ -108,6 +112,10 @@ import { CartHeaderComponent } from './header-vip/cart-header/cart-header.compon
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatTabsModule,
+    ShareButtonsModule.withConfig({
+      debug: true
+    }),
+    ShareIconsModule,
 
   ],
   providers: [],

@@ -11,6 +11,7 @@ import { ProductCart } from '../model/product-cart';
   styleUrls: ['./shop-detail.component.scss'],
 })
 export class ShopDetailComponent implements OnInit, OnChanges {
+  name = 'ngx sharebuttons';
   heartIcon = false;
   product: any;
   change = false;
