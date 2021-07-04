@@ -32,7 +32,7 @@ export class ProductsService {
   };
   // lay dia chi ser ver phai chay localhost moi lay dc data
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) { }
 
   // lay product out
   public getProduct(): Observable<Product[]> {

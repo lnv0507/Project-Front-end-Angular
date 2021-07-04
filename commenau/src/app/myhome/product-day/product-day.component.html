@@ -4,8 +4,8 @@
             <h5>{{ titleRice }}</h5>
         </div>
         <div class="container">
-            <ul class="nav nav-pills nav-uppercase nav-size-large nav-center day-product">
-                <li *ngFor="let th of weekDays">
+            <ul class="nav nav-fill day-product ">
+                <li *ngFor="let th of weekDays" class=" mb-3 mt-1 nav-item">
                     <a (click)="listProductDay(th.day)" routerLink="/trangchu" routerLinkActive="clickDay" [routerLinkActiveOptions]="{ exact: true }">
                         <label for="">{{ th.day }} </label></a>
                 </li>
@@ -67,4 +67,3 @@
             </div>
         </div>
     </div>
-</div>
