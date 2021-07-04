@@ -29,7 +29,7 @@
                         </div>
                     </div>
                     <div class="invalid-feedback">
-                        Vui lòng nhập email
+                        Email không đúng vui lòng nhập email.
                     </div>
                 </div>
                 <div class="wrap-input validate-input" data-validate="Phone is reauired">
@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     <div class="invalid-feedback">
-                        Vui lòng nhập số điện thoại
+                        Số điện thoại không hợp lệ vui lòng nhập số điện thoại.
                     </div>
                     
                 </div>
@@ -56,21 +56,21 @@
                             <i class="fas fa-lock"></i>
                         </div>
                     </span>
-                    <div class="invalid-feedback">
-                        Vui lòng nhập mật khẩu
+                    <div class="invalid-feedback" >
+                        Mật khẩu chưa đúng vui lòng nhập mật khẩu.
                     </div>
                 </div>
                 <div class="wrap-input validate-input" data-validate="RePassword is required">
                     <span class="label-input">Mật khẩu</span>
                     <input class="input" type="password" name="repass" placeholder="Nhập lại mật khẩu" formControlName ="re_password"
-                    [ngClass]="{'is-invalid' : formRegister.controls.re_password.invalid && formRegister.controls.re_password.touched}">
+                    [ngClass]="{'is-invalid' : formRegister.controls.re_password.invalid && formRegister.controls.re_password.touched && ( formRegister.controls.password.value !== formRegister.controls.re_password.value)}">
                     <span class="focus-input">
                         <div class="ic">
                             <i class="fas fa-lock"></i>
                         </div>
                     </span>
                     <div class="invalid-feedback">
-                        Vui lòng nhập lại mật khẩu
+                        Mật khẩu không khớp vui lòng nhập lại
                     </div>
                 </div>
 
