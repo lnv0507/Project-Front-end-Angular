@@ -13,7 +13,7 @@
             <div class="tab-panels row">
                 <div *ngIf="productCheck; then thenMonday; else thenDay"></div>
                 <ng-template #thenMonday>
-                    <div class="col-lg-4 col-md-6 col-xl-3 col-sm-12" *ngFor="let product of getProduct()">
+                    <div class="col-lg-3 col-md-12 col-sm-12" *ngFor="let product of getProduct()">
                         <div class="product__item">
                             <div class="product__item__pic set-bg" style="background-image: url('{{ product.img }}')">
                                 <ul class="product__item__pic__hover">
@@ -38,7 +38,7 @@
                     </div>
                 </ng-template>
                 <ng-template #thenDay>
-                    <div class="col-lg-4 col-md-6 col-xl-3 col-sm-12" *ngFor="let product of dataProduct">
+                    <div class="col-lg-3 col-md-12 col-sm-12" *ngFor="let product of dataProduct">
                         <div class="product__item">
                             <div class="product__item__pic set-bg" style="background-image: url('{{ product.img }}')">
                                 <ul class="product__item__pic__hover">

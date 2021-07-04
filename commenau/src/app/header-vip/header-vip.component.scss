@@ -9,11 +9,9 @@ $gray: #e7e7e7;
     z-index: 999999;
     transition: 0.4s;
     height: 120px;
-    width: 100%;
 }
 
 .menu-header {
-    width: 100%;
     display: flex;
     color: $white;
     position: relative;
@@ -35,7 +33,7 @@ $gray: #e7e7e7;
     #idLogo {
         top: 0.5em;
         position: absolute;
-        left: 140%;
+        left: 150%;
         font-size: 25px;
     }
     .header-big {
@@ -74,7 +72,7 @@ $gray: #e7e7e7;
     .icon-menu {
         display: flex;
         position: relative;
-        margin-left: 50%;
+        margin-left: 50em;
         margin-top: 0.4em;
         a {
             position: relative;
@@ -303,7 +301,6 @@ $gray: #e7e7e7;
         top: 0;
         background-color: $blue;
         height: 60px;
-        width: 100%;
         h2 {
             visibility: hidden;
         }

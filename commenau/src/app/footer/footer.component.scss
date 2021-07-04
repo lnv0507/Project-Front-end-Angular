@@ -2,14 +2,38 @@ $blue: #23536b;
 $black: #141619;
 $white: #ffffff;
 $gray: #e7e7e7;
-.footer-vip {
+.footer-1 {
+    background-color: $blue;
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 220px;
+    // height: 200px;
+    div {
+        border: 1px dashed $white;
+        width: 45%;
+        background-color: $blue;
+        padding: 20px;
+        height: 100%;
+        h5 {
+            font-size: 20px;
+            margin-left: 15%;
+            padding: 20px;
+        }
+        p {
+            font-size: 15px;
+            margin-left: 10%;
+        }
+    }
+}
+
+div {
     background-color: $blue;
     .footer-header {
         display: flex;
         justify-content: space-around;
-        padding: 20px 0;
+        padding: 20px 15em;
         color: $gray;
-        width: 100%;
         .footer-vip {
             p {
                 font-size: 15px;
@@ -21,7 +45,6 @@ $gray: #e7e7e7;
                 font-size: 1.35rem;
                 color: $gray;
                 padding-bottom: 1.5em;
-                width: 300px;
             }
             a {
                 color: gray;
@@ -37,10 +60,9 @@ $gray: #e7e7e7;
         }
     }
     .footer-under {
-        width: 100%;
         background-color: $black;
         color: gray;
-        padding: 10px 0;
+        padding: 10px 24em;
         font-size: 10px;
     }
 }
