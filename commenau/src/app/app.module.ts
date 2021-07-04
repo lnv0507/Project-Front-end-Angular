@@ -23,7 +23,7 @@ const routersConfig: Routes = [
   { path: 'vechungtoi', component: AboutComponent },
   { path: 'kiemtra', component: VerifyComponent },
   { path: 'yeuthich', component: WishlistComponent },
-  { path: 'thongtin', component: DetailCustomerComponent},
+  { path: 'thongtin', component: DetailCustomerComponent },
   { path: '**', component: Page404Component },
 ];
 
@@ -45,7 +45,6 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { ProductDirective } from './directives/product.directive';
-import { ProductsService } from './Services/products.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsComponent } from './products/products.component';
 import { BreakcumbComponent } from './products/breakcumb/breakcumb.component';
@@ -58,7 +57,7 @@ import { CheckoutAccountComponent } from './checkout/checkout-account/checkout-a
 import { CheckoutCouponComponent } from './checkout/checkout-coupon/checkout-coupon.component';
 import { CheckoutDetailComponent } from './checkout/checkout-detail/checkout-detail.component';
 import { CheckoutOrderComponent } from './checkout/checkout-order/checkout-order.component';
-import { NgxPaginationModule} from 'ngx-pagination';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import { FormsModule } from '@angular/forms';
@@ -99,14 +98,15 @@ import { CartHeaderComponent } from './header-vip/cart-header/cart-header.compon
     BreakcumbAboutComponent,
     WishlistDetailComponent,
     WishlistComponent,
-    CartHeaderComponent
+    CartHeaderComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routersConfig),
     HttpClientModule,
-    NgxPaginationModule,Ng2SearchPipeModule,Ng2OrderModule,
+    NgxPaginationModule, Ng2SearchPipeModule, Ng2OrderModule,
     FormsModule,
     NgbModule,
     ReactiveFormsModule,
@@ -121,4 +121,4 @@ import { CartHeaderComponent } from './header-vip/cart-header/cart-header.compon
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

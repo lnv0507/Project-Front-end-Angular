@@ -7,7 +7,7 @@
                     <ul class="nav nav-pills nav-uppercase nav-size-large nav-center dayProduct">
                         <li *ngFor="let th of weekDays">
                             <a (click)="listProductDay(th.day)" routerLink="/menu" routerLinkActive="clickDay" [routerLinkActiveOptions]="{ exact: false }">
-                                <label> {{ th.day }}</label>
+                                <label style="cursor: pointer;"> {{ th.day }}</label>
                             </a>
                         </li>
                     </ul>

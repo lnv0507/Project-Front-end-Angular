@@ -22,6 +22,9 @@ export class ProductListComponent implements OnInit {
   weekDays = [{ day: 'string' }];
   productCheck = true;
   addedWishlist: boolean = false;
+  order: string = 'id';
+  reverse: boolean = false;
+  public day: Date = new Date();
 
   constructor(
     private product: ProductsService,
@@ -49,8 +52,7 @@ export class ProductListComponent implements OnInit {
     return this.product.getDayProduct();
   }
 
-  order: string = 'id';
-  reverse: boolean = false;
+
   public setOrder(value: string) {
     if (this.order === value) {
       this.reverse = !this.reverse;
@@ -61,7 +63,7 @@ export class ProductListComponent implements OnInit {
 
   public addToCart(product: Product) {
     this.clickCart.open(CartHeaderComponent);
-    const item : ProductCart = new ProductCart();
+    const item: ProductCart = new ProductCart();
     item.id = product.id;
     item.img = product.img;
     item.name = product.name;
@@ -80,5 +82,5 @@ export class ProductListComponent implements OnInit {
     this.wishlistService.removeItem(p);
     return p.yeuthich;
   }
-  public day: Date=new Date();
+
 }
