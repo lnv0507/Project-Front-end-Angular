@@ -1,26 +1,42 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, NgControlStatus, Validators} from '@angular/forms'
+import {AbstractControl, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms'
+import { User } from '../model/user';
+import { UserService } from '../Services/user.service';
+
+export function checkExistPhone(phones: any = []){
+  return (c : AbstractControl) =>{
+    return (phones.includes(c.value)) ?{
+      invalidphone : true
+    } : null;
+  };
+}
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
+
+
 export class RegisterComponent implements OnInit {
   formRegister!: FormGroup;
 
-  constructor(private formBuilder :FormBuilder) { 
+  constructor(private formBuilder :FormBuilder, private serviceUser : UserService) { 
+
     this.formRegister = this.formBuilder.group({
       name: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
       phone: new FormControl('', [Validators.required, Validators.pattern("^[0-9]+$"), Validators.minLength(10), Validators.maxLength(10)]),
-      password: new FormControl('', Validators.required),
+      password: new FormControl('', [Validators.required, Validators.minLength(6)]),
       re_password: new FormControl('', Validators.required)
     },
     {
       validators : this.MustMatch('password', 're_password')
-    })
+     }
+    )
   }
+
+
 
   ngOnInit(): void {
     
@@ -41,7 +57,22 @@ export class RegisterComponent implements OnInit {
     }
   }
   onSubmit(){
-    console.log(this.formRegister.value);
+    
+    this.serviceUser.getUser().subscribe(data =>{
+      const user = new User();
+      user.id = data.length + 1 + '';
+      user.name =  this.formRegister.controls.name.value;
+      user.email = this.formRegister.controls.email.value;
+      user.phone = this.formRegister.controls.phone.value;
+      user.password = this.formRegister.controls.password.value;
+      user.address = '';
+      this.serviceUser.addUser(user).subscribe(data =>{
+      console.log(data);
+      })
+    }) ;
+    
+    
+
   }
   
   

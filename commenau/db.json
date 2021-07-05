@@ -6,17 +6,93 @@
       "author": "hello"
     }
   ],
+  "user": [
+    {
+      "id": "1",
+      "name": "ss",
+      "email": "ss@gmail.com",
+      "phone": "1233322233",
+      "password": "123456",
+      "address": ""
+    },
+    {
+      "id": "2",
+      "name": "ss",
+      "email": "ss@gmail.com",
+      "phone": "1233322233",
+      "password": "123456",
+      "address": ""
+    },
+    {
+      "id": "3",
+      "name": "Le Huy",
+      "email": "123@gmail.com",
+      "phone": "0999898776",
+      "password": "123456789",
+      "address": ""
+    }
+  ],
   "voucher": [
-    {"id":"CMN20K", "discount" : 20000, "percent" : 0 , "condition" : 100000},
-    {"id":"CMN30K", "discount" : 30000, "percent" : 0 , "condition" : 100000},
-    {"id":"CMN40K", "discount" : 40000, "percent" : 0 , "condition" : 150000},
-    {"id":"CMN50K", "discount" : 50000, "percent" : 0 , "condition" : 150000},
-    {"id":"CMN60K", "discount" : 60000, "percent" : 0 , "condition" : 200000},
-    {"id":"CMN70K", "discount" : 70000, "percent" : 0 , "condition" : 200000},
-    {"id":"CMN5%", "discount" : 0, "percent" : 0.05 ,"condition" : 250000},
-    {"id":"CMN10%", "discount" : 0, "percent" : 0.1 , "condition" : 100000},
-    {"id":"CMN20%", "discount" : 0, "percent" : 0.25 , "condition" : 200000},
-    {"id":"CMN30%", "discount" : 0, "percent" : 0.5 , "condition" : 300000}
+    {
+      "id": "CMN20K",
+      "discount": 20000,
+      "percent": 0,
+      "condition": 100000
+    },
+    {
+      "id": "CMN30K",
+      "discount": 30000,
+      "percent": 0,
+      "condition": 100000
+    },
+    {
+      "id": "CMN40K",
+      "discount": 40000,
+      "percent": 0,
+      "condition": 150000
+    },
+    {
+      "id": "CMN50K",
+      "discount": 50000,
+      "percent": 0,
+      "condition": 150000
+    },
+    {
+      "id": "CMN60K",
+      "discount": 60000,
+      "percent": 0,
+      "condition": 200000
+    },
+    {
+      "id": "CMN70K",
+      "discount": 70000,
+      "percent": 0,
+      "condition": 200000
+    },
+    {
+      "id": "CMN5%",
+      "discount": 0,
+      "percent": 0.05,
+      "condition": 250000
+    },
+    {
+      "id": "CMN10%",
+      "discount": 0,
+      "percent": 0.1,
+      "condition": 100000
+    },
+    {
+      "id": "CMN20%",
+      "discount": 0,
+      "percent": 0.25,
+      "condition": 200000
+    },
+    {
+      "id": "CMN30%",
+      "discount": 0,
+      "percent": 0.5,
+      "condition": 300000
+    }
   ],
   "product": [
     {
