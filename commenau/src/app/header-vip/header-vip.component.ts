@@ -13,6 +13,7 @@ import { WishlistService } from '../Services/wishlist.service';
 })
 
 export class HeaderVipComponent implements OnInit {
+  public isMenuCollapsed = true;
   header_variable = false;
   search_click = false;
   @Input() menu_header: string = 'menu-header2';
@@ -67,6 +68,9 @@ export class HeaderVipComponent implements OnInit {
 
   getTotal() {
     return this.cart.getTotal();
+  }
+  getQuatity(){
+    return this.cart.getQuatity();
   }
 
 }

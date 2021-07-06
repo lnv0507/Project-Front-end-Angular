@@ -7,6 +7,13 @@ import { ProductCart } from '../model/product-cart';
   providedIn: 'root',
 })
 export class CartService {
+  getQuatity() {
+    let total = 0;
+    for (let i of this.cartItems) {
+      total +=i.quatity;
+    }
+    return total;
+  }
   cartItems: Array<ProductCart> = [];
   constructor() {}
   addItem(product: ProductCart) {

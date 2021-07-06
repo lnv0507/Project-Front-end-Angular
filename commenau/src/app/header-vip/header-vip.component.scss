@@ -24,7 +24,8 @@ $gray: #e7e7e7;
 }
 
 .navbar {
-    .navbar-toggler {}
+    .navbar-toggler {
+    }
 }
 
 .menu-header2:hover {
@@ -74,7 +75,7 @@ $gray: #e7e7e7;
     .icon-menu {
         display: flex;
         position: relative;
-        margin-left: 50%;
+        margin-left: 40%;
         margin-top: 0.4em;
         a {
             position: relative;
@@ -94,7 +95,7 @@ $gray: #e7e7e7;
                 background-color: $white;
                 width: 0px;
                 height: 0px;
-                right: 0;
+                right: -35px;
                 z-index: 2;
                 visibility: hidden;
                 opacity: 0;
@@ -138,7 +139,7 @@ $gray: #e7e7e7;
                 background-color: $white;
                 width: 0em;
                 height: 0em;
-                right: -70px;
+                right: -125px;
                 z-index: 2;
                 overflow: hidden;
                 .food-bag {
@@ -222,6 +223,7 @@ $gray: #e7e7e7;
                 height: 500px;
             }
         }
+        
         .thanhbar-muiten:hover {
             .thanh-bar {
                 position: relative;
@@ -236,10 +238,9 @@ $gray: #e7e7e7;
         }
         .search-menu {
             .search-cancel {
-                font-size: 25px;
+                font-size: 20px;
                 position: relative;
-                top: -0.6em;
-                right: 10px;
+                top: -5px;
             }
             .search-menu-bar {
                 opacity: 0;
@@ -248,7 +249,7 @@ $gray: #e7e7e7;
                 color: #141619;
                 width: 0em;
                 position: absolute;
-                right: -100px;
+                right: 0px;
                 height: 0em;
                 padding: 2em 5em;
                 overflow: hidden;
@@ -318,5 +319,274 @@ $gray: #e7e7e7;
     .icon-x {
         margin-top: 20px;
         margin-left: 100px;
+    }
+}
+.badge {
+    position: absolute;
+    top: 5px;
+    right: 53px;
+    padding: 2px 5px;
+    border-radius: 100%;
+    background: red;
+    color: white;
+  }
+  //Mobile 
+
+  
+//*----------------------------------Resposive Media--------------------
+
+@media screen and(min-width:1200px) {
+    .header {
+        .icon-menu {
+            margin-left: 53%;
+            .search-menu {
+                .search-menu-bar {
+                    right: 0px;
+                }
+            }
+            .user-big {
+                .login-user {
+                    // top: 5em;
+                    right: 0px;
+                }
+            }
+            .bag-big {
+                .bag-user {
+                    right: 0px;
+                }
+            }
+        }
+    }
+}
+/* Medium Device = 1200px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .header {
+        #idLogo{
+            left: 100%;
+            
+        }
+        .header-big {
+            position: relative;
+            transition: 0.4s;
+            margin-top: 3.5em;
+            left: 80%;
+        }
+        .icon-menu {
+            margin-left: 40%;
+            .search-menu {
+                .search-menu-bar {
+                    right: 20px;
+                }
+            }
+            .user-big {
+                .login-user {
+                    // top: 5em;
+                    right: -49px;
+                }
+            }
+            .bag-big {
+                .bag-user {
+                    right: -52px;
+                }
+            }
+        }
+    }
+}
+
+/* Tablet Device = 768px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .menu-header2 {
+        height: 60px;
+    }
+    .menu-header {
+        height: 60px;
+    }
+    
+    .header {
+       
+        #idLogo{
+            top: 10px;
+            position: absolute;
+            left: 100%;
+            font-size: 25px;
+        }
+        .header-big {
+            left: 0%;
+            display: flex;
+            background: #23536b;
+            margin-top: 20px;
+            min-width: 300%;
+            .menu-bar-title {
+                color: $gray;
+                text-decoration: none;
+                margin: 0 20px;
+                .menu-word {
+                    cursor: pointer;
+                    height: 15px;
+                    font-size: 0.7em;
+                    font-weight: bold;
+                }
+                .menu-word:hover {
+                    height: 15px;
+                }
+            }
+        }
+        .icon-menu {
+            margin-left: 70%;
+            .search-menu {
+                .search-menu-bar {
+                    right: -40px;
+                }
+            }
+            .user-big {
+                .login-user {
+                    // top: 5em;
+                    right: -51px;
+                }
+            }
+            .bag-big {
+                .bag-user {
+                    right: -51px;
+                }
+            }
+        }
+    }
+}
+/* Wide Mobile = 480px */
+@media only screen and (max-width: 767px) {
+    .menu-header2 {
+        height: 60px;
+    }
+    .menu-header {
+        height: 60px;
+    }
+    .header {
+        #idLogo{
+            top: 10px;
+            position: absolute;
+            left: 100%;
+            font-size: 25px;
+        }
+        .header-big {
+            left: 0%;
+            display: fixed;
+            background: #23536b;
+            margin-top: 10px;
+            // min-width: 300%;
+            .menu-bar-title {
+                color: $gray;
+                text-decoration: none;
+                margin: 0 20px;
+                .menu-word {
+                    cursor: pointer;
+                    height: 15px;
+                    font-size: 0.7em;
+                    font-weight: bold;
+                }
+                .menu-word:hover {
+                    height: 15px;
+                }
+            }
+        }
+        .icon-menu {
+            margin-left: 55%;
+            .search-menu {
+                .search-menu-bar {
+                    right: 0px;
+                }
+            }
+            .search-menu {
+                .search-menu-charge {
+                    height: 8em;
+                    width: 25em;
+                }
+            }
+            .user-big {
+                .login-user {
+                    // top: 5em;
+                    right: 10px;
+                }
+            }
+            .bag-big {
+                .bag-user {
+                    right: 15px;
+                }
+            }
+        }
+    }
+}
+/* Small Device = 320px */
+@media only screen and (max-width: 479px) {
+    .menu-header {
+        height: 60px;
+    }.menu-header2 {
+        height: 60px;
+    }
+    .header {
+        #idLogo{
+            top: 10px;
+            position: absolute;
+            left: 100%;
+            font-size: 25px;
+        }
+        .header-big {
+            left: 0%;
+            display: fixed;
+            background: #23536b;
+            margin-top: 10px;
+            // min-width: 300%;
+            min-width: 365%;
+            .menu-bar-title {
+                color: $gray;
+                text-decoration: none;
+                margin: 0 20px;
+                .menu-word {
+                    cursor: pointer;
+                    height: 15px;
+                    font-size: 0.7em;
+                    font-weight: bold;
+                }
+                .menu-word:hover {
+                    height: 15px;
+                }
+            }
+        }
+        .icon-menu {
+            margin-left: 60%;
+            margin-top: 9px;
+            a {
+                
+                i {
+                    margin-top: 1px;
+                    padding: 0.8em;
+                    cursor: pointer;
+                    // margin-left: 60px;
+                }
+            }
+            .search-menu {
+                .search-cancel {
+                   
+                }
+                .search-menu-charge {
+                    left: -300px;
+                    
+                    height: 8em;
+                    width: 23em;
+                }
+            }
+        }
+        .user-big {
+            display: none;
+            .login-user {
+                // top: 5em;
+                right: -51px;
+            }
+        }
+        .bag-big {
+            display: none;
+            .bag-user {
+                right: -30px;
+            }
+        }
     }
 }

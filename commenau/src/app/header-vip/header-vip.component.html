@@ -1,51 +1,73 @@
 <div class="header">
-    <div [class.header-change]="header_variable" class="{{ menu_header }}">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container">
-                <h2 id="idLogo" class="navbar-brand">C O M M E N A U</h2>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menubarMobile" aria-controls="menubarMobile" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon">
-                  </span>
-                 </button>
-                <div class="collapse navbar-collapse" id="toggleMobileMenu">
-                    <div class="header-big">
-                        <ul class="navbar-nav text-center ms-auto mb-2 mb-lg-0 me-auto">
-                            <li class="nav-item">
-                                <a routerLink="/trangchu" class="menu-bar-title nav-link">
-                                    <h5 class="menu-word">
-                                        TRANG CHỦ
-                                        <div class="thanh-bar"></div>
-                                    </h5>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a routerLink="/menu" class="menu-bar-title nav-link">
-                                    <h5 class="menu-word">
-                                        MENU
-                                        <div class="thanh-bar"></div>
-                                    </h5>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a routerLink="/vechungtoi" class="menu-bar-title nav-link">
-                                    <h5 class="menu-word">
-                                        VỀ CHÚNG TÔI
-                                        <div class="thanh-bar"></div>
-                                    </h5>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a routerLink="/lienhe" class="menu-bar-title nav-link">
-                                    <h5 class="menu-word">
-                                        LIÊN HỆ
-                                        <div class="thanh-bar"></div>
-                                    </h5>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="menubarMobile" class="collapse">
+  <div [class.header-change]="header_variable" class="{{ menu_header }}">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <!-- <div class="container"> -->
+      <a routerLink="/trangchu">
+        <h2 id="idLogo" class="navbar-brand">C O M M E N A U</h2></a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        (click)="isMenuCollapsed = !isMenuCollapsed"
+      >
+        &#9776;
+      </button>
+      <div
+        id="main-nav"
+        [ngbCollapse]="isMenuCollapsed"
+        class="collapse navbar-collapse"
+        id="toggleMobileMenu"
+      >
+        <div class="header-big">
+          <ul class="navbar-nav text-center ms-auto mb-2 mb-lg-0 me-auto">
+            <li class="nav-item">
+              <a
+                routerLink="/trangchu"
+                class="menu-bar-title nav-link"
+                (click)="isMenuCollapsed = true"
+              >
+                <h5 class="menu-word">
+                  TRANG CHỦ
+                  <div class="thanh-bar"></div>
+                </h5>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                routerLink="/menu"
+                class="menu-bar-title nav-link"
+                (click)="isMenuCollapsed = true"
+              >
+                <h5 class="menu-word">
+                  MENU
+                  <div class="thanh-bar"></div>
+                </h5>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                routerLink="/vechungtoi"
+                class="menu-bar-title nav-link"
+                (click)="isMenuCollapsed = true"
+              >
+                <h5 class="menu-word">
+                  VỀ CHÚNG TÔI
+                  <div class="thanh-bar"></div>
+                </h5>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/lienhe" class="menu-bar-title nav-link">
+                <h5 class="menu-word">
+                  LIÊN HỆ
+                  <div class="thanh-bar"></div>
+                </h5>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- <div id="menubarMobile" class="collapse">
                     <ul class="navbar-nav text-center ms-auto mb-2 mb-lg-0 me-auto">
                         <li>
                             <a href="">Trang Chủ</a>
@@ -68,87 +90,97 @@
                             <a href=""></a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
+      <!-- </div> -->
+    </nav>
+    <div class="icon-menu">
+      <div style="display: flex" class="collapse">
+        <div class="user-big thanhbar-muiten">
+          <a class="userA" routerLink="/dangnhap"
+            ><i class="far fa-user"></i
+          ></a>
+          <div class="thanh-bar"></div>
+          <div class="login-user">
+            <div>
+              <button routerLink="/dangky">Tạo tài khoản</button>
             </div>
-        </nav>
-        <div class="icon-menu">
-            <div style="display: flex;" class="collapse">
-                <div class="user-big thanhbar-muiten">
-                    <a class="userA" routerLink="/dangnhap"><i class="far fa-user"></i></a>
-                    <div class="thanh-bar"></div>
-                    <div class="login-user">
-                        <div>
-                            <button routerLink="/dangky">Tạo tài khoản</button>
-                        </div>
-                        <button class="login-button" routerLink="/dangnhap">Đăng nhập</button>
-                    </div>
-                </div>
-                <div class="bag-big thanhbar-muiten">
-                    <a class="bagA" routerLink="/giohang"><i class="fas fa-briefcase"></i></a>
-                    <div class="thanh-bar"></div>
-                    <div class="bag-user">
-                        <div class="header-cart">
-                            <p class="food-bag">Túi Đồ Ăn</p>
-                        </div>
-
-                        <div class="scroll">
-                            <div class="item-cart" *ngFor="let i of items">
-                                <img src="{{ i.img }}" alt="" />
-                                <div class="item-food">
-                                    <p>{{ i.name }}</p>
-                                    <p>
-                                        <label for="">{{ i.quatity }}</label>
-                                    </p>
-                                    <p>
-                                        <label for="">{{ i.price * i.quatity }} </label>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sub-total">
-                            <p>Tổng Tiền</p>
-                            <p>{{ getTotal() }}</p>
-                        </div>
-                        <div>
-                            <a routerLink="/giohang"> <button>XEM CHI TIẾT TÚI</button></a>
-                        </div>
-                        <button class="bag-button">THANH TOÁN</button>
-                    </div>
-                </div>
-            </div>
-            <div class="search-menu">
-                <a>
-                    <i (click)="searchClick()" class="search-cancel fas fa-search"></i></a>
-                <div class="search-menu-bar" [class.search-menu-charge]="search_click">
-                    <div class="input-search">
-                        <i class="fas fa-search"> </i>
-                        <input placeholder="Bạn đang thèm gì nhờ?" type="text" />
-                    </div>
-                    <div class="title-search">
-                        <ul>
-                            <h5>Tìm Kiếm Nhiều Nhất</h5>
-                            <li>
-                                <i class="fas fa-search"> </i>
-                                <p>Cơm Gà</p>
-                            </li>
-                            <li>
-                                <i class="fas fa-search"> </i>
-                                <p>Phở</p>
-                            </li>
-                            <li>
-                                <i class="fas fa-search"> </i>
-                                <p>Cơm Sườn</p>
-                            </li>
-                            <li>
-                                <i class="fas fa-search"> </i>
-                                <p>Cơm Gà</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <button class="login-button" routerLink="/dangnhap">
+              Đăng nhập
+            </button>
+          </div>
         </div>
+        <div class="bag-big thanhbar-muiten">
+          <a class="bagA" routerLink="/giohang"
+            ><i class="fas fa-briefcase"></i
+          ></a>
+          <span class="badge" *ngFor="let i of items">{{ getQuatity() }}</span>
+          <div class="thanh-bar"></div>
+          <div class="bag-user">
+            <div class="header-cart">
+              <p class="food-bag">Túi Đồ Ăn</p>
+            </div>
+
+            <div class="scroll">
+              <div class="item-cart" *ngFor="let i of items">
+                <img src="{{ i.img }}" alt="" />
+                <div class="item-food">
+                  <p>{{ i.name }}</p>
+                  <p>
+                    <label for="">{{ i.quatity }}</label>
+                  </p>
+                  <p>
+                    <label for=""
+                      >{{ i.price * i.quatity | currency: "VND":true }}
+                    </label>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="sub-total">
+              <p>Tổng Tiền</p>
+              <p>{{ getTotal() | currency: "VND":true }}</p>
+            </div>
+            <div>
+              <a routerLink="/giohang"> <button>XEM CHI TIẾT TÚI</button></a>
+            </div>
+            <button class="bag-button">THANH TOÁN</button>
+          </div>
+        </div>
+      </div>
+      <div class="search-menu">
+        <a>
+          <i (click)="searchClick()" class="search-cancel fas fa-search"></i
+        ></a>
+        <div class="search-menu-bar" [class.search-menu-charge]="search_click">
+          <div class="input-search">
+            <i class="fas fa-search"> </i>
+            <input placeholder="Bạn đang thèm gì nhờ?" type="text" />
+          </div>
+          <div class="title-search">
+            <ul>
+              <h5>Tìm Kiếm Nhiều Nhất</h5>
+              <li>
+                <i class="fas fa-search"> </i>
+                <p>Cơm Gà</p>
+              </li>
+              <li>
+                <i class="fas fa-search"> </i>
+                <p>Phở</p>
+              </li>
+              <li>
+                <i class="fas fa-search"> </i>
+                <p>Cơm Sườn</p>
+              </li>
+              <li>
+                <i class="fas fa-search"> </i>
+                <p>Cơm Gà</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <router-outlet></router-outlet>

@@ -15,14 +15,14 @@
                         <label for="">{{ i.quatity }}</label>
                     </p>
                     <p>
-                        <label for="">{{ i.price * i.quatity }} </label>
+                        <label for="">{{ i.price * i.quatity| currency: "VND":true  }} </label>
                     </p>
                 </div>
             </div>
         </div>
         <div class="sub-total">
             <p>Tổng Tiền</p>
-            <p>{{ getTotal() }}</p>
+            <p>{{ getTotal() | currency: "VND":true }}</p>
         </div>
         <div>
             <a routerLink="/giohang"> <button>XEM CHI TIẾT TÚI</button></a>

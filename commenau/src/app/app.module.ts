@@ -65,6 +65,7 @@ import { BreakcumbAboutComponent } from './about/breakcumb-about/breakcumb-about
 import { WishlistDetailComponent } from './wishlist/wishlist-detail/wishlist-detail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CartHeaderComponent } from './header-vip/cart-header/cart-header.component';
+import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
 
 @NgModule({
   declarations: [
@@ -116,6 +117,7 @@ import { CartHeaderComponent } from './header-vip/cart-header/cart-header.compon
       debug: true
     }),
     ShareIconsModule,
+    NgxNavbarModule,
 
   ],
   providers: [],
