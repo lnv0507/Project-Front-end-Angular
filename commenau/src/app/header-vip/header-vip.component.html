@@ -1,6 +1,6 @@
 <div class="header">
   <div [class.header-change]="header_variable" class="{{ menu_header }}">
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark cyan">
       <!-- <div class="container"> -->
       <a routerLink="/trangchu">
         <h2 id="idLogo" class="navbar-brand">C O M M E N A U</h2></a
@@ -23,7 +23,7 @@
             <li class="nav-item">
               <a
                 routerLink="/trangchu"
-                class="menu-bar-title nav-link"
+                class="menu-bar-title nav-link waves-light"
                 (click)="isMenuCollapsed = true"
               >
                 <h5 class="menu-word">
@@ -35,7 +35,7 @@
             <li class="nav-item">
               <a
                 routerLink="/menu"
-                class="menu-bar-title nav-link"
+                class="menu-bar-title nav-link waves-light"
                 (click)="isMenuCollapsed = true"
               >
                 <h5 class="menu-word">
@@ -47,7 +47,7 @@
             <li class="nav-item">
               <a
                 routerLink="/vechungtoi"
-                class="menu-bar-title nav-link"
+                class="menu-bar-title nav-link waves-light"
                 (click)="isMenuCollapsed = true"
               >
                 <h5 class="menu-word">
@@ -57,7 +57,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a routerLink="/lienhe" class="menu-bar-title nav-link">
+              <a routerLink="/lienhe" class="menu-bar-title nav-link waves-light">
                 <h5 class="menu-word">
                   LIÊN HỆ
                   <div class="thanh-bar"></div>
@@ -113,7 +113,7 @@
           <a class="bagA" routerLink="/giohang"
             ><i class="fas fa-briefcase"></i
           ></a>
-          <span class="badge" *ngFor="let i of items">{{ getQuatity() }}</span>
+          <span class="badge">{{ getQuatity() }}</span>
           <div class="thanh-bar"></div>
           <div class="bag-user">
             <div class="header-cart">

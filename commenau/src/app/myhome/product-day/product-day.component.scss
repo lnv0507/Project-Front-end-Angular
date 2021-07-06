@@ -19,8 +19,11 @@ $gray: #e7e7e7;
             }
         }
         .day-product {
+            .textDay{
+                font-size: 17px;
+            }
             .clickDay {
-                color: $blue;
+                color: $black;
             }
         }
         // San Pham Slide

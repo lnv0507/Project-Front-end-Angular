@@ -5,8 +5,8 @@
         </div>
         <div class="container">
             <ul class="nav nav-fill day-product ">
-                <li *ngFor="let th of weekDays" class=" mb-3 mt-1 nav-item">
-                    <a (click)="listProductDay(th.day)" routerLink="/trangchu" routerLinkActive="clickDay" [routerLinkActiveOptions]="{ exact: true }">
+                <li *ngFor="let th of weekDays" class=" mb-5 mt-3 nav-item textDay">
+                    <a (click)="listProductDay(th.day)" routerLink="/trangchu" routerLinkActive="clickDay" [routerLinkActiveOptions]="{ exact: true }" style="color: black; font-weight: bolder;">
                         <label style="cursor: pointer;" for="">{{ th.day }} </label></a>
                 </li>
             </ul>

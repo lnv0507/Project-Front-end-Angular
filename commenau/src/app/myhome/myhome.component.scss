@@ -40,6 +40,7 @@ $gray: #e7e7e7;
     height: 100vh;
     // width: 100vw;
     overflow: hidden;
+    filter: brightness(0.5);
     .slideshow {
         position: absolute;
         top: 0;
