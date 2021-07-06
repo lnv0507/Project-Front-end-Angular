@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
     this.formRegister = this.formBuilder.group({
       name: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
-      phone: new FormControl('', [Validators.required, Validators.pattern("^[0-9]+$"), Validators.minLength(10), Validators.maxLength(10)]),
+      phone: new FormControl('', [Validators.required, Validators.pattern("^[0-9]+$"), Validators.minLength(10), Validators.maxLength(10), checkExistPhone(this.serviceUser.getListPhone())]),
       password: new FormControl('', [Validators.required, Validators.minLength(6)]),
       re_password: new FormControl('', Validators.required)
     },
@@ -57,7 +57,6 @@ export class RegisterComponent implements OnInit {
     }
   }
   onSubmit(){
-    
     this.serviceUser.getUser().subscribe(data =>{
       const user = new User();
       user.id = data.length + 1 + '';

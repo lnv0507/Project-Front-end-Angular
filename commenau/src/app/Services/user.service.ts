@@ -51,6 +51,15 @@ export class UserService {
     });
     return this.listUser;
   }
+  public getListPhone(){
+    const phones: string[] = [];
+    this.getUser().subscribe((data) =>{
+      for(let i of data){
+        phones.push(i.phone);
+      }
+    })
+    return phones;
+  }
   
 
 

@@ -11,15 +11,15 @@
       "id": "1",
       "name": "ss",
       "email": "ss@gmail.com",
-      "phone": "1233322233",
+      "phone": "1233322234",
       "password": "123456",
       "address": ""
     },
     {
       "id": "2",
-      "name": "ss",
+      "name": "Lê Văn Nam",
       "email": "ss@gmail.com",
-      "phone": "1233322233",
+      "phone": "0377634557",
       "password": "123456",
       "address": ""
     },
@@ -29,6 +29,22 @@
       "email": "123@gmail.com",
       "phone": "0999898776",
       "password": "123456789",
+      "address": ""
+    },
+    {
+      "id": "4",
+      "name": "Nguyễn Phong",
+      "email": "ss@gmail.com",
+      "phone": "0909885445",
+      "password": "123456",
+      "address": ""
+    },
+    {
+      "id": "5",
+      "name": "Nguyễn Thị Loan",
+      "email": "loanhong@gmail.com",
+      "phone": "0998998998",
+      "password": "123456",
       "address": ""
     }
   ],
