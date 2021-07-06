@@ -20,7 +20,7 @@
                 <div class="wrap-input validate-input" data-validate="Username is reauired">
                     <span class="label-input">Email </span>
 
-                    <input class="input" type="text" name="username"
+                    <input class="input" type="text" name="email"
                         placeholder="Nhập email của bạn" formControlName ="email" 
                         [ngClass]="{'is-invalid' : formRegister.controls.email.invalid && formRegister.controls.email.touched}">
                     <div class="focus-input">
@@ -29,7 +29,7 @@
                         </div>
                     </div>
                     <div class="invalid-feedback">
-                        Email không đúng vui lòng nhập email.
+                        Email không hợp lệ.
                     </div>
                 </div>
                 <div class="wrap-input validate-input" data-validate="Phone is reauired">

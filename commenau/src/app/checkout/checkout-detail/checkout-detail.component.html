@@ -1,23 +1,45 @@
 <hr>
 <h1>CHI TIẾT THANH TOÁN</h1>
-<div class="name-checkout">
-    <h5>Họ tên*</h5>
-    <input type="text">
-</div>
-<div class="address-checkout">
-    <h5>Địa chỉ*</h5>
-    <input type="text">
-</div>
-<div class="phone-checkout">
-    <h5>Số điện thoại*</h5>
-    <input type="text">
-</div>
-<div class="email-checkout">
-    <h5>Email*</h5>
-    <input type="text">
-</div>
-<h5>Bạn chưa có tài khoản? <a href="">Đăng kí ngay</a></h5>
-<div class="note-checkout">
-    <h5>Ghi chú đặt hàng</h5>
-    <textarea name="note-checkout" id="note-checkout" cols="130" rows="8"></textarea>
-</div>
+<form action="" [formGroup]="checkoutForm">
+    <div class="name-checkout">
+        <h5>Họ tên*</h5>
+        <input type="text" name="name" formControlName="name"
+        [ngClass]="{'is-invalid' : checkoutForm.controls.name.invalid && checkoutForm.controls.name.touched}">
+        <div class="invalid-feedback">
+            Vui lòng nhập họ tên.
+        </div>
+    </div>
+    <div class="address-checkout">
+        <h5>Địa chỉ*</h5>
+        <input type="text" name="address" formControlName="address"
+        [ngClass]="{'is-invalid' : checkoutForm.controls.address.invalid && checkoutForm.controls.address.touched}">
+        <div class="invalid-feedback">
+            Vui lòng nhập địa chỉ.
+        </div>
+    </div>
+    <div class="email_phone">
+        <div class="phone-checkout">
+            <h5>Số điện thoại*</h5>
+            <input type="text" name="phone" formControlName="phone"
+            [ngClass]="{'is-invalid' : checkoutForm.controls.phone.invalid && checkoutForm.controls.phone.touched}">
+            <div class="invalid-feedback">
+                Số điện thoại không hợp lệ, vui lòng nhập số điện thoại
+            </div>
+        </div>
+        <div class="email-checkout">
+            <h5>Email*</h5>
+            <input type="text" name="email" formControlName="email"
+            [ngClass]="{'is-invalid' : checkoutForm.controls.email.invalid && checkoutForm.controls.email.touched}">
+            <div class="invalid-feedback">
+                Email không hợp lệ, vui lòng nhập email
+            </div>
+        </div>
+    </div>
+    
+    <h5>Bạn chưa có tài khoản? <a href="">Đăng kí ngay</a></h5>
+    <div class="note-checkout">
+        <h5>Ghi chú đặt hàng</h5>
+        <textarea name="note-checkout" id="note-checkout" cols="130" rows="8"></textarea>
+    </div>
+</form>
+

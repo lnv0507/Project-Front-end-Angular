@@ -77,14 +77,24 @@ input {
     width: 100%;
     height: 30px;
     border: 2px solid #e1e1e1;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-top: 5px;
+    padding-left: 10px;
+}
+.is-invalid{
+    border: red 2px solid;
+}
+.invalid-feedback{
+    margin-bottom: 5px;
 }
 
 .phone-checkout,
 .email-checkout {
     width: 50%;
     float: left;
+}
+.email_phone{
+    overflow: auto;
 }
 
 .email-checkout {
