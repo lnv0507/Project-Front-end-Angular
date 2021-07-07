@@ -36,7 +36,7 @@ export class HeaderVipComponent implements OnInit {
 
   ngOnInit(): void {
     this.getTotal();
-    this.user=this.userService.currentUserValue;
+    // this.user=this.userService.userValue;
 
   }
 

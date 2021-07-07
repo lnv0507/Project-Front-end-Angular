@@ -70,7 +70,7 @@ export class RegisterComponent implements OnInit {
       console.log(data);
       });
       const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/dangnhap';
-            this.router.navigateByUrl(returnUrl);
+      this.router.navigateByUrl(returnUrl);
     }
     ) ;
     
