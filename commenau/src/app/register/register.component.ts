@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AbstractControl, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms'
+import { ActivatedRoute, Router } from '@angular/router';
 import { User } from '../model/user';
 import { UserService } from '../Services/user.service';
 
@@ -21,7 +22,7 @@ export function checkExistPhone(phones: any = []){
 export class RegisterComponent implements OnInit {
   formRegister!: FormGroup;
 
-  constructor(private formBuilder :FormBuilder, private serviceUser : UserService) { 
+  constructor(private formBuilder :FormBuilder, private serviceUser : UserService,private router: Router,private route: ActivatedRoute) { 
 
     this.formRegister = this.formBuilder.group({
       name: new FormControl('', Validators.required),
@@ -67,8 +68,11 @@ export class RegisterComponent implements OnInit {
       user.address = '';
       this.serviceUser.addUser(user).subscribe(data =>{
       console.log(data);
-      })
-    }) ;
+      });
+      const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/dangnhap';
+            this.router.navigateByUrl(returnUrl);
+    }
+    ) ;
     
     
 

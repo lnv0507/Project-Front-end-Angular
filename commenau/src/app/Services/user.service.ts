@@ -4,14 +4,16 @@ import {
   HttpErrorResponse,
   HttpHeaders,
 } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { BehaviorSubject, Observable, throwError } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 import { User } from '../model/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
+  private currentUserSubject!: BehaviorSubject<User>;
+    public currentUser!: Observable<User>;
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-type': 'application/json',
@@ -19,7 +21,14 @@ export class UserService {
     }),
   };
 
-  constructor(private httpClient : HttpClient) { }
+  constructor(private httpClient : HttpClient) {
+    this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('user') || '{}'));
+        this.currentUser = this.currentUserSubject.asObservable();
+   }
+   public get currentUserValue(): User {
+    return this.currentUserSubject.value;
+    
+}
   public getUser(): Observable<User[]> {
     // lay dia chi ra vo database la do an
     const url = `http://localhost:3000/user`;
@@ -60,6 +69,23 @@ export class UserService {
     })
     return phones;
   }
+
+  login(phone: any, password: any) {
+    return this.httpClient.post<User>(`http://localhost:3000/user/`, { phone, password })
+        .pipe(map(user => {
+            // store user details and jwt token in local storage to keep user logged in between page refreshes
+            localStorage.setItem('user', JSON.stringify(user));
+            this.currentUserSubject.next(user);
+            return user;
+        }));
+        
+}
+
+logout() {
+    // remove user from local storage to log user out
+    localStorage.removeItem('currentUser');
+    // this.currentUserSubject.next(null);
+}
   
 
 

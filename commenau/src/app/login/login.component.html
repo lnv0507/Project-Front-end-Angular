@@ -6,7 +6,7 @@
 
         <div
           class="wrap-input validate-input"
-          data-validate="Username is required"
+          data-validate="Phone is required"
         >
           <span class="label-input">Số điện thoại</span> 
           
@@ -14,9 +14,9 @@
           <input
             class="input1"
             type="text"
-            name="username"
-            formControlName="username"
-            [ngClass]="{ 'is-invalid': f.username.invalid&&f.username.touched }"
+            name="phone"
+            formControlName="phone"
+            [ngClass]="{ 'is-invalid': f.phone.invalid&&f.phone.touched }"
            
             placeholder="Nhập số điện thoại của bạn"
             
@@ -66,7 +66,8 @@
         <div class="container-login-form-btn">
           <div class="wrap-login-form-btn">
             <div class="login-form-bgbtn"></div>
-            <button class="login-form-btn" [disabled]="f.valid">Đăng nhập</button>
+            <button class="login-form-btn" [disabled]="loading"><span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Đăng nhập</button>
+            <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
           </div>
         </div>
 

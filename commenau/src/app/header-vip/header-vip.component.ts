@@ -1,8 +1,11 @@
 import { Component, OnInit, HostListener, Input } from '@angular/core';
 import { totalmem } from 'os';
+import { first } from 'rxjs/operators';
 import { AppComponent } from '../app.component';
+import { User } from '../model/user';
 import { CartService } from '../Services/cart.service';
 import { ProductsService } from '../Services/products.service';
+import { UserService } from '../Services/user.service';
 import { WishlistService } from '../Services/wishlist.service';
 
 @Component({
@@ -13,6 +16,8 @@ import { WishlistService } from '../Services/wishlist.service';
 })
 
 export class HeaderVipComponent implements OnInit {
+  loading = false;
+  user!: User;
   public isMenuCollapsed = true;
   header_variable = false;
   search_click = false;
@@ -25,11 +30,14 @@ export class HeaderVipComponent implements OnInit {
     private cart: CartService,
     private product: ProductsService,
     public activeModal: AppComponent,
-    private wish: WishlistService
+    private wish: WishlistService,
+    private userService: UserService
   ) {}
 
   ngOnInit(): void {
     this.getTotal();
+    this.user=this.userService.currentUserValue;
+    
   }
 
   @HostListener('document:scroll')
