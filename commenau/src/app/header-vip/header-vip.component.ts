@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener, Input } from '@angular/core';
 import { totalmem } from 'os';
-import { first } from 'rxjs/operators';
+import { first, isEmpty } from 'rxjs/operators';
 import { AppComponent } from '../app.component';
 import { User } from '../model/user';
 import { CartService } from '../Services/cart.service';
@@ -18,6 +18,7 @@ import { WishlistService } from '../Services/wishlist.service';
 export class HeaderVipComponent implements OnInit {
   loading = false;
   user!: User;
+  login!:false;
   public isMenuCollapsed = true;
   header_variable = false;
   search_click = false;
@@ -37,8 +38,7 @@ export class HeaderVipComponent implements OnInit {
   ngOnInit(): void {
     this.getTotal();
     this.user=this.userService.user;
-    this.logout();
-
+    
   }
 
   @HostListener('document:scroll')
@@ -84,5 +84,7 @@ export class HeaderVipComponent implements OnInit {
   logout(){
     return this.userService.logout();
   }
+ 
+  
 
 }

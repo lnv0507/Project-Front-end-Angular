@@ -3,6 +3,8 @@
     <div class="wrap-login">
       <form class="login-form validate-form" [formGroup]="form" (ngSubmit)="onSubmit()">
         <span class="login-form-title"> Đăng Nhập </span>
+        <div *ngIf="error" class="alert alert-danger mt-3 mb-2">{{error}}</div>
+        <div *ngIf="getMessage()" class="alert alert-danger mt-3 mb-2">{{getMessage()}}</div>
 
         <div
           class="wrap-input validate-input"
@@ -66,8 +68,8 @@
         <div class="container-login-form-btn">
           <div class="wrap-login-form-btn">
             <div class="login-form-bgbtn"></div>
-            <button class="login-form-btn" [disabled]="loading"><span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Đăng nhập</button>
-            <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+            <button class="login-form-btn" [disabled]="!form.valid">Đăng nhập</button>
+            
           </div>
         </div>
 

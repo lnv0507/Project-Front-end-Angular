@@ -1,8 +1,6 @@
-import { Route } from '@angular/compiler/src/core';
+
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-import { first } from 'rxjs/operators';
 import { UserService } from '../Services/user.service';
 
 @Component({
@@ -12,15 +10,12 @@ import { UserService } from '../Services/user.service';
 })
 export class LoginComponent implements OnInit {
   form!: FormGroup;
-  loading = false;
   submitted = false;
   error='';
   
 
   constructor(
     private formBuilder: FormBuilder,
-    private route: ActivatedRoute,
-    private router: Router,
     private userService: UserService
   ) {
   }
@@ -44,13 +39,14 @@ export class LoginComponent implements OnInit {
     return this.form.controls;
   }
   onSubmit() {
-    console.log(this.f.phone.value, this.f.password.value);
-    this.submitted = true;
-    if(this.form.invalid){
-      this.error="sai thong tin dang nhap"
-      return;
-    }
+    // if(this.form.invalid){
+    //   this.error="Sai thông tin đăng nhập"
+    //   return;
+    // }
     this.userService.login(this.f.phone.value,this.f.password.value);
     
+  }
+  getMessage(){
+    return this.userService.getMessage();
   }
 }

@@ -68,28 +68,29 @@ export class UserService {
     return phones;
   }
   user: User=new User();
+  message : String = "";
 
 
   public login(phone: any,password:any){
     const listUser=this.getUserData();
-    console.log('Danh sachs ng dung la'+listUser);
     for(let u of listUser){
       if(u.phone===phone && u.password===password){
         this.user=u;
         const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/trangchu';
         this.router.navigateByUrl(returnUrl);
-        console.log('dung roi')
-        return true;
-        
+     
       }
       else{
-        console.log('sai thong tin');
-        return false;
+        this.message="Tài khoản hoặc mật khẩu không đúng"
+        
       }
     }
     return this.user;
  
 
+  }
+  public getMessage(){
+    return this.message;
   }
 
   logout() {
