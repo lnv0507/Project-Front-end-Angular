@@ -4,7 +4,7 @@
         <div class="customer-left">
             <div class="avatar-name">
                 <img src="https://i.pinimg.com/originals/d5/b0/4c/d5b04cc3dcd8c17702549ebc5f1acf1a.png" alt="">
-                <p>Nguyễn Phong</p>
+                <p>{{user.name}}</p>
             </div>
             <ul>
                 <li>
@@ -27,7 +27,7 @@
                 <div class="content-left">
                     <div class="name-customer">
                         <p>Họ tên:</p>
-                        <input type="text" value="Nguyễn Phong">
+                        <input type="text" value="{{user.name}}">
                     </div>
                     <div class="sex-customer">
                         <p>Giới tính:</p>
@@ -39,15 +39,15 @@
                     </div>
                     <div class="email-customer">
                         <p>Email:</p>
-                        <input type="text" value="nguyenphong04@gmail.com">
+                        <input type="text" value="{{user.email}}">
                     </div>
                     <div class="address-customer">
                         <p>Địa chỉ:</p>
-                        <input type="text" value="23 Nguyễn Trỗi, Quận 1, TPHCM">
+                        <input type="text" value="{{user.address}}">
                     </div>
                     <div class="phone-customer">
                         <p>Số điện thoại:</p>
-                        <p>0397786578</p>
+                        <p>{{user.phone}}</p>
                         <a href="">Thay đổi</a>
                     </div>
                     <button>Lưu</button>

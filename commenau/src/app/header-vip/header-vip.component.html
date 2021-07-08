@@ -74,7 +74,11 @@
         </nav>
         <div class="icon-menu">
             <div style="display: flex" class="collapse">
-                <!-- <p>hi {{user.phone}}</p> -->
+                <div class="acc" routerLink="/thongtin">
+                    <p class="mt-2" style="cursor: pointer;">My account  {{user.name}}</p>
+                </div>
+                <div style="cursor: pointer;" routerLink="/dangnhap" (click)="logout()">Dang xuat</div>
+               
 
                 <div class="user-big thanhbar-muiten">
                     <a class="userA" routerLink="/dangnhap"><i class="far fa-user"></i

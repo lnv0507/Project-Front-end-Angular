@@ -14,8 +14,8 @@ export class LoginComponent implements OnInit {
   form!: FormGroup;
   loading = false;
   submitted = false;
-  returnUrl!: string;
-  error = '';
+  error='';
+  
 
   constructor(
     private formBuilder: FormBuilder,
@@ -23,9 +23,6 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private userService: UserService
   ) {
-  //   if (this.userService.currentUserValue) { 
-  //     this.router.navigate(['/']);
-  // }
   }
 
   ngOnInit(): void {
@@ -41,7 +38,7 @@ export class LoginComponent implements OnInit {
       ],
       password: ['', [Validators.required]],
     });
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+    
   }
   get f() {
     return this.form.controls;
@@ -49,26 +46,11 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     console.log(this.f.phone.value, this.f.password.value);
     this.submitted = true;
-
-    // if (this.form.invalid) {
-    //   return;
-    // }
-    // this.loading = true;
-    // this.userService
-    //   .login(this.f.phone.value, this.f.password.value)
-    //   .pipe(first())
-    //   .subscribe({
-    //     next: () => {
-    //         // get return url from query parameters or default to home page
-            
-    //         const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
-    //         this.router.navigateByUrl(returnUrl);
-            
-    //     },
-    //     error: error => {
-    //        alert(error)
-    //        this.loading = false;
-    //     }
-    // });
+    if(this.form.invalid){
+      this.error="sai thong tin dang nhap"
+      return;
+    }
+    this.userService.login(this.f.phone.value,this.f.password.value);
+    
   }
 }

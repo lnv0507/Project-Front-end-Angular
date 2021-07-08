@@ -36,7 +36,8 @@ export class HeaderVipComponent implements OnInit {
 
   ngOnInit(): void {
     this.getTotal();
-    // this.user=this.userService.userValue;
+    this.user=this.userService.user;
+    this.logout();
 
   }
 
@@ -79,6 +80,9 @@ export class HeaderVipComponent implements OnInit {
   }
   getQuatity() {
     return this.cart.getQuatity();
+  }
+  logout(){
+    return this.userService.logout();
   }
 
 }
