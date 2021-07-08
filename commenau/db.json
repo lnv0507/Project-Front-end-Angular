@@ -6,6 +6,7 @@
       "author": "hello"
     }
   ],
+  "wishlist": [],
   "user": [
     {
       "id": "1",
@@ -49,9 +50,9 @@
     },
     {
       "id": "6",
-      "name": "Le Hao",
-      "email": "haole7301@gmail.com",
-      "phone": "0369750752",
+      "name": "Nguyễn Viết Lâm",
+      "email": "lamdilinh.nguyen@gmail.com",
+      "phone": "0937983205",
       "password": "123456",
       "address": ""
     }
