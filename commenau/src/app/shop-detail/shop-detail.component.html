@@ -1,115 +1,90 @@
 <div class="breadcurb-area">
-  <div class="container">
-    <ul class="breadcrumb">
-      <li><a routerLink="/trangchu">Trang chủ /&nbsp;</a></li>
-      <li><a routerLink="/menu"> Menu /&nbsp;</a></li>
-      <li>{{ product.weekdays }}</li>
-    </ul>
-  </div>
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a routerLink="/trangchu">Trang chủ /&nbsp;</a></li>
+            <li><a routerLink="/menu"> Menu /&nbsp;</a></li>
+            <li>{{ product.weekdays }}</li>
+        </ul>
+    </div>
 </div>
 <!-- Breadcrumb Section End -->
 <!-- Product Details Section Begin -->
 <section class="product-details spad">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 col-md-6">
-        <div class="product__details__pic">
-          <div class="product__details__pic__item">
-            <img
-              class="product__details__pic__item--large"
-              src="{{ product.img }}"
-              alt=""
-            />
-          </div>
-          <div class="product__details__pic__slider owl-carousel row">
-            <img
-              class="col-lg-4"
-              data-imgbigurl="assets/img/product/heo-quay-kho-cai-chua.png"
-              src="{{ product.img }}"
-              alt=""
-            />
-            <img
-              class="col-lg-4"
-              data-imgbigurl="img/product/product/details/product-details-3.jpg"
-              src="{{ product.img }}"
-              alt=""
-            />
-            <img
-              class="col-lg-4"
-              data-imgbigurl="img/product/details/product-details-5.jpg"
-              src="{{ product.img }}"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-6">
-        <div class="product__details__text">
-          <h3>{{ product.name }}</h3>
-          <div class="product__details__price">
-            {{ product.price | currency: "VND" }}
-          </div>
-          <div class="product__details__rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-alt"></i>
-            <!-- <span>(18 reviews)</span> -->
-          </div>
-          <p><b>Mô tả: </b>{{ product.des }}</p>
-          <p><b>Tình trạng:</b> Còn hàng</p>
-          <p><b>Giao hàng:</b> 1 giờ. <samp> Miễn phí trong ngày</samp></p>
-          <share-buttons
-            [theme]="'circles-dark'"
-            [include]="[
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="product__details__pic">
+                    <div class="product__details__pic__item">
+                        <img class="product__details__pic__item--large" src="{{ product.img }}" alt="" />
+                    </div>
+                    <div class="product__details__pic__slider owl-carousel row">
+                        <img class="col-lg-4" data-imgbigurl="assets/img/product/heo-quay-kho-cai-chua.png" src="{{ product.img }}" alt="" />
+                        <img class="col-lg-4" data-imgbigurl="img/product/product/details/product-details-3.jpg" src="{{ product.img }}" alt="" />
+                        <img class="col-lg-4" data-imgbigurl="img/product/details/product-details-5.jpg" src="{{ product.img }}" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="product__details__text">
+                    <h3>{{ product.name }}</h3>
+                    <div class="product__details__price">
+                        {{ product.price | currency: "VND" }}
+                    </div>
+                    <div class="product__details__rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-alt"></i>
+                        <!-- <span>(18 reviews)</span> -->
+                    </div>
+                    <p><b>Mô tả: </b>{{ product.des }}</p>
+                    <p><b>Tình trạng:</b> Còn hàng</p>
+                    <p><b>Giao hàng:</b> 1 giờ. <samp> Miễn phí trong ngày</samp></p>
+                    <share-buttons [theme]="'circles-dark'" [include]="[
               'facebook',
               'twitter',
               'telegram',
               'email',
-              'messenger', 
+              'messenger',
               'linkedin',
-              'pinterest', 
+              'pinterest',
               'copy'
-            ]"
-            [show]="3"
-            [size]="1"
-            [url]="
+            ]" [show]="3" [size]="1" [url]="
               'https://commenau.vn/chitietsanpham/{{product.id}}'
-            "
-            [image]="
+            " [image]="
               '{{ product.img }}'
-            "
-            [autoSetMeta]="false"
-          ></share-buttons>
+            " [autoSetMeta]="false"></share-buttons>
 
-          <div class="product__details__quantity">
-            <div class="quantity">
-              <div class="pro-qty">
-                <span (click)="increaseValue()" class="dec qtybtn">+</span
+                    <div class="product__details__quantity">
+                        <div class="quantity">
+                            <div class="pro-qty">
+                                <span (click)="increaseValue()" class="dec qtybtn">+</span
                 ><input type="text" value="{{ value }}" />
                 <span (click)="reduceValue()" class="inc qtybtn">-</span>
-              </div>
-            </div>
-          </div>
-          <a class="addCart" (click)="addToCartDetail()" class="primary-btn"
-            >Thêm Vào Giỏ Hàng</a
+                            </div>
+                        </div>
+                    </div>
+                    <a class="addCart" (click)="addToCartDetail()" class="primary-btn">Thêm Vào Giỏ Hàng</a
           >
-          <a (click)="fullHeart()" class="heart-icon"
-            ><span class="icon_heart_alt">
-              <i *ngIf="heartIcon" class="fas fa-heart"></i>
-              <i *ngIf="!heartIcon" class="far fa-heart"></i> </span
-          ></a>
-        </div>
-      </div>
-      <div class="col-lg-12">
-        <div class="product__details__tab">
-          <!-- <ul class="nav nav-tabs" role="tablist"> -->
-          <!-- <li class="nav-item">
+          <div  class="heart-icon">
+          <span *ngIf="!product.yeuthich" class="icon_heart_alt">
+              <i (click)="addToWishlist(product)" class="fas fa-heart"></i>
+            </span>
+            <span *ngIf="product.yeuthich" class="icon_heart_alt">
+              <i (click)="removeWish(product)" class="fas fa-heart" style="color: red;"></i>
+            </span>
+          </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="product__details__tab">
+                    <!-- <ul class="nav nav-tabs" role="tablist"> -->
+                    <!-- <li class="nav-item">
               <a
                 class="nav-link active"
                 data-toggle="tab"
-                
+
                 role="tab"
                 aria-selected="true"
                 >Mô tả</a
@@ -120,7 +95,7 @@
               <a
                 class="nav-link"
                 data-toggle="tab"
-                
+
                 role="tab"
                 aria-selected="false"
                 >Đánh giá <span>(1)</span></a
@@ -148,10 +123,7 @@
               </div>
             </div>
           </div> -->
-          <mat-tab-group
-            mat-align-tabs="center"
-            animationDuration="0ms"
-            style="
+                    <mat-tab-group mat-align-tabs="center" animationDuration="0ms" style="
               font-size: 20px;
               color: black;
               font-weight: 700;
@@ -160,80 +132,66 @@
               border-top-right-radius: 0;
               padding: 0;
               background-color: white;
-            "
-          >
-            <mat-tab label="Mô Tả">
-              <hr />
-              <div class="product__details__tab__desc">
-                <h6>Mô tả món ăn</h6>
-                <p><b>Tên: </b>{{ product.name }}</p>
-                <p></p>
-                <p><b>Mô tả: </b>{{ product.des }}</p>
-                <p><b>Tình trạng:</b> Còn hàng</p>
-                <p>
-                  <b>Giao hàng:</b> 1 giờ. <samp> Miễn phí trong ngày</samp>
-                </p>
-              </div>
-            </mat-tab>
-            <mat-tab label="Đánh Giá">
-              <hr />
-              <div class="product__details__tab__desc">
-                <h6>Đánh giá</h6>
-                <p><span>Hào Lê : </span>Sản phẩm ngon</p>
-              </div>
-            </mat-tab>
-          </mat-tab-group>
+            ">
+                        <mat-tab label="Mô Tả">
+                            <hr />
+                            <div class="product__details__tab__desc">
+                                <h6>Mô tả món ăn</h6>
+                                <p><b>Tên: </b>{{ product.name }}</p>
+                                <p></p>
+                                <p><b>Mô tả: </b>{{ product.des }}</p>
+                                <p><b>Tình trạng:</b> Còn hàng</p>
+                                <p>
+                                    <b>Giao hàng:</b> 1 giờ. <samp> Miễn phí trong ngày</samp>
+                                </p>
+                            </div>
+                        </mat-tab>
+                        <mat-tab label="Đánh Giá">
+                            <hr />
+                            <div class="product__details__tab__desc">
+                                <h6>Đánh giá</h6>
+                                <p><span>Hào Lê : </span>Sản phẩm ngon</p>
+                            </div>
+                        </mat-tab>
+                    </mat-tab-group>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
 <!-- Product Details Section End -->
 
 <!-- Related Product Section Begin -->
 <section class="related-product">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="section-title related__product__title">
-          <h2>Món ăn liên quan</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title related__product__title">
+                    <h2>Món ăn liên quan</h2>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div
-        class="col-lg-3 col-md-4 col-sm-6"
-        *ngFor="let product of getProduct().splice(0, 4)"
-      >
-        <div class="product__item">
-          <div
-            class="product__item__pic set-bg"
-            style="background-image: url('{{ product.img }}')"
-          >
-            <ul class="product__item__pic__hover">
-              <li>
-                <a href="#"><i class="fa fa-heart"></i></a>
-              </li>
-              <li>
-                <a
-                  [routerLink]="['/chitietsanpham', product.id]"
-                  (click)="refresh()"
-                  ><i class="fa fa-external-link"></i
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let product of getProduct().splice(0, 4)">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" style="background-image: url('{{ product.img }}')">
+                        <ul class="product__item__pic__hover">
+                            <li>
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/chitietsanpham', product.id]" (click)="refresh()"><i class="fa fa-external-link"></i
                 ></a>
-              </li>
-              <li>
-                <a (click)="addToCart(product)"
-                  ><i class="fa fa-shopping-cart"></i
+                    </li>
+                    <li>
+                        <a (click)="addToCart(product)"><i class="fa fa-shopping-cart"></i
                 ></a>
-              </li>
-            </ul>
-          </div>
-          <div class="product__item__text">
-            <h6>
-              <a
-                [routerLink]="['/chitietsanpham', product.id]"
-                (click)="refresh()"
-                >{{ product.name }}</a
+                    </li>
+                    </ul>
+                </div>
+                <div class="product__item__text">
+                    <h6>
+                        <a [routerLink]="['/chitietsanpham', product.id]" (click)="refresh()">{{ product.name }}</a
               >
             </h6>
             <h5>{{ product.price | currency: "VND" }}</h5>

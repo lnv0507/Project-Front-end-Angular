@@ -24,6 +24,7 @@ export class WishlistDetailComponent implements OnInit {
     item.price = product.price;
     item.quatity = 1;
     this.cartService.addItem(item);
+
   }
   removeItem(id: any){
     const index=this.items.findIndex((item)=>item.id===id);

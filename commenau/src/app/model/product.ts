@@ -5,7 +5,8 @@ export class Product {
   img!: String;
   des!: String;
   weekdays!: String;
-  yeuthich!:boolean;
-  constructor(){
+  yeuthich!: boolean;
+  constructor() {
   }
+
 }

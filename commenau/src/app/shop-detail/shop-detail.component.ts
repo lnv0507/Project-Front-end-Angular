@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Product } from '../model/product';
 import { CartService } from '../Services/cart.service';
 import { ProductCart } from '../model/product-cart';
+import { WishlistService } from '../Services/wishlist.service';
 
 @Component({
   selector: 'app-shop-detail',
@@ -19,8 +20,9 @@ export class ShopDetailComponent implements OnInit, OnChanges {
   constructor(
     private serviceProduct: ProductsService,
     private cartService: CartService,
-    private route: ActivatedRoute
-  ) {}
+    private route: ActivatedRoute,
+    private wishlistService: WishlistService
+  ) { }
 
   ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap;
@@ -33,11 +35,20 @@ export class ShopDetailComponent implements OnInit, OnChanges {
   }
   public connect() {
     this.serviceProduct.connectProduct();
+
+
+
   }
   getProdutById(id: any) {
     this.serviceProduct.getProductById(id).subscribe((res) => {
       this.product = res;
+      let parse = JSON.parse(localStorage.getItem(this.product.id + '') || '{}')
+      if (JSON.stringify(parse) == 'true')
+        this.product.yeuthich = true;
+      else
+        this.product.yeuthich = false;
     });
+
   }
 
   fullHeart() {
@@ -80,5 +91,15 @@ export class ShopDetailComponent implements OnInit, OnChanges {
   }
   refresh() {
     window.location.reload();
+  }
+  public addToWishlist(p: Product) {
+    return this.wishlistService.addToWishlist(p);
+  }
+
+  public removeWish(p: Product) {
+    return this.wishlistService.removeWish(p);
+  }
+  getWishList() {
+    return this.wishlistService.getWishlistItems();
   }
 }

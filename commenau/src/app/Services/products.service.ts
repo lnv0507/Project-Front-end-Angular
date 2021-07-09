@@ -63,6 +63,7 @@ export class ProductsService {
     this.getProduct().subscribe((data) => {
       this.dataProduct = data;
     });
+
   }
   // List product follow day of weeks
   public productDay(day: String): Product[] {
@@ -72,7 +73,13 @@ export class ProductsService {
         this.dataProduct2.push(i);
       }
     }
-
+    this.dataProduct.forEach(element => {
+      let parse = JSON.parse(localStorage.getItem(element.id + '') || '{}')
+      if (JSON.stringify(parse) == 'true')
+        element.yeuthich = true;
+      else
+        element.yeuthich = false;
+    });
     return this.dataProduct2;
   }
   // Lay danh sach product theo ngay`
@@ -107,6 +114,17 @@ export class ProductsService {
       case 6:
         day_name = 'Thứ 7';
     }
+
     return this.productDay(day_name);
   }
+  // check yeu thich luu lai vao localstrorage
+  // public getCheckWishList() {
+  //   this.getDayProduct().forEach(element => {
+  //     let parse = JSON.parse(localStorage.getItem(element.id + '') || '{}')
+  //     if (JSON.stringify(parse) == 'true')
+  //       element.yeuthich = true;
+  //     else
+  //       element.yeuthich = false;
+  //   });
+  // }
 }

@@ -7,6 +7,7 @@ import { HeaderVipComponent } from 'src/app/header-vip/header-vip.component';
 import { ProductCart } from 'src/app/model/product-cart';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CartHeaderComponent } from 'src/app/header-vip/cart-header/cart-header.component';
+import { WishlistService } from 'src/app/Services/wishlist.service';
 
 @Component({
   selector: 'app-product-day',
@@ -22,7 +23,8 @@ export class ProductDayComponent implements OnInit {
   constructor(
     private product: ProductsService,
     private cartService: CartService,
-    private clickCart: NgbModal
+    private clickCart: NgbModal,
+    private wishlistService: WishlistService
   ) {
     this.weekDays = this.product.weekDays;
   }
@@ -45,12 +47,27 @@ export class ProductDayComponent implements OnInit {
 
   public addToCart(product: Product) {
     this.clickCart.open(CartHeaderComponent);
-    const item : ProductCart = new ProductCart();
+    const item: ProductCart = new ProductCart();
     item.id = product.id;
     item.img = product.img;
     item.name = product.name;
     item.price = product.price;
     item.quatity = 1;
     this.cartService.addItem(item);
+  }
+  public addToWishlist(p: Product) {
+    // this.getProduct().forEach(element => {
+    //     element.id == p.id ? element.yeuthich = true : ''
+    // });
+    // localStorage.setItem(p.id + '', 'true');
+    return this.wishlistService.addToWishlist(p);
+  }
+
+  public removeWish(p: Product) {
+    // localStorage.setItem(p.id + '', 'false');
+    return this.wishlistService.removeWish(p);
+  }
+  getWishList() {
+    return this.wishlistService.getWishlistItems();
   }
 }

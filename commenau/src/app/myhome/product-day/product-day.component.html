@@ -17,8 +17,11 @@
                         <div class="product__item">
                             <div class="product__item__pic set-bg" style="background-image: url('{{ product.img }}')">
                                 <ul class="product__item__pic__hover">
-                                    <li>
-                                        <a href="#"><i class="fa fa-heart"></i></a>
+                                    <li *ngIf="!product.yeuthich">
+                                        <a (click)="addToWishlist(product)"><i class="fa fa-heart"></i></a>
+                                    </li>
+                                    <li *ngIf="product.yeuthich">
+                                        <a (click)="removeWish(product)"><i class="fa fa-heart" style="color: red"></i></a>
                                     </li>
                                     <li>
                                         <a [routerLink]="['/chitietsanpham', product.id]"><i class="fa fa-external-link"></i></a>
@@ -42,8 +45,11 @@
                         <div class="product__item">
                             <div class="product__item__pic set-bg" style="background-image: url('{{ product.img }}')">
                                 <ul class="product__item__pic__hover">
-                                    <li>
-                                        <a href="#"><i class="fa fa-heart"></i></a>
+                                    <li *ngIf="!product.yeuthich">
+                                        <a (click)="addToWishlist(product)"><i class="fa fa-heart"></i></a>
+                                    </li>
+                                    <li *ngIf="product.yeuthich">
+                                        <a (click)="removeWish(product)"><i class="fa fa-heart"></i></a>
                                     </li>
                                     <li>
                                         <a [routerLink]="['/chitietsanpham', product.id]"><i class="fa fa-external-link"></i

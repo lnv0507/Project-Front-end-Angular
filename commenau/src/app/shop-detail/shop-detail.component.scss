@@ -126,7 +126,6 @@ a:focus {
     border: none;
 }
 
-
 //product
 .product-details {
     padding-top: 20px;
@@ -199,13 +198,12 @@ a:focus {
         .heart-icon {
             display: inline-block;
             font-size: 16px;
-            color: red;
+            // color: $blue1;
             padding: 13px 16px 13px;
             cursor: pointer;
         }
         .product__details__quantity {
             display: inline-block;
-            
             margin-top: 20px;
             .pro-qty {
                 width: 140px;
@@ -416,6 +414,7 @@ a:focus {
 .changee2 {
     color: blue;
 }
+
 .mat-tab-label {
     min-width: 25px !important;
     padding: 5px;
@@ -424,7 +423,9 @@ a:focus {
     font-weight: 700;
 }
 
+
 /* Styles for the active tab label */
+
 .mat-tab-label.mat-tab-label-active {
     min-width: 25px !important;
     padding: 5px;
@@ -432,18 +433,22 @@ a:focus {
     color: red;
     font-weight: 700;
 }
-//*----------------------------------Resposive Media--------------------
 
+//*----------------------------------Resposive Media--------------------
 @media screen and(min-width:1200px) {
     .container {
         max-width: 1170px;
     }
 }
+
+
 /* Medium Device = 1200px */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
 
 /* Tablet Device = 768px */
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .product-details {
         .product__details__tab {
@@ -458,7 +463,7 @@ a:focus {
             }
             .nav-tabs:after {
                 position: absolute;
-                right:0px;
+                right: 0px;
                 top: 14px;
                 height: 1px;
                 width: 210px;
@@ -468,7 +473,10 @@ a:focus {
         }
     }
 }
+
+
 /* Wide Mobile = 480px */
+
 @media only screen and (max-width: 767px) {
     .product__details__text {
         margin-top: 30px;
@@ -496,7 +504,10 @@ a:focus {
         }
     }
 }
+
+
 /* Small Device = 320px */
+
 @media only screen and (max-width: 479px) {
     .product__details__text {
         margin-top: 30px;

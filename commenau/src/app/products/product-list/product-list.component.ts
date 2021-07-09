@@ -19,14 +19,16 @@ export class ProductListComponent implements OnInit {
   p: number = 1;
   search = '';
   dataProduct: Array<Product> = [];
+  dataProduct2 = this.product.dataProduct;
   weekDays = [{ day: 'string' }];
   productCheck = true;
-  addedWishlist: boolean = false;
   order: string = 'id';
   reverse: boolean = false;
+  check!: boolean;
   public day: Date = new Date();
 
   constructor(
+
     private product: ProductsService,
     public router: Router,
     private cartService: CartService,
@@ -37,17 +39,33 @@ export class ProductListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // load connect
+
     this.connect();
+    this.getWishList();
+
+    console.log(this.getProduct())
   }
+  // connect product
   public connect() {
     this.product.connectProduct();
   }
+  // hoat dong click product theo ngay
   public listProductDay(day: String): Product[] {
     this.dataProduct = this.product.productDay(day);
     this.productCheck = false;
+    console.log(this.dataProduct);
     return this.dataProduct;
   }
+  // haot dong lay product dung ngay hien tai
   public getProduct() {
+    // this.product.getDayProduct().forEach(element => {
+    //   let parse = JSON.parse(localStorage.getItem(element.id+'')|| '{}')
+    //   if(JSON.stringify(parse) == 'true' )
+    //     element.yeuthich = true;
+    //   else
+    //     element.yeuthich = false;
+    // });
     this.productCheck = true;
     return this.product.getDayProduct();
   }
@@ -72,15 +90,16 @@ export class ProductListComponent implements OnInit {
     this.cartService.addItem(item);
   }
   public addToWishlist(p: Product) {
-    p.yeuthich = true;
-    this.wishlistService.addItem(p);
-    return p.yeuthich;
+
+    return this.wishlistService.addToWishlist(p);
   }
 
   public removeWish(p: Product) {
-    p.yeuthich = false;
-    this.wishlistService.removeItem(p);
-    return p.yeuthich;
+    return this.wishlistService.removeWish(p);
   }
+  getWishList() {
+    return this.wishlistService.getWishlistItems();
+  }
+
 
 }
