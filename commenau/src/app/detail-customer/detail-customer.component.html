@@ -25,32 +25,56 @@
         <div class="customer-right">
             <div class="content">
                 <div class="content-left">
-                    <div class="name-customer">
-                        <p>Họ tên:</p>
-                        <input type="text" value="{{user.name}}">
-                    </div>
-                    <div class="sex-customer">
-                        <p>Giới tính:</p>
-                        <div>
-                            <label for="nam"><input type="radio" id="Nam" value="Nam" name="gioitinh" checked>Nam</label>
-                            <label for="nu"><input type="radio" id="nu" value="nu" name="gioitinh">Nữ</label>
-                            <label for="khac"><input type="radio" id="khac" value="khac" name="gioitinh">Khác</label>
+                    <form (ngSubmit)="updateProfile()" [formGroup]="customForm">
+                        <div class="name-customer">
+                            <p>Họ tên:</p>
+                            <div class="input-type">
+                                <input type="text" value="{{user.name}}" formControlName="name"
+                                [ngClass]="{'is-invalid' : customForm.controls.name.invalid && customForm.controls.name.touched}">
+                                <div class="invalid-feedback">
+                                    Vui lòng nhập họ tên
+                                </div>
+                            </div>
+                            
+                            
                         </div>
-                    </div>
-                    <div class="email-customer">
-                        <p>Email:</p>
-                        <input type="text" value="{{user.email}}">
-                    </div>
-                    <div class="address-customer">
-                        <p>Địa chỉ:</p>
-                        <input type="text" value="{{user.address}}">
-                    </div>
-                    <div class="phone-customer">
-                        <p>Số điện thoại:</p>
-                        <p>{{user.phone}}</p>
-                        <a href="">Thay đổi</a>
-                    </div>
-                    <button>Lưu</button>
+                        <div class="email-customer">
+                            <p>Email:</p>
+                            <div class="input-type">
+                                <input type="text" value="{{user.email}}" formControlName="email"
+                                [ngClass]="{'is-invalid' : customForm.controls.email.invalid && customForm.controls.email.touched}">
+                                <div class="invalid-feedback">
+                                    Email không hợp lệ phải kết thúc bằng @gmail.com
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="address-customer">
+                            <p>Địa chỉ:</p>
+                            <div class="input-type">
+                                <input type="text" value="{{user.address}}" formControlName="address"
+                                [ngClass]="{'is-invalid' : customForm.controls.address.invalid && customForm.controls.address.touched}">
+                                <div class="invalid-feedback">
+                                    Vui lòng nhập địa chỉ
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="phone-customer">
+                            <p>Số điện thoại:</p>
+                            <p *ngIf = "!display">{{user.phone}}</p>
+                            <div class="input-type">
+                                <input *ngIf = "display" type="text" value="{{user.phone}}" formControlName="phone"
+                                [ngClass]="{'is-invalid' : customForm.controls.phone.invalid && customForm.controls.phone.touched}">
+                                <a (click) = "displayPhone()" >Thay đổi</a>
+                                <div class="invalid-feedback">
+                                    Số điện thoại không hợp lệ hoặc đã tồn tại trong hệ thống.
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <button [disabled]="!customForm.valid">Lưu</button>
+                    </form>
                 </div>
                 <div class="content-right">
                     <div class="avatar-change">

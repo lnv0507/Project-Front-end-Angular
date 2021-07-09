@@ -50,8 +50,8 @@ export class UserService {
   }
 
 
-  public putUser(id: any, user: User) {
-    return this.httpClient.put('http://localhost:3000/user/' + id, user);
+  public updateUser(user: User) {
+    return this.httpClient.put('http://localhost:3000/user/' + user.id, user);
   }
   public addUser(user: User) {
     return this.httpClient.post('http://localhost:3000/user/', user);
@@ -108,4 +108,5 @@ export class UserService {
   public getCheckLogin(){
     return this.checkLogin;
   }
+ 
 }

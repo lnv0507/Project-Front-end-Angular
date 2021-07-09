@@ -40,10 +40,10 @@ ul {
     .customer-left {
         width: 20%;
         float: left;
+        
         .avatar-name {
             width: 100%;
-            height: 80px;
-            line-height: 80px;
+            overflow: auto;
             img {
                 width: 40%;
                 float: left;
@@ -51,6 +51,7 @@ ul {
                 height: 80px;
             }
             p {
+                padding-top: 22px;
                 width: 60%;
                 float: left;
                 font-weight: 600;
@@ -117,11 +118,16 @@ ul {
                         width: 30%;
                         font-weight: 600;
                     }
-                    input {
-                        float: left;
+                    .input-type{
+                        overflow: auto;
                         width: 70%;
-                        padding-left: 30px;
+                        float: left;
+                        input {
+                            padding-left: 10px;
+                            width: 100%;
+                        }
                     }
+                    
                 }
                 .sex-customer {
                     width: 100%;
@@ -147,6 +153,11 @@ ul {
                         text-decoration: none;
                         color: #2b82ad;
                         font-weight: 600;
+                    }
+                    input{
+                        width: 163px;
+                        padding-left: 10px;
+                        margin-right: 36px;
                     }
                 }
                 button {

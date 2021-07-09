@@ -24,23 +24,23 @@ export class RegisterComponent implements OnInit {
 
   constructor(private formBuilder :FormBuilder, private serviceUser : UserService,private router: Router,private route: ActivatedRoute) { 
 
-    this.formRegister = this.formBuilder.group({
-      name: new FormControl('', Validators.required),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      phone: new FormControl('', [Validators.required, Validators.pattern("^[0-9]+$"), Validators.minLength(10), Validators.maxLength(10), checkExistPhone(this.serviceUser.getListPhone())]),
-      password: new FormControl('', [Validators.required, Validators.minLength(6)]),
-      re_password: new FormControl('', Validators.required)
-    },
-    {
-      validators : this.MustMatch('password', 're_password')
-     }
-    )
+    
   }
 
 
 
   ngOnInit(): void {
-    
+    this.formRegister = this.formBuilder.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email, gmailValidate]],
+      phone: ['', [Validators.required, Validators.pattern("^[0-9]+$"), Validators.minLength(10), Validators.maxLength(10), checkExistPhone(this.serviceUser.getListPhone())]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      re_password: ['', Validators.required]
+    },
+    {
+      validators : this.MustMatch('password', 're_password')
+     }
+    )
   }
 
   MustMatch(controlName: string, matchingControlName: string){
@@ -78,6 +78,10 @@ export class RegisterComponent implements OnInit {
 
   }
   
-  
-
+}
+function gmailValidate(formControl: FormControl) {
+  if(formControl.value.includes('@gmail.com')){
+    return null
+  }
+  return {gmail: true}
 }
