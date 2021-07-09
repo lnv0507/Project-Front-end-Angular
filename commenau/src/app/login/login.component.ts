@@ -11,16 +11,18 @@ import { UserService } from '../Services/user.service';
 export class LoginComponent implements OnInit {
   form!: FormGroup;
   submitted = false;
-  error='';
-  
+  error = '';
+
 
   constructor(
     private formBuilder: FormBuilder,
     private userService: UserService
   ) {
+
   }
 
   ngOnInit(): void {
+    this.userService.getUserData();
     this.form = this.formBuilder.group({
       phone: [
         '',
@@ -33,20 +35,20 @@ export class LoginComponent implements OnInit {
       ],
       password: ['', [Validators.required]],
     });
-    
   }
   get f() {
     return this.form.controls;
   }
   onSubmit() {
-    if(this.form.invalid){
-      this.error="Sai thông tin đăng nhập";
+    if (this.form.invalid) {
+      this.error = "Sai thông tin đăng nhập";
       return;
     }
-    this.userService.login(this.f.phone.value,this.f.password.value);
-    
+    this.userService.login(this.f.phone.value, this.f.password.value);
+
   }
-  getMessage(){
+  getMessage() {
     return this.userService.getMessage();
   }
+
 }

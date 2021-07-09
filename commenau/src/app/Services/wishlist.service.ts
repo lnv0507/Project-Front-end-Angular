@@ -9,9 +9,11 @@ import { ProductsService } from './products.service';
 export class WishlistService {
   wishlistItems: Array<Wishlist> = [];
   lastId: number = 0;
-  dataProduct!:any;
+  dataProduct!: any;
   private products!: ProductsService;
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+
+  }
   addItem(product: Product) {
     const exist = this.wishlistItems.find((item: Wishlist) => {
       return item.id === product.id;
@@ -45,10 +47,12 @@ export class WishlistService {
   }
   getWishlistItems() {
     if (this.wishlistItems.length == 0) {
-      // this.products.dataProduct.forEach(element => {
+      // this.products.getDataProduct().forEach(element => {
       //   element.yeuthich = false;
       // });
+
     }
+    console.log(this.wishlistItems.length)
     return this.wishlistItems;
   }
 

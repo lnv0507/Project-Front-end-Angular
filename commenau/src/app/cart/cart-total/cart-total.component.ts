@@ -13,10 +13,12 @@ export class CartTotalComponent implements OnInit {
   nameVoucher = "";
 
   constructor(private cartService: CartService, private voucherService: VoucherService) {
-    
+
   }
-  ngOnInit(): void {}
-  
+  ngOnInit(): void {
+    this.voucherService.getVoucherData();
+  }
+
   getTotalAll() {
     return this.getTotal() - this.getDiscount();
   }
@@ -36,7 +38,7 @@ export class CartTotalComponent implements OnInit {
   }
   getCheckMessage(){
     console.log(this.voucherService.getCheckMessage());
-    
+
     return this.voucherService.getCheckMessage();
   }
 

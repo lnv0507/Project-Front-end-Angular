@@ -7,6 +7,7 @@ import {
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Product } from '../model/product';
+import { WishlistService } from './wishlist.service';
 
 @Injectable({
   providedIn: 'root',
@@ -14,6 +15,7 @@ import { Product } from '../model/product';
 export class ProductsService {
   dataProduct!: Product[];
   dataProduct2: Array<Product> = [];
+  private wistListService!: WishlistService;
   weekDays = [
     { day: 'Thứ 2' },
     { day: 'Thứ 3' },
@@ -75,11 +77,20 @@ export class ProductsService {
     }
     this.dataProduct.forEach(element => {
       let parse = JSON.parse(localStorage.getItem(element.id + '') || '{}')
-      if (JSON.stringify(parse) == 'true')
+      if (JSON.stringify(parse) == 'true') {
         element.yeuthich = true;
-      else
+      } else {
         element.yeuthich = false;
+      }
+
+
     });
+    // if (this.wistListService.getWishlistItems().length == 0) {
+    //   this.dataProduct.forEach(element => {
+    //     element.yeuthich = false;
+    //   });
+    // }
+
     return this.dataProduct2;
   }
   // Lay danh sach product theo ngay`
@@ -127,4 +138,7 @@ export class ProductsService {
   //       element.yeuthich = false;
   //   });
   // }
+  public getDataProduct() {
+    return this.dataProduct;
+  }
 }

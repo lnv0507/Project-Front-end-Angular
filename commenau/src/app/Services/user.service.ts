@@ -15,6 +15,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class UserService {
   // private currentUserSubject!: BehaviorSubject<User>;
   // public currentUser!: Observable<User>;
+  listUser: Array<User> = [];
+  user: User=new User();
+  message : String = "";
+  checkLogin: boolean = false;
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-type': 'application/json',
@@ -44,7 +48,7 @@ export class UserService {
     }
     return throwError('Something bad happened; Please try again later.');
   }
-  listUser: Array<User> = [];
+
 
   public putUser(id: any, user: User) {
     return this.httpClient.put('http://localhost:3000/user/' + id, user);
@@ -67,9 +71,7 @@ export class UserService {
     });
     return phones;
   }
-  user: User=new User();
-  message : String = "";
-  checkLogin: boolean = false;
+
 
 
   public login(phone: any,password:any){
@@ -81,16 +83,16 @@ export class UserService {
         const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/trangchu';
         this.router.navigateByUrl(returnUrl);
         this.message="";
-        
-     
+
+
       }
       else{
         this.message="Sai thông tin đăng nhập"
-        
+
       }
     }
     return this.user;
- 
+
 
   }
   public getMessage(){

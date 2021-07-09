@@ -11,6 +11,7 @@ export class CheckoutCouponComponent implements OnInit {
   constructor(private voucherService: VoucherService) { }
 
   ngOnInit(): void {
+    this.voucherService.getVoucherData();
   }
   showCoupon = false;
   nameVoucher = "";

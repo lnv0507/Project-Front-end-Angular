@@ -38,7 +38,7 @@ export class HeaderVipComponent implements OnInit {
   ngOnInit(): void {
     this.getTotal();
     this.user=this.userService.user;
-    
+
   }
 
   @HostListener('document:scroll')
@@ -87,7 +87,7 @@ export class HeaderVipComponent implements OnInit {
   getCheckLogin(){
     return this.userService.getCheckLogin();
   }
- 
-  
+
+
 
 }
