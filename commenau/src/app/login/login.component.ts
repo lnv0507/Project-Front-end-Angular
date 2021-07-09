@@ -39,10 +39,10 @@ export class LoginComponent implements OnInit {
     return this.form.controls;
   }
   onSubmit() {
-    // if(this.form.invalid){
-    //   this.error="Sai thông tin đăng nhập"
-    //   return;
-    // }
+    if(this.form.invalid){
+      this.error="Sai thông tin đăng nhập";
+      return;
+    }
     this.userService.login(this.f.phone.value,this.f.password.value);
     
   }

@@ -69,6 +69,7 @@ export class UserService {
   }
   user: User=new User();
   message : String = "";
+  checkLogin: boolean = false;
 
 
   public login(phone: any,password:any){
@@ -76,12 +77,15 @@ export class UserService {
     for(let u of listUser){
       if(u.phone===phone && u.password===password){
         this.user=u;
+        this.checkLogin=true;
         const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/trangchu';
         this.router.navigateByUrl(returnUrl);
+        this.message="";
+        
      
       }
       else{
-        this.message="Tài khoản hoặc mật khẩu không đúng"
+        this.message="Sai thông tin đăng nhập"
         
       }
     }
@@ -95,6 +99,11 @@ export class UserService {
 
   logout() {
       this.user=new User();
+      this.checkLogin=false;
+      this.message="";
       return this.user;
+  }
+  public getCheckLogin(){
+    return this.checkLogin;
   }
 }

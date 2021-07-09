@@ -113,12 +113,20 @@
             ><i class="far fa-user"></i
           ></a>
           <div class="thanh-bar"></div>
-          <div class="login-user">
+          <div *ngIf="!getCheckLogin()" class="login-user">
             <div>
               <button routerLink="/dangky">Tạo tài khoản</button>
             </div>
             <button class="login-button" routerLink="/dangnhap">
               Đăng nhập
+            </button>
+          </div>
+          <div *ngIf="getCheckLogin()"class="login-user">
+            <div>
+              <button routerLink="/dangky">Tạo tài khoản</button>
+            </div>
+            <button class="login-button" routerLink="/dangnhap" (click)="logout()">
+              Đăng xuất
             </button>
           </div>
         </div>

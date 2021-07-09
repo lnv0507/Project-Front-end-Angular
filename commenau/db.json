@@ -55,6 +55,14 @@
       "phone": "0937983205",
       "password": "123456",
       "address": ""
+    },
+    {
+      "id": "7",
+      "name": "Lê Văn Hào",
+      "email": "haole7301@gmail.com",
+      "phone": "0369750752",
+      "password": "123456",
+      "address": ""
     }
   ],
   "voucher": [

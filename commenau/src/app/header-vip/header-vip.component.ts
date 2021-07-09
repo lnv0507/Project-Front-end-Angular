@@ -84,6 +84,9 @@ export class HeaderVipComponent implements OnInit {
   logout(){
     return this.userService.logout();
   }
+  getCheckLogin(){
+    return this.userService.getCheckLogin();
+  }
  
   
 
