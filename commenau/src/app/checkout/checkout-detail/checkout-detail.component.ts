@@ -23,7 +23,6 @@ export class CheckoutDetailComponent implements OnInit {
       this.user.email = '';
       this.user.phone = '';
     }
-    console.log(this.user);
     
     this.checkoutForm = this.formBuilder.group({
       name: [this.user.name, Validators.required],
