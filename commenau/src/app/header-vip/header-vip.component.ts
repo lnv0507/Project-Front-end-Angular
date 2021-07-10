@@ -25,6 +25,7 @@ export class HeaderVipComponent implements OnInit {
   @Input() menu_header: string = 'menu-header2';
   items = this.cart.getCartItems();
   itemsWishlist = this.wish.getWishlistItems();
+  search = '';
 
 
   constructor(
@@ -38,7 +39,11 @@ export class HeaderVipComponent implements OnInit {
   ngOnInit(): void {
     this.getTotal();
     this.user=this.userService.user;
+    this.connect();
 
+  }
+  public connect() {
+    this.product.connectProduct();
   }
 
   @HostListener('document:scroll')
@@ -86,6 +91,9 @@ export class HeaderVipComponent implements OnInit {
   }
   getCheckLogin(){
     return this.userService.getCheckLogin();
+  }
+  getAllProduct(){
+    return this.product.getDayProduct();
   }
 
 
