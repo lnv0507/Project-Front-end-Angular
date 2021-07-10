@@ -36,7 +36,7 @@ $gray: #e7e7e7;
     #idLogo {
         top: 0.5em;
         position: absolute;
-        left: 140%;
+        left: 150%;
         font-size: 25px;
     }
     .header-big {
@@ -223,7 +223,7 @@ $gray: #e7e7e7;
                 height: 500px;
             }
         }
-        
+
         .thanhbar-muiten:hover {
             .thanh-bar {
                 position: relative;
@@ -251,7 +251,7 @@ $gray: #e7e7e7;
                 position: absolute;
                 right: 0px;
                 height: 0em;
-                padding:0.1em 3em;
+                padding: 0.1em 3em;
                 overflow: hidden;
                 transition: height 0.5s ease-in;
                 z-index: 2;
@@ -329,21 +329,27 @@ $gray: #e7e7e7;
     border-radius: 100%;
     background: red;
     color: white;
-  }
-  //Mobile 
-  .collapsable {
+}
+.dangnhap{
+    display: none;
+}
+.giohang{
+    display: none;
+}
+//Mobile
+.collapsable {
     display: inline-block;
     overflow: hidden;
     height: 0;
     transition: height 1s;
-    -webkit-transition: height 1s;        
-    -moz-transition: height 1s;        
-    -o-transition: height 1s;         
-  }
-  .collapsable.showMe {
+    -webkit-transition: height 1s;
+    -moz-transition: height 1s;
+    -o-transition: height 1s;
+}
+.collapsable.showMe {
     height: 100px;
-  }
-  
+}
+
 //*----------------------------------Resposive Media--------------------
 
 @media screen and(min-width:1200px) {
@@ -372,9 +378,8 @@ $gray: #e7e7e7;
 /* Medium Device = 1200px */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .header {
-        #idLogo{
+        #idLogo {
             left: 100%;
-            
         }
         .header-big {
             position: relative;
@@ -406,16 +411,21 @@ $gray: #e7e7e7;
 
 /* Tablet Device = 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .dangnhap{
+        display: inline;
+    }
+    .giohang{
+        display: inline;
+    }
     .menu-header2 {
         height: 60px;
     }
     .menu-header {
         height: 60px;
     }
-    
+
     .header {
-       
-        #idLogo{
+        #idLogo {
             top: 10px;
             position: absolute;
             left: 100%;
@@ -466,6 +476,12 @@ $gray: #e7e7e7;
 }
 /* Wide Mobile = 480px */
 @media only screen and (max-width: 767px) {
+    .dangnhap{
+        display: inline;
+    }
+    .giohang{
+        display: inline;
+    }
     .menu-header2 {
         height: 60px;
     }
@@ -473,7 +489,7 @@ $gray: #e7e7e7;
         height: 60px;
     }
     .header {
-        #idLogo{
+        #idLogo {
             top: 10px;
             position: absolute;
             left: 100%;
@@ -502,6 +518,9 @@ $gray: #e7e7e7;
         }
         .icon-menu {
             margin-left: 55%;
+            .acc {
+                display: none;
+            }
             .search-menu {
                 .search-menu-bar {
                     right: 0px;
@@ -529,13 +548,20 @@ $gray: #e7e7e7;
 }
 /* Small Device = 320px */
 @media only screen and (max-width: 479px) {
+    .dangnhap{
+        display: inline;
+    }
+    .giohang{
+        display: inline;
+    }
     .menu-header {
         height: 60px;
-    }.menu-header2 {
+    }
+    .menu-header2 {
         height: 60px;
     }
     .header {
-        #idLogo{
+        #idLogo {
             top: 10px;
             position: absolute;
             left: 100%;
@@ -547,6 +573,7 @@ $gray: #e7e7e7;
             background: #23536b;
             margin-top: 10px;
             min-width: 100%;
+            
             .menu-bar-title {
                 color: $gray;
                 text-decoration: none;
@@ -565,8 +592,10 @@ $gray: #e7e7e7;
         .icon-menu {
             margin-left: 60%;
             margin-top: 9px;
+            .acc {
+                display: none;
+            }
             a {
-                
                 i {
                     margin-top: 1px;
                     padding: 0.8em;
@@ -575,28 +604,27 @@ $gray: #e7e7e7;
                 }
             }
             .search-menu {
-                .search-cancel {
-                   
+                .search-menu-bar {
+                    right: 0px;
                 }
                 .search-menu-charge {
-                    left: -300px;
-                    
-                    height: 8em;
-                    width: 23em;
+                    left: -255px;
+                    height: 7em;
+                    width: 22em;
                 }
             }
-        }
-        .user-big {
-            display: none;
-            .login-user {
-                // top: 5em;
-                right: -51px;
+            .user-big {
+                display: none;
+                .login-user {
+                    // top: 5em;
+                    right: -51px;
+                }
             }
-        }
-        .bag-big {
-            display: none;
-            .bag-user {
-                right: -30px;
+            .bag-big {
+                display: none;
+                .bag-user {
+                    right: -30px;
+                }
             }
         }
     }

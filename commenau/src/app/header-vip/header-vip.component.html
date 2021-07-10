@@ -43,6 +43,40 @@
                                 </h5>
                             </a>
                         </li>
+                        <li class="nav-item giohang">
+                            <a routerLink="/giohang" class="menu-bar-title nav-link waves-light" >
+                                <h5 class="menu-word">
+                                    GIỎ HÀNG
+                                    <div class="thanh-bar"></div>
+                                </h5>
+                            </a>
+                        </li>
+                        <li *ngIf="!getCheckLogin()"
+                        class="nav-item dangnhap">
+                            <a routerLink="/dangnhap" class="menu-bar-title nav-link waves-light">
+                                <h5 class="menu-word">
+                                    ĐĂNG NHẬP
+                                    <div class="thanh-bar"></div>
+                                </h5>
+                            </a>
+                        </li>
+                        <li *ngIf="getCheckLogin()" class="nav-item dangnhap">
+                            <a routerLink="/thongtin" class="menu-bar-title nav-link waves-light" >
+                                <h5 class="menu-word">
+                                    TÀI KHOẢN CỦA TÔI
+                                    <div class="thanh-bar"></div>
+                                </h5>
+                            </a>
+                        </li>
+                        <li *ngIf="getCheckLogin()" class="nav-item dangnhap">
+                            <a routerLink="/dangnhap" class="menu-bar-title nav-link waves-light" (click)="logout()">
+                                <h5 class="menu-word">
+                                    ĐĂNG XUẤT
+                                    <div class="thanh-bar"></div>
+                                </h5>
+                            </a>
+                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -72,15 +106,17 @@
                 </div> -->
             <!-- </div> -->
         </nav>
+        
         <div class="icon-menu">
+            <div *ngIf="getCheckLogin()" class="acc" style="width: 100%;">
+                <p class="mt-2" style="cursor: pointer"><i>{{ user.name }}</i></p>
+            </div>
+            <div *ngIf="!getCheckLogin()" class="acc" style="width: 100%;">
+                <p class="mt-2" style="cursor: pointer"></p>
+            </div>
             <div style="display: flex" class="collapse">
-                <div *ngIf="user" class="acc" routerLink="/thongtin">
-                    <p class="mt-2" style="cursor: pointer"><i>{{ user.name }}</i></p>
-                </div>
-                <div *ngIf="!user" class="acc" style="display: none" routerLink="/thongtin"></div>
-
                 <div class="user-big thanhbar-muiten">
-                    <a class="userA" routerLink="/dangnhap"><i class="far fa-user"></i
+                    <a class="userA" ><i class="far fa-user"></i
           ></a>
                     <div class="thanh-bar"></div>
                     <div *ngIf="!getCheckLogin()" class="login-user">
@@ -93,7 +129,7 @@
                     </div>
                     <div *ngIf="getCheckLogin()" class="login-user">
                         <div>
-                            <button routerLink="/dangky">Tạo tài khoản</button>
+                            <button routerLink="/thongtin">Tài Khoản Của tôi</button>
                         </div>
                         <button class="login-button" routerLink="/dangnhap" (click)="logout()">
               Đăng xuất
