@@ -14,7 +14,17 @@ export class CheckoutDetailComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private userService : UserService) { }
 
   ngOnInit(): void {
-    this.user = this.userService.user
+    if(this.userService.getCheckLogin()){
+      this.user = this.userService.user;
+    }else{
+      this.user = new User();
+      this.user.name = '';
+      this.user.address ='';
+      this.user.email = '';
+      this.user.phone = '';
+    }
+    console.log(this.user);
+    
     this.checkoutForm = this.formBuilder.group({
       name: [this.user.name, Validators.required],
       address: [this.user.address, Validators.required],

@@ -8,13 +8,15 @@ import { VoucherService } from 'src/app/Services/voucher.service';
   styleUrls: ['./checkout-order.component.scss']
 })
 export class CheckoutOrderComponent implements OnInit {
+  items :any;
   
   constructor(private cartService: CartService, private voucherService: VoucherService) { }
 
   ngOnInit(): void {
+    this.items = this.cartService.getCartItems();
   }
 
-  items = this.cartService.getCartItems();
+  
   getDisCount(){
     return this.voucherService.getDiscount();
   }
