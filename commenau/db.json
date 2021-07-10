@@ -14,7 +14,8 @@
       "email": "ss@gmail.com",
       "phone": "1233322234",
       "password": "123456",
-      "address": ""
+      "address": "",
+      "urlImg": "assets/img/avatar/avatar1.png"
     },
     {
       "id": "2",
@@ -22,7 +23,8 @@
       "email": "ss@gmail.com",
       "phone": "0377634557",
       "password": "123456",
-      "address": ""
+      "address": "",
+      "urlImg": "assets/img/avatar/avatar1.png"
     },
     {
       "id": "3",
@@ -30,7 +32,8 @@
       "email": "123@gmail.com",
       "phone": "0999898776",
       "password": "123456789",
-      "address": ""
+      "address": "",
+      "urlImg": "assets/img/avatar/avatar1.png"
     },
     {
       "id": "4",
@@ -38,7 +41,8 @@
       "email": "ss@gmail.com",
       "phone": "0909885445",
       "password": "123456",
-      "address": ""
+      "address": "",
+      "urlImg": "assets/img/avatar/avatar1.png"
     },
     {
       "id": "5",
@@ -46,7 +50,8 @@
       "email": "loanhong@gmail.com",
       "phone": "0998998998",
       "password": "123456",
-      "address": ""
+      "address": "",
+      "urlImg": "assets/img/avatar/avatar1.png"
     },
     {
       "id": "6",
@@ -54,7 +59,8 @@
       "email": "lamdilinh.nguyen@gmail.com",
       "phone": "0937983205",
       "password": "123456",
-      "address": ""
+      "address": "",
+      "urlImg": "assets/img/avatar/avatar1.png"
     },
     {
       "id": "7",
@@ -62,7 +68,8 @@
       "email": "haole7301@gmail.com",
       "phone": "0369750752",
       "password": "123456",
-      "address": ""
+      "address": "",
+      "urlImg": "assets/img/avatar/avatar1.png"
     },
     {
       "id": "8",
@@ -70,7 +77,17 @@
       "email": "huyle@gmail.com",
       "phone": "0393503929",
       "password": "123456",
-      "address": "23 Nguyễn Trãi Quận 1, TPHCM"
+      "address": "23 Nguyễn Trãi, quận 1, TPHCM",
+      "urlImg": "assets/img/avatar/avatar2.png"
+    },
+    {
+      "id": "9",
+      "name": "Nguyễn Khang",
+      "email": "nguyenkhang@gmail.com",
+      "phone": "0909090909",
+      "password": "123456",
+      "address": "23 Nguyễn Khang",
+      "urlImg": "assets/img/avatar/avartar3.jpg"
     }
   ],
   "voucher": [

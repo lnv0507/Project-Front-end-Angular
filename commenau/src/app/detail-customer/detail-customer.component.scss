@@ -144,25 +144,58 @@ ul {
                 .phone-customer {
                     width: 100%;
                     margin-top: 30px;
-                    p {
-                        float: left;
+                    p{
                         width: 30%;
+                        float: left;
                         font-weight: 600;
                     }
-                    a {
-                        text-decoration: none;
-                        color: #2b82ad;
-                        font-weight: 600;
+                    
+                    .input-type{
+                        overflow: auto;
+                        width: 70%;
+                        float: left;
+                        p {
+                            float: left;
+                            width: 43%;
+                            font-weight: 600;
+                        }
+                        a {
+                            text-decoration: none;
+                            color: #2b82ad;
+                            font-weight: 600;
+                            cursor: pointer;
+                        }
+                        input{
+                            width: 163px;
+                            padding-left: 10px;
+                            margin-right: 36px;
+                        }
                     }
-                    input{
-                        width: 163px;
-                        padding-left: 10px;
-                        margin-right: 36px;
-                    }
+                   
                 }
                 button {
                     margin-top: 30px;
                 }
+                button:hover {
+                    background-color: black;
+                }
+                .alert{
+                    margin-top: 20px;
+                    height: 40px;
+                    p{
+                        line-height: 40px;
+                        text-align: center;
+                        font-weight: 600;
+                    }
+                    .btn-close{
+                        background-color: #d1e7dd;
+                        border-color: #badbcc;
+                        width: 10px;
+                        height: 20px;
+                        margin-top: 0px;
+                    }
+                }
+                
             }
             .content-right {
                 width: 25%;
@@ -172,10 +205,37 @@ ul {
                 .avatar-change {
                     padding-left: 40%
                 }
-                button {
+                .custom-file-input {
+                    color: transparent;
                     margin-top: 20px;
-                    margin-left: 40%;
-                }
+                    margin-left: 42%;
+                  }
+                  .custom-file-input::-webkit-file-upload-button {
+                    visibility: hidden;
+                  }
+                  .custom-file-input::before {
+                    content: 'Chọn Ảnh';
+                    color: white;
+                    display: inline-block;
+                    background: #2b82ad;
+                    border: 1px solid #999;
+                    border-radius: 3px;
+                    padding: 5px 8px;
+                    outline: none;
+                    cursor: pointer;
+                    font-weight: 700;
+                    font-size: 10pt;
+                  }
+                  .custom-file-input:hover::before {
+                    border-color: black;
+                  }
+                  .custom-file-input:active {
+                    outline: 0;
+                  }
+                  .custom-file-input:active::before {
+                    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+                  }
+
             }
         }
     }

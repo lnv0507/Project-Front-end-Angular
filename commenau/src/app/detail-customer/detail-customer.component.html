@@ -3,7 +3,7 @@
         <h1 class="main-title">THÔNG TIN KHÁCH HÀNG</h1>
         <div class="customer-left">
             <div class="avatar-name">
-                <img src="https://i.pinimg.com/originals/d5/b0/4c/d5b04cc3dcd8c17702549ebc5f1acf1a.png" alt="">
+                <img src="{{urlImg}}" alt="">
                 <p>{{user.name}}</p>
             </div>
             <ul>
@@ -25,6 +25,10 @@
         <div class="customer-right">
             <div class="content">
                 <div class="content-left">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="displayAlert">
+                        <strong><p>Thông tin đã được cập nhật thông tin thành công</p></strong>
+                        <button (click)="closeAlert()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
                     <form (ngSubmit)="updateProfile()" [formGroup]="customForm">
                         <div class="name-customer">
                             <p>Họ tên:</p>
@@ -61,9 +65,10 @@
                             
                         </div>
                         <div class="phone-customer">
-                            <p>Số điện thoại:</p>
-                            <p *ngIf = "!display">{{user.phone}}</p>
+                            <p >Số điện thoại:</p>
+                            
                             <div class="input-type">
+                                <p *ngIf = "!display">{{user.phone}}</p>
                                 <input *ngIf = "display" type="text" value="{{user.phone}}" formControlName="phone"
                                 [ngClass]="{'is-invalid' : customForm.controls.phone.invalid && customForm.controls.phone.touched}">
                                 <a (click) = "displayPhone()" >Thay đổi</a>
@@ -75,12 +80,14 @@
                         </div>
                         <button [disabled]="!customForm.valid">Lưu</button>
                     </form>
+                    
                 </div>
+                
                 <div class="content-right">
                     <div class="avatar-change">
-                        <img src="https://i.pinimg.com/originals/d5/b0/4c/d5b04cc3dcd8c17702549ebc5f1acf1a.png" alt="">
+                        <img src="{{urlImg}}" alt="">
                     </div>
-                    <button>Chọn ảnh</button>
+                    <input type="file" class="custom-file-input" (change)="onFileSelected($event)">
                 </div>
             </div>
         </div>

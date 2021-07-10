@@ -66,6 +66,7 @@ export class RegisterComponent implements OnInit {
       user.phone = this.formRegister.controls.phone.value;
       user.password = this.formRegister.controls.password.value;
       user.address = '';
+      user.urlImg = "assets/img/avatar/avatar1.png";
       this.serviceUser.addUser(user).subscribe(data =>{
       console.log(data);
       });

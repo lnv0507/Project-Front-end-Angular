@@ -5,6 +5,7 @@ export class User {
   phone!: string;
   address!: string;
   password!: string;
+  urlImg!:string;
   listWishList!: [];
   constructor() {
 
