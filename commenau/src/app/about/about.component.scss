@@ -18,8 +18,8 @@ $gray: #e7e7e7;
         .line {
             position: relative;
             //   left: 40%;
-            padding-left: 40%;
-            top: 10em;
+            // padding-left: 40%;
+            // top: 10em;
             h5 {
                 margin: auto;
                 font-size: 60px;
@@ -32,7 +32,7 @@ $gray: #e7e7e7;
                 font-size: 20px;
                 color: $white;
                 position: relative;
-                right: 10em;
+                // right: 10em;
                 text-transform: uppercase;
                 font-weight: 500;
             }
@@ -42,13 +42,11 @@ $gray: #e7e7e7;
         width: 100%;
         div {
             h5 {
-                margin-top: 20px;
                 font-size: 50px;
-                margin-left: 42%;
             }
             p {
                 font-size: 20px;
-                padding: 10px 200px;
+                // padding: 10px 0px;
             }
              :nth-child(2) {
                 color: black;
@@ -59,17 +57,13 @@ $gray: #e7e7e7;
     }
     .customer {
         .customer-brand {
-            font-size: 5rem;
-            margin-left: 40%;
+            font-size: 3rem;
         }
-        padding: 20px 130px;
         ul {
             display: flex;
             justify-content: space-between;
             list-style: none;
-            height: 400px;
             li {
-                margin: 20px 80px;
                 img {
                     border-radius: 50%;
                     width: 250px;
