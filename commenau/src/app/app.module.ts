@@ -24,6 +24,7 @@ const routersConfig: Routes = [
   { path: 'kiemtra', component: VerifyComponent },
   { path: 'yeuthich', component: WishlistComponent },
   { path: 'thongtin', component: DetailCustomerComponent },
+  { path : 'donhang', component: OrderComponent},
   { path: '**', component: Page404Component },
 ];
 
