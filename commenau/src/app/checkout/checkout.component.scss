@@ -90,17 +90,10 @@ button:hover {
     .detail-checkout {
         margin-top: 20px;
         height: fit-content;
-        width: 60%;
+        width: 100%;
         float: left;
-        padding-right: 100px;
     }
-    .order-checkout {
-        width: 40%;
-        float: left;
-        padding: 30px;
-        border: black 2px solid;
-        margin-top: 20px;
-    }
+    
 }
 //tablet and moblie
 @media only screen and (max-width: 63.9375em){

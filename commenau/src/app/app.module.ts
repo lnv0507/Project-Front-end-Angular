@@ -57,7 +57,6 @@ import { CartTotalComponent } from './cart/cart-total/cart-total.component';
 import { CheckoutAccountComponent } from './checkout/checkout-account/checkout-account.component';
 import { CheckoutCouponComponent } from './checkout/checkout-coupon/checkout-coupon.component';
 import { CheckoutDetailComponent } from './checkout/checkout-detail/checkout-detail.component';
-import { CheckoutOrderComponent } from './checkout/checkout-order/checkout-order.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Ng2OrderModule } from 'ng2-order-pipe';
@@ -96,7 +95,6 @@ import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
     CheckoutAccountComponent,
     CheckoutCouponComponent,
     CheckoutDetailComponent,
-    CheckoutOrderComponent,
     BreakcumbAboutComponent,
     WishlistDetailComponent,
     WishlistComponent,

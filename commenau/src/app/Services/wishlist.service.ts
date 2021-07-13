@@ -52,7 +52,6 @@ export class WishlistService {
       // });
 
     }
-    console.log(this.wishlistItems.length)
     return this.wishlistItems;
   }
 

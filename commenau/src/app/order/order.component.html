@@ -9,15 +9,15 @@
                 <div class="info-detail-customer">
                     <div class="name-order">
                         <h5 class="label-info">Họ tên:</h5>
-                        <p>Nguyễn Phong</p>
+                        <p>{{orderInfo.name}}</p>
                     </div>
                     <div class="addres-order">
                         <h5 class="label-info">Địa chỉ:</h5>
-                        <p>23, Nguyễn Văn Trỗi, Quận 1, TPHCM</p>
+                        <p>{{orderInfo.address}}</p>
                     </div>
                     <div class="phone-order">
                         <h5 class="label-info">Điện thoại:</h5>
-                        <p>0397786578</p>
+                        <p>{{orderInfo.phone}}</p>
                     </div>
                 </div>
             </div>
@@ -53,6 +53,9 @@
                     <div class="total-checkout">
                         <h5 class="bold">Tổng cộng</h5>
                         <p class="bold">{{getAllTotal()}} đ</p>
+                    </div>
+                    <div class="note">
+                        <p> <strong>Ghi chú: </strong>{{orderInfo.note}}</p>
                     </div>
                 </div>
 

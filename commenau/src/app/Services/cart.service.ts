@@ -1,6 +1,6 @@
 import { getTranslationDeclStmts } from '@angular/compiler/src/render3/view/template';
 import { Injectable } from '@angular/core';
-import { Product } from '../model/product';
+import { Order } from '../model/order';
 import { ProductCart } from '../model/product-cart';
 
 @Injectable({
@@ -15,6 +15,7 @@ export class CartService {
     return total;
   }
   cartItems: Array<ProductCart> = [];
+  orderInfo! : Order;
   constructor() {}
   addItem(product: ProductCart) {
     const exist = this.cartItems.find((item: ProductCart) => {
@@ -41,5 +42,9 @@ export class CartService {
     }
     return total;
   }
+  setOrder(orderInfo: Order){
+  
+  }
+  
 
 }

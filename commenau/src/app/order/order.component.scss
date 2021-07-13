@@ -48,13 +48,14 @@ p {
                     .addres-order,
                     .phone-order {
                         width: 100%;
+                        overflow: auto;
                         h5 {
-                            width: 30%;
+                            width: 20%;
                             float: left;
                             height: fit-content;
                         }
                         p {
-                            width: 70%;
+                            width: 80%;
                             height: fit-content;
                             float: left;
                         }
@@ -109,6 +110,12 @@ p {
                     }
                     .discount-checkout{
                         margin-top: 10px;
+                    }
+                    .note{
+                        margin-top: 5px;
+                        p{
+                            font-weight: normal;
+                        }
                     }
                 }
             }
