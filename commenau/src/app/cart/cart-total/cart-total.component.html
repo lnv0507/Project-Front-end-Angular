@@ -4,16 +4,16 @@
     <div class="items-total-cart">
         <div class="temporary-money">
             <h5 class="text-left">Tạm thu</h5>
-            <h5 class="text-right">{{getTotal()}}</h5>
+            <h5 class="text-right">{{getTotal() | currency: "VND":"symbol"}}</h5>
         </div>
         <div class="discount">
             <h5 class="text-left">Giảm giá</h5>
-            <h5 class="text-right">{{getDiscount()}}</h5>
+            <h5 class="text-right">{{getDiscount() | currency: "VND":"symbol"}}</h5>
         </div>
         <hr />
         <div class="total-money">
             <h5 class="text-left">TỔNG CỘNG</h5>
-            <h5 class="text-right">{{ getTotalAll() }}</h5>
+            <h5 class="text-right">{{ getTotalAll() | currency: "VND":"symbol"}}</h5>
         </div>
     </div>
     <button class="btn-order">

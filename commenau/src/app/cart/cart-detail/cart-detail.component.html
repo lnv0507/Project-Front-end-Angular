@@ -27,7 +27,7 @@
                 <h5 class="mobile_reponsive">{{ item.name }}</h5>
 
             </td>
-            <td class="price price_table">{{ item.price }}</td>
+            <td class="price price_table">{{ item.price | currency: "VND":"symbol" }}</td>
             <td class="quantity">
                 <div class="hihi">
                     <button (click)="increaseQuatity(item.id)">+</button>
@@ -36,7 +36,7 @@
                 </div>
                 
             </td>
-            <td class="total">{{ item.price * item.quatity }}</td>
+            <td class="total">{{ item.price * item.quatity | currency: "VND":"symbol" }}</td>
         </tr>
     </tbody>
 </table>

@@ -41,18 +41,18 @@
                             <tr *ngFor="let i of items">
                                 <th>{{i.name}}</th>
                                 <th>x<span>{{i.quatity}}</span></th>
-                                <th class="right">{{i.price}} đ</th>
+                                <th class="right">{{i.price * i.quantity | currency: "VND":"symbol"}}</th>
                             </tr>
                         </tbody>
                     </table>
                     <hr>
                     <div class="discount-checkout">
                         <h5 class="bold">Giảm giá</h5>
-                        <p> {{getDisCount()}} đ</p>
+                        <p> {{getDisCount() | currency: "VND":"symbol"}}</p>
                     </div>
                     <div class="total-checkout">
                         <h5 class="bold">Tổng cộng</h5>
-                        <p class="bold">{{getAllTotal()}} đ</p>
+                        <p class="bold">{{getAllTotal() | currency: "VND":"symbol"}}</p>
                     </div>
                     <div class="note">
                         <p> <strong>Ghi chú: </strong>{{orderInfo.note}}</p>
@@ -67,7 +67,7 @@
                 <div class="content-detail">
                     <div class="id-order">
                         <h5 class="label-info">Mã đơn hàng:</h5>
-                        <p>HD0001</p>
+                        <p>HD0932</p>
                     </div>
                     <div class="date-order">
                         <h5 class="label-info">Ngày xuất</h5>
@@ -75,7 +75,7 @@
                     </div>
                     <div class="total-order">
                         <h5 class="label-info">Tổng hóa đơn</h5>
-                        <p>{{getAllTotal()}} đ</p>
+                        <p>{{getAllTotal() | currency: "VND":"symbol"}}</p>
                     </div>
 
                 </div>
