@@ -2,91 +2,85 @@ $blue: #23536b;
 $black: #141619;
 $white: #ffffff;
 $gray: #e7e7e7;
-.bag-big {
-    height: 20em;
-    .bag-user {
-        // margin-top: 1em;
-        transition: height 0.5s ease-in;
-        opacity: 1;
-        visibility: inherit;
-        position: absolute;
-        background-color: $white;
-        width: 35em;
-        height: 50em;
-        left: -50px;
-        z-index: 2;
-        overflow: hidden;
-        .food-bag {
+.bag-user {
+    transition: height 0.5s ease-in;
+    opacity: 1;
+    visibility: inherit;
+    position: absolute;
+    background-color: $white;
+    z-index: 2;
+    overflow: hidden;
+    padding-bottom: 20px;
+    .food-bag {
+        color: $black;
+        margin-left: 34%;
+        margin-top: 0.7em;
+        font-size: 2em;
+    }
+    .scroll {
+        height: 150px;
+        overflow-y: scroll;
+        .item-cart {
             color: $black;
-            margin-left: 34%;
-            margin-top: 0.7em;
-            font-size: 2em;
-        }
-        .scroll {
-            height: 150px;
-            overflow-y: scroll;
-            .item-cart {
-                color: $black;
-                display: flex;
-                margin-left: 20px;
-                font-size: 1.5em;
-                margin-top: 10px;
-                .item-food {
-                    display: flex;
-                    justify-content: space-between;
-                    width: 100%;
-                }
-                p {
-                    color: darkgray;
-                }
-                p:nth-child(1) {
-                    color: $black;
-                    width: 40%;
-                }
-                p:nth-child(2) {
-                    width: 10%;
-                }
-                p:nth-child(3) {
-                    width: 30%;
-                }
-                img {
-                    width: 40px;
-                    height: 50px;
-                    margin-right: 20px;
-                }
-            }
-        }
-        .sub-total {
-            margin-top: 2em;
-            border-top: solid 1px #141619;
-            border-bottom: solid 1px #141619;
-            padding: 20px;
             display: flex;
-            justify-content: space-between;
-            color: $black;
-            font-size: 2em;
-        }
-        div {
-            button {
-                font-size: 1.5em;
-                width: 90%;
-                height: 3em;
+            margin-left: 20px;
+            font-size: 1.5em;
+            margin-top: 10px;
+            .item-food {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+            p {
+                color: darkgray;
+            }
+            p:nth-child(1) {
                 color: $black;
-                margin-top: 50px;
-                margin-left: 5%;
-                border: none;
+                width: 40%;
+            }
+            p:nth-child(2) {
+                width: 10%;
+            }
+            p:nth-child(3) {
+                width: 30%;
+            }
+            img {
+                width: 40px;
+                height: 50px;
+                margin-right: 20px;
             }
         }
-        .bag-button {
-            border: none;
+    }
+    .sub-total {
+        margin-top: 2em;
+        border-top: solid 1px #141619;
+        border-bottom: solid 1px #141619;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        color: $black;
+        font-size: 2em;
+    }
+    div {
+        button {
             font-size: 1.5em;
             width: 90%;
             height: 3em;
-            color: $white;
-            background-color: $black;
-            margin-top: 10px;
+            color: $black;
+            margin-top: 50px;
             margin-left: 5%;
+            border: none;
         }
+    }
+    .bag-button {
+        border: none;
+        font-size: 1.5em;
+        width: 90%;
+        height: 3em;
+        color: $white;
+        background-color: $black;
+        margin-top: 10px;
+        margin-left: 5%;
     }
 }
 
@@ -98,3 +92,10 @@ $gray: #e7e7e7;
 //         height: 50em;
 //     }
 // }
+@media only screen and (min-width: 600px) {
+    .bag-big {
+        .bag-user {
+            height: 5em;
+        }
+    }
+}

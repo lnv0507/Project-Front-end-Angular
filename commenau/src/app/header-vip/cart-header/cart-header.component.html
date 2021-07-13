@@ -1,33 +1,29 @@
-<div class="bag-big thanhbar-muiten">
-    <a class="bagA" routerLink="/giohang"><i class="fas fa-briefcase"></i></a>
-    <div class="thanh-bar"></div>
-    <div class="bag-user">
-        <div class="header-cart">
-            <p class="food-bag">Túi Đồ Ăn</p>
-        </div>
+<div class="bag-user mt-5 container-fluid">
+    <div class="header-cart">
+        <p class="food-bag col-12">Túi Đồ Ăn</p>
+    </div>
 
-        <div class="scroll">
-            <div class="item-cart" *ngFor="let i of items">
-                <img src="{{ i.img }}" alt="" />
-                <div class="item-food">
-                    <p>{{ i.name }}</p>
-                    <p>
-                        <label for="">{{ i.quatity }}</label>
-                    </p>
-                    <p>
-                        <label for="">{{ i.price * i.quatity| currency: "VND":true  }} </label>
-                    </p>
-                </div>
+    <div class="scroll">
+        <div class="item-cart " *ngFor="let i of items">
+            <img src="{{ i.img }}" alt="" />
+            <div class="item-food row">
+                <p>{{ i.name }}</p>
+                <p>
+                    <label for="">{{ i.quatity }}</label>
+                </p>
+                <p>
+                    <label for="">{{ i.price * i.quatity| currency: "VND":true  }} </label>
+                </p>
             </div>
         </div>
-        <div class="sub-total">
-            <p>Tổng Tiền</p>
-            <p>{{ getTotal() | currency: "VND":true }}</p>
-        </div>
-        <div>
-            <a routerLink="/giohang"> <button>XEM CHI TIẾT TÚI</button></a>
-        </div>
-        <a routerLink="/thanhtoan"><button class="bag-button">THANH TOÁN</button></a>
-        
     </div>
+    <div class="sub-total">
+        <p>Tổng Tiền</p>
+        <p>{{ getTotal() | currency: "VND":true }}</p>
+    </div>
+    <div>
+        <a routerLink="/giohang"> <button>XEM CHI TIẾT TÚI</button></a>
+    </div>
+    <a routerLink="/thanhtoan"><button class="bag-button">THANH TOÁN</button></a>
+
 </div>
