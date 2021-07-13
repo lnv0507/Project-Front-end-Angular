@@ -25,6 +25,9 @@ export class ProductListComponent implements OnInit {
   order: string = 'id';
   reverse: boolean = false;
   check!: boolean;
+  days = this.product.getDay();
+  active = "active active2";
+  noActive = "noActive";
   public day: Date = new Date();
 
   constructor(

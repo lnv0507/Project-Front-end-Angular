@@ -4,9 +4,9 @@
             <div class="sidebar">
                 <div class="sidebar__item">
                     <h5>Thực đơn theo ngày</h5>
-                    <ul class="nav nav-pills nav-uppercase nav-size-large nav-center dayProduct">
-                        <li *ngFor="let th of weekDays">
-                            <a (click)="listProductDay(th.day)" routerLink="/menu" routerLinkActive="clickDay" [routerLinkActiveOptions]="{ exact: false }">
+                    <ul class="nav nav-justified dayProduct">
+                        <li *ngFor="let th of weekDays" class="nav-item" role="presentation" role="tab" aria-selected="true">
+                            <a [ngClass]="th.day == days ?  active : noActive " (click)="listProductDay(th.day)" class="nav-link" data-bs-toggle="pill">
                                 <label style="cursor: pointer;"> {{ th.day }}</label>
                             </a>
                         </li>
