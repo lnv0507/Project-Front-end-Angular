@@ -4,12 +4,14 @@
             <h5>{{ titleRice }}</h5>
         </div>
         <div class="container">
-            <ul class="nav nav-fill day-product ">
-                <li *ngFor="let th of weekDays" class=" mb-5 mt-3 nav-item textDay">
-                    <a (click)="listProductDay(th.day)" routerLink="/trangchu" routerLinkActive="clickDay" [routerLinkActiveOptions]="{ exact: true }" style="color: black; font-weight: bolder;">
-                        <label style="cursor: pointer;" for="">{{ th.day }} </label></a>
-                </li>
-            </ul>
+            <nav>
+                <ul class="nav nav-fill day-product nav-pills" id="pills-tab" role="tablist">
+                    <li *ngFor="let th of weekDays" class=" mb-5 mt-3 nav-item textDay" role="presentation">
+                        <a [ngClass]="th.day == days ?  active : noActive " class="nav-link" data-bs-toggle="pill" role="tab" aria-selected="true" (click)="listProductDay(th.day)" style=" font-weight: bolder;">
+                            <label style="cursor: pointer;" for="">{{ th.day }} </label></a>
+                    </li>
+                </ul>
+            </nav>
             <div class="tab-panels row">
                 <div *ngIf="productCheck; then thenMonday; else thenDay"></div>
                 <ng-template #thenMonday>

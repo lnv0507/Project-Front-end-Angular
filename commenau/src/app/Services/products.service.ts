@@ -94,7 +94,7 @@ export class ProductsService {
     return this.dataProduct2;
   }
   // Lay danh sach product theo ngay`
-  public getDayProduct() {
+  public getDay() {
     let date = new Date();
     let th = date.getDay();
     let day_name = '';
@@ -125,7 +125,10 @@ export class ProductsService {
       case 6:
         day_name = 'Thứ 7';
     }
-
+    return day_name;
+  }
+  public getDayProduct() {
+    let day_name = this.getDay();
     return this.productDay(day_name);
   }
   // check yeu thich luu lai vao localstrorage

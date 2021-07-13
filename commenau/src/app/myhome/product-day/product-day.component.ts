@@ -20,6 +20,9 @@ export class ProductDayComponent implements OnInit {
   titleRice = 'Cơm Trưa Văn Phòng';
   date!: Date;
   productCheck = true;
+  days = this.product.getDay();
+  active = "active active2";
+  noActive = "noActive";
   constructor(
     private product: ProductsService,
     private cartService: CartService,

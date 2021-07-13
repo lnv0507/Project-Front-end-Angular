@@ -7,7 +7,6 @@ $gray: #e7e7e7;
     .title-everyday {
         text-align: center;
         h5 {
-            
             font-size: 30px;
         }
         ul {
@@ -20,8 +19,18 @@ $gray: #e7e7e7;
             }
         }
         .day-product {
-            .textDay{
+            .textDay {
                 font-size: 17px;
+                a {
+                    color: $black;
+                }
+                .active {
+                    color: white;
+                    background-color: $blue;
+                }
+                .active2 {
+                    border: 1px solid black;
+                }
             }
             .clickDay {
                 color: $black;
