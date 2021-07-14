@@ -123,11 +123,11 @@
 
                         <div class="scroll">
                             <div class="item-cart" *ngFor="let i of items">
-                                <img src="{{ i.img }}" alt="" />
+                                <a [routerLink]="['/chitietsanpham', i.id]"><img src="{{ i.img }}" alt="" /></a>
                                 <div class="item-food">
-                                    <p>{{ i.name }}</p>
+                                    <a [routerLink]="['/chitietsanpham', i.id]"><p>{{ i.name }}</p></a>
                                     <p>
-                                        <label for="">{{ i.quatity }}</label>
+                                        <label for=""> Số lượng: {{ i.quatity }}</label>
                                     </p>
                                     <p>
                                         <label for="">{{ i.price * i.quatity | currency: "VND":true }}

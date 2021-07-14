@@ -16,8 +16,9 @@
         </div>
         <div class="col-lg-9 col-md-7">
             <div class="row">
-                <div class="sidebar__item">
-                    <h5>Thực đơn ngày: {{day | date: ' dd/MM/y'}}</h5>
+                <div class="sidebar__item" *ngFor="
+                let d1 of getProduct().slice(0,1)">
+                    <h5>Thực đơn: {{d1.weekdays}} -{{day | date: ' dd/MM/y'}}</h5>
                 </div>
                 <div class="hero__search__form">
                     <!-- <div class="hero__search__categories">
