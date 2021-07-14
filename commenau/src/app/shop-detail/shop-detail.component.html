@@ -180,7 +180,7 @@
                                 <a href="#"><i class="fa fa-heart"></i></a>
                     </li>
                     <li>
-                        <a [routerLink]="['/chitietsanpham', product.id]" (click)="refresh()"><i class="fa fa-external-link"></i
+                        <a [routerLink]="['/chitietsanpham', product.id]" (click)="refresh(product.id)"><i class="fa fa-external-link"></i
                 ></a>
                     </li>
                     <li>
@@ -191,7 +191,7 @@
                 </div>
                 <div class="product__item__text">
                     <h6>
-                        <a [routerLink]="['/chitietsanpham', product.id]" (click)="refresh()">{{ product.name }}</a
+                        <a [routerLink]="['/chitietsanpham', product.id]" (click)="refresh(product.id)">{{ product.name }}</a
               >
             </h6>
             <h5>{{ product.price | currency: "VND" }}</h5>

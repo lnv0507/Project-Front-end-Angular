@@ -1,6 +1,6 @@
 import { Component, OnChanges, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/Services/products.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../model/product';
 import { CartService } from '../Services/cart.service';
 import { ProductCart } from '../model/product-cart';
@@ -17,11 +17,13 @@ export class ShopDetailComponent implements OnInit, OnChanges {
   product: any;
   change = false;
   value = 1;
+  test: any;
   constructor(
     private serviceProduct: ProductsService,
     private cartService: CartService,
     private route: ActivatedRoute,
-    private wishlistService: WishlistService
+    private wishlistService: WishlistService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -89,8 +91,8 @@ export class ShopDetailComponent implements OnInit, OnChanges {
   increaseValue() {
     this.value++;
   }
-  refresh() {
-    window.location.reload();
+  refresh(productId: any) {
+    return this.getProdutById(productId);
   }
   public addToWishlist(p: Product) {
     return this.wishlistService.addToWishlist(p);
