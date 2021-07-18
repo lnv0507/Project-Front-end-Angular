@@ -67,9 +67,7 @@ export class AccountCustomerComponent implements OnInit {
   onFileSelected(event: any) {
     if(event.target.files.length > 0) 
      {
-
       this.urlImg= "assets/img/avatar/" + event.target.files[0].name;
-      this.userService.urlImgUser = "assets/img/avatar/" + event.target.files[0].name;
      }
   }
 
