@@ -12,8 +12,8 @@
                     <p>Cập nhật tài khoản</p>
                 </li>
                 <div class="inline">
-                    <p><a href="">Hồ sơ</a></p>
-                    <p><a href="">Đổi mật khẩu</a> </p>
+                    <p><a (click)="displayAccount()" [ngStyle]="{color: isAccount ? '#2b82ad' : 'black'}">Hồ sơ</a></p>
+                    <p><a (click)="displayPassword()" [ngStyle]="{color: isPassword ? '#2b82ad' : 'black'}">Đổi mật khẩu</a> </p>
                 </div>
     
                 <li>
@@ -23,7 +23,7 @@
             </ul>
         </div>
         <div class="customer-right">
-            <div class="content">
+            <div *ngIf="isAccount" class="content">
                 <div class="content-left">
                     <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="displayAlert">
                         <strong><p>Thông tin đã được cập nhật thông tin thành công</p></strong>
@@ -90,6 +90,27 @@
                     <input type="file" class="custom-file-input" (change)="onFileSelected($event)">
                 </div>
             </div>
+
+            <div *ngIf="isPassword" class="change-password">
+                <div class="change-item">
+                    <p class="lable-change">Mật Khẩu Hiện Tại</p>
+                    <input type="text" class="input-change">
+                </div>
+
+                <div class="change-item">
+                    <p class="lable-change">Mật Khẩu Mới</p>
+                    <input type="text" class="input-change">
+                </div>
+
+                <div class="change-item">
+                    <p class="lable-change">Xác Nhận Mật Khẩu</p>
+                    <input type="text" class="input-change">
+                </div>
+
+                <button class="confirm-btn">Xác Nhận</button>
+            </div>
+
+            
         </div>
 
     </div>

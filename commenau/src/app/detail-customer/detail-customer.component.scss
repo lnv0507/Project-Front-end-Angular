@@ -43,7 +43,7 @@ ul {
         
         .avatar-name {
             width: 100%;
-            overflow: auto;
+            overflow: hidden;
             img {
                 width: 40%;
                 float: left;
@@ -84,6 +84,7 @@ ul {
                 width: 100%;
                 text-decoration: none;
                 color: black;
+                cursor: pointer;
             }
             a:hover {
                 color: #2b82ad;
@@ -103,6 +104,7 @@ ul {
         padding: 50px;
         .content {
             width: 100%;
+            overflow: hidden;
             .content-left {
                 width: 75%;
                 float: left;
@@ -171,7 +173,7 @@ ul {
                         input{
                             width: 163px;
                             padding-left: 10px;
-                            margin-right: 36px;
+                            margin-right: 10px;
                         }
                         .is-invalid{
                             border: red 2px solid;
@@ -244,9 +246,59 @@ ul {
 
             }
         }
+        .change-password{
+            padding: 20px 60px 80px;
+            .change-item{
+                margin-bottom: 20px;
+                .lable-change{
+                    width: 30%;
+                    float: left;
+                    color: #757575;
+                    text-transform: capitalize;
+                    text-align: right;
+                    padding-right: 20px;
+                    line-height: 44px;
+                    font-size: 18px;
+            
+                }
+                .input-change{
+                    width: 70%;
+                    padding: 10px;
+                }
+
+            }
+            .confirm-btn{
+                margin-left: 30%;
+                padding: 10px 20px;
+                display: inline-block;
+                width: auto;
+                height: auto;
+            }
+            
+        }
+
     }
 }
 @media only screen and (max-width: 63.9375em){
+    .container{
+        .customer-right{
+            .change-password{
+                .change-item{
+                    .lable-change{
+                        width: 100%;
+                        text-align: left;
+                    }
+                    .input-change{
+                        width: 100%;
+                    }
+                    
+                }
+                .confirm-btn{
+                    margin-left: 0;
+                }
+            }
+       }
+    }
    
     
 }
@@ -267,7 +319,6 @@ ul {
         .customer-right{
             width: 100%;
             padding: 10px;
-            height: 360px;
             .content{
                 .content-right{
                     display: none;

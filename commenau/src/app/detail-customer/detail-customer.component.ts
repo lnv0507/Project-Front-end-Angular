@@ -1,3 +1,4 @@
+import { ReturnStatement } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { User } from '../model/user';
@@ -21,6 +22,8 @@ export class DetailCustomerComponent implements OnInit {
   displayAlert = false;
   customForm! : FormGroup;
   urlImg!: string;
+  isAccount = true;
+  isPassword= false;
 
   constructor(private userService: UserService, private formBuilder : FormBuilder) { }
 
@@ -71,9 +74,27 @@ export class DetailCustomerComponent implements OnInit {
      {
        this.urlImg= "assets/img/avatar/" + event.target.files[0].name;
      }
-   }
- 
+  }
+  displayAccount(){
+    if(this.isAccount){
+      return;
+    }
+    else{
+      this.isAccount = true;
+      this.isPassword = false
+    }
+  }
+  displayPassword(){
+    if(this.isPassword){
+      return;
+    }
+    else{
+      this.isAccount = false;
+      this.isPassword = true;
+    }
 
+  }
+ 
 }
 function gmailValidate(formControl: FormControl) {
   if(formControl.value.includes('@gmail.com')){
