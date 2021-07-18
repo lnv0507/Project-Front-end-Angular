@@ -66,6 +66,8 @@ import { WishlistDetailComponent } from './wishlist/wishlist-detail/wishlist-det
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CartHeaderComponent } from './header-vip/cart-header/cart-header.component';
 import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
+import { AccountCustomerComponent } from './detail-customer/account-customer/account-customer.component';
+import { PasswordCustomerComponent } from './detail-customer/password-customer/password-customer.component';
 
 @NgModule({
   declarations: [
@@ -99,6 +101,8 @@ import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
     WishlistDetailComponent,
     WishlistComponent,
     CartHeaderComponent,
+    AccountCustomerComponent,
+    PasswordCustomerComponent,
 
   ],
   imports: [

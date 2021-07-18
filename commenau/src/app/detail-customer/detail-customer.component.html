@@ -3,7 +3,7 @@
         <h1 class="main-title">THÔNG TIN KHÁCH HÀNG</h1>
         <div class="customer-left">
             <div class="avatar-name">
-                <img src="{{urlImg}}" alt="">
+                <img src="{{user.urlImg}}" alt="">
                 <p>{{user.name}}</p>
             </div>
             <ul>
@@ -24,90 +24,11 @@
         </div>
         <div class="customer-right">
             <div *ngIf="isAccount" class="content">
-                <div class="content-left">
-                    <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="displayAlert">
-                        <strong><p>Thông tin đã được cập nhật thông tin thành công</p></strong>
-                        <button (click)="closeAlert()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                    <form (ngSubmit)="updateProfile()" [formGroup]="customForm">
-                        <div class="name-customer">
-                            <p>Họ tên:</p>
-                            <div class="input-type">
-                                <input type="text" value="{{user.name}}" formControlName="name"
-                                [ngClass]="{'is-invalid' : customForm.controls.name.invalid && customForm.controls.name.touched}">
-                                <div class="invalid-feedback">
-                                    Vui lòng nhập họ tên
-                                </div>
-                            </div>
-                            
-                            
-                        </div>
-                        <div class="email-customer">
-                            <p>Email:</p>
-                            <div class="input-type">
-                                <input type="text" value="{{user.email}}" formControlName="email"
-                                [ngClass]="{'is-invalid' : customForm.controls.email.invalid && customForm.controls.email.touched}">
-                                <div class="invalid-feedback">
-                                    Email không hợp lệ phải kết thúc bằng @gmail.com
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div class="address-customer">
-                            <p>Địa chỉ:</p>
-                            <div class="input-type">
-                                <input type="text" value="{{user.address}}" formControlName="address"
-                                [ngClass]="{'is-invalid' : customForm.controls.address.invalid && customForm.controls.address.touched}">
-                                <div class="invalid-feedback">
-                                    Vui lòng nhập địa chỉ
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div class="phone-customer">
-                            <p >Số điện thoại:</p>
-                            
-                            <div class="input-type">
-                                <p *ngIf = "!display">{{user.phone}}</p>
-                                <input *ngIf = "display" type="text" value="{{user.phone}}" formControlName="phone"
-                                [ngClass]="{'is-invalid' : customForm.controls.phone.invalid && customForm.controls.phone.touched}">
-                                <a (click) = "displayPhone()" >Thay đổi</a>
-                                <div class="invalid-feedback">
-                                    Số điện thoại không hợp lệ hoặc đã tồn tại trong hệ thống.
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <button [disabled]="!customForm.valid">Lưu</button>
-                    </form>
-                    
-                </div>
-                
-                <div class="content-right">
-                    <div class="avatar-change">
-                        <img src="{{urlImg}}" alt="">
-                    </div>
-                    <input type="file" class="custom-file-input" (change)="onFileSelected($event)">
-                </div>
+                <app-account-customer></app-account-customer>
             </div>
 
             <div *ngIf="isPassword" class="change-password">
-                <div class="change-item">
-                    <p class="lable-change">Mật Khẩu Hiện Tại</p>
-                    <input type="text" class="input-change">
-                </div>
-
-                <div class="change-item">
-                    <p class="lable-change">Mật Khẩu Mới</p>
-                    <input type="text" class="input-change">
-                </div>
-
-                <div class="change-item">
-                    <p class="lable-change">Xác Nhận Mật Khẩu</p>
-                    <input type="text" class="input-change">
-                </div>
-
-                <button class="confirm-btn">Xác Nhận</button>
+                <app-password-customer></app-password-customer>
             </div>
 
             

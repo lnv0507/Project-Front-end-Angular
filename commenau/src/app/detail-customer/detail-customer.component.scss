@@ -105,200 +105,16 @@ ul {
         .content {
             width: 100%;
             overflow: hidden;
-            .content-left {
-                width: 75%;
-                float: left;
-                padding-right: 50px;
-                .name-customer,
-                .email-customer,
-                .address-customer {
-                    width: 100%;
-                    height: 30px;
-                    margin-top: 20px;
-                    p {
-                        float: left;
-                        width: 30%;
-                        font-weight: 600;
-                    }
-                    .input-type{
-                        overflow: auto;
-                        width: 70%;
-                        float: left;
-                        input {
-                            padding-left: 10px;
-                            width: 100%;
-                        }
-                        .is-invalid{
-                            border: red 2px solid;
-                        }
-                    }
-                    
-                }
-                .sex-customer {
-                    width: 100%;
-                    margin-top: 30px;
-                    p {
-                        width: 30%;
-                        float: left;
-                        font-weight: 600;
-                    }
-                    label {
-                        margin-right: 30px;
-                    }
-                }
-                .phone-customer {
-                    width: 100%;
-                    margin-top: 30px;
-                    p{
-                        width: 30%;
-                        float: left;
-                        font-weight: 600;
-                    }
-                    
-                    .input-type{
-                        overflow: auto;
-                        width: 70%;
-                        float: left;
-                        p {
-                            float: left;
-                            width: 43%;
-                            font-weight: 600;
-                        }
-                        a {
-                            text-decoration: none;
-                            color: #2b82ad;
-                            font-weight: 600;
-                            cursor: pointer;
-                        }
-                        input{
-                            width: 163px;
-                            padding-left: 10px;
-                            margin-right: 10px;
-                        }
-                        .is-invalid{
-                            border: red 2px solid;
-                        }
-                    }
-                   
-                }
-                button {
-                    margin-top: 30px;
-                }
-                button:hover {
-                    background-color: black;
-                }
-                .alert{
-                    margin-top: 20px;
-                    height: 40px;
-                    p{
-                        line-height: 40px;
-                        text-align: center;
-                        font-weight: 600;
-                    }
-                    .btn-close{
-                        background-color: #d1e7dd;
-                        border-color: #badbcc;
-                        width: 10px;
-                        height: 20px;
-                        margin-top: 0px;
-                    }
-                }
-                
-            }
-            .content-right {
-                width: 25%;
-                float: left;
-                height: 300px;
-                border-left: 1px solid gray;
-                .avatar-change {
-                    padding-left: 40%
-                }
-                .custom-file-input {
-                    color: transparent;
-                    margin-top: 20px;
-                    margin-left: 42%;
-                  }
-                  .custom-file-input::-webkit-file-upload-button {
-                    visibility: hidden;
-                  }
-                  .custom-file-input::before {
-                    content: 'Chọn Ảnh';
-                    color: white;
-                    display: inline-block;
-                    background: #2b82ad;
-                    border: 1px solid #999;
-                    border-radius: 3px;
-                    padding: 5px 8px;
-                    outline: none;
-                    cursor: pointer;
-                    font-weight: 700;
-                    font-size: 10pt;
-                  }
-                  .custom-file-input:hover::before {
-                    border-color: black;
-                  }
-                  .custom-file-input:active {
-                    outline: 0;
-                  }
-                  .custom-file-input:active::before {
-                    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
-                  }
-
-            }
+            
         }
         .change-password{
-            padding: 20px 60px 80px;
-            .change-item{
-                margin-bottom: 20px;
-                .lable-change{
-                    width: 30%;
-                    float: left;
-                    color: #757575;
-                    text-transform: capitalize;
-                    text-align: right;
-                    padding-right: 20px;
-                    line-height: 44px;
-                    font-size: 18px;
-            
-                }
-                .input-change{
-                    width: 70%;
-                    padding: 10px;
-                }
-
-            }
-            .confirm-btn{
-                margin-left: 30%;
-                padding: 10px 20px;
-                display: inline-block;
-                width: auto;
-                height: auto;
-            }
+            padding: 20px 60px 80px 0;
             
         }
 
     }
 }
 @media only screen and (max-width: 63.9375em){
-    .container{
-        .customer-right{
-            .change-password{
-                .change-item{
-                    .lable-change{
-                        width: 100%;
-                        text-align: left;
-                    }
-                    .input-change{
-                        width: 100%;
-                    }
-                    
-                }
-                .confirm-btn{
-                    margin-left: 0;
-                }
-            }
-       }
-    }
    
     
 }
@@ -319,51 +135,17 @@ ul {
         .customer-right{
             width: 100%;
             padding: 10px;
-            .content{
-                .content-right{
-                    display: none;
-                }
-                .content-left{
-                    width: 100%;
-                    padding-right: 0;
-                }
-            }
+            
         }
     }
 }
 //tablet
 @media only screen and (min-width: 46.25em ) and (max-width: 63.9375em){
-    .container {
-        .customer-left{
-            width: 30%;
-            .avatar-name{
-                text-align: center;
-                flex-direction: column;
-                line-height: 2;
-                p{
-                    width: 100%;
-                    margin-left: 0;
-                }
-                img{
-                    margin-left: 60px;
-                }
-            }
-            .inline{
-                padding-left: 60px;
-            }
-        }
-        .customer-right{
-            width: 70%;
-            .content{
-                .content-right{
-                    display: none;
-                }
-                .content-left{
-                    width: 100%;
-                    padding-right: 0;
-                }
-            }
- 
-        }
+    .content-right{
+        display: none;
+    }
+    .content-left{
+        width: 100%;
+        padding-right: 0;
     }
 }

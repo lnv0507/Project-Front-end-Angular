@@ -17,6 +17,7 @@ export class UserService {
   // public currentUser!: Observable<User>;
   listUser: Array<User> = [];
   user: User = new User();
+  urlImgUser: string ="";
   message: String = "";
   checkLogin: boolean = false;
   private httpOptions = {
@@ -82,6 +83,7 @@ export class UserService {
     for (let u of listUser) {
       if (u.phone === phone && u.password === password) {
         this.user = u;
+        this.urlImgUser = u.urlImg;
         this.checkLogin = true;
         this.message = "";
         this.check(word);
