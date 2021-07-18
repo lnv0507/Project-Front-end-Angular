@@ -1,19 +1,19 @@
 <h5>Bạn đã có tài khoản? <a (click)="displayAccount()">Nhấn vào để đăng nhập</a></h5>
 <div class="detail-account" *ngIf="showAccount">
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        
+
         <div class="user-checkout">
-        <h5>Số điện thoại*</h5>
-        <input type="text" name="phone" formControlName="phone" [ngClass]="{ 'is-invalid': f.phone.invalid&&f.phone.touched }">
-    </div>
-    <div class="pass-checkout">
-        <h5>Mật khẩu*</h5>
-        <input type="password" name="pass" formControlName="password" [ngClass]="{ 'is-invalid': f.password.invalid&&f.password.touched }">
-    </div>
-    <div class="button-forget">
-        <button [disabled]="!form.valid">ĐĂNG NHẬP</button>
-        <a routerLink="/quenmatkhau">Quên mật khẩu? </a>
-    </div>
-</form>
-    
+            <h5>Số điện thoại*</h5>
+            <input type="text" name="phone" formControlName="phone" [ngClass]="{ 'is-invalid': f.phone.invalid&&f.phone.touched }">
+        </div>
+        <div class="pass-checkout">
+            <h5>Mật khẩu*</h5>
+            <input type="password" name="pass" formControlName="password" [ngClass]="{ 'is-invalid': f.password.invalid&&f.password.touched }">
+        </div>
+        <div class="button-forget">
+            <button [disabled]="!form.valid">ĐĂNG NHẬP</button>
+            <a routerLink="/quenmatkhau">Quên mật khẩu? </a>
+        </div>
+    </form>
+
 </div>

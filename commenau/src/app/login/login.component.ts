@@ -44,8 +44,7 @@ export class LoginComponent implements OnInit {
       this.error = "Sai thông tin đăng nhập";
       return;
     }
-    this.userService.login(this.f.phone.value, this.f.password.value);
-
+    this.userService.login(this.f.phone.value, this.f.password.value,'/trangchu');
   }
   getMessage() {
     return this.userService.getMessage();

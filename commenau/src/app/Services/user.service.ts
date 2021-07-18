@@ -16,8 +16,8 @@ export class UserService {
   // private currentUserSubject!: BehaviorSubject<User>;
   // public currentUser!: Observable<User>;
   listUser: Array<User> = [];
-  user: User=new User();
-  message : String = "";
+  user: User = new User();
+  message: String = "";
   checkLogin: boolean = false;
   private httpOptions = {
     headers: new HttpHeaders({
@@ -27,7 +27,7 @@ export class UserService {
   };
 
   constructor(private httpClient: HttpClient, private route: ActivatedRoute,
-    private router: Router,) {}
+    private router: Router,) { }
   // public get currentUserValue(): User {
   //   return this.currentUserSubject.value;
   // }
@@ -72,22 +72,22 @@ export class UserService {
     return phones;
   }
 
+  public check(result: any) {
+    const returnUrl = this.route.snapshot.queryParams['returnUrl'] || result;
+    return this.router.navigateByUrl(returnUrl);
+  }
 
-
-  public login(phone: any,password:any){
-    const listUser=this.getUserData();
-    for(let u of listUser){
-      if(u.phone===phone && u.password===password){
-        this.user=u;
-        this.checkLogin=true;
-        const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/trangchu';
-        this.router.navigateByUrl(returnUrl);
-        this.message="";
-
-
+  public login(phone: any, password: any, word: any) {
+    const listUser = this.getUserData();
+    for (let u of listUser) {
+      if (u.phone === phone && u.password === password) {
+        this.user = u;
+        this.checkLogin = true;
+        this.message = "";
+        this.check(word);
       }
-      else{
-        this.message="Sai thông tin đăng nhập"
+      else {
+        this.message = "Sai thông tin đăng nhập"
 
       }
     }
@@ -95,18 +95,18 @@ export class UserService {
 
 
   }
-  public getMessage(){
+  public getMessage() {
     return this.message;
   }
 
   logout() {
-      this.user=new User();
-      this.checkLogin=false;
-      this.message="";
-      return this.user;
+    this.user = new User();
+    this.checkLogin = false;
+    this.message = "";
+    return this.user;
   }
-  public getCheckLogin(){
+  public getCheckLogin() {
     return this.checkLogin;
   }
- 
+
 }

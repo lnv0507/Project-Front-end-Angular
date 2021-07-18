@@ -40,22 +40,23 @@ export class CheckoutAccountComponent implements OnInit {
   }
   showAccount = false;
 
-  displayAccount(){
+  displayAccount() {
     this.showAccount = !this.showAccount;
+
   }
   onSubmit() {
     if (this.form.invalid) {
       this.error = "Sai thông tin đăng nhập";
       return;
     }
-    this.userService.login(this.f.phone.value, this.f.password.value);
-    const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/thanhtoan';
-    this.router.navigateByUrl(returnUrl);
+    this.showAccount = false;
+    this.userService.login(this.f.phone.value, this.f.password.value, '/thanhtoan');
+
 
   }
   getMessage() {
     return this.userService.getMessage();
   }
-  
+
 
 }
