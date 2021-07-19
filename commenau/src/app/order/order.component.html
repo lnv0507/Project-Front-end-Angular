@@ -41,7 +41,7 @@
                             <tr *ngFor="let i of items">
                                 <th>{{i.name}}</th>
                                 <th>x<span>{{i.quatity}}</span></th>
-                                <th class="right">{{i.price * i.quantity | currency: "VND":"symbol"}}</th>
+                                <th class="right">{{i.price * i.quatity | currency: "VND":"symbol"}}</th>
                             </tr>
                         </tbody>
                     </table>

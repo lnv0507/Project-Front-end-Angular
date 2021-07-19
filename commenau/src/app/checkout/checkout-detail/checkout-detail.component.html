@@ -74,7 +74,7 @@
     </div>
     <div class="total-checkout">
         <h5>Tổng cộng</h5>
-        <p>{{getAllTotal() | currency: "VND":"symbol"}}</p>
+        <p formControlName="totalPrice">{{getAllTotal() | currency: "VND":"symbol"}}</p>
     </div>
     <div class="btn-checkout">
         <a><button [disabled]="!checkoutForm.valid">ĐẶT HÀNG</button></a>

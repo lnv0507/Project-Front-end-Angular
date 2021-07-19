@@ -1,11 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Order } from 'src/app/model/order';
 import { User } from 'src/app/model/user';
 import { CartService } from 'src/app/Services/cart.service';
 import { UserService } from 'src/app/Services/user.service';
 import { VoucherService } from 'src/app/Services/voucher.service';
+
+export function checkTotalPrice(){
+  return (c : AbstractControl) =>{
+    return (c.value === 0) ?{
+      invalidPrice : true
+    } : null;
+  };
+}
 
 @Component({
   selector: 'app-checkout-detail',
@@ -44,6 +52,7 @@ export class CheckoutDetailComponent implements OnInit {
       phone: [this.user.phone, [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern("^[0-9]+$")]],
       email: [this.user.email, [Validators.required, Validators.email, gmailValidate]],
       note: '',
+      totalPrice: [this.getAllTotal(), checkTotalPrice() ]
     })
   }
   getDisCount(){
@@ -58,17 +67,14 @@ export class CheckoutDetailComponent implements OnInit {
     orderInfo.address =  this.checkoutForm.controls.address.value;
     orderInfo.phone = this.checkoutForm.controls.phone.value;
     if(this.checkoutForm.controls.note.value.trim() === ''){
-      orderInfo.note = "Không có ghi chú gì"
+      orderInfo.note = "Không có ghi chú gì."
     }
     else{
       orderInfo.note = this.checkoutForm.controls.note.value;
     }
-    
     this.cartService.orderInfo = orderInfo;
-    
     const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/donhang';
     this.router.navigateByUrl(returnUrl);
-    
   }
 
 }

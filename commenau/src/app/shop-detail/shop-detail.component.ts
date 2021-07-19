@@ -23,12 +23,11 @@ export class ShopDetailComponent implements OnInit, OnChanges {
     private cartService: CartService,
     private route: ActivatedRoute,
     private wishlistService: WishlistService,
-    private router: Router
   ) { }
 
   ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap;
-    const productIdFromRoute = Number(routeParams.get('productId'));
+    const productIdFromRoute = routeParams.get('productId');
     this.getProdutById(productIdFromRoute);
     this.connect();
   }
@@ -50,7 +49,7 @@ export class ShopDetailComponent implements OnInit, OnChanges {
       else
         this.product.yeuthich = false;
     });
-
+    
   }
 
   fullHeart() {
