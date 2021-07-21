@@ -86,17 +86,15 @@ a:hover {
     .user-checkout,
     .pass-checkout {
         float: left;
-        width: 40%;
-        height: fit-content;
+        width: 50%;
+        overflow: auto;
+        padding-right: 10px;
         input {
-            width: 220px;
+            width: 100%;
             height: 25px;
             border: 2px solid gray;
             padding-left: 20px;
         }
-    }
-    .pass-checkout {
-        width: 60%;
     }
     
     .button-forget{
@@ -116,7 +114,7 @@ a:hover {
         }
     }
 }
-@media only screen and (max-width: 46.1875em){
+@media only screen and (max-width: 768px){
     .detail-account{
         width: 100%;
         .user-checkout{

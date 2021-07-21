@@ -74,24 +74,25 @@ td {
     }
   }
   .btn-dark {
-    background: #000000;
-    border: #000000 solid 2px;
+    background-color: black;
     float: right;
     margin-right: 20px;
+    padding: 7px 37px;
     a {
       color: #ffffff;
       font-weight: bolder;
     }
   }
-}
-//tablet and moblie
-@media only screen and (max-width: 63.9375em){
-  .row{
-    display: none;
+  .btn-dark:hover{
+    color: white;
+    background: #2b82ad;
   }
 }
+//tablet and moblie
+@media only screen and (max-width: 1023px){
+}
 // moblie
-@media only screen and (max-width: 46.1875em){
+@media only screen and (max-width: 739px){
   .product-name{
     width: 100%;
     display: flexbox;
@@ -130,7 +131,7 @@ td {
   }
 }
 //tablet
-@media only screen and (min-width: 46.25em ) and (max-width: 63.9375em){
+@media only screen and (min-width: 739px ) and (max-width: 1023px){
     
     
 }

@@ -83,7 +83,7 @@ button {
        
     }
     button {
-        margin-top: 30px;
+        margin-top: 20px;
     }
     button:hover {
         background-color: black;
@@ -152,18 +152,24 @@ button {
       }
 
 }
+@media only screen and (max-width: 1023px){
 
-@media only screen and (max-width: 46.1875em){
+}
+
+@media only screen and (max-width: 739px){
     .content-right{
         display: none;
     }
     .content-left{
         width: 100%;
         padding-right: 0;
+        button{
+            width: 100%;
+        }
     }
 }
 //tablet
-@media only screen and (min-width: 46.25em ) and (max-width: 63.9375em){
+@media only screen and (min-width: 739px ) and (max-width: 1023px){
         .customer-left{
             width: 30%;
             .avatar-name{

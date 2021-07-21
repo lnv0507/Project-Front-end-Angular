@@ -120,6 +120,7 @@ input {
         border: 2px solid #e1e1e1;
         padding-left: 20px;
         padding-right: 20px;
+        margin-bottom: 20px;
     }
 }
 .detail-right{
@@ -174,21 +175,27 @@ input {
         }
     }
 }
-@media only screen and (max-width: 63.9375em){
-
-}
-// moblie
-@media only screen and (max-width: 46.1875em){
+//mobile, tablet
+@media only screen and (max-width: 1023px){
+    .detail-right{
+        width: 100%;
+        .btn-checkout{
+            button{
+                width: 100%;
+                height: 42px;
+            }
+        }
+    }
     .detail-left{
         width: 100%;
         padding-right: 0;
     }
-    .detail-right{
-        width: 100%;
-    }
+}
+// moblie
+@media only screen and (max-width: 768px){
 }
 //tablet
-@media only screen and (min-width: 46.25em ) and (max-width: 63.9375em){
+@media only screen and (min-width: 740px ) and (max-width: 1023px){
     
     
 }

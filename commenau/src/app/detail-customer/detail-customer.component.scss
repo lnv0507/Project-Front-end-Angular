@@ -104,22 +104,16 @@ ul {
         padding: 50px;
         .content {
             width: 100%;
-            overflow: hidden;
-            
-        }
-        .change-password{
-            padding: 20px 60px 80px 0;
-            
         }
 
     }
 }
-@media only screen and (max-width: 63.9375em){
+@media only screen and (max-width: 1023px){
    
     
 }
 // moblie
-@media only screen and (max-width: 46.1875em){
+@media only screen and (max-width: 739px){
     .container{
         .customer-left{
             width: 100%;
@@ -129,23 +123,24 @@ ul {
                 }
             }
             .inline{
-                padding-left: 100px;
+                padding-left: 25%;
             }
         }
         .customer-right{
-            width: 100%;
+            width: 90%;
             padding: 10px;
+            margin: auto ;
             
         }
     }
 }
 //tablet
-@media only screen and (min-width: 46.25em ) and (max-width: 63.9375em){
-    .content-right{
-        display: none;
-    }
-    .content-left{
-        width: 100%;
-        padding-right: 0;
+@media only screen and (min-width: 739px ) and (max-width: 1023px){
+    .container{
+        .customer-left{
+            .inline{
+                padding-left: 20%;
+            }
+        }
     }
 }

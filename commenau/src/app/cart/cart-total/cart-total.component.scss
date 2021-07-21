@@ -16,6 +16,7 @@ a {
 h5 {
     width: fit-content;
     font-size: 15px;
+    font-weight: 500;
 }
 
 input {
@@ -28,13 +29,17 @@ hr {
 }
 h1{
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 650;
+    color: #2b82ad;
 }
 
 .checkvoucher {
     font-size: 13px;
     color: red;
     width: 300px;
+}
+.total-cart {
+    margin-bottom: 40px;
 }
 
 .items-total-cart {
@@ -104,7 +109,7 @@ h1{
         }
     }
 }
-@media only screen and (max-width: 63.9375em){
+@media only screen and (max-width: 1023px){
     .total-cart{
         float: right;
         width: 93%;
@@ -115,11 +120,11 @@ h1{
     }
 }
 // moblie
-@media only screen and (max-width: 46.1875em){
+@media only screen and (max-width: 739px){
     
 }
 //tablet
-@media only screen and (min-width: 46.25em ) and (max-width: 63.9375em){
+@media only screen and (min-width: 739px ) and (max-width: 1023px){
     
     
 }

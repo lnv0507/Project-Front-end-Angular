@@ -96,7 +96,7 @@ button:hover {
     
 }
 //tablet and moblie
-@media only screen and (max-width: 63.9375em){
+@media only screen and (max-width: 1024px){
     .container{
         padding-right: 10px;
         padding-left: 10px;
@@ -118,11 +118,11 @@ button:hover {
     
 }
 // moblie
-@media only screen and (max-width: 46.1875em){
+@media only screen and (max-width: 739px){
 
 }
 //tablet
-@media only screen and (min-width: 46.25em ) and (max-width: 63.9375em){
+@media only screen and (min-width: 740px ) and (max-width: 1023px){
     
     
 }
