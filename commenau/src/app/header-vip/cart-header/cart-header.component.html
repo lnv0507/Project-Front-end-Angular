@@ -1,4 +1,4 @@
-<div class="bag-user mt-5 container-fluid">
+<div class="bag-user mt-5 container-fluid" [ngClass]="{ 'close' : checkCart == true}">
     <div class="header-cart">
         <p class="food-bag col-12">Túi Đồ Ăn</p>
     </div>
@@ -22,8 +22,8 @@
         <p>{{ getTotal() | currency: "VND":true }}</p>
     </div>
     <div>
-        <a routerLink="/giohang"> <button>XEM CHI TIẾT TÚI</button></a>
+        <a routerLink="/giohang"> <button (click)="closeCart()">XEM CHI TIẾT TÚI</button></a>
     </div>
-    <a routerLink="/thanhtoan"><button class="bag-button">THANH TOÁN</button></a>
+    <a routerLink="/thanhtoan"><button class="bag-button" (click)="closeCart()" >THANH TOÁN</button></a>
 
 </div>

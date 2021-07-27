@@ -2,6 +2,11 @@ $blue: #23536b;
 $black: #141619;
 $white: #ffffff;
 $gray: #e7e7e7;
+.close-cart {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .bag-user {
     transition: height 0.5s ease-in;
     opacity: 1;

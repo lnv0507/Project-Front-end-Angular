@@ -9,6 +9,8 @@ import { CartService } from 'src/app/Services/cart.service';
 export class CartHeaderComponent {
   closeResult = '';
   items = this.cart.getCartItems();
+  checkCart = false;
+  close = "close-cart";
   constructor(private modalService: NgbModal,
     private cart: CartService,) {}
   open(content: any) {
@@ -36,5 +38,10 @@ export class CartHeaderComponent {
   }
   getTotal() {
     return this.cart.getTotal();
+  }
+
+  // dong the cart
+  closeCart(){
+    return this.checkCart = true;
   }
 }
