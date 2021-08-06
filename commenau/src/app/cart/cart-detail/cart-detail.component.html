@@ -21,7 +21,7 @@
             <td class="product-name">
                 <img src="{{ item.img }}" alt="" style="height: 50px; width: 50px" />
                 <div class="reponsive">
-                    <h5>{{ item.name }}</h5>
+                    <h5 class="reponsive__name">{{ item.name }}</h5>
                     <h5 class="title">{{item.price}}</h5>
                 </div>
                 <h5 class="mobile_reponsive">{{ item.name }}</h5>
@@ -42,13 +42,13 @@
 </table>
 <div class="row">
     <div class="col-lg-12">
-        <div class="shoping__cart__btns">
-            <button type="button" class="btn btn-light">
-        <a routerLink="/menu">TIẾP TỤC ĐẶT HÀNG</a>
-      </button>
-            <button type="button" class="btn btn-dark">
-        <a routerLink="/thanhtoan">THANH TOÁN</a>
-      </button>
+        <div class="shoping__cart__btns checkout__section">
+            <button type="button" class="btn btn-light order-btn">
+                <a routerLink="/menu">TIẾP TỤC ĐẶT HÀNG</a>
+            </button>
+            <button type="button" class="btn btn-dark checkout-btn">
+                <a routerLink="/thanhtoan">THANH TOÁN</a>
+            </button>
         </div>
     </div>
 </div>

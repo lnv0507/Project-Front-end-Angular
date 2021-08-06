@@ -100,12 +100,10 @@ ul {
         float: left;
         border: 2px solid gray;
         background-color: #ededed;
-        height: 500px;
         padding: 50px;
         .content {
             width: 100%;
         }
-
     }
 }
 @media only screen and (max-width: 1023px){
@@ -113,7 +111,7 @@ ul {
     
 }
 // moblie
-@media only screen and (max-width: 739px){
+@media only screen and (max-width: 770px){
     .container{
         .customer-left{
             width: 100%;
@@ -129,18 +127,27 @@ ul {
         .customer-right{
             width: 90%;
             padding: 10px;
-            margin: auto ;
+            margin: 10px auto 0 ;
             
         }
     }
 }
 //tablet
-@media only screen and (min-width: 739px ) and (max-width: 1023px){
+@media only screen and (min-width: 770px ) and (max-width: 1023px){
     .container{
         .customer-left{
             .inline{
                 padding-left: 20%;
             }
         }
+    }
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

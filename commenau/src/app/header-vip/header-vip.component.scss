@@ -100,6 +100,8 @@ $gray: #e7e7e7;
                 visibility: hidden;
                 opacity: 0;
                 overflow: hidden;
+                box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+                border-radius: 3px;
                 div {
                     background-color: #2b82ad;
                     height: 100px;
@@ -142,6 +144,8 @@ $gray: #e7e7e7;
                 right: -125px;
                 z-index: 2;
                 overflow: hidden;
+                box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+                border-radius: 3px;
                 .food-bag {
                     color: $black;
                     margin-left: 34%;
@@ -262,10 +266,12 @@ $gray: #e7e7e7;
                 position: absolute;
                 right: 0px;
                 height: 0em;
-                padding: 0.1em 3em;
+                padding: 0.2em 3em ;
                 overflow: hidden;
                 transition: height 0.5s ease-in;
                 z-index: 2;
+                box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+                border-radius: 3px;
             }
             .input-search {
                 border-bottom: solid 1px black;
@@ -284,6 +290,7 @@ $gray: #e7e7e7;
                 margin-top: 2em;
                 .search-Sug {
                     width: 32%;
+                    padding-left: 0;
                 }
                 ul {
                     h5 {

@@ -41,7 +41,7 @@
         <div class="phone-customer">
             <p >Số điện thoại:</p>
             
-            <div class="input-type">
+            <div class="input-type phone-customer__content">
                 <p *ngIf = "!display">{{user.phone}}</p>
                 <input *ngIf = "display" type="text" value="{{user.phone}}" formControlName="phone"
                 [ngClass]="{'is-invalid' : customForm.controls.phone.invalid && customForm.controls.phone.touched}">

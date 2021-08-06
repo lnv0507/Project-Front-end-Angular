@@ -25,6 +25,8 @@ button {
             overflow: auto;
             width: 70%;
             float: left;
+            display: flex;
+            flex-wrap: wrap;
             input {
                 padding-left: 10px;
                 width: 100%;
@@ -152,11 +154,20 @@ button {
       }
 
 }
+
+.phone-customer__content {
+    display: flex;
+    flex-wrap: wrap ;
+    align-items: center;
+    p {
+        margin-bottom: 0;
+    }
+}
 @media only screen and (max-width: 1023px){
 
 }
 
-@media only screen and (max-width: 739px){
+@media only screen and (max-width: 770px){
     .content-right{
         display: none;
     }
@@ -169,7 +180,7 @@ button {
     }
 }
 //tablet
-@media only screen and (min-width: 739px ) and (max-width: 1023px){
+@media only screen and (min-width: 770px ) and (max-width: 1023px){
         .customer-left{
             width: 30%;
             .avatar-name{
@@ -191,5 +202,10 @@ button {
         .customer-right{
             width: 70%;
  
+        }
+        .phone-customer__content {
+            input {
+                margin-bottom: 10px;
+            }
         }
 }
