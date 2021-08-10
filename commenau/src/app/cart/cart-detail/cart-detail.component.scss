@@ -154,14 +154,16 @@ td {
   .checkout__section {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column-reverse;
     padding: 0 10px;
     .order-btn {
       width: 100%;
-      margin: 0 0 10px;
+      margin: 0;
     }
     .checkout-btn {
       width: 100%;
       margin: 0;
+      margin: 0 0 10px;
     }
   }
 }

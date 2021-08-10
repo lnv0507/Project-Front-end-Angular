@@ -17,6 +17,7 @@ $gray: #e7e7e7;
     overflow: hidden;
     padding-bottom: 20px;
     border-radius: 3px;
+    margin-top: 100px !important;
     .food-bag {
         color: $black;
         text-align: center;
@@ -24,8 +25,8 @@ $gray: #e7e7e7;
         font-size: 2em;
     }
     .scroll {
-        height: 150px;
-        overflow-y: scroll;
+        max-height: 250px;
+        overflow-y: auto;
         .item-cart {
             color: $black;
             display: flex;
@@ -35,7 +36,9 @@ $gray: #e7e7e7;
             .item-food {
                 display: flex;
                 justify-content: space-between;
-                width: 100%;
+                flex: 1;
+                margin-right: 10px;
+                align-items: center;
                 .item-food__name {
                    line-height: 30px;
                    max-height: 60px;
@@ -62,18 +65,22 @@ $gray: #e7e7e7;
                 width: 40px;
                 height: 50px;
                 margin-right: 20px;
+                object-fit: cover;
             }
         }
     }
     .sub-total {
-        margin-top: 2em;
+        margin-top: 12px;
         border-top: solid 1px #141619;
         border-bottom: solid 1px #141619;
         padding: 20px;
         display: flex;
         justify-content: space-between;
         color: $black;
-        font-size: 2em;
+        font-size: 1.6em;
+        p {
+            margin-bottom: 0;
+        }
     }
     div {
         button {
@@ -81,7 +88,7 @@ $gray: #e7e7e7;
             width: 90%;
             height: 3em;
             color: $black;
-            margin-top: 50px;
+            margin-top: 20px;
             margin-left: 5%;
             border: none;
         }

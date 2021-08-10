@@ -154,7 +154,7 @@ $gray: #e7e7e7;
                 }
                 .scroll {
                     height: 225px;
-                    overflow-y: scroll;
+                    overflow-y: auto;
                     .item-cart {
                         color: $black;
                         display: flex;
@@ -162,9 +162,13 @@ $gray: #e7e7e7;
                         font-size: 1.5em;
                         margin-top: 10px;
                         .item-food {
-                            
                             justify-content: space-between;
                             width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            p {
+                                margin-bottom: 10px;
+                            }
                         }
                         p {
                             color: darkgray;
@@ -193,6 +197,7 @@ $gray: #e7e7e7;
                             height: 95px;
                             margin-right: 20px;
                             cursor: pointer;
+                            object-fit: cover;
                         }
                     }
                 }
@@ -206,6 +211,10 @@ $gray: #e7e7e7;
                     justify-content: space-between;
                     color: $black;
                     font-size: 1em;
+                    padding: 12px;
+                    p{
+                        margin-bottom: 0;
+                    }
                 }
                 div {
                     button {
@@ -215,18 +224,20 @@ $gray: #e7e7e7;
                         color: $black;
                         margin-top: 1em;
                         margin-left: 5%;
-                        border: none;
+                        border: 1px solid #ccc;
+                        border-radius: 2px;
                     }
                 }
                 .bag-button {
                     border: none;
                     font-size: 1em;
                     width: 90%;
-                    height: 3em;
+                    height: 2em;
                     color: $white;
                     background-color: $black;
                     margin-top: 10px;
                     margin-left: 5%;
+                    border-radius: 2px;
                 }
             }
         }
@@ -423,6 +434,17 @@ $gray: #e7e7e7;
     }
 }
 /* Medium Device = 1200px */
+@media only screen and (max-width: 992px) {
+    .menu-header, .menu-header2 {
+       justify-content: space-between;
+       padding: 0 12px;
+    }
+    .header #idLogo {
+        margin-left: 12px;
+    }
+
+  
+}
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .header {
         #idLogo {
