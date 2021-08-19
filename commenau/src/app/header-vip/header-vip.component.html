@@ -3,16 +3,71 @@
         <nav class="navbar navbar-expand-lg navbar-dark cyan">
             <!-- <div class="container"> -->
             <a routerLink="/trangchu">
-                <h2 id="idLogo" class="navbar-brand">C O M M E N A U</h2>
+                <h2 id="idLogo" class="navbar-brand">COMMENAU</h2>
             </a>
-            <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
-        &#9776;
-      </button>
-            <div id="main-nav" [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="toggleMobileMenu">
+            <label for="nav__mobile-id" class="navbar-toggler" type="button" >&#9776;</label>
+            <input type="checkbox" name="" class="nav__input" id="nav__mobile-id">
+            <label for="nav__mobile-id" class="overlay"></label>
+            <div class="nav__mobile">
+                <div class="nav__header">
+                    <span class="nav__header-title">COMMENAU</span>
+                    <label for="nav__mobile-id" class="nav__header-close">
+                        <i class="fas fa-times"></i>
+                    </label>
+                </div>
+
+                <ul class="nav__mobile-list">
+                    <li class="nav__mobile-item">
+                        <div class="nav__mobile-icon"><i class="fas fa-home"></i></div>
+                        <label for="nav__mobile-id" routerLink="/trangchu" class="nav__mobile-link">
+                            Trang chủ
+                        </label>
+                    </li>
+                    <li class="nav__mobile-item">
+                        <div class="nav__mobile-icon"><i class="fas fa-clipboard-list"></i></div>
+                        <label for="nav__mobile-id" routerLink="/menu" class="nav__mobile-link">
+                            Menu
+                        </label>
+                    </li>
+                    <li class="nav__mobile-item">
+                        <div class="nav__mobile-icon"><i class="fas fa-users"></i></div>
+                        <label for="nav__mobile-id" routerLink="/vechungtoi" class="nav__mobile-link">
+                            Về chúng tôi
+                        </label>
+                    </li>
+                    <li class="nav__mobile-item">
+                        <div class="nav__mobile-icon"><i class="fas fa-phone"></i></div>
+                        <label for="nav__mobile-id" routerLink="/lienhe" class="nav__mobile-link">
+                            Liên hệ
+                        </label>
+                    </li>
+                    <li *ngIf="!getCheckLogin()" class="nav__mobile-item">
+                        <div class="nav__mobile-icon"><i class="fas fa-sign-in-alt"></i></div>
+                        <label for="nav__mobile-id" routerLink="/dangnhap" class="nav__mobile-link">
+                            Đăng nhập
+                        </label>
+                    </li>
+                    <li *ngIf="getCheckLogin()" class="nav__mobile-item">
+                        <div class="nav__mobile-icon"><i class="fas fa-user"></i></div>
+                        <label for="nav__mobile-id" routerLink="/thongtin" class="nav__mobile-link">
+                            Tài khoản của tôi
+                        </label>
+                    </li>
+                    <li *ngIf="getCheckLogin()" class="nav__mobile-item">
+                        <div class="nav__mobile-icon"><i class="fas fa-sign-out-alt"></i></div>
+                        <label for="nav__mobile-id" href="" class="nav__mobile-link" (click)="logout()">
+                            Đăng xuất
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div id="main-nav" class="collapse navbar-collapse" id="toggleMobileMenu">
                 <div class="header-big">
                     <ul class="navbar-nav text-center ms-auto mb-2 mb-lg-0 me-auto">
                         <li class="nav-item">
-                            <a routerLink="/trangchu" class="menu-bar-title nav-link waves-light" (click)="isMenuCollapsed = true">
+                            <a routerLink="/trangchu" class="menu-bar-title nav-link waves-light" >
                                 <h5 class="menu-word">
                                     TRANG CHỦ
                                     <div class="thanh-bar"></div>
@@ -20,7 +75,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a routerLink="/menu" class="menu-bar-title nav-link waves-light" (click)="isMenuCollapsed = true">
+                            <a routerLink="/menu" class="menu-bar-title nav-link waves-light">
                                 <h5 class="menu-word">
                                     MENU
                                     <div class="thanh-bar"></div>
@@ -28,7 +83,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a routerLink="/vechungtoi" class="menu-bar-title nav-link waves-light" (click)="isMenuCollapsed = true">
+                            <a routerLink="/vechungtoi" class="menu-bar-title nav-link waves-light">
                                 <h5 class="menu-word">
                                     VỀ CHÚNG TÔI
                                     <div class="thanh-bar"></div>
@@ -43,38 +98,7 @@
                                 </h5>
                             </a>
                         </li>
-                        <li class="nav-item giohang">
-                            <a routerLink="/giohang" class="menu-bar-title nav-link waves-light">
-                                <h5 class="menu-word">
-                                    GIỎ HÀNG
-                                    <div class="thanh-bar"></div>
-                                </h5>
-                            </a>
-                        </li>
-                        <li *ngIf="!getCheckLogin()" class="nav-item dangnhap">
-                            <a routerLink="/dangnhap" class="menu-bar-title nav-link waves-light">
-                                <h5 class="menu-word">
-                                    ĐĂNG NHẬP
-                                    <div class="thanh-bar"></div>
-                                </h5>
-                            </a>
-                        </li>
-                        <li *ngIf="getCheckLogin()" class="nav-item dangnhap">
-                            <a routerLink="/thongtin" class="menu-bar-title nav-link waves-light">
-                                <h5 class="menu-word">
-                                    TÀI KHOẢN CỦA TÔI
-                                    <div class="thanh-bar"></div>
-                                </h5>
-                            </a>
-                        </li>
-                        <li *ngIf="getCheckLogin()" class="nav-item dangnhap">
-                            <a routerLink="/dangnhap" class="menu-bar-title nav-link waves-light" (click)="logout()">
-                                <h5 class="menu-word">
-                                    ĐĂNG XUẤT
-                                    <div class="thanh-bar"></div>
-                                </h5>
-                            </a>
-                        </li>
+                        
                     </ul>
                 </div>
             </div>
@@ -184,5 +208,8 @@
 </div>
 </div>
 </div>
+
+
+
 
 <router-outlet></router-outlet>
