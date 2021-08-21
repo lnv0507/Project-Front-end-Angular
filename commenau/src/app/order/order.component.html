@@ -13,11 +13,11 @@
                     </div>
                     <div class="info-detail-customer-wrap">
                         <h5 class="label-info">Địa chỉ:</h5>
-                        <p>{{orderInfo.address}}</p>
+                        <p class="label-content">{{orderInfo.address}}</p>
                     </div>
                     <div class="info-detail-customer-wrap">
                         <h5 class="label-info">Điện thoại:</h5>
-                        <p>{{orderInfo.phone}}</p>
+                        <p class="label-content">{{orderInfo.phone}}</p>
                     </div>
                 </div>
             </div>
@@ -84,5 +84,10 @@
 
         </div>
     </div>
+
+    <a (click)="createNewOrder()" class="btn-countinueOrder">
+        <i class="fas fa-arrow-left btn-countinueOrder__icon"></i>
+        ĐẶT ĐƠN HÀNG MỚI
+    </a>
 </div>
     

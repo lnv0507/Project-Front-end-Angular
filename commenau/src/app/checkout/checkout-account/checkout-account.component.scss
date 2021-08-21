@@ -83,6 +83,7 @@ a:hover {
     padding: 5px;
     padding-left: 20px;
     display: flex;
+    animation: FadeIn linear 0.3s;
     .user-checkout,
     .pass-checkout {
         float: left;
@@ -101,17 +102,26 @@ a:hover {
         display: flex;
         width: 100%;
         margin: 0 8px;
+        align-items: center;
         
         button {
-            margin-top: 10px;
             width: 20%;
+            height: 30px;
+            font-size: 14px;
         }
         a{
             width: 80%;
-            margin-top: 10px;
             padding-left: 20px;
             font-weight: 600;
         }
+    }
+}
+@keyframes FadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }
 @media only screen and (max-width: 768px){

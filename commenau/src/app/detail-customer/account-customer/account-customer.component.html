@@ -1,6 +1,6 @@
 <div class="content-left">
     <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="displayAlert" >
-        <strong><p>Thông tin đã được cập nhật thông tin thành công</p></strong>
+        <strong><p>Thông tin đã được cập nhật thông tin thành công.</p></strong>
         <button (click)="closeAlert()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     <form (ngSubmit)="updateProfile()" [formGroup]="customForm">
@@ -10,7 +10,7 @@
                 <input type="text" value="{{user.name}}" formControlName="name"
                 [ngClass]="{'is-invalid' : customForm.controls.name.invalid && customForm.controls.name.touched}">
                 <div class="invalid-feedback">
-                    Vui lòng nhập họ tên
+                    Vui lòng nhập họ tên.
                 </div>
             </div>
             
@@ -22,7 +22,7 @@
                 <input type="text" value="{{user.email}}" formControlName="email"
                 [ngClass]="{'is-invalid' : customForm.controls.email.invalid && customForm.controls.email.touched}">
                 <div class="invalid-feedback">
-                    Email không hợp lệ phải kết thúc bằng @gmail.com
+                    Email không hợp lệ phải kết thúc bằng "@gmail.com".
                 </div>
             </div>
             
@@ -33,7 +33,7 @@
                 <input type="text" value="{{user.address}}" formControlName="address"
                 [ngClass]="{'is-invalid' : customForm.controls.address.invalid && customForm.controls.address.touched}">
                 <div class="invalid-feedback">
-                    Vui lòng nhập địa chỉ
+                    Vui lòng nhập địa chỉ.
                 </div>
             </div>
             

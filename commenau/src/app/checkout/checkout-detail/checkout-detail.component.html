@@ -25,7 +25,7 @@
                 <input type="text" name="phone" formControlName="phone"
                 [ngClass]="{'is-invalid' : checkoutForm.controls.phone.invalid && checkoutForm.controls.phone.touched}">
                 <div class="invalid-feedback">
-                    Số điện thoại không hợp lệ, vui lòng nhập số điện thoại
+                    Số điện thoại không hợp lệ, vui lòng nhập số điện thoại.
                 </div>
             </div>
             <div class="email-checkout">
@@ -33,7 +33,7 @@
                 <input type="text" name="email" formControlName="email"
                 [ngClass]="{'is-invalid' : checkoutForm.controls.email.invalid && checkoutForm.controls.email.touched}">
                 <div class="invalid-feedback">
-                    Email không hợp lệ phải kết thúc bằng @gmail.com
+                    Email không hợp lệ phải kết thúc bằng "@gmail.com" .
                 </div>
             </div>
         </div>
@@ -77,7 +77,7 @@
         <p formControlName="totalPrice">{{getAllTotal() | currency: "VND":"symbol"}}</p>
     </div>
     <div class="btn-checkout">
-        <a><button [disabled]="!checkoutForm.valid">ĐẶT HÀNG</button></a>
+        <button [disabled]="!checkoutForm.valid"> <a>ĐẶT HÀNG</a> </button>
     </div>
 
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Order } from '../model/order';
 import { CartService } from '../Services/cart.service';
 import { UserService } from '../Services/user.service';
@@ -13,7 +14,7 @@ export class OrderComponent implements OnInit {
   items :any;
   public day: Date = new Date();
   orderInfo: Order = new Order()
-  constructor(private cartService: CartService, private voucherService: VoucherService, private userService: UserService) { 
+  constructor(private cartService: CartService, private voucherService: VoucherService, private router: Router,private route: ActivatedRoute) { 
   }
 
   ngOnInit(): void {
@@ -26,6 +27,11 @@ export class OrderComponent implements OnInit {
   }
   getAllTotal(){
     return this.cartService.getTotal() - this.getDisCount();
+  }
+  createNewOrder(){
+    this.cartService.setCartItems([]);
+    const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/trangchu';
+      this.router.navigateByUrl(returnUrl);
   }
 
 }
