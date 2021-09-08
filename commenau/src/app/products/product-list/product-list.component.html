@@ -46,7 +46,7 @@
 
                 <div *ngIf="productCheck; then thenMonday; else thenDay"></div>
                 <ng-template #thenMonday>
-                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12" *ngFor="
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12" *ngFor="
           let d of getProduct()
             | filter: search
             | paginate: { itemsPerPage: 12, currentPage: p }
@@ -82,7 +82,7 @@
                     </div>
                 </ng-template>
                 <ng-template #thenDay>
-                    <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12" *ngFor="
+                    <div class="col-xl-3 col-lg-6 col-md-12 col-sm-12" *ngFor="
           let d of dataProduct
             | filter: search
             | paginate: { itemsPerPage: 12, currentPage: p }
