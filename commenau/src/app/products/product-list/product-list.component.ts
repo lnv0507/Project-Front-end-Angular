@@ -62,13 +62,6 @@ export class ProductListComponent implements OnInit {
   }
   // haot dong lay product dung ngay hien tai
   public getProduct() {
-    // this.product.getDayProduct().forEach(element => {
-    //   let parse = JSON.parse(localStorage.getItem(element.id+'')|| '{}')
-    //   if(JSON.stringify(parse) == 'true' )
-    //     element.yeuthich = true;
-    //   else
-    //     element.yeuthich = false;
-    // });
     this.productCheck = true;
     return this.product.getDayProduct();
   }

@@ -57,11 +57,11 @@
                                 <ul class="product__item__pic__hover">
 
 
-                                    <li *ngIf="!d.yeuthich">
+                                    <li *ngIf="!d.favorite">
                                         <a (click)="addToWishlist(d)"><i class="fa fa-heart"></i></a>
                                     </li>
 
-                                    <li *ngIf="d.yeuthich">
+                                    <li *ngIf="d.favorite">
                                         <a (click)="removeWish(d)"><i class="fa fa-heart" style="color: red"></i></a>
                                     </li>
                                     <li>

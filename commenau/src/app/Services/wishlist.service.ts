@@ -28,7 +28,7 @@ export class WishlistService {
       item.price = product.price;
       item.quantity = true;
       item.img = product.img;
-      item.yeuthich = product.yeuthich;
+      item.favorite = product.favorite;
       this.wishlistItems.push(item);
 
       // cách của Lâm
@@ -61,14 +61,14 @@ export class WishlistService {
   }
   public addToWishlist(p: Product) {
     localStorage.setItem(p.id + '', 'true');
-    p.yeuthich = true;
+    p.favorite = true;
     this.addItem(p);
 
   }
 
   public removeWish(p: Product) {
     localStorage.setItem(p.id + '', 'false');
-    p.yeuthich = false;
+    p.favorite = false;
     this.removeItem(p);
   }
 

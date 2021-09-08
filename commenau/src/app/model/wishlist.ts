@@ -6,6 +6,6 @@ export class Wishlist {
   quantity!: boolean;
   des!: String;
   weekdays!: String;
-  yeuthich!: boolean;
+  favorite!: boolean;
   constructor() { }
 }

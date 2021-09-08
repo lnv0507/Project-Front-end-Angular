@@ -76,9 +76,9 @@ export class ProductsService {
     this.dataProduct.forEach(element => {
       let parse = JSON.parse(localStorage.getItem(element.id + '') || '{}')
       if (JSON.stringify(parse) == 'true') {
-        element.yeuthich = true;
+        element.favorite = true;
       } else {
-        element.yeuthich = false;
+        element.favorite = false;
       }
 
 
@@ -88,37 +88,37 @@ export class ProductsService {
   }
   // Lay danh sach product theo ngay`
   public getDay() {
-    let date = new Date();
-    let th = date.getDay();
-    let day_name = '';
-    switch (th) {
+    let date = new Date(); // list date of computer
+    let numberDay = date.getDay(); // get number day 0 1 2 3 4 5 6 7 same day
+    let dayName = '';
+    switch (numberDay) {
       case 0:
-        day_name = 'Chủ Nhật';
+        dayName = 'Chủ Nhật';
         break;
       case 1:
-        day_name = 'Thứ 2';
+        dayName = 'Thứ 2';
         break;
 
       case 2:
-        day_name = 'Thứ 3';
+        dayName = 'Thứ 3';
         break;
 
       case 3:
-        day_name = 'Thứ 4';
+        dayName = 'Thứ 4';
         break;
 
       case 4:
-        day_name = 'Thứ 5';
+        dayName = 'Thứ 5';
         break;
 
       case 5:
-        day_name = 'Thứ 6';
+        dayName = 'Thứ 6';
         break;
 
       case 6:
-        day_name = 'Thứ 7';
+        dayName = 'Thứ 7';
     }
-    return day_name;
+    return dayName;
   }
   public getDayProduct() {
     let dayName = this.getDay();
