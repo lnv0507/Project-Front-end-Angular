@@ -83,8 +83,8 @@ export class HeaderVipComponent implements OnInit {
   getTotal() {
     return this.cart.getTotal();
   }
-  getQuatity() {
-    return this.cart.getQuatity();
+  getQuantity() {
+    return this.cart.getQuantity();
   }
   logout(){
     return this.userService.logout();

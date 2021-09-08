@@ -14,7 +14,7 @@ export class OrderComponent implements OnInit {
   items :any;
   public day: Date = new Date();
   orderInfo: Order = new Order()
-  constructor(private cartService: CartService, private voucherService: VoucherService, private router: Router,private route: ActivatedRoute) { 
+  constructor(private cartService: CartService, private voucherService: VoucherService, private router: Router,private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {

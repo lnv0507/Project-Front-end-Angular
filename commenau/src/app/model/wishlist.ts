@@ -3,7 +3,7 @@ export class Wishlist {
   name!: String;
   price!: number;
   img!: String;
-  quatity!: boolean;
+  quantity!: boolean;
   des!: String;
   weekdays!: String;
   yeuthich!: boolean;

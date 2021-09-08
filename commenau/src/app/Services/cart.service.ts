@@ -7,10 +7,10 @@ import { ProductCart } from '../model/product-cart';
   providedIn: 'root',
 })
 export class CartService {
-  getQuatity() {
+  getQuantity() {
     let total = 0;
     for (let i of this.cartItems) {
-      total +=i.quatity;
+      total +=i.quantity;
     }
     return total;
   }
@@ -23,7 +23,7 @@ export class CartService {
     });
 
     if (exist) {
-      exist.quatity += product.quatity;
+      exist.quantity += product.quantity;
     } else {
       this.cartItems.push(product);
     }
@@ -38,13 +38,13 @@ export class CartService {
   getTotal() {
     let total = 0;
     for (let i of this.cartItems) {
-      total += i.price * i.quatity;
+      total += i.price * i.quantity;
     }
     return total;
   }
   setOrder(orderInfo: Order){
-  
+
   }
-  
+
 
 }

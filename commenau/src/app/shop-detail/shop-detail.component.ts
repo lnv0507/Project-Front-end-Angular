@@ -49,7 +49,7 @@ export class ShopDetailComponent implements OnInit, OnChanges {
       else
         this.product.yeuthich = false;
     });
-    
+
   }
 
   fullHeart() {
@@ -68,7 +68,7 @@ export class ShopDetailComponent implements OnInit, OnChanges {
     item.img = product.img;
     item.name = product.name;
     item.price = product.price;
-    item.quatity = 1;
+    item.quantity = 1;
     this.cartService.addItem(item);
   }
   public addToCartDetail() {
@@ -77,7 +77,7 @@ export class ShopDetailComponent implements OnInit, OnChanges {
     item.img = this.product.img;
     item.name = this.product.name;
     item.price = this.product.price;
-    item.quatity = this.value;
+    item.quantity = this.value;
     this.cartService.addItem(item);
   }
   reduceValue() {

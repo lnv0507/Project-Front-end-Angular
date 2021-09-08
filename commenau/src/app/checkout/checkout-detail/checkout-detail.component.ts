@@ -26,7 +26,7 @@ export class CheckoutDetailComponent implements OnInit {
   items : any;
   note = '';
   constructor(
-    private formBuilder: FormBuilder, 
+    private formBuilder: FormBuilder,
     private userService : UserService,
     private voucherService: VoucherService,
     private cartService: CartService,
@@ -45,7 +45,7 @@ export class CheckoutDetailComponent implements OnInit {
       this.user.email = '';
       this.user.phone = '';
     }
-    
+
     this.checkoutForm = this.formBuilder.group({
       name: [this.user.name, Validators.required],
       address: [this.user.address, Validators.required],

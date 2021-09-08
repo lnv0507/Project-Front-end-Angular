@@ -8,8 +8,8 @@
             <img src="{{ i.img }}" alt="" />
             <div class="item-food">
                 <span class="item-food__name">{{ i.name }}</span>
-                <span class="item-food__quantity" for="">{{ i.quatity }}</span>
-                <span class="item-food__curency" for="">{{ i.price * i.quatity| currency: "VND":true  }} </span>
+                <span class="item-food__quantity" for="">{{ i.quantity }}</span>
+                <span class="item-food__curency" for="">{{ i.price * i.quantity| currency: "VND":true }} </span>
             </div>
         </div>
     </div>
@@ -18,9 +18,9 @@
         <p class="sub-total__value">{{ getTotal() | currency: "VND":true }}</p>
     </div>
     <div class="popupBtn-list">
-         <a class="popupBtn__viewCart popupBtn" (click)="closeCart()" routerLink="/giohang">CHI TIẾT GIỎ HÀNG</a>
-         <a class="popupBtn__checkOut popupBtn" (click)="closeCart()" routerLink="/thanhtoan">THANH TOÁN</a>
+        <a class="popupBtn__viewCart popupBtn" (click)="closeCart()" routerLink="/giohang">CHI TIẾT GIỎ HÀNG</a>
+        <a class="popupBtn__checkOut popupBtn" (click)="closeCart()" routerLink="/thanhtoan">THANH TOÁN</a>
     </div>
-    
+
 
 </div>

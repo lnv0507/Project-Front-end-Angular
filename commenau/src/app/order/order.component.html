@@ -1,93 +1,91 @@
 <div class="container">
     <div class="row">
         <h1 class="title-order">ĐƠN HÀNG</h1>
-    <div class="order-detail">
-        <div class="order-left">
-            <div class="info-customer">
-                <h2>THÔNG TIN KHÁCH HÀNG</h2>
-                <hr>
-                <div class="info-detail-customer">
-                    <div class="info-detail-customer-wrap">
-                        <h5 class="label-info">Họ tên:</h5>
-                        <p class="label-content">{{orderInfo.name}}</p>
-                    </div>
-                    <div class="info-detail-customer-wrap">
-                        <h5 class="label-info">Địa chỉ:</h5>
-                        <p class="label-content">{{orderInfo.address}}</p>
-                    </div>
-                    <div class="info-detail-customer-wrap">
-                        <h5 class="label-info">Điện thoại:</h5>
-                        <p class="label-content">{{orderInfo.phone}}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="order-detail">
-                <h2>CHI TIẾT ĐƠN HÀNG</h2>
-                <hr>
-                <div class="order">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>
-                                    <h5>Sản phẩm</h5>
-                                </th>
-                                <th></th>
-                                <th class="right">
-                                    <h5>Tổng</h5>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr *ngFor="let i of items">
-                                <th>{{i.name}}</th>
-                                <th>x<span>{{i.quatity}}</span></th>
-                                <th class="right">{{i.price * i.quatity | currency: "VND":"symbol"}}</th>
-                            </tr>
-                        </tbody>
-                    </table>
+        <div class="order-detail">
+            <div class="order-left">
+                <div class="info-customer">
+                    <h2>THÔNG TIN KHÁCH HÀNG</h2>
                     <hr>
-                    <div class="discount-checkout wrap-checkout">
-                        <h5 class="bold">Giảm giá</h5>
-                        <p> {{getDisCount() | currency: "VND":"symbol"}}</p>
+                    <div class="info-detail-customer">
+                        <div class="info-detail-customer-wrap">
+                            <h5 class="label-info">Họ tên:</h5>
+                            <p class="label-content">{{orderInfo.name}}</p>
+                        </div>
+                        <div class="info-detail-customer-wrap">
+                            <h5 class="label-info">Địa chỉ:</h5>
+                            <p class="label-content">{{orderInfo.address}}</p>
+                        </div>
+                        <div class="info-detail-customer-wrap">
+                            <h5 class="label-info">Điện thoại:</h5>
+                            <p class="label-content">{{orderInfo.phone}}</p>
+                        </div>
                     </div>
-                    <div class="total-checkout wrap-checkout">
-                        <h5 class="bold">Tổng cộng</h5>
-                        <p class="bold">{{getAllTotal() | currency: "VND":"symbol"}}</p>
+                </div>
+                <div class="order-detail">
+                    <h2>CHI TIẾT ĐƠN HÀNG</h2>
+                    <hr>
+                    <div class="order">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h5>Sản phẩm</h5>
+                                    </th>
+                                    <th></th>
+                                    <th class="right">
+                                        <h5>Tổng</h5>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let i of items">
+                                    <th>{{i.name}}</th>
+                                    <th>x<span>{{i.quatity}}</span></th>
+                                    <th class="right">{{i.price * i.quatity | currency: "VND":"symbol"}}</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <hr>
+                        <div class="discount-checkout wrap-checkout">
+                            <h5 class="bold">Giảm giá</h5>
+                            <p> {{getDisCount() | currency: "VND":"symbol"}}</p>
+                        </div>
+                        <div class="total-checkout wrap-checkout">
+                            <h5 class="bold">Tổng cộng</h5>
+                            <p class="bold">{{getAllTotal() | currency: "VND":"symbol"}}</p>
+                        </div>
+                        <div class="note">
+                            <p> <strong>Ghi chú: </strong>{{orderInfo.note}}</p>
+                        </div>
                     </div>
-                    <div class="note">
-                        <p> <strong>Ghi chú: </strong>{{orderInfo.note}}</p>
+
+                </div>
+            </div>
+            <div class="order-right">
+                <div class="order-right-detail">
+                    <h2>THÔNG TIN ĐƠN HÀNG</h2>
+                    <div class="content-detail">
+                        <div class="id-order">
+                            <h5 class="label-info">Mã đơn hàng:</h5>
+                            <p>HD0932</p>
+                        </div>
+                        <div class="date-order">
+                            <h5 class="label-info">Ngày xuất</h5>
+                            <p>{{day | date: ' dd/MM/y'}}</p>
+                        </div>
+                        <div class="total-order">
+                            <h5 class="label-info">Tổng hóa đơn</h5>
+                            <p>{{getAllTotal() | currency: "VND":"symbol"}}</p>
+                        </div>
+
                     </div>
+
                 </div>
 
             </div>
         </div>
-        <div class="order-right">
-            <div class="order-right-detail">
-                <h2>THÔNG TIN ĐƠN HÀNG</h2>
-                <div class="content-detail">
-                    <div class="id-order">
-                        <h5 class="label-info">Mã đơn hàng:</h5>
-                        <p>HD0932</p>
-                    </div>
-                    <div class="date-order">
-                        <h5 class="label-info">Ngày xuất</h5>
-                        <p>{{day | date: ' dd/MM/y'}}</p>
-                    </div>
-                    <div class="total-order">
-                        <h5 class="label-info">Tổng hóa đơn</h5>
-                        <p>{{getAllTotal() | currency: "VND":"symbol"}}</p>
-                    </div>
 
-                </div>
-
-            </div>
-
-        </div>
+        <a (click)="createNewOrder()" class="btn-countinueOrder">
+            <i class="fas fa-arrow-left btn-countinueOrder__icon"></i> ĐẶT ĐƠN HÀNG MỚI
+        </a>
     </div>
-
-    <a (click)="createNewOrder()" class="btn-countinueOrder">
-        <i class="fas fa-arrow-left btn-countinueOrder__icon"></i>
-        ĐẶT ĐƠN HÀNG MỚI
-    </a>
-</div>
-    

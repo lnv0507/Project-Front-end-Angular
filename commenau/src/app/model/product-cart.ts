@@ -3,7 +3,7 @@ export class ProductCart {
     name!: String;
     price!: number;
     img!: String;
-    quatity!: number;
+    quantity!: number;
     constructor(){}
 
 

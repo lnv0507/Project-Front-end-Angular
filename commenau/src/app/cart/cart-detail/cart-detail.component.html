@@ -30,13 +30,13 @@
             <td class="price price_table">{{ item.price | currency: "VND":"symbol" }}</td>
             <td class="quantity">
                 <div class="hihi">
-                    <button (click)="increaseQuatity(item.id)">+</button>
-                    <input type="text" value="{{ item.quatity }}" disabled/>
-                    <button (click)="reduceQuatity(item.id)">-</button>
+                    <button (click)="increaseQuantity(item.id)">+</button>
+                    <input type="text" value="{{ item.quantity }}" disabled/>
+                    <button (click)="reduceQuantity(item.id)">-</button>
                 </div>
-                
+
             </td>
-            <td class="total">{{ item.price * item.quatity | currency: "VND":"symbol" }}</td>
+            <td class="total">{{ item.price * item.quantity | currency: "VND":"symbol" }}</td>
         </tr>
     </tbody>
 </table>

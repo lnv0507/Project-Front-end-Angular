@@ -4,8 +4,8 @@
 <div class="detail-coupon" *ngIf="showCoupon">
     <div class="wrap-coupon">
         <input type="text" placeholder="Mã ưu đãi" [(ngModel)]="nameVoucher">
-        <button class="btn-coupon" (click)="applyVoucher(nameVoucher) " >ÁP DỤNG</button>
+        <button class="btn-coupon" (click)="applyVoucher(nameVoucher) ">ÁP DỤNG</button>
     </div>
-    
+
     <p class="checkvoucher" *ngIf="getCheckMessage()">{{getMessage()}}</p>
 </div>

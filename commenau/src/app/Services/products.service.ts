@@ -7,15 +7,13 @@ import {
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Product } from '../model/product';
-import { WishlistService } from './wishlist.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProductsService {
-  dataProduct!: Product[];
-  dataProduct2: Array<Product> = [];
-  private wistListService!: WishlistService;
+  dataProduct!: Array<Product>;
+  dataProduct2!: Array<Product> ;
   weekDays = [
     { day: 'Thứ 2' },
     { day: 'Thứ 3' },
@@ -68,7 +66,7 @@ export class ProductsService {
 
   }
   // List product follow day of weeks
-  public productDay(day: String): Product[] {
+  public productDay(day: String) {
     this.dataProduct2 = [];
     for (let i of this.dataProduct) {
       if (day === i.weekdays) {
@@ -85,11 +83,6 @@ export class ProductsService {
 
 
     });
-    // if (this.wistListService.getWishlistItems().length == 0) {
-    //   this.dataProduct.forEach(element => {
-    //     element.yeuthich = false;
-    //   });
-    // }
 
     return this.dataProduct2;
   }
@@ -128,8 +121,8 @@ export class ProductsService {
     return day_name;
   }
   public getDayProduct() {
-    let day_name = this.getDay();
-    return this.productDay(day_name);
+    let dayName = this.getDay();
+    return this.productDay(dayName);
   }
   // check yeu thich luu lai vao localstrorage
   // public getCheckWishList() {

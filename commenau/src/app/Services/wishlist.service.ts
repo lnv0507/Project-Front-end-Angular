@@ -20,13 +20,13 @@ export class WishlistService {
 
     });
     if (exist) {
-      exist.quatity == false;
+      exist.quantity == false;
     } else {
       const item: Wishlist = new Wishlist();
       item.id = product.id;
       item.name = product.name;
       item.price = product.price;
-      item.quatity = true;
+      item.quantity = true;
       item.img = product.img;
       item.yeuthich = product.yeuthich;
       this.wishlistItems.push(item);

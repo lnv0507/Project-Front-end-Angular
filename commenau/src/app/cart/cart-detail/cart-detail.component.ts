@@ -12,11 +12,12 @@ export class CartDetailComponent implements OnInit {
   constructor(private cart: CartService) {}
 
   ngOnInit(): void {}
-  increaseQuatity(id: any) {
+  // increase in number items cart
+  increaseQuantity(id: any) {
+    // loop items of list
     for (let p of this.items) {
-      if (p.id === id) {
-        p.quatity++;
-      }
+      if (p.id === id)  // can take out id === id if true => quantity++
+        p.quantity++;
     }
     this.cart.setCartItems(this.items);
   }
@@ -25,12 +26,12 @@ export class CartDetailComponent implements OnInit {
     var total = new Number(this.cart.getTotal());
     return (total > 0) ? true : false;
   }
-
-  reduceQuatity(id: any) {
+// reduce in number items cart
+  reduceQuantity(id: any) {
     for (let p of this.items) {
       if (p.id === id) {
-        if (p.quatity === 1) p.quatity = 1;
-        else p.quatity--;
+        if (p.quantity === 1) p.quantity = 1;
+        else p.quantity--;
       }
     }
     this.cart.setCartItems(this.items);

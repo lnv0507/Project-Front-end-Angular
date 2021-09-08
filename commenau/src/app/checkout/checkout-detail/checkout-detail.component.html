@@ -1,20 +1,18 @@
-<form [formGroup]="checkoutForm" (ngSubmit)= "sendOrder()">
-<div class="detail-left">
-    <hr>
-    <h1>CHI TIẾT THANH TOÁN</h1>
-    
+<form [formGroup]="checkoutForm" (ngSubmit)="sendOrder()">
+    <div class="detail-left">
+        <hr>
+        <h1>CHI TIẾT THANH TOÁN</h1>
+
         <div class="name-checkout">
             <h5>Họ tên*</h5>
-            <input type="text" name="name" formControlName="name"
-            [ngClass]="{'is-invalid' : checkoutForm.controls.name.invalid && checkoutForm.controls.name.touched}">
+            <input type="text" name="name" formControlName="name" [ngClass]="{'is-invalid' : checkoutForm.controls.name.invalid && checkoutForm.controls.name.touched}">
             <div class="invalid-feedback">
                 Vui lòng nhập họ tên.
             </div>
         </div>
         <div class="address-checkout">
             <h5>Địa chỉ*</h5>
-            <input type="text" name="address" formControlName="address"
-            [ngClass]="{'is-invalid' : checkoutForm.controls.address.invalid && checkoutForm.controls.address.touched}">
+            <input type="text" name="address" formControlName="address" [ngClass]="{'is-invalid' : checkoutForm.controls.address.invalid && checkoutForm.controls.address.touched}">
             <div class="invalid-feedback">
                 Vui lòng nhập địa chỉ.
             </div>
@@ -22,63 +20,61 @@
         <div class="email_phone">
             <div class="phone-checkout">
                 <h5>Số điện thoại*</h5>
-                <input type="text" name="phone" formControlName="phone"
-                [ngClass]="{'is-invalid' : checkoutForm.controls.phone.invalid && checkoutForm.controls.phone.touched}">
+                <input type="text" name="phone" formControlName="phone" [ngClass]="{'is-invalid' : checkoutForm.controls.phone.invalid && checkoutForm.controls.phone.touched}">
                 <div class="invalid-feedback">
                     Số điện thoại không hợp lệ, vui lòng nhập số điện thoại.
                 </div>
             </div>
             <div class="email-checkout">
                 <h5>Email*</h5>
-                <input type="text" name="email" formControlName="email"
-                [ngClass]="{'is-invalid' : checkoutForm.controls.email.invalid && checkoutForm.controls.email.touched}">
+                <input type="text" name="email" formControlName="email" [ngClass]="{'is-invalid' : checkoutForm.controls.email.invalid && checkoutForm.controls.email.touched}">
                 <div class="invalid-feedback">
                     Email không hợp lệ phải kết thúc bằng "@gmail.com" .
                 </div>
             </div>
         </div>
-        
+
         <h5>Bạn chưa có tài khoản? <a routerLink="/dangky">Đăng kí ngay</a></h5>
         <div class="note-checkout">
             <h5>Ghi chú đặt hàng</h5>
             <textarea name="note-checkout" id="note-checkout" cols="130" rows="8" formControlName="note"></textarea>
         </div>
-</div>
-<div class="detail-right">
-    <h1>ĐƠN HÀNG CỦA BẠN</h1>
-    <hr>
-    <table>
-        <thead>
-            <tr>
-                <th>
-                    <h5>Sản phẩm</h5>
-                </th>
-                <th></th>
-                <th class="right">
-                    <h5>Tổng</h5>
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let i of items">
-                <th>{{i.name}}</th>
-                <th>x<span>{{i.quatity}}</span></th>
-                <th class="right">{{i.price * i.quatity | currency: "VND":"symbol"}}</th>
-            </tr>
-        </tbody>
-    </table>
-    <hr>
-    <div class="discount-checkout">
-        <h5>Giảm giá</h5>
-        <p>{{getDisCount() | currency: "VND":"symbol"}}</p>
     </div>
-    <div class="total-checkout">
-        <h5>Tổng cộng</h5>
-        <p formControlName="totalPrice">{{getAllTotal() | currency: "VND":"symbol"}}</p>
-    </div>
-    <div class="btn-checkout">
-        <button [disabled]="!checkoutForm.valid"> <a>ĐẶT HÀNG</a> </button>
-    </div>
+    <div class="detail-right">
+        <h1>ĐƠN HÀNG CỦA BẠN</h1>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <h5>Sản phẩm</h5>
+                    </th>
+                    <th></th>
+                    <th class="right">
+                        <h5>Tổng</h5>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of items">
+                    <th>{{i.name}}</th>
+                    <th>x<span>{{i.quatity}}</span></th>
+                    <th class="right">{{i.price * i.quatity | currency: "VND":"symbol"}}</th>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <div class="discount-checkout">
+            <h5>Giảm giá</h5>
+            <p>{{getDisCount() | currency: "VND":"symbol"}}</p>
+        </div>
+        <div class="total-checkout">
+            <h5>Tổng cộng</h5>
+            <p formControlName="totalPrice">{{getAllTotal() | currency: "VND":"symbol"}}</p>
+        </div>
+        <div class="btn-checkout">
+            <button [disabled]="!checkoutForm.valid"> <a>ĐẶT HÀNG</a> </button>
+        </div>
 
-</div>
+    </div>
 </form>

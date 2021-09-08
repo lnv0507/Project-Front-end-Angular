@@ -22,9 +22,9 @@ export function checkExistPhone(phones: any = []){
 export class RegisterComponent implements OnInit {
   formRegister!: FormGroup;
 
-  constructor(private formBuilder :FormBuilder, private serviceUser : UserService,private router: Router,private route: ActivatedRoute) { 
+  constructor(private formBuilder :FormBuilder, private serviceUser : UserService,private router: Router,private route: ActivatedRoute) {
 
-    
+
   }
 
 
@@ -74,11 +74,11 @@ export class RegisterComponent implements OnInit {
       this.router.navigateByUrl(returnUrl);
     }
     ) ;
-    
-    
+
+
 
   }
-  
+
 }
 function gmailValidate(formControl: FormControl) {
   if(formControl.value.includes('@gmail.com')){

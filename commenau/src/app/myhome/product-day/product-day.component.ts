@@ -55,7 +55,7 @@ export class ProductDayComponent implements OnInit {
     item.img = product.img;
     item.name = product.name;
     item.price = product.price;
-    item.quatity = 1;
+    item.quantity = 1;
     this.cartService.addItem(item);
   }
   public addToWishlist(p: Product) {

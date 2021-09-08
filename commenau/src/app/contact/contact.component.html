@@ -60,27 +60,24 @@
         </div>
         <form [formGroup]="contactForm" (ngSubmit)="sendContact()">
             <div class="row">
-                <div class="col-lg-6 col-md-6 input-contact" >
-                    <input type="text" placeholder="Tên của bạn" formControlName="name"
-                    [ngClass]="{'is-invalid' : contactForm.controls.name.invalid && contactForm.controls.name.touched}">
+                <div class="col-lg-6 col-md-6 input-contact">
+                    <input type="text" placeholder="Tên của bạn" formControlName="name" [ngClass]="{'is-invalid' : contactForm.controls.name.invalid && contactForm.controls.name.touched}">
                     <div class="invalid-feedback">
                         Vui lòng nhập họ và tên
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 input-contact" >
-                    <input type="text" placeholder=" Email" formControlName="email"
-                    [ngClass]="{'is-invalid' : contactForm.controls.email.invalid && contactForm.controls.email.touched}">
+                <div class="col-lg-6 col-md-6 input-contact">
+                    <input type="text" placeholder=" Email" formControlName="email" [ngClass]="{'is-invalid' : contactForm.controls.email.invalid && contactForm.controls.email.touched}">
                     <div class="invalid-feedback">
                         Email không đúng phải kết thúc bằng @gmail.com
                     </div>
                 </div>
-                <div class="col-lg-12 text-center" >
-                    <textarea placeholder="Tin nhắn của bạn" formControlName="message"
-                    [ngClass]="{'is-invalid' : contactForm.controls.message.invalid && contactForm.controls.message.touched}"></textarea>
+                <div class="col-lg-12 text-center">
+                    <textarea placeholder="Tin nhắn của bạn" formControlName="message" [ngClass]="{'is-invalid' : contactForm.controls.message.invalid && contactForm.controls.message.touched}"></textarea>
                     <div class="invalid-feedback">
                         Vui lòng nhập ít nhất 20 ký tự
                     </div>
-                    <button class="site-btn" [disabled]="!contactForm.valid" >GỬI TIN NHẮN</button>
+                    <button class="site-btn" [disabled]="!contactForm.valid">GỬI TIN NHẮN</button>
                 </div>
             </div>
         </form>
