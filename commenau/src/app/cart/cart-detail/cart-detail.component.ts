@@ -21,6 +21,11 @@ export class CartDetailComponent implements OnInit {
     this.cart.setCartItems(this.items);
   }
 
+  checkTotal(){
+    var total = new Number(this.cart.getTotal());
+    return (total > 0) ? true : false;
+  }
+
   reduceQuatity(id: any) {
     for (let p of this.items) {
       if (p.id === id) {
