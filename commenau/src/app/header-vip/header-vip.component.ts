@@ -95,6 +95,12 @@ export class HeaderVipComponent implements OnInit {
   getAllProduct(){
     return this.product.getDayProduct();
   }
+  checkQuantityCart(){
+    if(this.cart.getQuantity() > 0){
+      return true;
+    }
+    return false;
+  }
 
 
 

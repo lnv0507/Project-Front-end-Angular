@@ -42,8 +42,7 @@
 </table>
 <div class="footer-list-btn">
     <a class="countinue-order-btn" routerLink="/menu">TIẾP TỤC ĐẶT HÀNG</a>
-    <div class="wrap-checkout-btn">
-        <a *ngIf="!checkTotal()" class="checkout-btn checkout-btn--disible">THANH TOÁN</a>
-        <a *ngIf="checkTotal()" routerLink="/thanhtoan" class="checkout-btn">THANH TOÁN</a>
-    </div>
+    <a *ngIf="!checkTotal()" class="checkout-btn--disible">THANH TOÁN</a>
+    <a *ngIf="checkTotal()" routerLink="/thanhtoan" class="checkout-btn">THANH TOÁN</a>
+ 
 </div>

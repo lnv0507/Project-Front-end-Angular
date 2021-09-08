@@ -168,7 +168,7 @@
                         <div>
                             <a routerLink="/giohang"> <button>XEM GIỎ HÀNG</button></a>
                         </div>
-                        <a routerLink="/thanhtoan"><button class="bag-button">THANH TOÁN</button></a>
+                        <a *ngIf="checkQuantityCart()" routerLink="/thanhtoan"><button class="bag-button">THANH TOÁN</button></a>
                     </div>
                 </div>
             </div>

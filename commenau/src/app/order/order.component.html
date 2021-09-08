@@ -40,7 +40,7 @@
                             <tbody>
                                 <tr *ngFor="let i of items">
                                     <th>{{i.name}}</th>
-                                    <th>x<span>{{i.quatity}}</span></th>
+                                    <th>x<span>{{i.quantity}}</span></th>
                                     <th class="right">{{i.price * i.quatity | currency: "VND":"symbol"}}</th>
                                 </tr>
                             </tbody>
@@ -85,7 +85,7 @@
             </div>
         </div>
 
-        <a (click)="createNewOrder()" class="btn-countinueOrder">
-            <i class="fas fa-arrow-left btn-countinueOrder__icon"></i> ĐẶT ĐƠN HÀNG MỚI
+        <a (click)="createNewOrder()" class="btn-countinue-order">
+            <i class="fas fa-arrow-left btn-countinue-order__icon"></i> ĐẶT ĐƠN HÀNG MỚI
         </a>
     </div>

@@ -1,5 +1,6 @@
+
 hr {
-    width: 300px;
+    width: 100%;
     display: block;
     height: 1px;
     border: 0;
@@ -33,95 +34,66 @@ h1{
     color: #2b82ad;
 }
 
-.checkvoucher {
-    font-size: 13px;
-    color: red;
-    width: 300px;
+.cart-right {
+    margin-right: 130px;
 }
-.total-cart {
-    margin-bottom: 40px;
-}
-
-.items-total-cart {
-    width: 200px;
-    height: 100px;
-    .temporary-money,
-    .discount,
-    .total-money {
-        width: 300px;
-        height: 26px;
-        .text-left {
-            float: left;
-        }
-        .text-right {
-            float: right;
-        }
-    }
-    .total-money {
-        h5 {
-            font-weight: 600;
-            font-size: 16px;
-        }
-    }
+.header-title {
+    margin-bottom: 0;
+    font-size: 20px;
+    color: #2b82ad;
+    font-weight: 500;
 }
 
-.btn-order {
-    width: 300px;
-    height: 30px;
-    margin-bottom: 20px;
-    background-color: #2b82ad;
-    color: white;
-    border: 0px;
-    font-weight: bolder;
-    border-radius: 20px;
-    margin-top: 20px;
-    a {
-        color: white;
-    }
-    a:hover {
-        color: black;
+.total-cart__list {
+    list-style: none;
+    padding-left: 0;
+    .total-cart__item {
+        display: flex;
+        justify-content: space-between;
     }
 }
 
 .coupon-cart {
-    .items-coupon {
-        width: 400px;
-        input,
-        button {
-            width: 300px;
-            height: 30px;
-            margin-top: 10px;
-            text-align: center;
-            color: black;
-            font-size: 10px;
-            font-weight: bolder;
-        }
-        input {
-            border: black solid 2px;
-        }
-        button {
-            border: black solid 2px;
-            background-color: #dbdbdb;
-        }
-        button:hover {
-            background-color: black;
-            color: white;
-        }
+    .coupon-code{
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        color: black;
+        font-size: 14px;
+        font-weight: bolder;
+        font-weight: 500;
+        border: 2px solid #000;
     }
+    .coupon-validate {
+        font-size: 14px;
+        color: red;
+        width: 300px;
+        margin-bottom: 0;
+    }
+    .coupon-submit {
+        width: 100%;
+        color: #fff;
+        border-radius: 3px;
+        border: none;
+        padding: 5px 12px;
+        font-weight: 500;
+        background-color: #000;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    .coupon-submit:hover {
+        opacity: 0.9;
+        
+    }
+        
 }
 @media only screen and (max-width: 1023px){
-    .total-cart{
-        float: right;
-        width: 93%;
-    }
-    .coupon-cart{
-        float:right;
-        width: 93%;
-    }
+   .cart-right {
+    margin-right: 0;
+   }
 }
 // moblie
 @media only screen and (max-width: 770px){
-    
 }
 //tablet
 @media only screen and (min-width: 770px ) and (max-width: 1023px){

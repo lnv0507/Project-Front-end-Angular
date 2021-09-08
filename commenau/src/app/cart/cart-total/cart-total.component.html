@@ -1,28 +1,28 @@
-<div class="total-cart">
-    <h1>TỔNG GIỎ HÀNG</h1>
-    <hr />
-    <div class="items-total-cart">
-        <div class="temporary-money">
-            <h5 class="text-left">Tạm thu</h5>
-            <h5 class="text-right">{{getTotal() | currency: "VND":"symbol"}}</h5>
-        </div>
-        <div class="discount">
-            <h5 class="text-left">Giảm giá</h5>
-            <h5 class="text-right">{{getDiscount() | currency: "VND":"symbol"}}</h5>
-        </div>
+
+<div class="info-cart">
+        <h2 class="total-cart__title header-title">TỔNG GIỎ HÀNG</h2>
         <hr />
-        <div class="total-money">
-            <h5 class="text-left">Tổng Cộng</h5>
-            <h5 class="text-right">{{ getTotalAll() | currency: "VND":"symbol"}}</h5>
-        </div>
+        <ul class="total-cart__list">
+            <li class="total-cart__item">
+                <h5 class="total-cart__label">Tạm thu</h5>
+                <h5 class="total-car__price">{{getTotal() | currency: "VND":"symbol"}}</h5>
+            </li>
+            <li class="total-cart__item">
+                <h5 class="total-cart__label">Giảm giá</h5>
+                <h5 class="total-cart__price">{{getDiscount() | currency: "VND":"symbol"}}</h5>
+            </li>
+            <hr />
+            <li class="total-cart__item">
+                <h5 class="total-cart__label">Tổng Cộng</h5>
+                <h5 class="total-cart__price">{{ getTotalAll() | currency: "VND":"symbol"}}</h5>
+            </li>
+        </ul>
     </div>
-</div>
-<div class="coupon-cart">
-    <h1>PHIẾU ƯU ĐÃI</h1>
-    <hr />
-    <div class="items-coupon">
-        <input type="text" placeholder="Mã ưu đãi" [(ngModel)]="nameVoucher" />
-        <p class="checkvoucher" *ngIf="getCheckMessage()">{{getMessage()}}</p>
-        <button (click)="applyVoucher(nameVoucher)" class="btn btn-light">ÁP DỤNG MÃ</button>
+    <div class="coupon-cart">
+        <h1 class="coupon-cart__title header-title">PHIẾU ƯU ĐÃI</h1>
+        <hr />
+        <input class="coupon-code" type="text" placeholder="Mã ưu đãi" [(ngModel)]="nameVoucher" />
+        <p class="coupon-validate" *ngIf="getCheckMessage()">{{getMessage()}}</p>
+        <button (click)="applyVoucher(nameVoucher)" class="btn coupon-submit" >ÁP DỤNG MÃ</button>
     </div>
-</div>
+

@@ -58,8 +58,8 @@
             <tbody>
                 <tr *ngFor="let i of items">
                     <th>{{i.name}}</th>
-                    <th>x<span>{{i.quatity}}</span></th>
-                    <th class="right">{{i.price * i.quatity | currency: "VND":"symbol"}}</th>
+                    <th>x<span>{{i.quantity}}</span></th>
+                    <th class="right">{{i.price * i.quantity | currency: "VND":"symbol"}}</th>
                 </tr>
             </tbody>
         </table>
@@ -72,9 +72,9 @@
             <h5>Tổng cộng</h5>
             <p formControlName="totalPrice">{{getAllTotal() | currency: "VND":"symbol"}}</p>
         </div>
-        <div class="btn-checkout">
-            <button [disabled]="!checkoutForm.valid"> <a>ĐẶT HÀNG</a> </button>
-        </div>
+        <button *ngIf="!checkoutForm.valid" [disabled]="!checkoutForm.valid" class="btn-checkout--disible">ĐẶT HÀNG</button>
+        <button *ngIf="checkoutForm.valid" class="btn-checkout" [disabled]="!checkoutForm.valid">ĐẶT HÀNG</button>
+
 
     </div>
 </form>
