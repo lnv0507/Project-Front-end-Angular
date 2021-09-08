@@ -88,6 +88,24 @@
       "password": "123456",
       "address": "23 Nguyễn Khang",
       "urlImg": "assets/img/avatar/avartar3.jpg"
+    },
+    {
+      "id": "10",
+      "name": "lam",
+      "email": "lamdili1nh.nguyen@gmail.com",
+      "phone": 937983204,
+      "password": "123123",
+      "address": "",
+      "urlImg": "assets/img/avatar/avatar1.png"
+    },
+    {
+      "id": "11",
+      "name": "Nguyễn Viết Lâm",
+      "email": "damvu2808@gmail.com",
+      "phone": 937983201,
+      "password": "123123",
+      "address": "",
+      "urlImg": "assets/img/avatar/avatar1.png"
     }
   ],
   "voucher": [

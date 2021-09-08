@@ -12,9 +12,8 @@ export class CartHeaderComponent {
   checkCart = false;
   close = "close-cart";
   constructor(private modalService: NgbModal,
-    private cart: CartService,) {}
+    private cart: CartService,) { }
   open(content: any) {
-    console.log('Hello Lam Dep Trai');
     this.modalService
       .open(content, { ariaLabelledBy: 'modal-basic-title' })
       .result.then(
@@ -41,7 +40,7 @@ export class CartHeaderComponent {
   }
 
   // dong the cart
-  closeCart(){
+  closeCart() {
     return this.checkCart = true;
   }
 }
