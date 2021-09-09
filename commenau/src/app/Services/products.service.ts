@@ -13,7 +13,7 @@ import { Product } from '../model/product';
 })
 export class ProductsService {
   dataProduct!: Array<Product>;
-  dataProduct2!: Array<Product> ;
+  dataProduct2!: Array<Product>;
   weekDays = [
     { day: 'Thứ 2' },
     { day: 'Thứ 3' },
@@ -81,7 +81,6 @@ export class ProductsService {
         element.favorite = false;
       }
 
-
     });
 
     return this.dataProduct2;
@@ -121,8 +120,7 @@ export class ProductsService {
     return dayName;
   }
   public getDayProduct() {
-    let dayName = this.getDay();
-    return this.productDay(dayName);
+    return this.productDay(this.getDay());
   }
   // check yeu thich luu lai vao localstrorage
   // public getCheckWishList() {

@@ -8,6 +8,7 @@ import { HistoryOrder } from '../model/history-order';
   providedIn: 'root'
 })
 export class HistoryOrderService {
+  historyOrders!: Array<HistoryOrder>;
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-type': 'application/json',
@@ -38,19 +39,25 @@ export class HistoryOrderService {
   }
 
 
-  historyOrders!: Array<HistoryOrder>;
 
-  public getData(){
-    this.getHistoryOrders().subscribe(data =>{
+  public getAboutCart(idUser: String) {
+    let arrCart = this.historyOrders.filter(item => {
+      return item.userId === idUser;
+    });
+
+    return arrCart;
+  }
+  public getData() {
+    this.getHistoryOrders().subscribe(data => {
       this.historyOrders = data;
-    })
-    return this.historyOrders;
+    });
+
   }
 
-  public addHistoryOrder(historyOrder: HistoryOrder){
+  public addHistoryOrder(historyOrder: HistoryOrder) {
     return this.httpClient.post('http://localhost:3000/historyOrder/', historyOrder);
   }
 
-  
-  
+
+
 }

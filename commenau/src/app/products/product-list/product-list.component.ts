@@ -18,7 +18,7 @@ export class ProductListComponent implements OnInit {
   totalRecords!: String;
   p: number = 1;
   search = '';
-  dataProduct: Array<Product> = [];
+  dataProduct!: Array<Product>;
   dataProduct2 = this.product.dataProduct;
   weekDays = [{ day: 'string' }];
   productCheck = true;
@@ -43,11 +43,9 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     // load connect
-
     this.connect();
-    this.getWishList();
+    // this.getWishList();
 
-    console.log(this.getProduct())
   }
   // connect product
   public connect() {
@@ -55,9 +53,9 @@ export class ProductListComponent implements OnInit {
   }
   // hoat dong click product theo ngay
   public listProductDay(day: String): Product[] {
+
     this.dataProduct = this.product.productDay(day);
     this.productCheck = false;
-    console.log(this.dataProduct);
     return this.dataProduct;
   }
   // haot dong lay product dung ngay hien tai
@@ -65,8 +63,6 @@ export class ProductListComponent implements OnInit {
     this.productCheck = true;
     return this.product.getDayProduct();
   }
-
-
   public setOrder(value: string) {
     if (this.order === value) {
       this.reverse = !this.reverse;

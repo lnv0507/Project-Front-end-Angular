@@ -59,10 +59,6 @@ export class ProductDayComponent implements OnInit {
     this.cartService.addItem(item);
   }
   public addToWishlist(p: Product) {
-    // this.getProduct().forEach(element => {
-    //     element.id == p.id ? element.yeuthich = true : ''
-    // });
-    // localStorage.setItem(p.id + '', 'true');
     return this.wishlistService.addToWishlist(p);
   }
 

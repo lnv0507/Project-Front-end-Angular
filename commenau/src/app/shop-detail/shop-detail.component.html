@@ -68,10 +68,10 @@
                     <a class="addCart" (click)="addToCartDetail()" class="primary-btn">Thêm Vào Giỏ Hàng</a
           >
           <div  class="heart-icon">
-          <span *ngIf="!product.yeuthich" class="icon_heart_alt">
+          <span *ngIf="!product.favorite" class="icon_heart_alt">
               <i (click)="addToWishlist(product)" class="fas fa-heart"></i>
             </span>
-            <span *ngIf="product.yeuthich" class="icon_heart_alt">
+            <span *ngIf="product.favorite" class="icon_heart_alt">
               <i (click)="removeWish(product)" class="fas fa-heart" style="color: red;"></i>
             </span>
           </div>

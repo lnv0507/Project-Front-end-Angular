@@ -40,6 +40,7 @@ export class CheckoutDetailComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    this.historyOrderService.getData();
     this.items = this.cartService.getCartItems();
     if(this.userService.getCheckLogin()){
       this.user = this.userService.user;
@@ -86,7 +87,7 @@ export class CheckoutDetailComponent implements OnInit {
 
   saveHistoryOrder(){
     const listOrder = this.cartService.getCartItems();
-    const id = this.historyOrderService.getData().length + 1 +'';
+    const id = this.historyOrderService.historyOrders.length + 1 +'';
     const orderHistory = new HistoryOrder();
 
     orderHistory.id = id;
@@ -101,12 +102,12 @@ export class CheckoutDetailComponent implements OnInit {
     orderHistory.discount = this.voucherService.getDiscount();
     orderHistory.total = this.cartService.getTotal() - this.voucherService.getDiscount();
     orderHistory.listOrder = listOrder;
-    
+
     this.historyOrderService.addHistoryOrder(orderHistory).subscribe(data =>{
       console.log(data);
     })
 
-    
+
   }
 
 }

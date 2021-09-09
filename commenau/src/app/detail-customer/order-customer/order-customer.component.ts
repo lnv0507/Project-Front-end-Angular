@@ -10,26 +10,23 @@ import { UserService } from 'src/app/Services/user.service';
   styleUrls: ['./order-customer.component.scss']
 })
 export class OrderCustomerComponent implements OnInit {
-  
-  historyOrderList!:Array<HistoryOrder>;
-  
-  constructor(private historyOrderService: HistoryOrderService, private userService : UserService) {
+
+  historyOrderList!: Array<HistoryOrder>;
+
+  constructor(private historyOrderService: HistoryOrderService, private userService: UserService) {
   }
 
   ngOnInit(): void {
-
+    this.historyOrderService.getData();
   }
 
-  getHistoryOrders(){
+  getHistoryOrders() {
     const idUser = this.userService.user.id;
-    this.historyOrderList = this.historyOrderService.getData().filter(item =>{
-      return item.userId === idUser;
-    });
-
-    return this.historyOrderList;
+    this.historyOrderList = this.historyOrderService.getAboutCart(idUser);
+    return  this.historyOrderList;
   }
-  
-  
+
+
 
 
 
