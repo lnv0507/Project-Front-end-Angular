@@ -12,17 +12,17 @@
                     <p>Cập nhật tài khoản</p>
                 </li>
                 <div class="inline">
-                    <p><a (click)="displayAccount()" [ngStyle]="{color: isAccount ? '#2b82ad' : 'black'}">Hồ sơ</a></p>
-                    <p><a (click)="displayPassword()" [ngStyle]="{color: isPassword ? '#2b82ad' : 'black'}">Đổi mật khẩu</a> </p>
+                    <p class="inline-item" (click)="displayAccount()" [ngStyle]="{color: isAccount ? '#2b82ad' : 'black'}"> Hồ sơ </p>
+                    <p class="inline-item" (click)="displayPassword()" [ngStyle]="{color: isPassword ? '#2b82ad' : 'black'}">Đổi mật khẩu</p>
                 </div>
     
                 <li>
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    <p>Thông tin đơn hàng</p>
+                    <i class="fa fa-shopping-cart" aria-hidden="true" [ngStyle]="{color: isOrder ? '#2b82ad' : 'black'}"></i>
+                    <p (click)="displayOrder()" [ngStyle]="{color: isOrder ? '#2b82ad' : 'black'}">Thông tin đơn hàng</p>
                 </li>
             </ul>
         </div>
-        <div class="customer-right">
+        <div *ngIf="!isOrder" class="customer-right">
             <div *ngIf="isAccount" class="content">
                 <app-account-customer></app-account-customer>
             </div>
@@ -31,7 +31,9 @@
                 <app-password-customer></app-password-customer>
             </div>
 
-            
+        </div>
+        <div *ngIf="isOrder" class="order-history">
+            <app-order-customer></app-order-customer>
         </div>
 
     </div>

@@ -1,0 +1,30 @@
+<ul class="order-history-list" *ngFor="let order of  getHistoryOrders()">
+    <li class="order-history-item" >
+        <div class="order-history__header">
+            <div class="wrap">
+                <p class="order-history__id">Mã đơn hàng: <span class="order-history__info">HD{{order.id}}</span></p>
+                <span class="order-history__date">{{order.date}}</span>
+            </div>
+            <p class="order-history__title">Tổng cộng: <span class="order-history__total">{{order.total}}</span> </p>
+
+        </div>
+
+        <ul class="order-list">
+            <li class="order-item" *ngFor="let o of order.listOrder">
+                <div class="order-item__wrap">
+                    <img src="{{o.img}}" alt="" class="order-item__img">
+                    <div class="order-item__wrap-info">
+                        <p class="order-item__name">{{o.name}}</p>
+                        <p class="order-item__price">{{o.price}}</p>
+                    </div>
+                </div>
+                <span class="order-item__quantity">x{{o.quantity}}</span>
+                <p class="order-item__total-price">{{o.price * o.quantity}}</p>
+            </li>
+        </ul>
+
+        <div class="order-footer">
+            <p class="order-discount">Giảm giá: <span class="order-discount-detail">{{order.discount}}</span></p>
+        </div>
+    </li>
+</ul>

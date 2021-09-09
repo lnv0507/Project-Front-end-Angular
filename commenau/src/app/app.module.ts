@@ -68,6 +68,7 @@ import { CartHeaderComponent } from './header-vip/cart-header/cart-header.compon
 import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
 import { AccountCustomerComponent } from './detail-customer/account-customer/account-customer.component';
 import { PasswordCustomerComponent } from './detail-customer/password-customer/password-customer.component';
+import { OrderCustomerComponent } from './detail-customer/order-customer/order-customer.component';
 
 @NgModule({
   declarations: [
@@ -103,6 +104,7 @@ import { PasswordCustomerComponent } from './detail-customer/password-customer/p
     CartHeaderComponent,
     AccountCustomerComponent,
     PasswordCustomerComponent,
+    OrderCustomerComponent,
 
   ],
   imports: [

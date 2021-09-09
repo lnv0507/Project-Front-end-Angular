@@ -5,6 +5,4 @@ export class ProductCart {
     img!: String;
     quantity!: number;
     constructor(){}
-
-
 }

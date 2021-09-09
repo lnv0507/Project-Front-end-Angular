@@ -13,8 +13,6 @@ import { ActivatedRoute, Router } from '@angular/router';
   providedIn: 'root',
 })
 export class UserService {
-  // private currentUserSubject!: BehaviorSubject<User>;
-  // public currentUser!: Observable<User>;
   listUser: Array<User> = [];
   user: User = new User();
   message: String = "";
@@ -26,13 +24,8 @@ export class UserService {
     }),
   };
 
-  constructor(private httpClient: HttpClient, private route: ActivatedRoute,
-    private router: Router,) { }
-  // public get currentUserValue(): User {
-  //   return this.currentUserSubject.value;
-  // }
+  constructor(private httpClient: HttpClient, private route: ActivatedRoute, private router: Router) { }
   public getUser(): Observable<User[]> {
-    // lay dia chi ra vo database la do an
     const url = `http://localhost:3000/user`;
     return this.httpClient
       .get<User[]>(url, this.httpOptions)

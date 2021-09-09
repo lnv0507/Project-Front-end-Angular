@@ -80,13 +80,13 @@ ul {
         .inline {
             width: 100%;
             padding-left: 60px;
-            a {
+            .inline-item{
                 width: 100%;
                 text-decoration: none;
                 color: black;
                 cursor: pointer;
             }
-            a:hover {
+            .inline-item:hover {
                 color: #2b82ad;
             }
         }
@@ -104,6 +104,10 @@ ul {
         .content {
             width: 100%;
         }
+    }
+    .order-history {
+        width: 80%;
+        float: left;
     }
 }
 @media only screen and (max-width: 1023px){

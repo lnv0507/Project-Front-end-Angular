@@ -42,9 +42,7 @@ export class CartService {
     }
     return total;
   }
-  setOrder(orderInfo: Order){
 
-  }
 
 
 }

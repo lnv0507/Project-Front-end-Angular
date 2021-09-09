@@ -17,6 +17,7 @@ export class DetailCustomerComponent implements OnInit {
   displayAlert = false;
   isAccount = true;
   isPassword= false;
+  isOrder = false;
 
   constructor(private userService: UserService) {
     
@@ -27,24 +28,25 @@ export class DetailCustomerComponent implements OnInit {
   }
   
   displayAccount(){
-    if(this.isAccount){
-      return;
-    }
-    else{
+    if(!this.isAccount){
       this.isAccount = true;
-      this.isPassword = false
+      this.isPassword = false;
+      this.isOrder = false;
     }
   }
   displayPassword(){
-    if(this.isPassword){
-      return;
-    }
-    else{
-      this.isAccount = false;
+    if(!this.isPassword){
       this.isPassword = true;
+      this.isAccount = false;
+      this.isOrder = false;
     }
-
   }
-  
+  displayOrder(){
+    if(!this.isOrder){
+      this.isOrder = true;
+      this.isAccount = false;
+      this.isPassword = false;
+    }
+  }
  
 }

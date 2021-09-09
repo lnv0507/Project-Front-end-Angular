@@ -1,0 +1,95 @@
+.order-history-list {
+    list-style: none;
+    .order-history-item {
+        border: 1px solid #ccc;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        margin-bottom: 20px;
+        .order-history__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f0f4f7;
+            padding: 6px 20px;
+            .order-history__id {
+                margin-bottom: 0;
+
+            }
+            .order-history__title{
+                margin-bottom: 0;
+            }
+            .order-history__total {
+                font-size: 16px;
+                font-weight: 700;
+                color: #2b82ad;
+            }
+            .order-history__info {
+                font-size: 14px;
+                font-weight: 700;
+            }
+            .order-history__date {
+                font-size: 14px;
+                font-weight: 700;
+            }
+        }
+
+        .order-list {
+            padding-left: 0;
+            list-style: none;
+            .order-item {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid #ccc;
+                padding: 10px 20px;
+                align-items: center;
+                .order-item__wrap {
+                    display: flex;
+                    align-items: center;
+                    flex: 3;
+                }
+                .order-item__img {
+                    width: 50px;
+                    height: 50px;
+                }
+                .order-item__wrap-info{
+                    margin-left: 20px;
+                    .order-item__name {
+                        margin-bottom: 0;
+                    }
+                    .order-item__price{
+                        color: #999;
+                        margin-bottom: 0;
+                    }
+                    
+                }
+                
+                .order-item__quantity {
+                    flex: 1;
+                    text-align: center;
+                }
+                .order-item__total-price {
+                    flex: 1;
+                    text-align: right;
+                    margin-bottom: 0;
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .order-footer {
+            padding: 4px 20px;
+            background-color: #f0f4f7;
+            .order-discount {
+                margin-bottom: 0;
+                text-align: right;
+                .order-discount-detail{
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+            }
+            
+        }
+    }
+}
