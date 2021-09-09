@@ -287,7 +287,7 @@ $gray: #e7e7e7;
             }
             .input-search {
                 border-bottom: solid 1px black;
-                width: 90%;
+                width: 100%;
                 font-size: 1em;
                 padding: 1em 0;
                 input {
@@ -640,14 +640,23 @@ $gray: #e7e7e7;
             margin-left: 55%;
             .search-menu {
                 .search-menu-bar {
-                    right: 0px;
+                    right: -14px;
                 }
             }
             .search-menu {
                 .search-menu-charge {
                     height: 25em;
-                    width: 28em;
+                    width: 35em; 
                     top: 51px;
+                    .title-search {
+                        .search-Sug{
+                            display: none;
+                        }
+                        .product-Search{
+                            border-right: #23536b 1px solid;
+    margin-left: 4%;
+                        }
+                    }
                 }
             }
             .user-big {
@@ -719,11 +728,18 @@ $gray: #e7e7e7;
                 }
                 .search-menu-charge {
                     left: -255px;
-                    height: 6em;
+                    height: 34em;
                     width: 22em;
                     top: 51px;
                     .title-search {
-                        display: none;
+                        .search-Sug{
+                            display: none;
+                        }
+                        .product-Search{
+                            grid-template-columns: auto auto;
+                            
+
+                        }
                     }
                     .input-search {
                         display: flex;
