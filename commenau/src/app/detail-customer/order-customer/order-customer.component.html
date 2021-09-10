@@ -1,4 +1,9 @@
-<ul class="order-history-list">
+<div *ngIf="checkCartEmpty()" class="emptyOrder" style="display: flex; justify-content: center;">
+    <img src="assets/img/no_order.png" alt="" style="width: 150px; border: 1px solid #ccc; margin-top: 30px;">
+</div>
+
+
+<ul *ngIf="!checkCartEmpty()" class="order-history-list">
     <li class="order-history-item" *ngFor="let order of getHistoryOrders()">
         <div class="order-history__header">
             <div class="wrap">

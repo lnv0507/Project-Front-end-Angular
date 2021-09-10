@@ -20,10 +20,18 @@ export class OrderCustomerComponent implements OnInit {
     this.historyOrderService.getData();
   }
 
+  checkCartEmpty(){
+    const idUser = this.userService.user.id;
+    if(this.historyOrderService.getListOrderById(idUser).length === 0){
+      return true;
+    }
+    return false
+  }
+
   getHistoryOrders() {
     const idUser = this.userService.user.id;
-    this.historyOrderList = this.historyOrderService.getAboutCart(idUser);
-    return  this.historyOrderList;
+    this.historyOrderList = this.historyOrderService.getListOrderById(idUser);
+    return this.historyOrderList;
   }
 
 

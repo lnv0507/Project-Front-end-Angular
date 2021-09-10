@@ -1,4 +1,7 @@
-<table class="table">
+<div *ngIf="items.length == 0" class="empty-cart" style="display: flex;">
+    <img src="assets/img/empty-cart.png" alt="" style="width:'300px'; margin: auto;">
+</div>
+<table class="table" *ngIf="items.length > 0">
     <thead>
         <tr>
             <th scope="col"></th>
@@ -8,12 +11,7 @@
             <th scope="col" class="title-table">TỔNG TIỀN</th>
         </tr>
     </thead>
-    <tbody *ngIf="items.length == 0">
-        <tr>
-            <td class="emty_items" colspan="5">Chưa có sản phẩm trong giỏ hàng</td>
-        </tr>
-    </tbody>
-    <tbody *ngIf="items.length > 0">
+    <tbody >
         <tr *ngFor="let item of items">
             <th class="delete">
                 <button (click)="removeItem(item.id)">x</button>

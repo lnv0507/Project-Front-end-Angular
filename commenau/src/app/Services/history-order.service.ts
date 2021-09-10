@@ -38,15 +38,13 @@ export class HistoryOrderService {
     return throwError('Something bad happened; Please try again later.');
   }
 
-
-
-  public getAboutCart(idUser: String) {
-    let arrCart = this.historyOrders.filter(item => {
+  public getListOrderById(idUser: String) {
+    const orders = this.historyOrders.filter(item => {
       return item.userId === idUser;
     });
-
-    return arrCart;
+    return orders;
   }
+
   public getData() {
     this.getHistoryOrders().subscribe(data => {
       this.historyOrders = data;

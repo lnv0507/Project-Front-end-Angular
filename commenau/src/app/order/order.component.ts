@@ -19,7 +19,6 @@ export class OrderComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = this.cartService.getCartItems();
-    ;
     this.orderInfo = this.cartService.orderInfo;
   }
   getDisCount(){
