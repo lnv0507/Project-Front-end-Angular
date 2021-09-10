@@ -12,75 +12,80 @@
 <section class="product-details spad">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <div class="product__details__pic">
-                    <div class="product__details__pic__item">
-                        <img class="product__details__pic__item--large" src="{{ product.img }}" alt="" />
-                    </div>
-                    <div class="product__details__pic__slider owl-carousel row">
-                        <img class="col-lg-4" data-imgbigurl="assets/img/product/heo-quay-kho-cai-chua.png" src="{{ product.img }}" alt="" />
-                        <img class="col-lg-4" data-imgbigurl="img/product/product/details/product-details-3.jpg" src="{{ product.img }}" alt="" />
-                        <img class="col-lg-4" data-imgbigurl="img/product/details/product-details-5.jpg" src="{{ product.img }}" alt="" />
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <div class="product__details__text">
-                    <h3>{{ product.name }}</h3>
-                    <div class="product__details__price">
-                        {{ product.price | currency: "VND" }}
-                    </div>
-                    <div class="product__details__rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-alt"></i>
-                        <!-- <span>(18 reviews)</span> -->
-                    </div>
-                    <p><b>Mô tả: </b>{{ product.des }}</p>
-                    <p><b>Tình trạng:</b> Còn hàng</p>
-                    <p><b>Giao hàng:</b> 1 giờ. <samp> Miễn phí trong ngày</samp></p>
-                    <share-buttons [theme]="'circles-dark'" [include]="[
-              'facebook',
-              'twitter',
-              'telegram',
-              'email',
-              'messenger',
-              'linkedin',
-              'pinterest',
-              'copy'
-            ]" [show]="3" [size]="1" [url]="
-              'https://commenau.vn/chitietsanpham/{{product.id}}'
-            " [image]="
-              '{{ product.img }}'
-            " [autoSetMeta]="false"></share-buttons>
-
-                    <div class="product__details__quantity">
-                        <div class="quantity">
-                            <div class="pro-qty">
-                                <span (click)="increaseValue()" class="dec qtybtn">+</span><input type="text" value="{{ value }}" />
-                                <span (click)="reduceValue()" class="inc qtybtn">-</span>
+            <div class="col-lg-12">
+                <div class="row product-detail-reverse">
+                    <div class="col-lg-6 col-md-6" >
+                        <div class="product__details__pic">
+                            <div class="product__details__pic__item">
+                                <img class="product__details__pic__item--large" src="{{ product.img }}" alt="" />
+                            </div>
+                            <div class="product__details__pic__slider owl-carousel row">
+                                <img class="col-lg-4" data-imgbigurl="assets/img/product/heo-quay-kho-cai-chua.png" src="{{ product.img }}" alt="" />
+                                <img class="col-lg-4" data-imgbigurl="img/product/product/details/product-details-3.jpg" src="{{ product.img }}" alt="" />
+                                <img class="col-lg-4" data-imgbigurl="img/product/details/product-details-5.jpg" src="{{ product.img }}" alt="" />
                             </div>
                         </div>
                     </div>
-                    <div *ngIf="product.weekdays === toDay; then addCart; else noAddCart"></div>
-                    <ng-template #addCart>
-                        <a class="addCart" (click)="addToCartDetail()" class="primary-btn">Thêm Vào Giỏ Hàng</a>
-                    </ng-template>
-                    <ng-template #noAddCart>
-                        <button type="button" class="btn btn-secondary btn-lg" disabled>Thêm Vào Giỏ Hàng</button>
-                    </ng-template>
-                    <div class="heart-icon">
-                        <span *ngIf="!product.favorite" class="icon_heart_alt">
-              <i (click)="addToWishlist(product)" class="fas fa-heart"></i>
-            </span>
-                        <span *ngIf="product.favorite" class="icon_heart_alt">
-              <i (click)="removeWish(product)" class="fas fa-heart" style="color: red;"></i>
-            </span>
+                    <div class="col-lg-6 col-md-6 product-detail-reverse-info">
+                        <div class="product__details__text">
+                            <h3>{{ product.name }}</h3>
+                            <div class="product__details__price">
+                                {{ product.price | currency: "VND" }}
+                            </div>
+                            <div class="product__details__rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-alt"></i>
+                                <!-- <span>(18 reviews)</span> -->
+                            </div>
+                            <p><b>Mô tả: </b>{{ product.des }}</p>
+                            <p><b>Tình trạng:</b> Còn hàng</p>
+                            <p><b>Giao hàng:</b> 1 giờ. <samp> Miễn phí trong ngày</samp></p>
+                            <share-buttons [theme]="'circles-dark'" [include]="[
+                      'facebook',
+                      'twitter',
+                      'telegram',
+                      'email',
+                      'messenger',
+                      'linkedin',
+                      'pinterest',
+                      'copy'
+                    ]" [show]="3" [size]="1" [url]="
+                      'https://commenau.vn/chitietsanpham/{{product.id}}'
+                    " [image]="
+                      '{{ product.img }}'
+                    " [autoSetMeta]="false"></share-buttons>
+        
+                            <div class="product__details__quantity">
+                                <div class="quantity">
+                                    <div class="pro-qty">
+                                        <span (click)="increaseValue()" class="dec qtybtn">+</span><input type="text" value="{{ value }}" />
+                                        <span (click)="reduceValue()" class="inc qtybtn">-</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div *ngIf="product.weekdays === toDay; then addCart; else noAddCart"></div>
+                            <ng-template #addCart>
+                                <a class="addCart" (click)="addToCartDetail()" class="primary-btn">Thêm Vào Giỏ Hàng</a>
+                            </ng-template>
+                            <ng-template #noAddCart>
+                                <button type="button" class="btn btn-secondary btn-lg" disabled>Thêm Vào Giỏ Hàng</button>
+                            </ng-template>
+                            <div class="heart-icon">
+                                <span *ngIf="!product.favorite" class="icon_heart_alt">
+                      <i (click)="addToWishlist(product)" class="fas fa-heart"></i>
+                    </span>
+                                <span *ngIf="product.favorite" class="icon_heart_alt">
+                      <i (click)="removeWish(product)" class="fas fa-heart" style="color: red;"></i>
+                    </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            
             <div class="col-lg-12">
                 <div class="product__details__tab">
                     <mat-tab-group mat-align-tabs="center" animationDuration="0ms" style="

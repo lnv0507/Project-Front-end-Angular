@@ -4,6 +4,7 @@ import { Order } from '../model/order';
 import { CartService } from '../Services/cart.service';
 import { UserService } from '../Services/user.service';
 import { VoucherService } from '../Services/voucher.service';
+import { HistoryOrderService } from '../Services/history-order.service';
 
 @Component({
   selector: 'app-order',
@@ -13,13 +14,15 @@ import { VoucherService } from '../Services/voucher.service';
 export class OrderComponent implements OnInit {
   items :any;
   public day: Date = new Date();
-  orderInfo: Order = new Order()
-  constructor(private cartService: CartService, private voucherService: VoucherService, private router: Router,private route: ActivatedRoute) {
+  orderInfo: Order = new Order();
+  id = this.historyOrderService.historyOrders.length + 1 + "";
+  constructor(private cartService: CartService, private voucherService: VoucherService, private historyOrderService: HistoryOrderService , private router: Router,private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
     this.items = this.cartService.getCartItems();
     this.orderInfo = this.cartService.orderInfo;
+    this.historyOrderService.getData()
   }
   getDisCount(){
     return this.voucherService.getDiscount();

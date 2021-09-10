@@ -482,6 +482,12 @@ a:focus {
         margin-top: 30px;
     }
     .product-details {
+        .product-detail-reverse {
+            flex-direction: column-reverse;
+            .product-detail-reverse-info{
+                margin-bottom: 20px;
+            }
+        }
         .product__details__tab {
             .nav-tabs:before {
                 position: absolute;
