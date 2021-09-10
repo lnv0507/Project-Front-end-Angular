@@ -77,6 +77,13 @@ $gray: #e7e7e7;
         position: relative;
         margin-left: 40%;
         margin-top: 0.4em;
+        .name_title {
+            overflow: hidden; // ẩn các nội dung khi kích thước lớn hơn chiều rộng khối bên ngoài
+            text-overflow: ellipsis; //thêm 3 dấu chấm ở cuối
+            -webkit-line-clamp: 1; // số dòng muốn hiển thị
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+        }
         a {
             position: relative;
             left: 0;
@@ -377,8 +384,7 @@ $gray: #e7e7e7;
     grid-template-columns: auto auto auto;
     background-color: $white;
     padding: 10px;
-   
-    li{
+    li {
         padding: 6px;
     }
     a {
@@ -663,10 +669,7 @@ $gray: #e7e7e7;
                         .search-Sug {
                             display: none;
                         }
-
-                        .product-Search{
-                            
-                        }
+                        .product-Search {}
                     }
                 }
             }
@@ -749,28 +752,26 @@ $gray: #e7e7e7;
                     display: block;
                     .title-search {
                         ul {
-                            li{
+                            li {
                                 padding-left: 0px;
                                 padding: 0px;
-                                
                             }
                         }
-                        .search-Sug{
+                        .search-Sug {
                             display: none;
                         }
-                        .product-Search{
-                            grid-template-columns:  none;
+                        .product-Search {
+                            grid-template-columns: none;
                             padding: 0px;
-                            
-                            a{  
+                            a {
                                 display: flex;
                                 padding: 5px;
                                 min-width: 258px;
-                                img{
+                                img {
                                     width: 30px;
                                     height: 30px;
                                 }
-                                p{
+                                p {
                                     min-width: 200px;
                                     padding-top: 10px;
                                 }
