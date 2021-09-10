@@ -23,6 +23,7 @@ export class ProductDayComponent implements OnInit {
   days = this.product.getDay();
   active = "active active2";
   noActive = "noActive";
+  toDay!:String;
   constructor(
     private product: ProductsService,
     private cartService: CartService,
@@ -30,6 +31,7 @@ export class ProductDayComponent implements OnInit {
     private wishlistService: WishlistService
   ) {
     this.weekDays = this.product.weekDays;
+    this.toDay = this.product.getDay();
   }
 
   ngOnInit(): void {
