@@ -50,9 +50,9 @@ export class ShopDetailComponent implements OnInit, OnChanges {
       this.product = res;
       let parse = JSON.parse(localStorage.getItem(this.product.id + '') || '{}')
       if (JSON.stringify(parse) == 'true')
-        this.product.yeuthich = true;
+        this.product.favorite = true;
       else
-        this.product.yeuthich = false;
+        this.product.favorite = false;
     });
 
   }
