@@ -12,52 +12,52 @@
                 <div class="nav__header">
                     <span class="nav__header-title">COMMENAU</span>
                     <label for="nav__mobile-id" class="nav__header-close">
-                        <i class="fas fa-times"></i>
-                    </label>
+            <i class="fas fa-times"></i>
+          </label>
                 </div>
 
                 <ul class="nav__mobile-list">
                     <li class="nav__mobile-item">
                         <div class="nav__mobile-icon"><i class="fas fa-home"></i></div>
                         <label for="nav__mobile-id" routerLink="/trangchu" class="nav__mobile-link">
-                            Trang chủ
-                        </label>
+              Trang chủ
+            </label>
                     </li>
                     <li class="nav__mobile-item">
                         <div class="nav__mobile-icon"><i class="fas fa-clipboard-list"></i></div>
                         <label for="nav__mobile-id" routerLink="/menu" class="nav__mobile-link">
-                            Menu
-                        </label>
+              Menu
+            </label>
                     </li>
                     <li class="nav__mobile-item">
                         <div class="nav__mobile-icon"><i class="fas fa-users"></i></div>
                         <label for="nav__mobile-id" routerLink="/vechungtoi" class="nav__mobile-link">
-                            Về chúng tôi
-                        </label>
+              Về chúng tôi
+            </label>
                     </li>
                     <li class="nav__mobile-item">
                         <div class="nav__mobile-icon"><i class="fas fa-phone"></i></div>
                         <label for="nav__mobile-id" routerLink="/lienhe" class="nav__mobile-link">
-                            Liên hệ
-                        </label>
+              Liên hệ
+            </label>
                     </li>
                     <li *ngIf="!getCheckLogin()" class="nav__mobile-item">
                         <div class="nav__mobile-icon"><i class="fas fa-sign-in-alt"></i></div>
                         <label for="nav__mobile-id" routerLink="/dangnhap" class="nav__mobile-link">
-                            Đăng nhập
-                        </label>
+              Đăng nhập
+            </label>
                     </li>
                     <li *ngIf="getCheckLogin()" class="nav__mobile-item">
                         <div class="nav__mobile-icon"><i class="fas fa-user"></i></div>
                         <label for="nav__mobile-id" routerLink="/thongtin" class="nav__mobile-link">
-                            Tài khoản của tôi
-                        </label>
+              Tài khoản của tôi
+            </label>
                     </li>
                     <li *ngIf="getCheckLogin()" class="nav__mobile-item">
                         <div class="nav__mobile-icon"><i class="fas fa-sign-out-alt"></i></div>
                         <label for="nav__mobile-id" href="" class="nav__mobile-link" (click)="logout()">
-                            Đăng xuất
-                        </label>
+              Đăng xuất
+            </label>
                     </li>
                 </ul>
             </div>
@@ -174,41 +174,40 @@
             </div>
             <div class="search-menu">
                 <a>
-                    <i (click)="searchClick()" class="search-cancel fas fa-search"></i
-        ></a>
-        <div class="search-menu-bar" [class.search-menu-charge]="search_click">
-          <div class="input-search">
-            <i class="fas fa-search"> </i>
-                    <input placeholder="Bạn đang thèm gì nhờ?" type="text" [(ngModel)]="search" />
-            </div>
-            <div class="title-search">
-                <ul class="search-Sug">
-                    <h6>Tìm kiếm nhiều nhất: </h6>
-                    <li>
+                    <i (click)="searchClick()" class="search-cancel fas fa-search"></i></a>
+                <div class="search-menu-bar" [class.search-menu-charge]="search_click">
+                    <div class="input-search">
                         <i class="fas fa-search"> </i>
-                        <p>Cơm</p>
-                    </li>
-                    <li>
-                        <i class="fas fa-search"> </i>
-                        <p>Bò</p>
-                    </li>
-                    <li>
-                        <i class="fas fa-search"> </i>
-                        <p>Gà</p>
-                    </li>
-                </ul>
-                <ul class="product-Search">
-                    <li *ngFor="let d of getAllProduct() | filter: search">
-                        <a [routerLink]="['/chitietsanpham', d.id]"><img src="{{ d.img }}" alt="" width="100px" height="100px" />
-                            <p class="namep">{{d.name}}</p>
-                        </a>
-                    </li>
-                </ul>
+                        <input placeholder="Bạn đang thèm gì nhờ?" type="text" [(ngModel)]="search" />
+                    </div>
+                    <div class="title-search">
+                        <ul class="search-Sug">
+                            <h6>Tìm kiếm nhiều nhất: </h6>
+                            <li>
+                                <i class="fas fa-search"> </i>
+                                <p>Cơm</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-search"> </i>
+                                <p>Bò</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-search"> </i>
+                                <p>Gà</p>
+                            </li>
+                        </ul>
+                        <ul class="product-Search">
+                            <li *ngFor="let d of getAllProduct() | filter: search">
+                                <a [routerLink]="['/chitietsanpham', d.id]"><img src="{{ d.img }}" alt="" width="100px" height="100px" />
+                                    <p class="namep">{{d.name}}</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-</div>
 </div>
 
 

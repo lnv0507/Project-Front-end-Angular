@@ -18,12 +18,17 @@ export class ShopDetailComponent implements OnInit, OnChanges {
   change = false;
   value = 1;
   test: any;
+  toDay!: String;
   constructor(
     private serviceProduct: ProductsService,
     private cartService: CartService,
     private route: ActivatedRoute,
     private wishlistService: WishlistService,
-  ) { }
+  ) {
+    this.toDay = serviceProduct.getDay();
+    console.log(this.toDay);
+
+  }
 
   ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap;
