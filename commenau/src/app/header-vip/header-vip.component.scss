@@ -24,8 +24,7 @@ $gray: #e7e7e7;
 }
 
 .navbar {
-    .navbar-toggler {
-    }
+    .navbar-toggler {}
 }
 
 .menu-header2:hover {
@@ -101,26 +100,27 @@ $gray: #e7e7e7;
                 visibility: hidden;
                 opacity: 0;
                 overflow: hidden;
-                box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+                box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
                 border-radius: 3px;
                 div {
                     background-color: #2b82ad;
-                    height: 100px;
+                    height: 150px;
+                    border: solid 2px $white;
                     button {
-                        width: 150px;
-                        height: 4em;
+                        width: 90%;
+                        height: 3em;
                         color: $black;
-                        margin-top: 50px;
-                        margin-left: 25%;
+                        margin-top: 25%;
+                        margin-left: 5%;
                     }
                 }
                 .login-button {
-                    width: 150px;
-                    height: 4em;
+                    width: 90%;
+                    height: 3em;
                     color: $white;
                     background-color: $black;
-                    margin-top: 10px;
-                    margin-left: 25%;
+                    margin-top: 5%;
+                    margin-left: 5%;
                 }
             }
         }
@@ -145,7 +145,7 @@ $gray: #e7e7e7;
                 right: -125px;
                 z-index: 2;
                 overflow: hidden;
-                box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+                box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
                 border-radius: 3px;
                 .food-bag {
                     color: $black;
@@ -173,25 +173,23 @@ $gray: #e7e7e7;
                         }
                         p {
                             color: darkgray;
-                           
                         }
                         p:nth-child(1) {
                             color: $black;
-                           font-size: 14px;
-                           font-weight: 700;
-                           cursor: pointer;
+                            font-size: 14px;
+                            font-weight: 700;
+                            cursor: pointer;
                         }
                         p:nth-child(1):hover {
                             color: $blue;
-                           
                         }
                         p:nth-child(2) {
-                           font-size: 12px;
+                            font-size: 12px;
                         }
                         p:nth-child(3) {
                             color: $black;
-                           font-size:14px ;
-                           font-weight: 700;
+                            font-size: 14px;
+                            font-weight: 700;
                         }
                         img {
                             width: 70px;
@@ -213,7 +211,7 @@ $gray: #e7e7e7;
                     color: $black;
                     font-size: 1em;
                     padding: 12px;
-                    p{
+                    p {
                         margin-bottom: 0;
                     }
                 }
@@ -250,7 +248,6 @@ $gray: #e7e7e7;
                 height: 470px;
             }
         }
-
         .thanhbar-muiten:hover {
             .thanh-bar {
                 position: relative;
@@ -278,11 +275,11 @@ $gray: #e7e7e7;
                 position: absolute;
                 right: 0px;
                 height: 0em;
-                padding: 0.2em 3em ;
+                padding: 0.2em 3em;
                 overflow: hidden;
                 transition: height 0.5s ease-in;
                 z-index: 2;
-                box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+                box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
                 border-radius: 3px;
             }
             .input-search {
@@ -356,6 +353,7 @@ $gray: #e7e7e7;
         margin-left: 100px;
     }
 }
+
 .badge {
     position: absolute;
     top: 5px;
@@ -365,19 +363,22 @@ $gray: #e7e7e7;
     background: red;
     color: white;
 }
+
 .dangnhap {
     display: none;
 }
+
 .giohang {
     display: none;
 }
+
 .product-Search {
     display: grid;
     grid-template-columns: auto auto auto;
     background-color: $white;
     padding: 10px;
     border-left: #23536b 1px solid;
-    li{
+    li {
         padding: 6px;
     }
     a {
@@ -386,15 +387,15 @@ $gray: #e7e7e7;
         padding: 10px;
         font-size: 9px;
         text-align: center;
-        
         text-decoration: none;
-        p{
+        p {
             color: $black;
             margin-bottom: 0px;
             width: 100px;
         }
     }
 }
+
 //Mobile
 .collapsable {
     display: inline-block;
@@ -405,31 +406,37 @@ $gray: #e7e7e7;
     -moz-transition: height 1s;
     -o-transition: height 1s;
 }
+
 .collapsable.showMe {
     height: 100px;
 }
+
 //Navbar-mobile
 .nav__input {
     display: none;
 }
-.nav__input:checked ~ .overlay{
+
+.nav__input:checked~.overlay {
     display: block;
 }
-.nav__input:checked ~ .nav__mobile{
+
+.nav__input:checked~.nav__mobile {
     transform: translateX(0);
     opacity: 1;
 }
+
 .overlay {
     position: fixed;
     top: 60px;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 100;
     display: none;
     animation: FadeIn linear 0.3s;
 }
+
 .nav__mobile {
     position: fixed;
     top: 60px;
@@ -439,11 +446,11 @@ $gray: #e7e7e7;
     max-width: 100%;
     background-color: #fff;
     z-index: 110;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
-    transform:translateX(-100%);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    transform: translateX(-100%);
     opacity: 0;
     transition: transform linear 0.2s, opacity linear 0.2s;
-    .nav__header{
+    .nav__header {
         color: #333;
         height: 70px;
         display: flex;
@@ -451,14 +458,14 @@ $gray: #e7e7e7;
         align-items: center;
         border-bottom: 1px solid #ccc;
         padding: 0 16px 0 32px;
-        .nav__header-title{
+        .nav__header-title {
             letter-spacing: 5px;
             font-weight: 500;
             color: #2b82ad;
             flex: 1;
             font-size: 20px;
         }
-        .nav__header-close{
+        .nav__header-close {
             font-size: 20px;
             padding: 8px 16px;
             color: #909090;
@@ -470,7 +477,7 @@ $gray: #e7e7e7;
         .nav__mobile-item {
             display: flex;
             align-items: center;
-            .nav__mobile-icon{
+            .nav__mobile-icon {
                 color: #909090;
                 width: 20px;
             }
@@ -484,11 +491,11 @@ $gray: #e7e7e7;
                 cursor: pointer;
             }
         }
-        
     }
 }
+
 @keyframes FadeIn {
-    from{
+    from {
         opacity: 0;
     }
     to {
@@ -497,7 +504,6 @@ $gray: #e7e7e7;
 }
 
 //*----------------------------------Resposive Media--------------------
-
 @media screen and(min-width:1200px) {
     .header {
         .icon-menu {
@@ -521,18 +527,21 @@ $gray: #e7e7e7;
         }
     }
 }
+
+
 /* Medium Device = 1200px */
+
 @media only screen and (max-width: 992px) {
-    .menu-header, .menu-header2 {
-       justify-content: space-between;
-       padding: 0 12px;
+    .menu-header,
+    .menu-header2 {
+        justify-content: space-between;
+        padding: 0 12px;
     }
     .header #idLogo {
         margin-left: 12px;
     }
-
-  
 }
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .header {
         #idLogo {
@@ -542,7 +551,7 @@ $gray: #e7e7e7;
             position: relative;
             transition: 0.4s;
             margin-top: 3.5em;
-            left: 80%;
+            left: 70%;
         }
         .icon-menu {
             margin-left: 40%;
@@ -566,7 +575,9 @@ $gray: #e7e7e7;
     }
 }
 
+
 /* Tablet Device = 768px */
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .menu-header2 {
         height: 60px;
@@ -574,10 +585,7 @@ $gray: #e7e7e7;
     .menu-header {
         height: 60px;
     }
-
     .header {
-        
-        
         .icon-menu {
             margin-left: 70%;
             .search-menu {
@@ -599,9 +607,11 @@ $gray: #e7e7e7;
         }
     }
 }
+
+
 /* Wide Mobile = 480px */
+
 @media only screen and (max-width: 767px) {
-    
     .menu-header2 {
         height: 60px;
     }
@@ -646,15 +656,15 @@ $gray: #e7e7e7;
             .search-menu {
                 .search-menu-charge {
                     height: 25em;
-                    width: 35em; 
+                    width: 35em;
                     top: 51px;
                     .title-search {
-                        .search-Sug{
+                        .search-Sug {
                             display: none;
                         }
-                        .product-Search{
+                        .product-Search {
                             border-right: #23536b 1px solid;
-    margin-left: 4%;
+                            margin-left: 4%;
                         }
                     }
                 }
@@ -673,7 +683,10 @@ $gray: #e7e7e7;
         }
     }
 }
+
+
 /* Small Device = 320px */
+
 @media only screen and (max-width: 479px) {
     .menu-header {
         height: 60px;
@@ -695,7 +708,6 @@ $gray: #e7e7e7;
             background: #23536b;
             margin-top: 10px;
             min-width: 100%;
-
             .menu-bar-title {
                 color: $gray;
                 text-decoration: none;
@@ -732,21 +744,17 @@ $gray: #e7e7e7;
                     width: 22em;
                     top: 51px;
                     .title-search {
-                        .search-Sug{
+                        .search-Sug {
                             display: none;
                         }
-                        .product-Search{
+                        .product-Search {
                             grid-template-columns: auto auto;
-                            
-
                         }
                     }
                     .input-search {
                         display: flex;
                         width: 100%;
-                        i{
-
-                        }
+                        i {}
                     }
                 }
             }
