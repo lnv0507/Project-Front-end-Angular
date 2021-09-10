@@ -551,13 +551,14 @@ $gray: #e7e7e7;
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .header {
         #idLogo {
-            left: 100%;
+            left: 95%;
         }
         .header-big {
             position: relative;
             transition: 0.4s;
             margin-top: 3.5em;
-            left: 70%;
+            left: 65%;
+            width: 450px;
         }
         .icon-menu {
             margin-left: 40%;
