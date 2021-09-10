@@ -22,6 +22,7 @@ export class AccountCustomerComponent implements OnInit {
   user!: User;
   customForm! : FormGroup;
   urlImg!: string;
+
   constructor(private userService: UserService, private formBuilder : FormBuilder) { }
 
   ngOnInit(): void {
@@ -65,10 +66,22 @@ export class AccountCustomerComponent implements OnInit {
     this.display = !this.display;
   }
   onFileSelected(event: any) {
-    if(event.target.files.length > 0) 
+    if(event.target.files.length > 0)
      {
       this.urlImg= "assets/img/avatar/" + event.target.files[0].name;
      }
+  }
+  // add image global link
+  onSelectFile(event: any) { // called each time file input changes
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+      reader.onload = (event: any) => { // called once readAsDataURL is completed
+        this.urlImg = event.target.result;
+      }
+    }
   }
 
 }

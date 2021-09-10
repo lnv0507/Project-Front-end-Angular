@@ -16,37 +16,38 @@ export class DetailCustomerComponent implements OnInit {
   urlImg!: string;
   displayAlert = false;
   isAccount = true;
-  isPassword= false;
+  isPassword = false;
   isOrder = false;
 
   constructor(private userService: UserService) {
-    
-   }
+
+  }
 
   ngOnInit(): void {
-    this.user=this.userService.user;
+    this.user = this.userService.user;
   }
-  
-  displayAccount(){
-    if(!this.isAccount){
+
+  displayAccount() {
+    if (!this.isAccount) {
       this.isAccount = true;
       this.isPassword = false;
       this.isOrder = false;
     }
   }
-  displayPassword(){
-    if(!this.isPassword){
+  displayPassword() {
+    if (!this.isPassword) {
       this.isPassword = true;
       this.isAccount = false;
       this.isOrder = false;
     }
   }
-  displayOrder(){
-    if(!this.isOrder){
+  displayOrder() {
+    if (!this.isOrder) {
       this.isOrder = true;
       this.isAccount = false;
       this.isPassword = false;
     }
   }
- 
+
+
 }
