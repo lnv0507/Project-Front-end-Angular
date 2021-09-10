@@ -296,7 +296,7 @@ $gray: #e7e7e7;
             }
             .title-search {
                 display: flex;
-                margin-top: 2em;
+                margin-top: 1em;
                 .search-Sug {
                     width: 32%;
                     padding-left: 0;
@@ -377,8 +377,8 @@ $gray: #e7e7e7;
     grid-template-columns: auto auto auto;
     background-color: $white;
     padding: 10px;
-    border-left: #23536b 1px solid;
-    li {
+   
+    li{
         padding: 6px;
     }
     a {
@@ -590,7 +590,7 @@ $gray: #e7e7e7;
             margin-left: 70%;
             .search-menu {
                 .search-menu-bar {
-                    right: -40px;
+                    right: -12px;
                 }
             }
             .user-big {
@@ -662,9 +662,9 @@ $gray: #e7e7e7;
                         .search-Sug {
                             display: none;
                         }
-                        .product-Search {
-                            border-right: #23536b 1px solid;
-                            margin-left: 4%;
+
+                        .product-Search{
+                            
                         }
                     }
                 }
@@ -739,16 +739,41 @@ $gray: #e7e7e7;
                     right: 0px;
                 }
                 .search-menu-charge {
-                    left: -255px;
-                    height: 34em;
+                    // left: -255px;
+                    height: 20.7em;
                     width: 22em;
                     top: 51px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: block;
                     .title-search {
-                        .search-Sug {
+                        ul {
+                            li{
+                                padding-left: 0px;
+                                padding: 0px;
+                                
+                            }
+                        }
+                        .search-Sug{
                             display: none;
                         }
-                        .product-Search {
-                            grid-template-columns: auto auto;
+                        .product-Search{
+                            grid-template-columns:  none;
+                            padding: 0px;
+                            
+                            a{  
+                                display: flex;
+                                padding: 5px;
+                                min-width: 258px;
+                                img{
+                                    width: 30px;
+                                    height: 30px;
+                                }
+                                p{
+                                    min-width: 200px;
+                                    padding-top: 10px;
+                                }
+                            }
                         }
                     }
                     .input-search {

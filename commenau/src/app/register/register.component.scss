@@ -83,7 +83,7 @@ button:hover {
 }
 #container{
     .container-register{
-        background-image: url('/assets/img/bg.png');
+        // background-image: url('/assets/img/bg.png');
         width: 100%;
         min-height: 100vh;
         display: -webkit-box;
@@ -271,4 +271,56 @@ button:hover {
     100% {
         background-position: 0% 50%;
     }
+}
+//*----------------------------------Resposive Media--------------------
+@media screen and(min-width:1200px) {
+    #container {
+        .container-register {
+            background-image: url("/assets/img/bg.png");}}
+    
+}
+
+
+/* Medium Device = 1200px */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    #container {
+        .container-register {
+            background-image: url("/assets/img/bg.png");}}
+    
+}
+
+
+/* Tablet Device = 768px */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    #container {
+        .container-register {
+            background-image: url("/assets/img/bg.png");
+        }
+    }
+    
+}
+
+
+/* Wide Mobile = 480px */
+
+@media only screen and (max-width: 767px) {
+    #container {
+        .container-register {
+            background-image: $white;
+        }
+    }
+}
+
+
+/* Small Device = 320px */
+
+@media only screen and (max-width: 479px) {
+    #container {
+        .container-register {
+            background-image: $white;
+        }
+    }
+    
 }
