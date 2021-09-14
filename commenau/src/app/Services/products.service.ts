@@ -12,7 +12,7 @@ import { Product } from '../model/product';
   providedIn: 'root',
 })
 export class ProductsService {
-  dataProduct!: Array<Product>;
+  dataProduct: Array<Product> = [];
   dataProduct2!: Array<Product>;
   weekDays = [
     { day: 'Thứ 2' },

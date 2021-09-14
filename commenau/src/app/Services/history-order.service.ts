@@ -8,7 +8,7 @@ import { HistoryOrder } from '../model/history-order';
   providedIn: 'root'
 })
 export class HistoryOrderService {
-  historyOrders!: Array<HistoryOrder>;
+  historyOrders: Array<HistoryOrder> = [];
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-type': 'application/json',

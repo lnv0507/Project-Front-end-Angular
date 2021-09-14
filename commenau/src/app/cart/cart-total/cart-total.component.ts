@@ -37,8 +37,6 @@ export class CartTotalComponent implements OnInit {
     return this.voucherService.getMessage();
   }
   getCheckMessage(){
-    console.log(this.voucherService.getCheckMessage());
-
     return this.voucherService.getCheckMessage();
   }
 }

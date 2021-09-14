@@ -57,8 +57,7 @@ export class CheckoutDetailComponent implements OnInit {
       address: [this.user.address, Validators.required],
       phone: [this.user.phone, [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern("^[0-9]+$")]],
       email: [this.user.email, [Validators.required, Validators.email, gmailValidate]],
-      note: '',
-      totalPrice: [this.getAllTotal(), checkTotalPrice() ]
+      note: ''
     })
   }
   getDisCount(){
@@ -104,7 +103,7 @@ export class CheckoutDetailComponent implements OnInit {
     orderHistory.listOrder = listOrder;
 
     this.historyOrderService.addHistoryOrder(orderHistory).subscribe(data =>{
-      console.log(data);
+    
     })
 
 

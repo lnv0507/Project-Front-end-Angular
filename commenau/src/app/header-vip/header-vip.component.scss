@@ -482,12 +482,17 @@ $gray: #e7e7e7;
     }
     .nav__mobile-list {
         list-style: none;
+        padding-left: 20px;
         .nav__mobile-item {
             display: flex;
             align-items: center;
+            padding-left: 10px;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
             .nav__mobile-icon {
-                color: #909090;
+                color: #757575;
                 width: 20px;
+                padding: 0 4px;
             }
             .nav__mobile-link {
                 flex: 1;
@@ -498,6 +503,9 @@ $gray: #e7e7e7;
                 padding: 16px 20px;
                 cursor: pointer;
             }
+        }
+        .nav__mobile-item:hover {
+            background-color: #f0f0f0;
         }
     }
 }

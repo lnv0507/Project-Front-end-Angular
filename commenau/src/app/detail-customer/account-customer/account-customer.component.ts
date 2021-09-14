@@ -86,7 +86,8 @@ export class AccountCustomerComponent implements OnInit {
 
 }
 function gmailValidate(formControl: FormControl) {
-  if(formControl.value.includes('@gmail.com')){
+  let email = formControl.value + "";
+  if(email.includes('@gmail.com')){
     return null
   }
   return {gmail: true}
