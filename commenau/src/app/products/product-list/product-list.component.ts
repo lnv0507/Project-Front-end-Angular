@@ -4,10 +4,10 @@ import { Product } from 'src/app/model/product';
 import { ProductDayComponent } from 'src/app/myhome/product-day/product-day.component';
 import { ProductsService } from 'src/app/Services/products.service';
 import { CartService } from 'src/app/Services/cart.service';
-import { WishlistService } from 'src/app/Services/wishlist.service';
 import { ProductCart } from 'src/app/model/product-cart';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CartHeaderComponent } from 'src/app/header-vip/cart-header/cart-header.component';
+import { UserService } from 'src/app/Services/user.service';
 
 @Component({
   selector: 'app-product-list',
@@ -31,11 +31,10 @@ export class ProductListComponent implements OnInit {
   public day: Date = new Date();
 
   constructor(
-
+    private userService: UserService,
     private product: ProductsService,
     public router: Router,
     private cartService: CartService,
-    private wishlistService: WishlistService,
     private clickCart: NgbModal
   ) {
     this.weekDays = this.product.weekDays;
@@ -44,6 +43,7 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
     // load connect
     this.connect();
+    this.userService.getUserData();
     // this.getWishList();
 
   }
@@ -53,16 +53,22 @@ export class ProductListComponent implements OnInit {
   }
   // hoat dong click product theo ngay
   public listProductDay(day: String): Product[] {
-
     this.dataProduct = this.product.productDay(day);
     this.productCheck = false;
     return this.dataProduct;
   }
   // haot dong lay product dung ngay hien tai
+
+  // public checkProduct(id: number) {
+  //   let result = this.product.getProductID(id);
+  //   return this.userService.user.listWishList.includes(result);
+
+  // }
   public getProduct() {
     this.productCheck = true;
     return this.product.getDayProduct();
   }
+
   public setOrder(value: string) {
     if (this.order === value) {
       this.reverse = !this.reverse;
@@ -82,16 +88,23 @@ export class ProductListComponent implements OnInit {
     this.cartService.addItem(item);
   }
   public addToWishlist(p: Product) {
+    if (this.userService.getCheckLogin()) {
+      this.userService.user.listWishList.push(p);
+      this.userService.updateUser(this.userService.user);
 
-    return this.wishlistService.addToWishlist(p);
+    }
+    return;
   }
 
   public removeWish(p: Product) {
-    return this.wishlistService.removeWish(p);
+    if (this.userService.getCheckLogin()) {
+      const products = this.userService.user.listWishList.filter(data => {
+        return data.id === p.id;
+      });
+      products.pop();
+      this.userService.updateUser(this.userService.user);
+    }
+    return;
   }
-  getWishList() {
-    return this.wishlistService.getWishlistItems();
-  }
-
 
 }

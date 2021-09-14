@@ -1,11 +1,8 @@
+import { Product } from "./product";
+
 export class Wishlist {
-  id!: number;
-  name!: String;
-  price!: number;
-  img!: String;
-  quantity!: boolean;
-  des!: String;
-  weekdays!: String;
-  favorite!: boolean;
+  id!:String;
+  userId!: String;
+  listWish!: Array<Product>;
   constructor() { }
 }

@@ -13,8 +13,10 @@
                                 <th>Xóa</th>
                             </tr>
                         </thead>
-                        <tbody *ngIf="items.length>0">
-                            <tr *ngFor="let i of items">
+                        <tbody *ngIf="listWish.length>0">
+
+                            <tr *ngFor="let i of listWish">
+
                                 <td class="wishlist__item">
                                     <img src="{{i.img}}" alt="">
                                     <h5>{{i.name}}</h5>
@@ -35,14 +37,14 @@
                                 </td>
                                 <td class="footer__widget">
                                     <div class="footer__widget__social">
-                                        <a (click)="removeItem(i.id)"><i class="fa fa-trash"></i></a>
+                                        <a (click)="(i.id)"><i class="fa fa-trash"></i></a>
                                     </div>
                                 </td>
                             </tr>
 
 
                         </tbody>
-                        <tbody *ngIf="items.length==0">
+                        <tbody *ngIf="listWish.length==0">
                             <tr>
                                 <td class="emty_items" colspan="5">Chưa có sản phẩm trong danh sách yêu thích</td>
                             </tr>

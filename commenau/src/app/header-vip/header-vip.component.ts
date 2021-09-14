@@ -6,7 +6,6 @@ import { User } from '../model/user';
 import { CartService } from '../Services/cart.service';
 import { ProductsService } from '../Services/products.service';
 import { UserService } from '../Services/user.service';
-import { WishlistService } from '../Services/wishlist.service';
 
 @Component({
   selector: 'app-header-vip',
@@ -24,7 +23,6 @@ export class HeaderVipComponent implements OnInit {
   search_click = false;
   @Input() menu_header: string = 'menu-header2';
   items = this.cart.getCartItems();
-  itemsWishlist = this.wish.getWishlistItems();
   search = '';
 
 
@@ -32,7 +30,6 @@ export class HeaderVipComponent implements OnInit {
     private cart: CartService,
     private product: ProductsService,
     public activeModal: AppComponent,
-    private wish: WishlistService,
     private userService: UserService
   ) {}
 

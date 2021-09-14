@@ -8,6 +8,7 @@ import { BehaviorSubject, Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { User } from '../model/user';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Product } from '../model/product';
 
 @Injectable({
   providedIn: 'root',
@@ -42,7 +43,12 @@ export class UserService {
     return throwError('Something bad happened; Please try again later.');
   }
 
-
+  public getUserByID(id: String) {
+    let result = this.getUserData().find(data => {
+      return data.id == id;
+    });
+    return result;
+  }
   public updateUser(user: User) {
     return this.httpClient.put('http://localhost:3000/user/' + user.id, user);
   }
@@ -100,6 +106,14 @@ export class UserService {
   }
   public getCheckLogin() {
     return this.checkLogin;
+  }
+  public getWishListByID(id: String) {
+    const arrProduct = this.getUserByID(id)?.listWishList;
+    return arrProduct;
+
+  }
+  public addWishListItem(){
+    return
   }
 
 }

@@ -1,3 +1,5 @@
+import { Product } from "./product";
+
 export class User {
   id!: string;
   name!: string;
@@ -6,7 +8,7 @@ export class User {
   address!: string;
   password!: string;
   urlImg!:string;
-  listWishList!: [];
+  listWishList!: Array<Product>;
   constructor() {
 
   }

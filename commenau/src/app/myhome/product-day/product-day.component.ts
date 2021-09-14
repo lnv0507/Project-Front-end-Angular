@@ -7,7 +7,6 @@ import { HeaderVipComponent } from 'src/app/header-vip/header-vip.component';
 import { ProductCart } from 'src/app/model/product-cart';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CartHeaderComponent } from 'src/app/header-vip/cart-header/cart-header.component';
-import { WishlistService } from 'src/app/Services/wishlist.service';
 
 @Component({
   selector: 'app-product-day',
@@ -28,7 +27,6 @@ export class ProductDayComponent implements OnInit {
     private product: ProductsService,
     private cartService: CartService,
     private clickCart: NgbModal,
-    private wishlistService: WishlistService
   ) {
     this.weekDays = this.product.weekDays;
     this.toDay = this.product.getDay();
@@ -36,6 +34,7 @@ export class ProductDayComponent implements OnInit {
 
   ngOnInit(): void {
     this.connect();
+
   }
   public connect() {
     this.product.connectProduct();
@@ -61,14 +60,11 @@ export class ProductDayComponent implements OnInit {
     this.cartService.addItem(item);
   }
   public addToWishlist(p: Product) {
-    return this.wishlistService.addToWishlist(p);
   }
 
   public removeWish(p: Product) {
     // localStorage.setItem(p.id + '', 'false');
-    return this.wishlistService.removeWish(p);
   }
   getWishList() {
-    return this.wishlistService.getWishlistItems();
   }
 }

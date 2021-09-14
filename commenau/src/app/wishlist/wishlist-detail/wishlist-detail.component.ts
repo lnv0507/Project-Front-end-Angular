@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/model/product';
 import { ProductCart } from 'src/app/model/product-cart';
 import { CartService } from 'src/app/Services/cart.service';
-import { WishlistService } from 'src/app/Services/wishlist.service';
+import { UserService } from 'src/app/Services/user.service';
 
 @Component({
   selector: 'app-wishlist-detail',
@@ -10,12 +10,16 @@ import { WishlistService } from 'src/app/Services/wishlist.service';
   styleUrls: ['./wishlist-detail.component.scss']
 })
 export class WishlistDetailComponent implements OnInit {
-  items= this.wishlist.getWishlistItems();
+  listWish= this.userService.user.listWishList;
 
-  constructor(private wishlist: WishlistService, private cartService: CartService,) { }
+  constructor(private userService: UserService, private cartService: CartService,) { }
 
   ngOnInit(): void {
+    this.userService.getUserData();
+    console.log(this.listWish);
   }
+
+
   public addToCart(product: Product) {
     const item : ProductCart = new ProductCart();
     item.id = product.id;
@@ -26,10 +30,13 @@ export class WishlistDetailComponent implements OnInit {
     this.cartService.addItem(item);
 
   }
-  removeItem(id: any){
-    const index=this.items.findIndex((item)=>item.id===id);
-    this.items.splice(index,1);
-    this.wishlist.setWishlistItems(this.items);
-  }
+  // removeItem(id: any){
+  //   const index=this.items.findIndex((item)=>item.product.id===id);
+  //   this.items.splice(index,1);
+  //   this.wishlist.setWishlistItems(this.items);
+  // }
+  // public removeItem(id:any){
+  //   return this.wishlist.removeList(id);
+  // }
 
 }

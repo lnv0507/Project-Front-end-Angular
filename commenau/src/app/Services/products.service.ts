@@ -7,6 +7,7 @@ import {
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Product } from '../model/product';
+import { UserService } from './user.service';
 
 @Injectable({
   providedIn: 'root',
@@ -30,14 +31,16 @@ export class ProductsService {
       Authorization: 'my-auth-token',
     }),
   };
+  userService: any;
   // lay dia chi ser ver phai chay localhost moi lay dc data
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, userService: UserService) { }
 
   // lay product out
   public getProduct(): Observable<Product[]> {
     // lay dia chi ra vo database la do an
     const url = `${this.REST_API_SERVER}/product`;
+
     return this.httpClient
       .get<Product[]>(url, this.httpOptions)
       .pipe(catchError(this.handleError));
@@ -45,7 +48,12 @@ export class ProductsService {
   public getProductById(id: any) {
     return this.httpClient.get('http://localhost:3000/product/' + id);
   }
-
+  public getProductID(id: number) {
+    const result =  this.dataProduct.find(data => {
+      return data.id === id;
+    });
+    return result;
+  }
   // Test error of json
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
@@ -72,16 +80,16 @@ export class ProductsService {
       if (day === i.weekdays) {
         this.dataProduct2.push(i);
       }
+      // }
+      // this.dataProduct.forEach(element => {
+      //   let parse = JSON.parse(localStorage.getItem(element.id + '') || '{}')
+      //   if (JSON.stringify(parse) == 'true') {
+      //     element.favorite = true;
+      //   } else {
+      //     element.favorite = false;
     }
-    this.dataProduct.forEach(element => {
-      let parse = JSON.parse(localStorage.getItem(element.id + '') || '{}')
-      if (JSON.stringify(parse) == 'true') {
-        element.favorite = true;
-      } else {
-        element.favorite = false;
-      }
 
-    });
+    // });
 
     return this.dataProduct2;
   }
@@ -120,8 +128,13 @@ export class ProductsService {
     return dayName;
   }
   public getDayProduct() {
+
     return this.productDay(this.getDay());
   }
+  public getProductDay() {
+    return this.getDayProduct();
+  }
+
   // check yeu thich luu lai vao localstrorage
   // public getCheckWishList() {
   //   this.getDayProduct().forEach(element => {

@@ -20,12 +20,12 @@
                         <div class="product__item">
                             <div class="product__item__pic set-bg" style="background-image: url('{{ product.img }}')">
                                 <ul class="product__item__pic__hover">
-                                    <li *ngIf="!product.favorite">
+                                    <!-- <li *ngIf="!product.favorite">
                                         <a (click)="addToWishlist(product)"><i class="fa fa-heart"></i></a>
                                     </li>
                                     <li *ngIf="product.favorite">
                                         <a (click)="removeWish(product)"><i class="fa fa-heart" style="color: red"></i></a>
-                                    </li>
+                                    </li> -->
                                     <li>
                                         <a [routerLink]="['/chitietsanpham', product.id]"><i class="fa fa-external-link"></i></a>
                                     </li>
@@ -50,12 +50,12 @@
                         <div class="product__item">
                             <div class="product__item__pic set-bg" style="background-image: url('{{ product.img }}')">
                                 <ul class="product__item__pic__hover">
-                                    <li *ngIf="!product.favorite">
+                                    <!-- <li *ngIf="!product.favorite">
                                         <a (click)="addToWishlist(product)"><i class="fa fa-heart"></i></a>
                                     </li>
                                     <li *ngIf="product.favorite">
                                         <a (click)="removeWish(product)"><i class="fa fa-heart"></i></a>
-                                    </li>
+                                    </li> -->
                                     <li>
                                         <a [routerLink]="['/chitietsanpham', product.id]"><i class="fa fa-external-link"></i></a>
                                     </li>

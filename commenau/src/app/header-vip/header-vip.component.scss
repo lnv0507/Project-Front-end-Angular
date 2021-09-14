@@ -384,9 +384,7 @@ $gray: #e7e7e7;
     grid-template-columns: auto auto auto;
     background-color: $white;
     padding: 10px;
-    border-left: #23536b solid 1px;
-   
-    li{
+    li {
         padding: 6px;
     }
     a {
@@ -673,14 +671,13 @@ $gray: #e7e7e7;
             .search-menu {
                 .search-menu-charge {
                     height: 25em;
-                    width: auto;
+                    width: 35em;
                     top: 51px;
                     .title-search {
                         .search-Sug {
                             display: none;
                         }
                         .product-Search {}
-
                     }
                 }
             }
@@ -756,7 +753,7 @@ $gray: #e7e7e7;
                 .search-menu-charge {
                     // left: -255px;
                     height: 20.7em;
-                    width: auto;
+                    width: 22em;
                     top: 51px;
                     margin-left: auto;
                     margin-right: auto;
@@ -774,9 +771,7 @@ $gray: #e7e7e7;
                         .product-Search {
                             grid-template-columns: none;
                             padding: 0px;
-                            border-left: #ffffff solid 1px;
-                            
-                            a{  
+                            a {
                                 display: flex;
                                 padding: 5px;
                                 min-width: 258px;

@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import {AbstractControl, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms'
+import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { ActivatedRoute, Router } from '@angular/router';
+import { Product } from '../model/product';
 import { User } from '../model/user';
 import { UserService } from '../Services/user.service';
 
-export function checkExistPhone(phones: any = []){
-  return (c : AbstractControl) =>{
-    return (phones.includes(c.value)) ?{
-      invalidphone : true
+export function checkExistPhone(phones: any = []) {
+  return (c: AbstractControl) => {
+    return (phones.includes(c.value)) ? {
+      invalidphone: true
     } : null;
   };
 }
@@ -22,7 +23,7 @@ export function checkExistPhone(phones: any = []){
 export class RegisterComponent implements OnInit {
   formRegister!: FormGroup;
 
-  constructor(private formBuilder :FormBuilder, private serviceUser : UserService,private router: Router,private route: ActivatedRoute) {
+  constructor(private formBuilder: FormBuilder, private serviceUser: UserService, private router: Router, private route: ActivatedRoute) {
 
 
   }
@@ -37,52 +38,50 @@ export class RegisterComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(6)]],
       re_password: ['', Validators.required]
     },
-    {
-      validators : this.MustMatch('password', 're_password')
-     }
+      {
+        validators: this.MustMatch('password', 're_password')
+      }
     )
   }
 
-  MustMatch(controlName: string, matchingControlName: string){
-    return(formGroup : FormGroup) =>{
+  MustMatch(controlName: string, matchingControlName: string) {
+    return (formGroup: FormGroup) => {
       const control = formGroup.controls[controlName];
       const matchingControl = formGroup.controls[matchingControlName];
-      if(matchingControl.errors && !matchingControl.errors.MustMatch){
+      if (matchingControl.errors && !matchingControl.errors.MustMatch) {
         return
       }
-      if(control.value !== matchingControl.value){
-        matchingControl.setErrors({MustMatch: true});
-      }else{
+      if (control.value !== matchingControl.value) {
+        matchingControl.setErrors({ MustMatch: true });
+      } else {
         matchingControl.setErrors(null);
       }
     }
   }
-  onSubmit(){
-    this.serviceUser.getUser().subscribe(data =>{
+  onSubmit() {
+    this.serviceUser.getUser().subscribe(data => {
       const user = new User();
       user.id = data.length + 1 + '';
-      user.name =  this.formRegister.controls.name.value;
+      user.name = this.formRegister.controls.name.value;
       user.email = this.formRegister.controls.email.value;
       user.phone = this.formRegister.controls.phone.value;
       user.password = this.formRegister.controls.password.value;
       user.address = '';
       user.urlImg = "assets/img/avatar/avatar1.png";
-      this.serviceUser.addUser(user).subscribe(data =>{
-      console.log(data);
+      user.listWishList = [];
+      this.serviceUser.addUser(user).subscribe(data => {
+        console.log(data);
       });
       const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/dangnhap';
       this.router.navigateByUrl(returnUrl);
     }
-    ) ;
-
-
-
+    );
   }
 
 }
 function gmailValidate(formControl: FormControl) {
-  if(formControl.value.includes('@gmail.com')){
+  if (formControl.value.includes('@gmail.com')) {
     return null
   }
-  return {gmail: true}
+  return { gmail: true }
 }

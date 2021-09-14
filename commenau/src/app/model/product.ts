@@ -5,7 +5,6 @@ export class Product {
   img!: String;
   des!: String;
   weekdays!: String;
-  favorite!: boolean;
   constructor() {
   }
 
