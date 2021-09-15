@@ -6,7 +6,7 @@
         <div class="container">
             <nav>
                 <ul class="nav nav-fill day-product nav-pills  mb-2" id="pills-tab" role="tablist">
-                    <li *ngFor="let th of weekDays" class="col-lg-1 col-4 nav-item textDay mb-3 mt-2" role="presentation">
+                    <li *ngFor="let th of weekDays" class="col-lg-1 col-4 nav-item textDay" role="presentation">
                         <a [ngClass]="th.day == days ?  active : noActive " class="nav-link" data-bs-toggle="pill" role="tab" aria-selected="true" (click)="listProductDay(th.day)" style=" font-weight: bolder;">
                             <label style="cursor: pointer;" for="">{{ th.day }} </label></a>
                     </li>
