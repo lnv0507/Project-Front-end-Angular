@@ -176,34 +176,39 @@
                 <a>
                     <i (click)="searchClick()" class="search-cancel fas fa-search"></i></a>
                 <div class="search-menu-bar" [class.search-menu-charge]="search_click">
-                    <div class="input-search">
-                        <i class="fas fa-search"> </i>
-                        <input placeholder="Bạn đang thèm gì nhờ?" type="text" [(ngModel)]="search" />
+                    <div class="container">
+                        <div class="row">
+                            <div class="input-search">
+                                <i class="fas fa-search"> </i>
+                                <input placeholder="Bạn đang thèm gì nhờ?" type="text" [(ngModel)]="search" />
+                            </div>
+                            <div class="title-search">
+                                <ul class="search-Sug">
+                                    <h6>Tìm kiếm nhiều nhất: </h6>
+                                    <li>
+                                        <i class="fas fa-search"> </i>
+                                        <p>Cơm</p>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-search"> </i>
+                                        <p>Bò</p>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-search"> </i>
+                                        <p>Gà</p>
+                                    </li>
+                                </ul>
+                                <ul class="product-Search">
+                                    <li *ngFor="let d of getAllProduct() | filter: search">
+                                        <a [routerLink]="['/chitietsanpham', d.id]"><img src="{{ d.img }}" alt="" width="100px" height="100px" />
+                                            <p class="namep">{{d.name}}</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="title-search">
-                        <ul class="search-Sug">
-                            <h6>Tìm kiếm nhiều nhất: </h6>
-                            <li>
-                                <i class="fas fa-search"> </i>
-                                <p>Cơm</p>
-                            </li>
-                            <li>
-                                <i class="fas fa-search"> </i>
-                                <p>Bò</p>
-                            </li>
-                            <li>
-                                <i class="fas fa-search"> </i>
-                                <p>Gà</p>
-                            </li>
-                        </ul>
-                        <ul class="product-Search">
-                            <li *ngFor="let d of getAllProduct() | filter: search">
-                                <a [routerLink]="['/chitietsanpham', d.id]"><img src="{{ d.img }}" alt="" width="100px" height="100px" />
-                                    <p class="namep">{{d.name}}</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    
                 </div>
             </div>
         </div>

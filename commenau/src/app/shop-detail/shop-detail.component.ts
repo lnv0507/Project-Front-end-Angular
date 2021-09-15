@@ -5,6 +5,9 @@ import { Product } from '../model/product';
 import { CartService } from '../Services/cart.service';
 import { ProductCart } from '../model/product-cart';
 import { UserService } from '../Services/user.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { DialogComponent } from 'src/app/dialog/dialog.component';
+import { CartHeaderComponent } from 'src/app/header-vip/cart-header/cart-header.component';
 
 @Component({
   selector: 'app-shop-detail',
@@ -23,7 +26,9 @@ export class ShopDetailComponent implements OnInit, OnChanges {
     private serviceProduct: ProductsService,
     private cartService: CartService,
     private route: ActivatedRoute,
-    private userService: UserService
+    private userService: UserService,
+    private clickCart: NgbModal,
+  
   ) {
     this.toDay = serviceProduct.getDay();
     console.log(this.toDay);
@@ -68,6 +73,8 @@ export class ShopDetailComponent implements OnInit, OnChanges {
     return this.serviceProduct.getDayProduct();
   }
   public addToCart(product: Product) {
+    if (this.cartService.checkHour()) {
+      this.clickCart.open(CartHeaderComponent);
     const item: ProductCart = new ProductCart();
     item.id = product.id;
     item.img = product.img;
@@ -75,8 +82,13 @@ export class ShopDetailComponent implements OnInit, OnChanges {
     item.price = product.price;
     item.quantity = 1;
     this.cartService.addItem(item);
+    }
+    else{
+      this.clickCart.open(DialogComponent);
+    }
   }
   public addToCartDetail() {
+    if (this.cartService.checkHour()) {
     const item: ProductCart = new ProductCart();
     item.id = this.product.id;
     item.img = this.product.img;
@@ -84,6 +96,10 @@ export class ShopDetailComponent implements OnInit, OnChanges {
     item.price = this.product.price;
     item.quantity = this.value;
     this.cartService.addItem(item);
+    }
+    else{
+      this.clickCart.open(DialogComponent);
+    }
   }
   reduceValue() {
     if (this.value === 1) {

@@ -150,6 +150,7 @@ a:focus {
                             margin-bottom: 30px;
                             overflow: hidden;
                             .footer__widget__social {
+                                cursor: pointer;
                                 a {
                                     display: inline-block;
                                     height: 41px;
@@ -176,6 +177,30 @@ a:focus {
                                     color: #ffffff;
                                     border-color: #ffffff;
                                 }
+                            }
+                            .footer__widget__social__non {
+                                a {
+                                    display: inline-block;
+                                    height: 41px;
+                                    width: 41px;
+                                    font-size: 16px;
+                                    color: #666;
+                                    border: 1px solid #ededed;
+                                    border-radius: 50%;
+                                    line-height: 38px;
+                                    text-align: center;
+                                    background: #ccc;
+                                    -webkit-transition: all, 0.3s;
+                                    -moz-transition: all, 0.3s;
+                                    -ms-transition: all, 0.3s;
+                                    -o-transition: all, 0.3s;
+                                    transition: all, 0.3s;
+                                    margin-right: 10px;
+                                }
+                                a:last-child {
+                                    margin-right: 0;
+                                }
+                                
                             }
                         }
                     }

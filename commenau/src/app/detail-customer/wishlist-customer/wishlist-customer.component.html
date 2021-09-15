@@ -33,11 +33,24 @@
                                     </div>
                                 </td>
 
-                                <td class="footer__widget">
+                                <td *ngIf="getCheckDay(i.weekdays);then addcart; else noAddCart" >
+                                </td>
+                                <ng-template #addcart>
+                                    <td class="footer__widget">
                                     <div class="footer__widget__social">
                                         <a (click)="addToCart(i)"><i class="fa fa-shopping-cart"></i></a>
                                     </div>
                                 </td>
+                                </ng-template>
+                                <ng-template #noAddCart>
+                                    <td class="footer__widget">
+                                        <div class="footer__widget__social__non">
+                                            <a><i class="fa fa-shopping-cart"></i></a>
+                                        </div>
+                                    </td>
+                                </ng-template>
+                                    
+                                
                                 <td class="footer__widget">
                                     <div class="footer__widget__social">
                                         <a (click)="removeItem(i)"><i class="fa fa-trash"></i></a>

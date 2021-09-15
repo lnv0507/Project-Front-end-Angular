@@ -2,13 +2,12 @@
     <div class="row">
         <div class="col-lg-12 col-md-12">
             <div class="row">
-                <!-- <div class="sidebar__item" *ngFor="
-                let d1 of getProduct().slice(0,1)">
-                    <h5>Thực đơn: {{d1.weekDays}} -{{day | date: ' dd/MM/y'}}</h5>
-                </div> -->
+                <div class="sidebar__item" *ngFor="let d of getProduct().slice(0,1)">
+                    <h5>Thực đơn: {{d.weekdays}} -{{day | date: ' dd/MM/y'}}</h5>
+                </div>
                 <div class="hero__search__form">
                     <button type="submit" class="site-btn"><i class="fas fa-search"></i></button>
-                    <input type="text" placeholder="Bạn muốn ăn gì?" [(ngModel)]="search" />
+                    <input type="text" placeholder="Bạn đang thèm gì nhở?" [(ngModel)]="search" />
                 </div>
                 <div class="col-lg-12 col-md-12">
                     <div class="sidebar">

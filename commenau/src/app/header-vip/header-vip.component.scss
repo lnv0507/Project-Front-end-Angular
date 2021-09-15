@@ -665,7 +665,7 @@ $gray: #e7e7e7;
             margin-left: 55%;
             .search-menu {
                 .search-menu-bar {
-                    right: -14px;
+                    // right: -14px;
                 }
             }
             .search-menu {
@@ -749,15 +749,13 @@ $gray: #e7e7e7;
             .search-menu {
                 .search-menu-bar {
                     right: 0px;
+                    padding: 0.2em 1em;
                 }
                 .search-menu-charge {
                     // left: -255px;
                     height: 20.7em;
-                    width: 22em;
+                    width: 335px;
                     top: 51px;
-                    margin-left: auto;
-                    margin-right: auto;
-                    display: block;
                     .title-search {
                         ul {
                             li {

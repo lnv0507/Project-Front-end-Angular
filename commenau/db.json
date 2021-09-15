@@ -11,11 +11,11 @@
       "urlImg": "assets/img/avatar/avatar1.png",
       "listWishList": [
         {
-          "id": 1,
-          "name": "Cơm Tấm Sườn Bì",
-          "price": 25000,
-          "img": "assets/img/product/1.png",
-          "des": "Cơm tấm là một món ăn Việt Nam có nguyên liệu chủ yếu từ gạo tấm. Dù có nhiều tên gọi ở các vùng miền khác nhau, tuy nhiên nguyên liệu và cách thức chế biến của món ăn trên gần như là giống nhau.",
+          "id": "11",
+          "name": "Thịt Kho Trứng Cút",
+          "price": 46000,
+          "img": "assets/img/product/8.jpg",
+          "des": "",
           "weekdays": "Thứ 3"
         },
         {
@@ -25,30 +25,6 @@
           "img": "assets/img/product/9.jpg",
           "des": "",
           "weekdays": "Thứ 4"
-        },
-        {
-          "id": "5",
-          "name": "Salad",
-          "price": 197000,
-          "img": "assets/img/product/2.jpg",
-          "des": "",
-          "weekdays": "Thứ 3"
-        },
-        {
-          "id": "11",
-          "name": "Thịt Kho Trứng Cút",
-          "price": 46000,
-          "img": "assets/img/product/8.jpg",
-          "des": "",
-          "weekdays": "Thứ 3"
-        },
-        {
-          "id": "17",
-          "name": "Gà Kho Lá Chanh",
-          "price": 55000,
-          "img": "assets/img/product/14.jpg",
-          "des": "",
-          "weekdays": "Thứ 3"
         }
       ]
     },
