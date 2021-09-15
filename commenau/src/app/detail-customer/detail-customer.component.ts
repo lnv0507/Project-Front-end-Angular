@@ -15,10 +15,10 @@ export class DetailCustomerComponent implements OnInit {
   user!: User;
   urlImg!: string;
   displayAlert = false;
-  isAccount = false;
+  isAccount = true;
   isPassword = false;
   isOrder = false;
-  isWishList = true;
+  isWishList = false;
 
   constructor(private userService: UserService) {
 

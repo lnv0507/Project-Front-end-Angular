@@ -62,15 +62,6 @@
       "urlImg": "assets/img/avatar/avatar1.png",
       "listWishList": [
         {
-          "id": "29",
-          "name": "Cánh Gà Chiên Nước Mắm",
-          "price": 59000,
-          "img": "assets/img/product/26.jpg",
-          "des": "",
-          "weekdays": "Thứ 3",
-          "favorite": false
-        },
-        {
           "id": "7",
           "name": "Cá Trạch Chiên",
           "price": 34000,
