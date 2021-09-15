@@ -15,6 +15,8 @@ import { Product } from '../model/product';
 })
 export class UserService {
   listUser: Array<User> = [];
+  wishlist: Array<Product> = [];
+
   user: User = new User();
   message: String = "";
   checkLogin: boolean = false;
@@ -26,6 +28,7 @@ export class UserService {
   };
 
   constructor(private httpClient: HttpClient, private route: ActivatedRoute, private router: Router) { }
+
   public getUser(): Observable<User[]> {
     const url = `http://localhost:3000/user`;
     return this.httpClient
@@ -49,6 +52,7 @@ export class UserService {
     });
     return result;
   }
+
   public updateUser(user: User) {
     return this.httpClient.put('http://localhost:3000/user/' + user.id, user);
   }
@@ -78,42 +82,40 @@ export class UserService {
 
   public login(phone: any, password: any, word: any) {
     const listUser = this.getUserData();
-    for (let u of listUser) {
-      if (u.phone === phone && u.password === password) {
-        this.user = u;
+    for (let user of listUser) {
+      if (user.phone === phone && user.password === password) {
+        this.user = user;
         this.checkLogin = true;
         this.message = "";
         this.check(word);
+        this.wishlist = user.listWishList;
       }
       else {
         this.message = "Sai thông tin đăng nhập"
-
       }
     }
     return this.user;
-
-
   }
+
   public getMessage() {
     return this.message;
   }
 
-  logout() {
+  public logout() {
     this.user = new User();
     this.checkLogin = false;
     this.message = "";
+    this.wishlist = [];
     return this.user;
   }
   public getCheckLogin() {
     return this.checkLogin;
   }
-  public getWishListByID(id: String) {
-    const arrProduct = this.getUserByID(id)?.listWishList;
-    return arrProduct;
 
+  
+  public getWishList(){
+    return this.wishlist;
   }
-  public addWishListItem(){
-    return
-  }
+ 
 
 }

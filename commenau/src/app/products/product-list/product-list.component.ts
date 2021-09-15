@@ -59,11 +59,10 @@ export class ProductListComponent implements OnInit {
   }
   // haot dong lay product dung ngay hien tai
 
-  // public checkProduct(id: number) {
-  //   let result = this.product.getProductID(id);
-  //   return this.userService.user.listWishList.includes(result);
+  public checkProduct(id: number) {
 
-  // }
+    return this.userService.getWishList().some(item => item.id == id)
+  }
   public getProduct() {
     this.productCheck = true;
     return this.product.getDayProduct();
@@ -90,19 +89,16 @@ export class ProductListComponent implements OnInit {
   public addToWishlist(p: Product) {
     if (this.userService.getCheckLogin()) {
       this.userService.user.listWishList.push(p);
-      this.userService.updateUser(this.userService.user);
-
+      this.userService.updateUser(this.userService.user).subscribe();
     }
     return;
   }
 
   public removeWish(p: Product) {
     if (this.userService.getCheckLogin()) {
-      const products = this.userService.user.listWishList.filter(data => {
-        return data.id === p.id;
-      });
-      products.pop();
-      this.userService.updateUser(this.userService.user);
+      const index = this.userService.wishlist.findIndex((item) => item.id == p.id);
+      this.userService.user.listWishList.splice(index, 1);
+      this.userService.updateUser(this.userService.user).subscribe();
     }
     return;
   }

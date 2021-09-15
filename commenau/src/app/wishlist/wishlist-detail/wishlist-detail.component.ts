@@ -10,7 +10,7 @@ import { UserService } from 'src/app/Services/user.service';
   styleUrls: ['./wishlist-detail.component.scss']
 })
 export class WishlistDetailComponent implements OnInit {
-  listWish= this.userService.user.listWishList;
+  listWish = this.userService.getWishList();
 
   constructor(private userService: UserService, private cartService: CartService,) { }
 
@@ -30,13 +30,11 @@ export class WishlistDetailComponent implements OnInit {
     this.cartService.addItem(item);
 
   }
-  // removeItem(id: any){
-  //   const index=this.items.findIndex((item)=>item.product.id===id);
-  //   this.items.splice(index,1);
-  //   this.wishlist.setWishlistItems(this.items);
-  // }
-  // public removeItem(id:any){
-  //   return this.wishlist.removeList(id);
-  // }
+
+  public removeItem(p: Product){
+    const index = this.userService.wishlist.findIndex((item) => item.id == p.id);
+    this.userService.user.listWishList.splice(index, 1);
+    this.userService.updateUser(this.userService.user).subscribe();
+  }
 
 }
