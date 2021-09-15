@@ -37,108 +37,100 @@ ul {
         font-size: 30px;
         font-weight: 600;
     }
-    .customer-left {
-        width: 20%;
-        float: left;
-        
-        .avatar-name {
-            width: 100%;
-            overflow: hidden;
-            img {
-                width: 40%;
-                float: left;
-                width: 80px;
-                height: 80px;
-            }
-            p {
-                padding-top: 22px;
-                width: 60%;
-                float: left;
-                font-weight: 600;
-                margin: auto;
-                font-size: 20px;
-                margin-left: 10px;
-            }
-        }
-        ul{
-            margin-top: 20px;
-            li {
-                width: 100%;
-                height: 20px;
-                i {
-                    width: 20%;
-                    float: left;
+    .customer-body{
+        display: flex;
+        .customer-left {
+            padding-right: 10px;
+            .customer-info{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .customer-info__img{
+                
+                }
+                .customer-info__name{
+                    font-size: 20px;
+                    font-weight: 550;
+                    flex: 1;
                     text-align: center;
                 }
-                p {
-                    width: 80%;
-                    float: left;
+            }
+            .customer-menu__list{
+                margin-top: 10px;
+                .customer-menu__item{
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                    .customer-menu__wrap{
+                        display: flex;
+                        align-items: center;
+                        .customer-menu__icon{
+                            width: 25px;
+                            font-size: 16px;
+                        }
+                        .customer-menu__label{
+                            font-size: 14px;
+                            flex: 1;
+                        }
+                    }
+                    .customer-detail__list {
+                        margin-left: 40px;
+                        font-size: 14px;
+                    }
                 }
             }
         }
-        
-        .inline {
-            width: 100%;
-            padding-left: 60px;
-            .inline-item{
+        .customer-right {
+            border: 2px solid gray;
+            background-color: #ededed;
+            padding: 30px;
+            flex: 1;
+            .content {
                 width: 100%;
-                text-decoration: none;
-                color: black;
-                cursor: pointer;
-            }
-            .inline-item:hover {
-                color: #2b82ad;
             }
         }
-        li:hover {
-            color: #2b82ad;
-            cursor: pointer;
+        .order-history {
+            flex: 1;
+        }
+        .whislist {
+            flex: 1;
         }
     }
-    .customer-right {
-        width: 80%;
-        float: left;
-        border: 2px solid gray;
-        background-color: #ededed;
-        padding: 50px;
-        .content {
-            width: 100%;
-        }
-    }
-    .order-history {
-        width: 80%;
-        float: left;
-    }
+    
 }
 @media only screen and (max-width: 1023px){
-   
     
 }
 // moblie
 @media only screen and (max-width: 770px){
     .container{
-        .customer-left{
-            width: 100%;
-            .avatar-name{
-                img{
-                    margin-left: 25px;
+        .customer-body{
+            flex-direction: column;
+            .customer-left{
+                width: 100%;
+                .customer-menu__list{
+                    padding-left: 65px;
                 }
+                
             }
-            .inline{
-                padding-left: 25%;
+            .customer-right{
+                width: 100%;
+                padding: 10px;
+                margin: 10px auto 0 ;
+                
             }
+            .order-history{
+                width: 100%;
+                margin-top: 10px;
+                padding:0;
+            }
+            .whislist {
+                width: 100%;
+                margin-top: 10px;
+            }
+
         }
-        .customer-right{
-            width: 90%;
-            padding: 10px;
-            margin: 10px auto 0 ;
-            
-        }
-        .order-history{
-            width: 100%;
-            margin-top: 10px;
-            padding-right: 20px;
-        }
+        
     }
 }
 //tablet

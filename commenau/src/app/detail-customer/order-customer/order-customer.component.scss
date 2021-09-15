@@ -1,7 +1,8 @@
 .order-history-list {
     list-style: none;
+    padding: 0;
     .order-history-item {
-        border: 1px solid #ccc;
+        border: 2px solid #ccc;
         border-top-right-radius: 3px;
         border-top-left-radius: 3px;
         margin-bottom: 20px;

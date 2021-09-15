@@ -22,7 +22,6 @@ const routersConfig: Routes = [
   { path: 'lienhe', component: ContactComponent },
   { path: 'vechungtoi', component: AboutComponent },
   { path: 'kiemtra', component: VerifyComponent },
-  { path: 'yeuthich', component: WishlistComponent },
   { path: 'thongtin', component: DetailCustomerComponent},
   { path : 'donhang', component: OrderComponent},
   { path: '**', component: Page404Component },
@@ -44,7 +43,6 @@ import { OrderComponent } from './order/order.component';
 import { DetailCustomerComponent } from './detail-customer/detail-customer.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
-import { WishlistComponent } from './wishlist/wishlist.component';
 import { ProductDirective } from './directives/product.directive';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsComponent } from './products/products.component';
@@ -62,7 +60,6 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import { FormsModule } from '@angular/forms';
 import { BreakcumbAboutComponent } from './about/breakcumb-about/breakcumb-about.component';
-import { WishlistDetailComponent } from './wishlist/wishlist-detail/wishlist-detail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CartHeaderComponent } from './header-vip/cart-header/cart-header.component';
 import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
@@ -70,6 +67,7 @@ import { AccountCustomerComponent } from './detail-customer/account-customer/acc
 import { PasswordCustomerComponent } from './detail-customer/password-customer/password-customer.component';
 import { OrderCustomerComponent } from './detail-customer/order-customer/order-customer.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { WishlistCustomerComponent } from './detail-customer/wishlist-customer/wishlist-customer.component';
 
 @NgModule({
   declarations: [
@@ -100,13 +98,12 @@ import { DialogComponent } from './dialog/dialog.component';
     CheckoutCouponComponent,
     CheckoutDetailComponent,
     BreakcumbAboutComponent,
-    WishlistDetailComponent,
-    WishlistComponent,
     CartHeaderComponent,
     AccountCustomerComponent,
     PasswordCustomerComponent,
     OrderCustomerComponent,
     DialogComponent,
+    WishlistCustomerComponent,
 
   ],
   imports: [

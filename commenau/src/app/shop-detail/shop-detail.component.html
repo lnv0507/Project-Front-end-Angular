@@ -68,18 +68,18 @@
                             </div>
                             <div *ngIf="product.weekdays === toDay; then addCart; else noAddCart"></div>
                             <ng-template #addCart>
-                                <a class="addCart" (click)="addToCartDetail()" class="primary-btn">Thêm Vào Giỏ Hàng</a>
+                                <a class="addCart" (click)="addToCartDetail()" class="primary-btn">Thêm vào giỏ hàng</a>
                             </ng-template>
                             <ng-template #noAddCart>
-                                <button type="button" class="btn btn-secondary btn-lg disaleBtn">Thêm Vào Giỏ Hàng</button>
+                                <button type="button" class="btn btn-secondary btn-lg disaleBtn">Thêm vào giỏ hàng</button>
                             </ng-template>
                             <div class="heart-icon">
                                 <span *ngIf="!checkProductInWishList(product.id)" class="icon_heart_alt">
-                  <i (click)="addToWishlist(product)" class="fas fa-heart"></i>
-                </span>
+                                    <i (click)="addToWishlist(product)" class="fas fa-heart"></i>
+                                </span>
                                 <span *ngIf="checkProductInWishList(product.id)" class="icon_heart_alt">
-                  <i (click)="removeWish(product)" class="fas fa-heart" style="color: red;"></i>
-                </span>
+                                    <i (click)="removeWish(product)" class="fas fa-heart" style="color: red;"></i>
+                                </span>
                             </div>
                         </div>
                     </div>

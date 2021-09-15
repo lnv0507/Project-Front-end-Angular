@@ -5,14 +5,15 @@ import { CartService } from 'src/app/Services/cart.service';
 import { UserService } from 'src/app/Services/user.service';
 
 @Component({
-  selector: 'app-wishlist-detail',
-  templateUrl: './wishlist-detail.component.html',
-  styleUrls: ['./wishlist-detail.component.scss']
+  selector: 'app-wishlist-customer',
+  templateUrl: './wishlist-customer.component.html',
+  styleUrls: ['./wishlist-customer.component.scss']
 })
-export class WishlistDetailComponent implements OnInit {
+export class WishlistCustomerComponent implements OnInit {
+
   listWish = this.userService.getWishList();
 
-  constructor(private userService: UserService, private cartService: CartService,) { }
+  constructor(private userService: UserService, private cartService: CartService) { }
 
   ngOnInit(): void {
     this.userService.getUserData();

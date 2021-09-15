@@ -58,7 +58,7 @@
       "email": "kunhuy@gmail.com",
       "phone": "0393503929",
       "password": "123456",
-      "address": "",
+      "address": "23 Nguyễn Thị Minh Khai, Quận 1, TPHCM",
       "urlImg": "assets/img/avatar/avatar1.png",
       "listWishList": [
         {
@@ -67,7 +67,16 @@
           "price": 59000,
           "img": "assets/img/product/26.jpg",
           "des": "",
-          "weekdays": "Thứ 3"
+          "weekdays": "Thứ 3",
+          "favorite": false
+        },
+        {
+          "id": "7",
+          "name": "Cá Trạch Chiên",
+          "price": 34000,
+          "img": "assets/img/product/4.jpg",
+          "des": "",
+          "weekdays": "Thứ 5"
         }
       ]
     }
@@ -963,38 +972,17 @@
   "historyOrder": [
     {
       "id": "1",
-      "userId": "0",
+      "userId": "2",
       "date": "15/9/2021",
       "discount": 0,
-      "total": 314000,
+      "total": 118000,
       "listOrder": [
         {
-          "id": "48",
-          "img": "assets/img/product/45.jpg",
-          "name": "Thịt Heo Chiên",
-          "price": 30000,
-          "quantity": 1
-        },
-        {
-          "id": "54",
-          "img": "assets/img/product/51.jpg",
-          "name": "Heo Xào Xả Ớt",
-          "price": 45000,
-          "quantity": 1
-        },
-        {
-          "id": "72",
-          "img": "assets/img/product/69.jpg",
-          "name": "Miến Trộn Sò Điệp",
-          "price": 20000,
-          "quantity": 1
-        },
-        {
-          "id": "60",
-          "img": "assets/img/product/57.jpg",
-          "name": "Mức Trứng Chiên Giòn",
-          "price": 219000,
-          "quantity": 1
+          "id": "29",
+          "img": "assets/img/product/26.jpg",
+          "name": "Cánh Gà Chiên Nước Mắm",
+          "price": 59000,
+          "quantity": 2
         }
       ]
     }

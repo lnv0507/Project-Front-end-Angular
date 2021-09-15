@@ -1,43 +1,62 @@
 <div class="container">
     <div class="row">
         <h1 class="main-title">THÔNG TIN KHÁCH HÀNG</h1>
-        <div class="customer-left">
-            <div class="avatar-name">
-                <img src="{{user.urlImg}}" alt="">
-                <p>{{user.name}}</p>
-            </div>
-            <ul>
-                <li>
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                    <p>Cập nhật tài khoản</p>
-                </li>
-                <div class="inline">
-                    <p class="inline-item" (click)="displayAccount()" [ngStyle]="{color: isAccount ? '#2b82ad' : 'black'}"> Hồ sơ </p>
-                    <p class="inline-item" (click)="displayPassword()" [ngStyle]="{color: isPassword ? '#2b82ad' : 'black'}">Đổi mật khẩu</p>
+        <div class="customer-body">
+            <div class="customer-left">
+                <div class="customer-info">
+                    <img src="{{user.urlImg}}" alt="" class="customer-info__img">
+                    <p class="customer-info__name">{{user.name}}</p>
                 </div>
-
-                <li>
-                    <i class="fa fa-shopping-cart" aria-hidden="true" [ngStyle]="{color: isOrder ? '#2b82ad' : 'black'}"></i>
-                    <p (click)="displayOrder()" [ngStyle]="{color: isOrder ? '#2b82ad' : 'black'}">Thông tin đơn hàng</p>
-                </li>
-            </ul>
-        </div>
-        <div *ngIf="!isOrder" class="customer-right">
-            <div *ngIf="isAccount" class="content">
-                <app-account-customer></app-account-customer>
+                <ul class="customer-menu__list">
+                    <li class="customer-menu__item">
+                        <div class="customer-menu__wrap">
+                            <div class="customer-menu__icon">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </div>
+                            <p class="customer-menu__label">Cập nhật tài khoản</p>
+                        </div>
+                        <ul class="customer-detail__list">
+                            <li class="customer-detai__item" (click)="displayAccount()" [ngStyle]="{color: isAccount ? '#2b82ad' : 'black'}" >Hồ sơ</li>
+                            <li class="customer-detai__item" (click)="displayPassword()" [ngStyle]="{color: isPassword ? '#2b82ad' : 'black'}">Đổi mật khẩu</li>
+                        </ul>
+                    </li>
+                    <li class="customer-menu__item" (click)="displayOrder()" [ngStyle]="{color: isOrder ? '#2b82ad' : 'black'}">
+                        <div class="customer-menu__wrap">
+                            <div class="customer-menu__icon">
+                                <i class="fa fa-shopping-cart" aria-hidden="true" ></i>
+                            </div>
+                            <p class="customer-menu__label">Thông tin đơn hàng</p>
+                        </div>
+                        
+                    </li>
+                    <li class="customer-menu__item" (click)="displayWhislist()" [ngStyle]="{color: isWishList ? '#2b82ad' : 'black'}">
+                        <div class="customer-menu__wrap">
+                            <div class="customer-menu__icon">
+                                <i class="fab fa-gratipay" aria-hidden="true"></i>
+                            </div>
+                            <p class="customer-menu__label">Danh sách yêu thích</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div *ngIf="!isOrder && !isWishList" class="customer-right">
+                <div *ngIf="isAccount" class="content">
+                    <app-account-customer></app-account-customer>
+                </div>
+    
+                <div *ngIf="isPassword" class="change-password">
+                    <app-password-customer></app-password-customer>
+                </div>
+            </div>
+            <div *ngIf="isOrder" class="order-history">
+                <app-order-customer></app-order-customer>
+            </div>
+            <div *ngIf="isWishList" class="whislist">
+                <app-wishlist-customer></app-wishlist-customer>
             </div>
 
-            <div *ngIf="isPassword" class="change-password">
-                <app-password-customer></app-password-customer>
-            </div>
-            <div class="order-history">
-                <a routerLink="/yeuthich">Danh Sacsh yeu Thich</a>
-            </div>
         </div>
-        <div *ngIf="isOrder" class="order-history">
-            <app-order-customer></app-order-customer>
-        </div>
-
+        
     </div>
 
 

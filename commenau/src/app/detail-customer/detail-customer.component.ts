@@ -15,9 +15,10 @@ export class DetailCustomerComponent implements OnInit {
   user!: User;
   urlImg!: string;
   displayAlert = false;
-  isAccount = true;
+  isAccount = false;
   isPassword = false;
   isOrder = false;
+  isWishList = true;
 
   constructor(private userService: UserService) {
 
@@ -32,6 +33,7 @@ export class DetailCustomerComponent implements OnInit {
       this.isAccount = true;
       this.isPassword = false;
       this.isOrder = false;
+      this.isWishList = false;
     }
   }
   displayPassword() {
@@ -39,11 +41,21 @@ export class DetailCustomerComponent implements OnInit {
       this.isPassword = true;
       this.isAccount = false;
       this.isOrder = false;
+      this.isWishList = false;
     }
   }
   displayOrder() {
     if (!this.isOrder) {
       this.isOrder = true;
+      this.isWishList = false;
+      this.isAccount = false;
+      this.isPassword = false;
+    }
+  }
+  displayWhislist(){
+    if(!this.isWishList){
+      this.isWishList = true;
+      this.isOrder = false;
       this.isAccount = false;
       this.isPassword = false;
     }
