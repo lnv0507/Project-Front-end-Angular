@@ -112,10 +112,30 @@ export class UserService {
     return this.checkLogin;
   }
 
-  
+
   public getWishList(){
     return this.wishlist;
   }
- 
 
+  // addwish list item for USER
+  public addToWishlist(p: Product) {
+    if (this.getCheckLogin()) {
+      this.user.listWishList.push(p);
+      this.updateUser(this.user).subscribe();
+    }
+    return;
+  }
+  // remove list item for USER
+  public removeWish(p: Product) {
+    if (this.getCheckLogin()) {
+      const index = this.wishlist.findIndex((item) => item.id == p.id);
+      this.user.listWishList.splice(index, 1);
+      this.updateUser(this.user).subscribe();
+    }
+    return;
+  }
+  // check product get id in WishList
+  public checkProductInWishList(id: number) {
+    return this.getWishList().some(item => item.id == id);
+  }
 }

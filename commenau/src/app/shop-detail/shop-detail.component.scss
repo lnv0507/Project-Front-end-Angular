@@ -15,6 +15,13 @@ h6 {
     font-weight: 400;
 }
 
+.disaleBtn {
+    background-color: #ccc !important;
+    color: #666 !important;
+    cursor: default;
+    border: none;
+}
+
 a {
     cursor: pointer;
 }
@@ -484,7 +491,7 @@ a:focus {
     .product-details {
         .product-detail-reverse {
             flex-direction: column-reverse;
-            .product-detail-reverse-info{
+            .product-detail-reverse-info {
                 margin-bottom: 20px;
             }
         }

@@ -20,12 +20,12 @@
                         <div class="product__item">
                             <div class="product__item__pic set-bg" style="background-image: url('{{ product.img }}')">
                                 <ul class="product__item__pic__hover">
-                                    <!-- <li *ngIf="!product.favorite">
+                                    <li *ngIf="!checkProductInWishList(product.id)">
                                         <a (click)="addToWishlist(product)"><i class="fa fa-heart"></i></a>
                                     </li>
-                                    <li *ngIf="product.favorite">
-                                        <a (click)="removeWish(product)"><i class="fa fa-heart" style="color: red"></i></a>
-                                    </li> -->
+                                    <li *ngIf="checkProductInWishList(product.id)">
+                                        <a (click)="removeWish(product)"><i class="fa fa-heart" style="color: red;"></i></a>
+                                    </li>
                                     <li>
                                         <a [routerLink]="['/chitietsanpham', product.id]"><i class="fa fa-external-link"></i></a>
                                     </li>
@@ -50,19 +50,27 @@
                         <div class="product__item">
                             <div class="product__item__pic set-bg" style="background-image: url('{{ product.img }}')">
                                 <ul class="product__item__pic__hover">
-                                    <!-- <li *ngIf="!product.favorite">
+                                    <li *ngIf="!checkProductInWishList(product.id)">
                                         <a (click)="addToWishlist(product)"><i class="fa fa-heart"></i></a>
                                     </li>
-                                    <li *ngIf="product.favorite">
-                                        <a (click)="removeWish(product)"><i class="fa fa-heart"></i></a>
-                                    </li> -->
+                                    <li *ngIf="checkProductInWishList(product.id)">
+                                        <a (click)="removeWish(product)"><i class="fa fa-heart" style="color: red;"></i></a>
+                                    </li>
                                     <li>
                                         <a [routerLink]="['/chitietsanpham', product.id]"><i class="fa fa-external-link"></i></a>
                                     </li>
-                                    <li [ngClass]="product.weekdays == toDay ? 'addCart':'noAddCart'">
-                                        <a class="icon_cart_head" (click)="addToCart(product)"><i
-                        class="icon_cart_head_icon fa fa-shopping-cart"></i></a>
-                                    </li>
+                                    <li *ngIf="getCheckDay(product.weekdays);then addcart; else noAddCart"></li>
+                                    <ng-template #addcart>
+                                        <li> <a class="icon_cart_head" (click)="addToCart(product)"><i
+                          class="icon_cart_head_icon fa fa-shopping-cart"></i></a>
+                                        </li>
+
+                                    </ng-template>
+                                    <ng-template #noAddCart>
+                                        <span class="noAddCart">
+                                            <a class="icon_cart_head"><i class="icon_cart_head_icon fa fa-shopping-cart"></i></a>
+                                        </span>
+                                    </ng-template>
 
                                 </ul>
                             </div>

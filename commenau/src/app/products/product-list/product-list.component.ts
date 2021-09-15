@@ -8,6 +8,7 @@ import { ProductCart } from 'src/app/model/product-cart';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CartHeaderComponent } from 'src/app/header-vip/cart-header/cart-header.component';
 import { UserService } from 'src/app/Services/user.service';
+import { DialogComponent } from 'src/app/dialog/dialog.component';
 
 @Component({
   selector: 'app-product-list',
@@ -28,6 +29,7 @@ export class ProductListComponent implements OnInit {
   days = this.product.getDay();
   active = "active active2";
   noActive = "noActive";
+  checkCart!: boolean;
   public day: Date = new Date();
 
   constructor(
@@ -35,7 +37,8 @@ export class ProductListComponent implements OnInit {
     private product: ProductsService,
     public router: Router,
     private cartService: CartService,
-    private clickCart: NgbModal
+    private clickCart: NgbModal,
+
   ) {
     this.weekDays = this.product.weekDays;
   }
@@ -59,9 +62,8 @@ export class ProductListComponent implements OnInit {
   }
   // haot dong lay product dung ngay hien tai
 
-  public checkProduct(id: number) {
-
-    return this.userService.getWishList().some(item => item.id == id)
+  public checkProductInWishList(id: number) {
+    return this.userService.checkProductInWishList(id);
   }
   public getProduct() {
     this.productCheck = true;
@@ -77,30 +79,28 @@ export class ProductListComponent implements OnInit {
   }
 
   public addToCart(product: Product) {
-    this.clickCart.open(CartHeaderComponent);
-    const item: ProductCart = new ProductCart();
-    item.id = product.id;
-    item.img = product.img;
-    item.name = product.name;
-    item.price = product.price;
-    item.quantity = 1;
-    this.cartService.addItem(item);
+    if (this.cartService.checkHour()) {
+      this.clickCart.open(CartHeaderComponent);
+      const item: ProductCart = new ProductCart();
+      item.id = product.id;
+      item.img = product.img;
+      item.name = product.name;
+      item.price = product.price;
+      item.quantity = 1;
+      this.cartService.addItem(item);
+    }else{
+      this.clickCart.open(DialogComponent);
+    }
+
+
   }
   public addToWishlist(p: Product) {
-    if (this.userService.getCheckLogin()) {
-      this.userService.user.listWishList.push(p);
-      this.userService.updateUser(this.userService.user).subscribe();
-    }
-    return;
+
+    return this.userService.addToWishlist(p);
   }
 
   public removeWish(p: Product) {
-    if (this.userService.getCheckLogin()) {
-      const index = this.userService.wishlist.findIndex((item) => item.id == p.id);
-      this.userService.user.listWishList.splice(index, 1);
-      this.userService.updateUser(this.userService.user).subscribe();
-    }
-    return;
+    return this.userService.removeWish(p);
   }
 
 }

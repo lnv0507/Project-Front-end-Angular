@@ -148,4 +148,5 @@ export class ProductsService {
   public getDataProduct() {
     return this.dataProduct;
   }
+
 }

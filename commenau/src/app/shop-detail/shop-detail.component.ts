@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../model/product';
 import { CartService } from '../Services/cart.service';
 import { ProductCart } from '../model/product-cart';
+import { UserService } from '../Services/user.service';
 
 @Component({
   selector: 'app-shop-detail',
@@ -22,6 +23,7 @@ export class ShopDetailComponent implements OnInit, OnChanges {
     private serviceProduct: ProductsService,
     private cartService: CartService,
     private route: ActivatedRoute,
+    private userService: UserService
   ) {
     this.toDay = serviceProduct.getDay();
     console.log(this.toDay);
@@ -97,10 +99,13 @@ export class ShopDetailComponent implements OnInit, OnChanges {
     return this.getProdutById(productId);
   }
   public addToWishlist(p: Product) {
+      return this.userService.addToWishlist(p);
   }
 
   public removeWish(p: Product) {
+    return this.userService.removeWish(p);
   }
-  getWishList() {
+  public checkProductInWishList(id: number) {
+    return this.userService.checkProductInWishList(id);
   }
 }

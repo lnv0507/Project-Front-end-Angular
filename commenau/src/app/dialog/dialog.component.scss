@@ -1,0 +1,25 @@
+$blue: #23536b;
+.dialog {
+    position: absolute;
+    z-index: 2;
+    margin-top: 100px !important;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 1;
+    overflow: hidden;
+    // width: 360px;
+    padding: 0;
+    .dialog__header {
+        background-color: $blue;
+        color: #ffff;
+        padding: 20px;
+    }
+    .dialog__body {
+        padding: 20px;
+        font-size: 18px;
+        .warning {
+            color: red;
+        }
+    }
+}

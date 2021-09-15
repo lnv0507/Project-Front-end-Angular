@@ -69,6 +69,7 @@ import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
 import { AccountCustomerComponent } from './detail-customer/account-customer/account-customer.component';
 import { PasswordCustomerComponent } from './detail-customer/password-customer/password-customer.component';
 import { OrderCustomerComponent } from './detail-customer/order-customer/order-customer.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -105,6 +106,7 @@ import { OrderCustomerComponent } from './detail-customer/order-customer/order-c
     AccountCustomerComponent,
     PasswordCustomerComponent,
     OrderCustomerComponent,
+    DialogComponent,
 
   ],
   imports: [

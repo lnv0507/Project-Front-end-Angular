@@ -7,6 +7,8 @@ import { HeaderVipComponent } from 'src/app/header-vip/header-vip.component';
 import { ProductCart } from 'src/app/model/product-cart';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CartHeaderComponent } from 'src/app/header-vip/cart-header/cart-header.component';
+import { UserService } from 'src/app/Services/user.service';
+import { DialogComponent } from 'src/app/dialog/dialog.component';
 
 @Component({
   selector: 'app-product-day',
@@ -22,11 +24,13 @@ export class ProductDayComponent implements OnInit {
   days = this.product.getDay();
   active = "active active2";
   noActive = "noActive";
-  toDay!:String;
+  toDay!: String;
+
   constructor(
     private product: ProductsService,
     private cartService: CartService,
     private clickCart: NgbModal,
+    private userService: UserService
   ) {
     this.weekDays = this.product.weekDays;
     this.toDay = this.product.getDay();
@@ -50,21 +54,32 @@ export class ProductDayComponent implements OnInit {
   }
 
   public addToCart(product: Product) {
-    this.clickCart.open(CartHeaderComponent);
-    const item: ProductCart = new ProductCart();
-    item.id = product.id;
-    item.img = product.img;
-    item.name = product.name;
-    item.price = product.price;
-    item.quantity = 1;
-    this.cartService.addItem(item);
+    if (this.cartService.checkHour()) {
+      this.clickCart.open(CartHeaderComponent);
+      const item: ProductCart = new ProductCart();
+      item.id = product.id;
+      item.img = product.img;
+      item.name = product.name;
+      item.price = product.price;
+      item.quantity = 1;
+      this.cartService.addItem(item);
+    }else{
+      this.clickCart.open(DialogComponent);
+    }
   }
   public addToWishlist(p: Product) {
+    return this.userService.addToWishlist(p);
   }
 
   public removeWish(p: Product) {
-    // localStorage.setItem(p.id + '', 'false');
+    return this.userService.removeWish(p);
   }
-  getWishList() {
+  public checkProductInWishList(id: number) {
+    return this.userService.checkProductInWishList(id);
+  }
+  public getCheckDay(day: String) {
+    if (day == this.product.getDay())
+      return true;
+    return false;
   }
 }

@@ -24,7 +24,6 @@ $gray: #e7e7e7;
                 transition: all linear 0.2s;
                 a {
                     color: $black;
-                    
                 }
                 .active {
                     color: white;
@@ -64,16 +63,51 @@ $gray: #e7e7e7;
                         -o-transition: all, 0.5s;
                         transition: all, 0.5s;
                         // hidden cart no same toDay
-                        .addCart {
-                            visibility: visible;
-                        }
                         .noAddCart {
-                            visibility: hidden;
+                            cursor: default;
+                            list-style: none;
+                            display: inline-block;
+                            margin-right: 6px;
+                            a {
+                                font-size: 16px;
+                                color: #666;
+                                height: 40px;
+                                width: 40px;
+                                line-height: 40px;
+                                text-align: center;
+                                border: 1px solid #ebebeb;
+                                background: #ccc;
+                                display: block;
+                                border-radius: 50%;
+                                -webkit-transition: all, 0.5s;
+                                -moz-transition: all, 0.5s;
+                                -ms-transition: all, 0.5s;
+                                -o-transition: all, 0.5s;
+                                transition: all, 0.5s;
+                                i {
+                                    position: relative;
+                                    transform: rotate(0);
+                                    -webkit-transition: all, 0.3s;
+                                    -moz-transition: all, 0.3s;
+                                    -ms-transition: all, 0.3s;
+                                    -o-transition: all, 0.3s;
+                                    transition: all, 0.3s;
+                                }
+                            }
+                        }
+                        .noAddCart:last-child {
+                            margin-right: 0;
+                        }
+                        .noAddCart:hover a {
+                            i {
+                                transform: rotate(0deg);
+                            }
                         }
                         li {
                             list-style: none;
                             display: inline-block;
                             margin-right: 6px;
+                            cursor: pointer;
                             a {
                                 font-size: 16px;
                                 color: $black;

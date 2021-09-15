@@ -21,7 +21,7 @@ export class WishlistDetailComponent implements OnInit {
 
 
   public addToCart(product: Product) {
-    const item : ProductCart = new ProductCart();
+    const item: ProductCart = new ProductCart();
     item.id = product.id;
     item.img = product.img;
     item.name = product.name;
@@ -31,10 +31,8 @@ export class WishlistDetailComponent implements OnInit {
 
   }
 
-  public removeItem(p: Product){
-    const index = this.userService.wishlist.findIndex((item) => item.id == p.id);
-    this.userService.user.listWishList.splice(index, 1);
-    this.userService.updateUser(this.userService.user).subscribe();
+  public removeItem(p: Product) {
+    return this.userService.removeWish(p);
   }
 
 }

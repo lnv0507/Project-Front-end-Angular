@@ -50,11 +50,11 @@
                         <div class="product__item">
                             <div class="product__item__pic set-bg" style="background-image: url('{{ product.img }}')">
                                 <ul class="product__item__pic__hover">
-                                    <li *ngIf="!checkProduct(product.id)">
+                                    <li *ngIf="!checkProductInWishList(product.id)">
                                         <a (click)="addToWishlist(product)"><i class="fa fa-heart"></i></a>
                                     </li>
 
-                                    <li *ngIf="checkProduct(product.id)">
+                                    <li *ngIf="checkProductInWishList(product.id)">
                                         <a (click)="removeWish(product)"><i class="fa fa-heart" style="color: red"></i></a>
                                     </li>
                                     <li>

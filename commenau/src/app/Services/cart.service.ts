@@ -10,13 +10,20 @@ export class CartService {
   getQuantity() {
     let total = 0;
     for (let i of this.cartItems) {
-      total +=i.quantity;
+      total += i.quantity;
     }
     return total;
   }
   cartItems: Array<ProductCart> = [];
-  orderInfo! : Order;
-  constructor() {}
+  orderInfo!: Order;
+  constructor() { }
+  checkHour() {
+    let date = new Date();
+    let hour = date.getHours();
+    if (hour >= 7 && hour <= 14)
+      return true;
+    return false;
+  }
   addItem(product: ProductCart) {
     const exist = this.cartItems.find((item: ProductCart) => {
       return item.id === product.id;
