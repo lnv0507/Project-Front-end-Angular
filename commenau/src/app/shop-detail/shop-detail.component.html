@@ -136,38 +136,10 @@
                 </div>
             </div>
         </div>
-            <!-- <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let product of getProduct().splice(0, 4)">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" style="background-image: url('{{ product.img }}')">
-                        <ul class="product__item__pic__hover">
-                            <li *ngIf="!checkProductInWishList(product.id)">
-                                <a (click)="addToWishlist(product)"><i class="fa fa-heart"></i></a>
-                            </li>
-                            <li *ngIf="checkProductInWishList(product.id)">
-                                <a (click)="removeWish(product)"><i class="fa fa-heart" style="color: red;"></i></a>
-                            </li>
-                            <li>
-                                <a [routerLink]="['/chitietsanpham', product.id]" (click)="refresh(product.id)"><i
-                    class="fa fa-external-link"></i></a>
-                            </li>
-                            <li>
-                                <a (click)="addToCart(product)"><i class="fa fa-shopping-cart"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6>
-                            <a [routerLink]="['/chitietsanpham', product.id]" (click)="refresh(product.id)">{{ product.name }}</a>
-                        </h6>
-                        <h5>{{ product.price | currency: "VND" }}</h5>
-                    </div>
-                </div>
-            </div> -->
-        
-            <carousel class="carousel-slider">
-                    <div class="carousel-cell"  *ngFor="let product of getProduct()">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" style="background-image: url('{{ product.img }}')">
+            <carousel class="carousel-slider" style="height: 300px">
+                <div class="carousel-cell"  *ngFor="let product of getProduct()">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" style="background-image: url('{{ product.img }}')">
                                 <ul class="product__item__pic__hover">
                                     <li *ngIf="!checkProductInWishList(product.id)">
                                         <a (click)="addToWishlist(product)"><i class="fa fa-heart"></i></a>
@@ -183,18 +155,18 @@
                                         <a (click)="addToCart(product)"><i class="fa fa-shopping-cart"></i></a>
                                     </li>
                                 </ul>
-                            </div>
-                            <div class="product__item__text">
+                        </div>
+                        <div class="product__item__text">
                                 <h6>
                                     <a [routerLink]="['/chitietsanpham', product.id]" (click)="refresh(product.id)">{{ product.name }}</a>
                                 </h6>
                                 <h5>{{ product.price | currency: "VND" }}</h5>
                         </div>
                     </div>
-                    </div>
-               
+                 </div>
             </carousel>
     </div>
     
 </section>
+
 <router-outlet></router-outlet>

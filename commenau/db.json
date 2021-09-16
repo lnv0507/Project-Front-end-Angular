@@ -54,18 +54,18 @@
           "weekdays": "Thứ 4"
         },
         {
-          "id": "25",
-          "name": "Cơm Chiên ",
-          "price": 45000,
-          "img": "assets/img/product/22.jpg",
-          "des": "",
-          "weekdays": "Thứ 5"
-        },
-        {
           "id": "13",
           "name": "Súp Hạt Sen",
           "price": 213000,
           "img": "assets/img/product/10.jpg",
+          "des": "",
+          "weekdays": "Thứ 5"
+        },
+        {
+          "id": "25",
+          "name": "Cơm Chiên ",
+          "price": 45000,
+          "img": "assets/img/product/22.jpg",
           "des": "",
           "weekdays": "Thứ 5"
         }
