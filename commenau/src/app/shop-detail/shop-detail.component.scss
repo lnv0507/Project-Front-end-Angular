@@ -312,7 +312,7 @@ a:focus {
     .product__item {
         margin-bottom: 50px;
         .product__item__pic {
-            height: 270px;
+            height: 225px;
             // width: 290px;
             position: relative;
             overflow: hidden;
@@ -439,6 +439,9 @@ a:focus {
     background-color: transparent;
     color: red;
     font-weight: 700;
+}
+.carousel-slider {
+    z-index: 2 !important;
 }
 
 //*----------------------------------Resposive Media--------------------

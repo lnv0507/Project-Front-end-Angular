@@ -68,6 +68,7 @@ import { PasswordCustomerComponent } from './detail-customer/password-customer/p
 import { OrderCustomerComponent } from './detail-customer/order-customer/order-customer.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { WishlistCustomerComponent } from './detail-customer/wishlist-customer/wishlist-customer.component';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
@@ -122,7 +123,7 @@ import { WishlistCustomerComponent } from './detail-customer/wishlist-customer/w
     }),
     ShareIconsModule,
     NgxNavbarModule,
-
+    IvyCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent],
