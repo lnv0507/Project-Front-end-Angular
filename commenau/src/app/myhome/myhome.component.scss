@@ -38,6 +38,11 @@ $gray: #e7e7e7;
 .sigle-support-content p {
     font-size: 14px;
 }
+.line-home {
+    width: 80%;
+    margin: auto;
+    border-top: 2px solid #ccc;
+}
 
 //css Slide show
 .wrapper {
@@ -347,6 +352,9 @@ h1 {
     // background-image: url("/assets/img/Body/slideshow4.jpg");
     // background-repeat: no-repeat;
 }
-@media only screen and (max-width: 767px){
-
+@media only screen and (max-width: 480px){
+    .title-load, .line-home{
+        display: none;
+    }
+    
 }

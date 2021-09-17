@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from 'src/app/model/user';
 import { UserService } from 'src/app/Services/user.service';
+import {Md5} from "md5-typescript";
 
 export function checkCurentPasssword(curentPassword : any){
   return (c : AbstractControl) =>{
-    return (curentPassword !== c.value) ?{
+    return (curentPassword !== Md5.init(c.value)) ?{
       invalidphone : true
     } : null;
   };
@@ -52,7 +53,7 @@ export class PasswordCustomerComponent implements OnInit {
   }
 
   changePassword(){
-    this.user.password = this.passwordForm.controls.changePasword.value;
+    this.user.password = Md5.init(this.passwordForm.controls.changePasword.value);
     this.userService.updateUser(this.user).subscribe((data)=>{
       console.log(data);
     });

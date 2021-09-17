@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { ActivatedRoute, Router } from '@angular/router';
-import { Product } from '../model/product';
 import { User } from '../model/user';
 import { UserService } from '../Services/user.service';
+import {Md5} from "md5-typescript";
 
 export function checkExistPhone(phones: any = []) {
   return (c: AbstractControl) => {
@@ -65,7 +65,7 @@ export class RegisterComponent implements OnInit {
       user.name = this.formRegister.controls.name.value;
       user.email = this.formRegister.controls.email.value;
       user.phone = this.formRegister.controls.phone.value;
-      user.password = this.formRegister.controls.password.value;
+      user.password = Md5.init(this.formRegister.controls.password.value);
       user.address = '';
       user.urlImg = "assets/img/avatar/avatar1.png";
       user.listWishList = [];

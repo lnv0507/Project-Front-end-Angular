@@ -806,3 +806,13 @@ $gray: #e7e7e7;
         }
     }
 }
+@media only screen and (max-width: 1366px) {
+    .bag-big:hover {
+        .bag-user{
+            display: none;
+        }
+        .thanh-bar{
+            display: none;
+        }
+    }
+}

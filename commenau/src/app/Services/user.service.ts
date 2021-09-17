@@ -9,6 +9,7 @@ import { catchError, map } from 'rxjs/operators';
 import { User } from '../model/user';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../model/product';
+import {Md5} from "md5-typescript";
 
 @Injectable({
   providedIn: 'root',
@@ -83,7 +84,7 @@ export class UserService {
   public login(phone: any, password: any, word: any) {
     const listUser = this.getUserData();
     for (let user of listUser) {
-      if (user.phone === phone && user.password === password) {
+      if (user.phone === phone && user.password === Md5.init(password)) {
         this.user = user;
         this.checkLogin = true;
         this.message = "";
